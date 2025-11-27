@@ -22,12 +22,13 @@ export const ContactPage: React.FC = () => {
 
             const data = await response.json();
 
-            if (data.success) {
+            if (response.ok && data.success) {
                 setFormState('success');
                 e.currentTarget.reset();
                 setTimeout(() => setFormState('idle'), 3000);
             } else {
-                throw new Error('Form submission failed');
+                console.error('Form submission error:', data);
+                throw new Error(data.message || 'Form submission failed');
             }
         } catch (error) {
             console.error('Error:', error);
