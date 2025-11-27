@@ -7,17 +7,33 @@ import { SEO } from '../components/SEO';
 export const ContactPage: React.FC = () => {
     const [formState, setFormState] = useState<'idle' | 'submitting' | 'success'>('idle');
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         setFormState('submitting');
-        // Simulate network request
-        setTimeout(() => {
-            setFormState('success');
-            // Reset after showing success message
-            setTimeout(() => setFormState('idle'), 3000);
-        }, 1500);
 
+        const formData = new FormData(e.currentTarget);
+        formData.append("access_key", "YOUR_WEB3FORMS_ACCESS_KEY_HERE");
 
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                body: formData
+            });
+
+            const data = await response.json();
+
+            if (data.success) {
+                setFormState('success');
+                e.currentTarget.reset();
+                setTimeout(() => setFormState('idle'), 3000);
+            } else {
+                throw new Error('Form submission failed');
+            }
+        } catch (error) {
+            console.error('Error:', error);
+            alert('Failed to send message. Please email me directly at ' + aboutMeData.email);
+            setFormState('idle');
+        }
     };
 
     return (
@@ -48,12 +64,17 @@ export const ContactPage: React.FC = () => {
                                 </div>
                                 <span>{aboutMeData.email}</span>
                             </div>
-                            <div className="flex items-center space-x-4 text-muted-foreground">
+                            <a
+                                href={aboutMeData.linkedin}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="flex items-center space-x-4 text-muted-foreground hover:text-primary transition-colors cursor-pointer"
+                            >
                                 <div className="w-10 h-10 rounded-full bg-card flex items-center justify-center border border-border">
                                     <LinkedInIcon className="w-5 h-5" />
                                 </div>
                                 <span>Connect on LinkedIn</span>
-                            </div>
+                            </a>
                         </div>
                     </div>
 
@@ -65,6 +86,7 @@ export const ContactPage: React.FC = () => {
                                 <input
                                     type="text"
                                     id="name"
+                                    name="name"
                                     required
                                     className="w-full bg-muted/20 border border-border rounded-lg px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                     placeholder="Jane Smith"
@@ -76,6 +98,7 @@ export const ContactPage: React.FC = () => {
                                 <input
                                     type="email"
                                     id="email"
+                                    name="email"
                                     required
                                     className="w-full bg-muted/20 border border-border rounded-lg px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                     placeholder="jane@example.com"
@@ -87,6 +110,7 @@ export const ContactPage: React.FC = () => {
                                 <input
                                     type="tel"
                                     id="phone"
+                                    name="phone"
                                     className="w-full bg-muted/20 border border-border rounded-lg px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all"
                                     placeholder="+1 234 567 890"
                                 />
@@ -96,6 +120,7 @@ export const ContactPage: React.FC = () => {
                                 <label htmlFor="message" className="text-sm font-medium text-muted-foreground">Message</label>
                                 <textarea
                                     id="message"
+                                    name="message"
                                     required
                                     rows={4}
                                     className="w-full bg-muted/20 border border-border rounded-lg px-4 py-3 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none"

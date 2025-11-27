@@ -46,7 +46,7 @@ const App: React.FC = () => {
                                     <Header />
 
                                     <main className="flex-grow">
-                                        <Suspense fallback={<LoadingSpinner />}>
+                                        <Suspense fallback={null}>
                                             <Routes>
                                                 <Route path="/" element={<HomePage />} />
                                                 <Route path="/projects" element={<ProjectsPage />} />
