@@ -2,12 +2,13 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { aboutMeData } from '../data/aboutMe';
 import { BriefcaseIcon, GraduationCapIcon, QuoteIcon, LinkedInIcon } from '../components/Icons';
-import { IconLayout2, IconBriefcase, IconPalette, IconDeviceMobile, IconZoomQuestion, IconTrophy, IconNews } from '@tabler/icons-react';
+import { IconLayout2, IconBriefcase, IconPalette, IconDeviceMobile, IconZoomQuestion, IconGitMerge, IconTrophy, IconNews } from '@tabler/icons-react';
 import { useDesignMode } from '../context/DesignModeContext';
 import { SEO } from '../components/SEO';
 
 const iconMap: Record<string, React.ComponentType<any>> = {
     IconLayout2,
+    IconGitMerge,
     IconBriefcase,
     IconPalette,
     IconDeviceMobile,
