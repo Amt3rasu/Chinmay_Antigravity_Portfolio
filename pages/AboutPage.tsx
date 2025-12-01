@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { aboutMeData } from '../data/aboutMe';
 import { BriefcaseIcon, GraduationCapIcon, QuoteIcon, LinkedInIcon } from '../components/Icons';
@@ -70,6 +71,11 @@ export const AboutPage: React.FC = () => {
                                 </motion.li>
                             ))}
                         </ul>
+                        <div className="mt-8">
+                            <Link to="/resume" className="inline-flex items-center px-8 py-3 rounded-full bg-primary text-primary-foreground font-medium hover:bg-primary/90 transition-colors shadow-lg shadow-primary/20 text-lg">
+                                View Resume
+                            </Link>
+                        </div>
                     </motion.div>
 
                     {/* Journey Section - Modern Split */}

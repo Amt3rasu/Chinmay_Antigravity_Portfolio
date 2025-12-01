@@ -43,6 +43,7 @@ export const Footer: React.FC = () => (
                     <h3 className="text-sm font-semibold text-foreground uppercase mb-4">Work</h3>
                     <ul className="space-y-2">
                         <li><Link to="/projects" className="text-muted-foreground hover:text-primary transition-colors">My Work</Link></li>
+                        <li><Link to="/resume" className="text-muted-foreground hover:text-primary transition-colors">Resume</Link></li>
                         <li><a href={aboutMeData.github} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">GitHub</a></li>
                     </ul>
                 </div>
