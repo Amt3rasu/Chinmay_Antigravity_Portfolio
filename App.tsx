@@ -21,6 +21,7 @@ const AboutPage = lazy(() => import('./pages/AboutPage').then(module => ({ defau
 const ContactPage = lazy(() => import('./pages/ContactPage').then(module => ({ default: module.ContactPage })));
 const CaseStudyPage = lazy(() => import('./pages/CaseStudyPage').then(module => ({ default: module.CaseStudyPage })));
 const ResumePage = lazy(() => import('./pages/ResumePage').then(module => ({ default: module.ResumePage })));
+const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({ default: module.NotFoundPage })));
 
 const LoadingSpinner = () => (
     <div className="flex items-center justify-center min-h-screen">
@@ -55,6 +56,7 @@ const App: React.FC = () => {
                                                 <Route path="/about" element={<AboutPage />} />
                                                 <Route path="/resume" element={<ResumePage />} />
                                                 <Route path="/contact" element={<ContactPage />} />
+                                                <Route path="*" element={<NotFoundPage />} />
                                             </Routes>
                                         </Suspense>
                                     </main>
