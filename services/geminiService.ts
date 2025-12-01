@@ -1,5 +1,4 @@
-
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 import { GEMINI_MODEL } from '../constants';
 import { getPortfolioContext } from '../data/caseStudies';
 import { getAboutMeContext } from '../data/aboutMe';
@@ -27,9 +26,8 @@ export const streamChatResponse = async (history: { role: 'user' | 'model'; part
 
   if (!apiKey) {
     console.warn("VITE_GEMINI_API_KEY not set. Using mock response.");
-    // Mock response for demonstration/development
     return (async function* () {
-      await new Promise(resolve => setTimeout(resolve, 1000)); // Simulate network delay
+      await new Promise(resolve => setTimeout(resolve, 1000));
       const mockResponses = [
         "I'm currently running in demo mode because my API key hasn't been set up yet.",
         "That's a great question! In a full deployment, I would use Gemini to answer that based on Chinmay's portfolio.",
@@ -37,8 +35,6 @@ export const streamChatResponse = async (history: { role: 'user' | 'model'; part
         "Feel free to explore the case studies to see more of his work!"
       ];
       const randomResponse = mockResponses[Math.floor(Math.random() * mockResponses.length)];
-
-      // Stream the response character by character for effect
       const chunkSize = 5;
       for (let i = 0; i < randomResponse.length; i += chunkSize) {
         await new Promise(resolve => setTimeout(resolve, 50));
@@ -47,16 +43,31 @@ export const streamChatResponse = async (history: { role: 'user' | 'model'; part
     })();
   }
 
-  const ai = new GoogleGenAI({ apiKey });
+  try {
+    const genAI = new GoogleGenerativeAI(apiKey);
+    const model = genAI.getGenerativeModel({
+      model: GEMINI_MODEL,
+      systemInstruction: SYSTEM_INSTRUCTION
+    });
 
-  const chat = ai.chats.create({
-    model: GEMINI_MODEL,
-    config: {
-      systemInstruction: SYSTEM_INSTRUCTION,
-    },
-    history: history,
-  });
+    const chat = model.startChat({
+      history: history,
+    });
 
-  const result = await chat.sendMessageStream({ message: newMessage });
-  return result;
+    const result = await chat.sendMessageStream(newMessage);
+
+    // Create a generator to yield text chunks from the stream
+    return (async function* () {
+      for await (const chunk of result.stream) {
+        const chunkText = chunk.text();
+        if (chunkText) {
+          yield { text: chunkText };
+        }
+      }
+    })();
+
+  } catch (error) {
+    console.error("Error initializing Gemini chat:", error);
+    throw error;
+  }
 };
