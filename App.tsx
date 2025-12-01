@@ -59,7 +59,7 @@ const App: React.FC = () => {
                                         </Suspense>
                                     </main>
                                     <Footer />
-                                    <Chatbot />
+                                    {/* <Chatbot /> */}
                                     <NoiseTexture />
                                     <FloatingDock />
                                     <TailedCursor baseThickness={30} color="#7c3aed" />
