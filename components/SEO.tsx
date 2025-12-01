@@ -13,7 +13,7 @@ interface SEOProps {
 export const SEO: React.FC<SEOProps> = ({
     title,
     description = aboutMeData.title,
-    image = aboutMeData.profileImage,
+    image = "/og-image.png",
     url = window.location.href,
     type = 'website'
 }) => {
