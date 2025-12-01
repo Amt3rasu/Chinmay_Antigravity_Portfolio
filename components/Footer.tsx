@@ -36,6 +36,7 @@ export const Footer: React.FC = () => (
                         <li><Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">About</Link></li>
                         <li><Link to="/contact" className="text-muted-foreground hover:text-primary transition-colors">Contact</Link></li>
                         <li><a href={aboutMeData.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary transition-colors">LinkedIn</a></li>
+                        <li><Link to="/meet-the-dev" className="text-muted-foreground/50 hover:text-primary transition-colors text-xs">Wanna meet dev?</Link></li>
                     </ul>
                 </div>
                 {/* Work */}
