@@ -47,7 +47,13 @@ export const Chatbot: React.FC = () => {
         setInput('');
         setIsLoading(true);
 
-        const history = messages.map(msg => ({
+        // Filter out the initial greeting if it's from the model, as Gemini history must start with user
+        const historyMessages = messages.filter((msg, index) => {
+            if (index === 0 && msg.role === 'model') return false;
+            return true;
+        });
+
+        const history = historyMessages.map(msg => ({
             role: msg.role,
             parts: [{ text: msg.text }]
         }));
