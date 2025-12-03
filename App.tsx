@@ -47,7 +47,7 @@ const App: React.FC = () => {
                                     <BackgroundDoodles />
                                     <Header />
 
-                                    <main className="flex-grow">
+                                    <main className="flex-grow min-h-screen">
                                         <Suspense fallback={null}>
                                             <Routes>
                                                 <Route path="/" element={<HomePage />} />

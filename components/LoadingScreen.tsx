@@ -25,7 +25,7 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete }) => {
                 }
                 return prev + 1; // Increment progress
             });
-        }, 30); // Total time approx 3 seconds
+        }, 15); // Total time approx 1.5 seconds
 
         return () => clearInterval(timer);
     }, [onComplete]);
