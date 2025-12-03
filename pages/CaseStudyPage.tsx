@@ -99,8 +99,8 @@ export const CaseStudyPage: React.FC = () => {
                     <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
                 </div>
 
-                <div className="absolute inset-0 flex flex-col justify-end pb-24 px-4 sm:px-6 lg:px-12">
-                    <div className="max-w-5xl mx-auto w-full">
+                <div className="absolute inset-0 flex flex-col justify-end pb-24 container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-7xl mx-auto w-full">
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -127,8 +127,8 @@ export const CaseStudyPage: React.FC = () => {
                 </div>
             </div>
 
-            <div className="w-full px-4 sm:px-6 lg:px-12">
-                <div className="max-w-5xl mx-auto">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="max-w-7xl mx-auto">
                     <div className="py-20">
                         <div className="grid md:grid-cols-3 gap-16">
                             <div className="md:col-span-2">
