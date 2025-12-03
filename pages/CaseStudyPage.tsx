@@ -183,9 +183,7 @@ export const CaseStudyPage: React.FC = () => {
                         {project.content.map(chapter => (
                             <section key={chapter.number}>
                                 <ChapterHeader chapter={chapter} />
-                                <div className="max-w-4xl mx-auto">
-                                    <ContentRenderer blocks={chapter.blocks} />
-                                </div>
+                                <ContentRenderer blocks={chapter.blocks} />
                             </section>
                         ))}
                     </article>
