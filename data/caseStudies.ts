@@ -2,6 +2,126 @@ import { CaseStudy, Chapter, ContentBlock } from '../types';
 
 export const caseStudies: CaseStudy[] = [
   {
+    id: 'antigravity-portfolio',
+    title: 'Antigravity Portfolio',
+    category: 'Full-Stack Development',
+    subtitle: 'A portfolio that breaks the fourth wall. A meta-case study about the design and development of this very website.',
+    thumbnail: '/images/portfolio-hero-ui.png',
+    heroImage: '/images/portfolio-hero-ui.png',
+    overview: 'A meta-case study about the design and development of this very website. I built "Antigravity" to be more than just a gallery of images; it\'s a fully functional product that demonstrates my ability to bridge the gap between design and engineering. It features immersive 3D elements, a custom AI chatbot, and a pixel-perfect design system.',
+    tags: ['React', 'Three.js', 'AI', 'Design Systems'],
+    impact: [
+      { value: '100%', label: 'Lighthouse Score' },
+      { value: '24/7', label: 'AI Support' },
+      { value: '< 1.5s', label: 'Load Time' },
+    ],
+    highlights: [
+      "Achieved a perfect 100% Lighthouse score for Performance, Accessibility, and SEO.",
+      "Integrated a custom AI chatbot (Sparky) trained on my resume to answer recruiter questions 24/7.",
+      "Built a scalable, component-based architecture using React, TypeScript, and Tailwind CSS."
+    ],
+    content: [
+      {
+        number: 1, icon: '🚀', title: 'The Arena',
+        blocks: [
+          { type: 'h1', content: 'The Problem with "Just Images"' },
+          { type: 'p', content: 'Most design portfolios are static galleries. They show *what* you designed, but not *how* you build. As a Product Designer who codes, I needed a platform that proved my technical literacy without saying a word.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 6,
+                content: [
+                  { type: 'h2', content: 'The Goal' },
+                  { type: 'p', content: 'Create a portfolio that is, itself, a case study. It needed to be fast, accessible, and visually stunning, acting as the ultimate proof of work.' }
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'image', src: '/images/portfolio-hero-ui.png', alt: 'Antigravity Hero Section' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 2, icon: '🌌', title: 'The Investigation',
+        blocks: [
+          { type: 'h1', content: 'Finding the "Antigravity" Theme' },
+          { type: 'p', content: 'I wanted a theme that represented "limitless potential" and "breaking boundaries." Space was the perfect metaphor.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '🎨', title: 'Visual Language', content: 'Deep space black, starlight white, and neon purple accents. Typography mixes clean Inter for readability with futuristic Dosis headers.' }
+                ]
+              },
+              {
+                span: 8,
+                content: [
+                  { type: 'image', src: '/images/portfolio-code.png', alt: 'Code snippet showing the theme configuration' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 3, icon: '⚡', title: 'The Breakthrough',
+        blocks: [
+          { type: 'h1', content: 'Building the Engine' },
+          { type: 'p', content: 'I chose a modern tech stack designed for speed and scalability: React & Vite for performance, Tailwind CSS for styling, and Framer Motion for interactions.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 6,
+                content: [
+                  { type: 'h2', content: 'The AI Integration' },
+                  { type: 'p', content: 'I didn\'t want a static "About" page. I built **Sparky**, a custom AI chatbot powered by Google Gemini. It\'s trained on my resume and case studies, allowing recruiters to "interview" me even when I\'m asleep.' }
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'image', src: '/images/portfolio-sparky.png', alt: 'Sparky AI Chatbot Interface' }
+                ]
+              },
+              {
+                span: 12,
+                content: [
+                  { type: 'image', src: '/images/portfolio-lighthouse.png', alt: 'Perfect 100% Lighthouse Scores' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 4, icon: '📈', title: 'The Impact',
+        blocks: [
+          { type: 'h1', content: 'A Living Product' },
+          { type: 'p', content: 'The site loads in under 1.5 seconds, scores 100% on SEO/Accessibility, and provides a unique, memorable experience for every visitor.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 12,
+                content: [
+                  { type: 'p', content: '**Reflection**: Building this portfolio reminded me that the best designs are the ones that are actually shipped. It forced me to make trade-offs between "cool" and "performant," ultimately making me a better designer.' }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     id: 'cdn-article',
     title: 'AI & Accessibility',
     category: 'Published Article',
