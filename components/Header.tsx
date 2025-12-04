@@ -71,7 +71,7 @@ export const Header: React.FC = () => {
                                 </div>
 
                                 <div className="md:hidden">
-                                    <button onClick={() => setIsOpen(!isOpen)} className="text-foreground">
+                                    <button onClick={() => setIsOpen(!isOpen)} className="text-foreground" aria-label="Toggle menu">
                                         <MenuIcon />
                                     </button>
                                 </div>
