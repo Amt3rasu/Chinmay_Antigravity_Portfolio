@@ -12,7 +12,7 @@ if (!rootElement) {
 const root = createRoot(rootElement);
 root.render(
   <React.StrictMode>
-    <ErrorBoundary fallback={<div style={{ color: 'white', padding: '20px', textAlign: 'center' }}>Something went wrong. Please refresh.</div>}>
+    <ErrorBoundary>
       <App />
     </ErrorBoundary>
   </React.StrictMode>
