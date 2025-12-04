@@ -93,9 +93,10 @@ export const ProjectsPage: React.FC = () => {
                         <button
                             key={category}
                             onClick={() => setFilter(category)}
+                            aria-pressed={filter === category}
                             className={`px-6 py-2 rounded-full text-sm font-medium transition-all duration-300 ${filter === category
-                                    ? 'bg-primary text-white shadow-lg shadow-primary/25'
-                                    : 'bg-card text-muted-foreground hover:bg-accent hover:text-foreground border border-border'
+                                ? 'bg-primary text-white shadow-lg shadow-primary/25'
+                                : 'bg-card text-muted-foreground hover:bg-accent hover:text-foreground border border-border'
                                 }`}
                         >
                             {category}
