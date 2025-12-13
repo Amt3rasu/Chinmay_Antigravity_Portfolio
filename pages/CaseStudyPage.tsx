@@ -10,8 +10,9 @@ const ContentRenderer: React.FC<{ blocks: ContentBlock[], compact?: boolean }> =
 
     const renderBlock = (block: ContentBlock, index: number) => {
         switch (block.type) {
-            case 'h1': return <h1 key={index} className={`text-3xl md:text-4xl font-serif font-bold text-foreground ${compact ? 'mt-0 mb-2' : 'mt-12 mb-6'} tracking-tight`}>{block.content}</h1>;
-            case 'h2': return <h2 key={index} className={`text-2xl font-bold text-foreground ${compact ? 'mt-0 mb-6' : 'mt-10 mb-4'}`}>{block.content}</h2>;
+            case 'h1': return <h1 key={index} className={`text-2xl md:text-3xl font-serif font-bold text-foreground ${compact ? 'mt-0 mb-4' : 'mt-10 mb-6'} tracking-tight`}>{block.content}</h1>;
+            case 'h2': return <h2 key={index} className={`text-xl md:text-2xl font-bold text-foreground ${compact ? 'mt-0 mb-3' : 'mt-8 mb-4'}`}>{block.content}</h2>;
+            case 'h3': return <h3 key={index} className={`text-lg md:text-xl font-bold text-foreground ${compact ? 'mt-0 mb-2' : 'mt-6 mb-3'}`}>{block.content}</h3>;
             case 'p': return <p key={index} className={`text-lg text-muted-foreground ${compact ? 'mb-2' : 'mb-6'} leading-relaxed`} dangerouslySetInnerHTML={{ __html: block.content.replace(/\*\*(.*?)\*\*/g, '<strong class="text-foreground">$1</strong>') }}></p>;
             case 'image': return (
                 <figure key={index} className={`${compact ? 'my-4' : 'my-10'}`}>

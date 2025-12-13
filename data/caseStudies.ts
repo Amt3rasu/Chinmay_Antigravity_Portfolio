@@ -169,7 +169,7 @@ export const caseStudies: CaseStudy[] = [
         number: 1, icon: '⭐', title: 'The Arena',
         blocks: [
           { type: 'prototype', src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FRs4rfDvt149VT7HWtUapX9%2FPortfolio%3Fpage-id%3D241%253A24891%26node-id%3D241-25590%26viewport%3D810%252C581%252C0.15%26t%3DbFesc6Pc2Eqlw6aW-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26starting-point-node-id%3D241%253A25590', title: 'AccessTransit Interactive Prototype' },
-          { type: 'h1', content: 'The Daily Gamble of Public Transit' },
+          { type: 'h2', content: 'The Daily Gamble of Public Transit' },
           {
             type: 'bento_grid',
             items: [
@@ -190,7 +190,7 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 12,
                 content: [
-                  { type: 'h2', content: 'Journey Map' },
+                  { type: 'h3', content: 'Journey Map' },
                   { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_d228779898c04719909ad71aae0823d9~mv2.png/v1/fill/w_817,h_397,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2020_08_01.png', alt: 'User Journey Map', caption: 'Mapped the emotional highs and lows to identify exactly where confidence was lost.' }
                 ]
               }
@@ -202,7 +202,7 @@ export const caseStudies: CaseStudy[] = [
       {
         number: 2, icon: '⭐', title: 'The Investigation',
         blocks: [
-          { type: 'h1', content: 'Process & Rationale' },
+          { type: 'h2', content: 'Process & Rationale' },
           { type: 'p', content: 'To solve a human problem, we had to go beyond assumptions. I used the Double Diamond framework, combining 8 participant interviews with contextual inquiry—shadowing users on their actual journeys to get unfiltered insights.' },
           {
             type: 'bento_grid',
@@ -210,7 +210,7 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 6,
                 content: [
-                  { type: 'h2', content: 'Phase 1: Immersion' },
+                  { type: 'h3', content: 'Phase 1: Immersion' },
                   { type: 'p', content: 'I rode the bus with a blind user, navigated a station with a wheelchair user, and spoke with elderly citizens. This ethnographic approach revealed the hidden friction points in their daily travel.' }
                 ]
               },
@@ -229,14 +229,14 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 8,
                 content: [
-                  { type: 'h2', content: 'The \'Aha!\' Moment' },
+                  { type: 'h3', content: 'The \'Aha!\' Moment' },
                   { type: 'p', content: 'The core issue wasn\'t a lack of features, but a profound lack of trust. Users didn\'t trust static online info or equipment status. We realized we weren\'t just building an app; we needed to build a service that earned trust.' },
                   { type: 'aside', icon: '💡', title: 'Insight', content: 'The problem isn\'t features, it\'s trust.' }
                 ]
               }
             ]
           },
-          { type: 'h2', content: 'Phase 2: Strategy' },
+          { type: 'h3', content: 'Phase 2: Strategy' },
           { type: 'p', content: 'With "trust-first" as our principle, I mapped the ideal journey. This wasn\'t about the app; it was about the human experience. The journey map became our north star for identifying trust-building moments.' },
           {
             type: 'bento_grid',
@@ -244,14 +244,14 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 5,
                 content: [
-                  { type: 'h2', content: 'Happy Path' },
+                  { type: 'h3', content: 'Happy Path' },
                   { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_a1328b9a724843f180a900618add0e4b~mv2.png/v1/fill/w_488,h_689,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2020_13_41.png', alt: 'Design Iteration' }
                 ]
               },
               {
                 span: 7,
                 content: [
-                  { type: 'h2', content: 'Phase 3: Design' },
+                  { type: 'h3', content: 'Phase 3: Design' },
                   { type: 'p', content: 'I started with low-fidelity wireframes focused on progressive disclosure—showing only what\'s necessary to minimize cognitive load.' },
                   {
                     type: 'list', items: [
@@ -268,7 +268,7 @@ export const caseStudies: CaseStudy[] = [
       {
         number: 3, icon: '⭐', title: 'The Breakthrough',
         blocks: [
-          { type: 'h1', content: 'The Ecosystem' },
+          { type: 'h2', content: 'The Ecosystem' },
           { type: 'p', content: 'The solution builds trust through clarity, control, and reliability across three pillars.' },
           {
             type: 'bento_grid',
@@ -276,7 +276,7 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 4,
                 content: [
-                  { type: 'h2', content: 'Pillar 1: Real-Time Data' },
+                  { type: 'h3', content: 'Pillar 1: Real-Time Data' },
                   { type: 'p', content: 'Addressing the fear of the unknown with live, verifiable info.' },
                   { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_d7741e88a374498b924f59ab592fb439~mv2.png/v1/fill/w_461,h_426,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Shots%20Mockups%201x.png', alt: 'Real-time Data Mockup' }
                 ]
@@ -291,7 +291,7 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 4,
                 content: [
-                  { type: 'h2', content: 'Pillar 2: Universal Design' },
+                  { type: 'h3', content: 'Pillar 2: Universal Design' },
                   { type: 'p', content: 'High-contrast, screen reader, and voice controls included.' },
                   { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_748ab77fad7a425587ee110551fe9a2d~mv2.png/v1/fill/w_461,h_448,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Woman%20Holding%20Smartphone%20Mockup.png', alt: 'Woman Holding Smartphone' }
                 ]
@@ -299,13 +299,13 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 8,
                 content: [
-                  { type: 'h2', content: 'Service Blueprint' },
+                  { type: 'h3', content: 'Service Blueprint' },
                   { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_edade27bf35c43d5916a957b6850573d~mv2.png/v1/fill/w_817,h_397,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2020_08_59.png', alt: 'Streamlined Purchase Flow', caption: 'Highlighted trust-critical touchpoints where outages and unclear responsibilities broke the journey.' }
                 ]
               },
             ]
           },
-          { type: 'h1', content: 'Station Kiosks: Ticketing Under Pressure' },
+          { type: 'h2', content: 'Station Kiosks: Ticketing Under Pressure' },
           {
             type: 'bento_grid',
             items: [
@@ -318,7 +318,7 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 6,
                 content: [
-                  { type: 'h2', content: 'Simplifying the Flow' },
+                  { type: 'h3', content: 'Simplifying the Flow' },
                   { type: 'p', content: 'We simplified the menu to 3 primary actions with large text labels. A dedicated "Accessible mode" toggle enlarges type, increases contrast, and adds audio guidance.' },
                   { type: 'p', content: 'Result: Ticket purchase time dropped by 68% (47s to 15s), and task success reached 95%.' }
                 ]
@@ -330,7 +330,7 @@ export const caseStudies: CaseStudy[] = [
       {
         number: 4, icon: '📐', title: 'Design Principles',
         blocks: [
-          { type: 'h1', content: 'Guiding Decisions' },
+          { type: 'h2', content: 'Guiding Decisions' },
           {
             type: 'bento_grid',
             items: [
@@ -359,7 +359,7 @@ export const caseStudies: CaseStudy[] = [
       {
         number: 5, icon: '📱', title: 'Key Flows and UX Decisions',
         blocks: [
-          { type: 'h1', content: 'Mobile: Planning and Real-Time Trust' },
+          { type: 'h2', content: 'Mobile: Planning and Real-Time Trust' },
           { type: 'p', content: 'Scenario: A wheelchair user wants to check whether their usual route is accessible before leaving home.' },
           {
             type: 'bento_grid',
@@ -367,9 +367,9 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 6,
                 content: [
-                  { type: 'h2', content: 'Home as "Trust Dashboard"' },
+                  { type: 'h3', content: 'Home as "Trust Dashboard"' },
                   { type: 'p', content: 'The home screen shows saved routes with elevator/escalator status and alerts. Riders know instantly if today\'s trip is viable.' },
-                  { type: 'h2', content: 'Proactive Disruption Handling' },
+                  { type: 'h3', content: 'Proactive Disruption Handling' },
                   { type: 'p', content: 'When infrastructure fails, the app sends a clear alert, suggests accessible alternatives, or offers a one-tap "Request assistance".' }
                 ]
               },
@@ -381,7 +381,7 @@ export const caseStudies: CaseStudy[] = [
               }
             ]
           },
-          { type: 'h1', content: 'Station Kiosks: Ticketing Under Pressure' },
+          { type: 'h2', content: 'Station Kiosks: Ticketing Under Pressure' },
           {
             type: 'bento_grid',
             items: [
@@ -394,7 +394,7 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 6,
                 content: [
-                  { type: 'h2', content: 'Simplifying the Flow' },
+                  { type: 'h3', content: 'Simplifying the Flow' },
                   { type: 'p', content: 'We simplified the menu to 3 primary actions with large text labels. A dedicated "Accessible mode" toggle enlarges type, increases contrast, and adds audio guidance.' },
                   { type: 'p', content: 'Result: Ticket purchase time dropped by 68% (47s to 15s), and task success reached 95%.' }
                 ]
@@ -406,7 +406,7 @@ export const caseStudies: CaseStudy[] = [
       {
         number: 6, icon: '🎨', title: 'Visual System and Accessibility',
         blocks: [
-          { type: 'h1', content: 'Clarity and Consistency' },
+          { type: 'h2', content: 'Clarity and Consistency' },
           {
             type: 'bento_grid',
             items: [
@@ -432,7 +432,7 @@ export const caseStudies: CaseStudy[] = [
       {
         number: 7, icon: '📈', title: 'Validation and Impact',
         blocks: [
-          { type: 'h1', content: 'Measuring Success' },
+          { type: 'h2', content: 'Measuring Success' },
           {
             type: 'bento_grid',
             items: [
@@ -461,7 +461,7 @@ export const caseStudies: CaseStudy[] = [
       {
         number: 8, icon: '🔮', title: 'What I\'d Do Next',
         blocks: [
-          { type: 'h1', content: 'Future Roadmap' },
+          { type: 'h2', content: 'Future Roadmap' },
           {
             type: 'list', items: [
               'Partner with a transit agency and local disability advocacy groups to co-design flows.',
@@ -497,7 +497,7 @@ export const caseStudies: CaseStudy[] = [
       {
         number: 1, icon: '🏪', title: 'The Arena',
         blocks: [
-          { type: 'h1', content: 'Hidden Inefficiencies on Main Street' },
+          { type: 'h2', content: 'Hidden Inefficiencies on Main Street' },
           { type: 'p', content: 'Independent retailers keep neighborhoods alive, but behind the scenes, most still run distribution on phone calls, chaotic WhatsApp threads, and paper spreadsheets.' },
           {
             type: 'bento_grid',
@@ -505,7 +505,7 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 8,
                 content: [
-                  { type: 'h2', content: 'The Problem' },
+                  { type: 'h3', content: 'The Problem' },
                   { type: 'p', content: 'Shop owners routinely juggle multiple distributors, each with different ordering methods. Distributors struggle with manual orders and overstocking because demand signals are buried in messages. Both sides lose money, and nobody has a clear picture of what’s actually happening.' }
                 ]
               },
@@ -519,7 +519,7 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 12,
                 content: [
-                  { type: 'h2', content: 'Design Goals' },
+                  { type: 'h3', content: 'Design Goals' },
                   {
                     type: 'list', items: [
                       '**Reduce time and effort** spent placing and tracking orders.',
@@ -536,7 +536,7 @@ export const caseStudies: CaseStudy[] = [
       {
         number: 2, icon: '🔍', title: 'Research',
         blocks: [
-          { type: 'h1', content: 'Decoding the Psychology of Trust' },
+          { type: 'h2', content: 'Decoding the Psychology of Trust' },
           { type: 'p', content: 'I researched independent commerce in London, Ontario, interviewing 5 shop owners and 3 small distributors. I also surveyed others to quantify the pain points.' },
           {
             type: 'bento_grid',
@@ -544,7 +544,7 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 6,
                 content: [
-                  { type: 'h2', content: 'What I Learned' },
+                  { type: 'h3', content: 'What I Learned' },
                   {
                     type: 'list', items: [
                       '**~80% of shops** struggled to reach distributors quickly for urgent orders.',
@@ -573,7 +573,7 @@ export const caseStudies: CaseStudy[] = [
       {
         number: 3, icon: '🏗️', title: 'From Insight to Architecture',
         blocks: [
-          { type: 'h1', content: 'Relationship-First Structure' },
+          { type: 'h2', content: 'Relationship-First Structure' },
           { type: 'p', content: 'With "relationship-first" as the guiding principle, I mapped the end-to-end flow. The goal was to make the relationship the primary object, not the product catalog.' },
           {
             type: 'bento_grid',
@@ -581,7 +581,7 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 12,
                 content: [
-                  { type: 'h2', content: 'Service Blueprint' },
+                  { type: 'h3', content: 'Service Blueprint' },
                   { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_b1335180f66c4d87a6f7f795a262104d~mv2.png/v1/fill/w_2218,h_872,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2021_04_33.png', alt: 'Service Blueprint', caption: 'Highlighted where orders currently break down due to scattered channels.' }
                 ]
               }
@@ -592,7 +592,7 @@ export const caseStudies: CaseStudy[] = [
       {
         number: 4, icon: '📐', title: 'Design Principles',
         blocks: [
-          { type: 'h1', content: 'Guiding Decisions' },
+          { type: 'h2', content: 'Guiding Decisions' },
           {
             type: 'bento_grid',
             items: [
@@ -621,7 +621,7 @@ export const caseStudies: CaseStudy[] = [
       {
         number: 5, icon: '📱', title: 'Key Flows',
         blocks: [
-          { type: 'h1', content: 'Relationship Hub' },
+          { type: 'h2', content: 'Relationship Hub' },
           { type: 'p', content: 'Instead of a generic marketplace, the home screen is a Hub showing each distributor with next delivery dates and quick actions. Tapping opens a dedicated space for order history and chat.' },
           {
             type: 'bento_grid',
@@ -635,20 +635,20 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 6,
                 content: [
-                  { type: 'h2', content: 'Consolidated History' },
+                  { type: 'h3', content: 'Consolidated History' },
                   { type: 'p', content: 'This design keeps the personal connection front and center while consolidating scattered conversations and spreadsheets into a single, shared history.' }
                 ]
               }
             ]
           },
-          { type: 'h1', content: 'Smart Inventory & Ordering' },
+          { type: 'h2', content: 'Smart Inventory & Ordering' },
           {
             type: 'bento_grid',
             items: [
               {
                 span: 6,
                 content: [
-                  { type: 'h2', content: 'Ending Guesswork' },
+                  { type: 'h3', content: 'Ending Guesswork' },
                   { type: 'p', content: 'Owners see stock grouped by category with "low" or "healthy" indicators. They can top up directly from this view, closing the loop between insight and action.' }
                 ]
               },
@@ -665,7 +665,7 @@ export const caseStudies: CaseStudy[] = [
       {
         number: 6, icon: '🎨', title: 'Visual System',
         blocks: [
-          { type: 'h1', content: 'Calm and Approachable' },
+          { type: 'h2', content: 'Calm and Approachable' },
           { type: 'p', content: 'To feel trustworthy to non-technical owners, I used a calm palette and readable typography (Merriweather for headings). Controls are large and touch-friendly for one-handed use.' },
           {
             type: 'bento_grid',
@@ -683,7 +683,7 @@ export const caseStudies: CaseStudy[] = [
       {
         number: 7, icon: '📈', title: 'Measuring Success',
         blocks: [
-          { type: 'h1', content: 'Concept Validation' },
+          { type: 'h2', content: 'Concept Validation' },
           {
             type: 'bento_grid',
             items: [
@@ -712,7 +712,7 @@ export const caseStudies: CaseStudy[] = [
       {
         number: 8, icon: '🚀', title: 'What I\'d Explore Next',
         blocks: [
-          { type: 'h1', content: 'Future Roadmap' },
+          { type: 'h2', content: 'Future Roadmap' },
           {
             type: 'list', items: [
               '**Pilot** with a small cluster of shops to measure real-world order accuracy.',
@@ -725,7 +725,7 @@ export const caseStudies: CaseStudy[] = [
       {
         number: 9, icon: '🧠', title: 'Reflection',
         blocks: [
-          { type: 'h1', content: 'B2B is Human' },
+          { type: 'h2', content: 'B2B is Human' },
           { type: 'p', content: 'ConnectDist showed that B2B design is as much about human psychology as operational efficiency. By treating users as partners, we turn messy workflows into a shared platform that helps local businesses compete.' }
         ]
       }
