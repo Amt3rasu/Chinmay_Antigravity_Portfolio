@@ -13,7 +13,12 @@ const ContentRenderer: React.FC<{ blocks: ContentBlock[], compact?: boolean }> =
             case 'h1': return <h1 key={index} className={`text-3xl md:text-4xl font-serif font-bold text-foreground ${compact ? 'mt-0 mb-2' : 'mt-12 mb-6'} tracking-tight`}>{block.content}</h1>;
             case 'h2': return <h2 key={index} className={`text-2xl font-bold text-foreground ${compact ? 'mt-0 mb-6' : 'mt-10 mb-4'}`}>{block.content}</h2>;
             case 'p': return <p key={index} className={`text-lg text-muted-foreground ${compact ? 'mb-2' : 'mb-6'} leading-relaxed`} dangerouslySetInnerHTML={{ __html: block.content.replace(/\*\*(.*?)\*\*/g, '<strong class="text-foreground">$1</strong>') }}></p>;
-            case 'image': return <img key={index} src={block.src} alt={block.alt} className={`${compact ? 'my-0' : 'my-10'} rounded-2xl shadow-lg w-full border border-border ${block.className || ''}`} />;
+            case 'image': return (
+                <figure key={index} className={`${compact ? 'my-4' : 'my-10'}`}>
+                    <img src={block.src} alt={block.alt} className={`rounded-2xl shadow-lg w-full border border-border ${block.className || ''}`} />
+                    {block.caption && <figcaption className="mt-3 text-center text-sm text-muted-foreground italic">{block.caption}</figcaption>}
+                </figure>
+            );
             case 'list': return (
                 <ul key={index} className={`list-disc pl-5 ${compact ? 'my-2' : 'my-6'} space-y-3 text-lg text-muted-foreground`}>
                     {block.items.map((item, i) => <li key={i} dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong class="text-foreground">$1</strong>') }}></li>)}

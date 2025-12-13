@@ -1,4 +1,4 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
+cimport { GoogleGenerativeAI } from "@google/generative-ai";
 import { GEMINI_MODEL } from '../constants';
 import { getPortfolioContext } from '../data/caseStudies';
 import { getAboutMeContext } from '../data/aboutMe';

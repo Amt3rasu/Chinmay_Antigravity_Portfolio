@@ -153,23 +153,22 @@ export const caseStudies: CaseStudy[] = [
     thumbnail: 'https://static.wixstatic.com/media/9a7729_db41f399ea68470baac3dedb85a2c370~mv2.jpg/v1/fill/w_603,h_721,fp_0.73_0.23,q_85,usm_0.66_1.00_0.01,enc_auto/Smiling%20Passenger%20Train%20Travel_edited.jpg',
     heroImage: 'https://static.wixstatic.com/media/9a7729_db41f399ea68470baac3dedb85a2c370~mv2.jpg/v1/fill/w_603,h_721,fp_0.73_0.23,q_85,usm_0.66_1.00_0.01,enc_auto/Smiling%20Passenger%20Train%20Travel_edited.jpg',
     overview: 'AccessTransit is a multi-channel concept service that helps riders with disabilities plan trips, check real-time accessibility, and buy tickets confidently across mobile, kiosk, and web.',
-    tags: ['Accessibility', 'Service Design', 'Mobile App'],
+    tags: ['Accessibility', 'Service Design', 'Mobile App', 'Concept Project · 8 Weeks · Individual'],
     impact: [
-      { value: '68% Faster', label: 'Ticket Purchase' },
-      { value: '95% Success', label: 'Kiosk Task' },
       { value: '+59 Point', label: 'NPS Swing' },
+      { value: '68% Faster', label: 'Ticket Purchase' },
+      { value: 'WCAG 2.1 AAA', label: 'Compliance' },
     ],
     highlights: [
-      "Reduced ticket purchase time by 68% in usability tests.",
-      "Achieved 95% task success on kiosk ticket flows after iteration.",
-      "Modeled +59-point NPS swing based on pre/post perception survey."
+      "Reduced ticket purchase time by 68% and achieved WCAG 2.1 AAA compliance.",
+      "Improved Net Promoter Score (NPS) from -12 to +47 with a better user experience.",
+      "Lowered long-term maintenance costs via standardized, sustainable design systems."
     ],
     content: [
       {
-        number: 1, icon: '🎯', title: 'Problem and Context',
+        number: 1, icon: '⭐', title: 'The Arena',
         blocks: [
-          { type: 'p', content: '**Context**: Concept project · 8 weeks · Individual' },
-          { type: 'p', content: 'Inspired by major North American transit systems and public accessibility data. Designed to explore how a small digital team could improve trust in transit for riders with mobility, vision, and cognitive challenges.' },
+          { type: 'prototype', src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FRs4rfDvt149VT7HWtUapX9%2FPortfolio%3Fpage-id%3D241%253A24891%26node-id%3D241-25590%26viewport%3D810%252C581%252C0.15%26t%3DbFesc6Pc2Eqlw6aW-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26starting-point-node-id%3D241%253A25590', title: 'AccessTransit Interactive Prototype' },
           { type: 'h1', content: 'The Daily Gamble of Public Transit' },
           {
             type: 'bento_grid',
@@ -177,66 +176,89 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 8,
                 content: [
-                  { type: 'p', content: 'For most riders, public transit is a routine. For riders with disabilities, every trip is a chain of unknowns: Will the elevator be working? Can I reach the platform in time? If something breaks, will I get help or be stranded?' },
-                  { type: 'p', content: 'Existing apps and websites offered static accessibility information and complex ticketing flows that often failed in real life. Riders described planning even short trips like a “logistics operation,” checking multiple sites and calling family to verify stations and equipment.' }
+                  { type: 'p', content: 'For many, public transit is a routine. For millions with disabilities, it\'s a game of chance. Every trip is a series of stressful questions: Will the elevator be working? Can I navigate the station before the train leaves?' },
+                  { type: 'p', content: 'This constant uncertainty creates a heavy cognitive load, turning simple journeys into complex logistical operations. The result is a loss of independence and a fundamental inequity in access to the city.' }
+                ]
+              },
+              {
+                span: 4,
+                className: 'flex flex-col justify-center',
+                content: [
+                  { type: 'aside', icon: '🎲', title: 'The Gamble', content: 'Every trip is a risk.' }
+                ]
+              },
+              {
+                span: 12,
+                content: [
+                  { type: 'h2', content: 'Journey Map' },
+                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_d228779898c04719909ad71aae0823d9~mv2.png/v1/fill/w_817,h_397,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2020_08_01.png', alt: 'User Journey Map', caption: 'Mapped the emotional highs and lows to identify exactly where confidence was lost.' }
+                ]
+              }
+            ]
+          },
+          { type: 'p', content: 'Our mission was to dismantle these barriers. We set out to design a service that would transform public transit from a source of anxiety into a seamless, reliable, and empowering experience for everyone.' }
+        ]
+      },
+      {
+        number: 2, icon: '⭐', title: 'The Investigation',
+        blocks: [
+          { type: 'h1', content: 'Process & Rationale' },
+          { type: 'p', content: 'To solve a human problem, we had to go beyond assumptions. I used the Double Diamond framework, combining 8 participant interviews with contextual inquiry—shadowing users on their actual journeys to get unfiltered insights.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 6,
+                content: [
+                  { type: 'h2', content: 'Phase 1: Immersion' },
+                  { type: 'p', content: 'I rode the bus with a blind user, navigated a station with a wheelchair user, and spoke with elderly citizens. This ethnographic approach revealed the hidden friction points in their daily travel.' }
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_627263def6404714af0f63e5d03c8778~mv2.png/v1/fill/w_775,h_663,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Copilot%20Jul%2031%202025%20(1).png', alt: 'AccessTransit Concept Art' }
                 ]
               },
               {
                 span: 4,
                 content: [
-                  { type: 'aside', icon: '🎲', title: 'The Problem', content: 'How might we create a transit experience that riders with disabilities can trust at every step of their journey—before, during, and after a trip?' }
-                ]
-              },
-              {
-                span: 12,
-                content: [
-                  { type: 'h2', content: 'Design Goals' },
-                  {
-                    type: 'list', items: [
-                      'Reduce uncertainty about station accessibility and disruptions.',
-                      'Simplify ticket purchase for both new and experienced riders.',
-                      'Support different abilities (vision, mobility, cognitive) across mobile, kiosk, and web.',
-                      'Build a coherent service, not just a single app.'
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 2, icon: '🔍', title: 'Research and Key Insight',
-        blocks: [
-          { type: 'h1', content: 'Uncovering the "Trust Gap"' },
-          { type: 'p', content: 'To ground this concept, I combined qualitative research with light desk research, including 8 participants with varied needs, 3 contextual inquiry sessions, and 5 semi-structured interviews.' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 6,
-                content: [
-                  { type: 'h2', content: 'What I Observed' },
-                  {
-                    type: 'list', items: [
-                      '**Unreliable information**: Riders did not trust elevator/escalator status on websites.',
-                      '**High cognitive load**: People juggled maps, PDFs, apps, and phone calls to plan one trip.',
-                      '**Complex ticketing**: Kiosks presented many paths and unclear labels.',
-                      '**Limited help**: Few options beyond asking strangers when things went wrong.'
-                    ]
-                  }
-                ]
-              },
-              {
-                span: 6,
-                content: [
                   { type: 'image', src: 'https://picsum.photos/seed/accesstransit1/1200/800', alt: 'Affinity Mapping Session' }
                 ]
               },
               {
-                span: 12,
+                span: 8,
                 content: [
-                  { type: 'aside', icon: '💡', title: 'Key Insight', content: 'The core problem was not the absence of features; it was the absence of trust. Riders did not trust the data, the system, or the experience. We needed to design a service that earns trust.' }
+                  { type: 'h2', content: 'The \'Aha!\' Moment' },
+                  { type: 'p', content: 'The core issue wasn\'t a lack of features, but a profound lack of trust. Users didn\'t trust static online info or equipment status. We realized we weren\'t just building an app; we needed to build a service that earned trust.' },
+                  { type: 'aside', icon: '💡', title: 'Insight', content: 'The problem isn\'t features, it\'s trust.' }
+                ]
+              }
+            ]
+          },
+          { type: 'h2', content: 'Phase 2: Strategy' },
+          { type: 'p', content: 'With "trust-first" as our principle, I mapped the ideal journey. This wasn\'t about the app; it was about the human experience. The journey map became our north star for identifying trust-building moments.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 5,
+                content: [
+                  { type: 'h2', content: 'Happy Path' },
+                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_a1328b9a724843f180a900618add0e4b~mv2.png/v1/fill/w_488,h_689,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2020_13_41.png', alt: 'Design Iteration' }
+                ]
+              },
+              {
+                span: 7,
+                content: [
+                  { type: 'h1', content: 'Phase 3: Design' },
+                  { type: 'p', content: 'I started with low-fidelity wireframes focused on progressive disclosure—showing only what\'s necessary to minimize cognitive load.' },
+                  {
+                    type: 'list', items: [
+                      '**Learning**: Early kiosk icons were not universally understood.',
+                      '**Iteration**: Replaced icons with clear, large-text labels, boosting task success to 95%.'
+                    ]
+                  }
                 ]
               }
             ]
@@ -244,32 +266,61 @@ export const caseStudies: CaseStudy[] = [
         ]
       },
       {
-        number: 3, icon: '🗺️', title: 'Strategy and Architecture',
+        number: 3, icon: '⭐', title: 'The Breakthrough',
         blocks: [
-          { type: 'h1', content: 'Mapping the Trust-Based Journey' },
-          { type: 'p', content: 'With “trust-first” as the guiding principle, I mapped a full door-to-door journey and created a service blueprint showing frontstage, backstage, and breakpoints.' },
+          { type: 'h1', content: 'The Ecosystem' },
+          { type: 'p', content: 'The solution builds trust through clarity, control, and reliability across three pillars.' },
           {
             type: 'bento_grid',
             items: [
               {
-                span: 12,
+                span: 4,
                 content: [
-                  { type: 'h2', content: 'User Journey Map' },
-                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_d228779898c04719909ad71aae0823d9~mv2.png/v1/fill/w_817,h_397,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2020_08_01.png', alt: 'User Journey Map' }
+                  { type: 'h2', content: 'Pillar 1: Real-Time Data' },
+                  { type: 'p', content: 'Addressing the fear of the unknown with live, verifiable info.' },
+                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_d7741e88a374498b924f59ab592fb439~mv2.png/v1/fill/w_461,h_426,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Shots%20Mockups%201x.png', alt: 'Real-time Data Mockup' }
                 ]
               },
               {
-                span: 12,
+                span: 4,
+                content: [
+                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_f306f28b91db46c6b2e3c4b28a130237~mv2.png/v1/fill/w_461,h_426,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Shots%20Mockup%201x.png', alt: 'Simple Design Mockup' },
+                  { type: 'aside', icon: '✨', title: 'Simplicity', content: 'Simplifying the complex.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'h2', content: 'Pillar 2: Universal Design' },
+                  { type: 'p', content: 'High-contrast, screen reader, and voice controls included.' },
+                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_748ab77fad7a425587ee110551fe9a2d~mv2.png/v1/fill/w_461,h_448,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Woman%20Holding%20Smartphone%20Mockup.png', alt: 'Woman Holding Smartphone' }
+                ]
+              },
+              {
+                span: 8,
                 content: [
                   { type: 'h2', content: 'Service Blueprint' },
-                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_edade27bf35c43d5916a957b6850573d~mv2.png/v1/fill/w_817,h_397,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2020_08_59.png', alt: 'Service Blueprint' }
+                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_edade27bf35c43d5916a957b6850573d~mv2.png/v1/fill/w_817,h_397,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2020_08_59.png', alt: 'Streamlined Purchase Flow', caption: 'Highlighted trust-critical touchpoints where outages and unclear responsibilities broke the journey.' }
+                ]
+              },
+            ]
+          },
+          { type: 'h1', content: 'Station Kiosks: Ticketing Under Pressure' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 6,
+                content: [
+                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_613aab198f9c48cf938fe84a19db3b76~mv2.png/v1/fill/w_461,h_448,fp_0.50_0.53,q_85,usm_0.66_1.00_0.01,enc_auto/Copilot%20Jul%2031%202025.png', alt: 'Accessible Kiosk Design' }
                 ]
               },
               {
-                span: 12,
+                span: 6,
                 content: [
-                  { type: 'h2', content: 'Service Concept' },
-                  { type: 'p', content: 'To cover the "trust-critical" moments, I designed a three-part ecosystem: Mobile app (planning & help), Station kiosks (ticketing), and Web portal (advance planning). Each touchpoint shares the same data and principles.' }
+                  { type: 'h2', content: 'Simplifying the Flow' },
+                  { type: 'p', content: 'We simplified the menu to 3 primary actions with large text labels. A dedicated "Accessible mode" toggle enlarges type, increases contrast, and adds audio guidance.' },
+                  { type: 'p', content: 'Result: Ticket purchase time dropped by 68% (47s to 15s), and task success reached 95%.' }
                 ]
               }
             ]
