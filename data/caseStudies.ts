@@ -251,7 +251,7 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 7,
                 content: [
-                  { type: 'h1', content: 'Phase 3: Design' },
+                  { type: 'h2', content: 'Phase 3: Design' },
                   { type: 'p', content: 'I started with low-fidelity wireframes focused on progressive disclosure—showing only what\'s necessary to minimize cognitive load.' },
                   {
                     type: 'list', items: [
