@@ -477,184 +477,257 @@ export const caseStudies: CaseStudy[] = [
   {
     id: 'connect-dist',
     title: 'ConnectDist',
-    category: 'B2B Product',
-    subtitle: 'A mobile app connecting distributors with neighborhood shops, simplifying orders and inventory management.',
+    category: 'Relationship-First B2B Commerce',
+    subtitle: 'Streamlining local distribution while strengthening the human connections that power Main Street.',
     thumbnail: 'https://static.wixstatic.com/media/9a7729_a2ad1234f455483689cb0f2d96312b46~mv2.png/v1/fill/w_1024,h_1224,fp_0.50_0.53,q_90,enc_auto/Copilot%20Aug%202%202025.png',
     heroImage: 'https://static.wixstatic.com/media/9a7729_c78319cf9cf743dda2836e075a9b6c04~mv2.jpg/v1/fill/w_1634,h_794,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Person%20Writing%20on%20Paper%202.jpg',
-    overview: 'ConnectDist is a mobile app connecting distributors with neighborhood shops, simplifying orders and inventory management, and empowering over 100 local businesses through intuitive design and smart technology.',
-    tags: ['B2B Marketplace', 'Mobile App', 'UX Research'],
+    overview: 'ConnectDist is a mobile platform that connects small distributors with neighborhood shops, streamlining B2B ordering, inventory, and communication so local retailers can run their businesses with less chaos and more confidence.',
+    tags: ['Product Management', 'UX Research', 'Concept Project · 7 Weeks · London, Ontario'],
     impact: [
-      { value: 'Unified', label: 'B2B Marketplace' },
-      { value: 'Real-Time', label: 'Inventory Sync' },
-      { value: 'Relationship', label: 'Centric Communication' },
+      { value: '90 Sec', label: 'Order Time' },
+      { value: '5-7 Hrs', label: 'Saved/Week' },
+      { value: 'High', label: 'Willingness to Pay' },
     ],
     highlights: [
-      'Identified critical ordering, communication, and delivery pain points.',
-      'Validated key features like real-time tracking and streamlined ordering processes.',
-      'Improved overall usability through iterative, user-driven design updates.'
+      "Complex multi-item orders completed in under 90 seconds in usability tests.",
+      "Participants estimated saving 5–7 hours per week on admin work.",
+      "Strong stated willingness to pay for a modest subscription from local shop owners."
     ],
     content: [
       {
-        number: 1,
-        icon: '⭐',
-        title: 'The Arena',
+        number: 1, icon: '🏪', title: 'The Arena',
         blocks: [
-          { type: 'h1', content: 'The Hidden Inefficiencies Costing Main Street' },
-          { type: 'p', content: 'Independent retail is the lifeblood of our communities, but behind the scenes, it runs on a chaotic web of outdated systems. Store owners juggle dozens of distributors, placing orders via phone calls, late-night texts, and paper catalogs. This isn\'t just inefficient; it\'s a drain on capital, leading to costly overstocking of slow-moving products and lost sales from empty shelves.' },
+          { type: 'h1', content: 'Hidden Inefficiencies on Main Street' },
+          { type: 'p', content: 'Independent retailers keep neighborhoods alive, but behind the scenes, most still run distribution on phone calls, chaotic WhatsApp threads, and paper spreadsheets.' },
           {
             type: 'bento_grid',
             items: [
               {
                 span: 8,
                 content: [
-                  { type: 'p', content: 'I saw a system at its breaking point. While consumer apps were getting sleeker and smarter, the tools for these vital small businesses were stuck in the past. My mission was to design ConnectDist: a single, elegant platform to streamline B2B commerce, giving local retailers the modern tools they needed to not just survive but thrive against larger competition.' }
+                  { type: 'h2', content: 'The Problem' },
+                  { type: 'p', content: 'Shop owners routinely juggle multiple distributors, each with different ordering methods. Distributors struggle with manual orders and overstocking because demand signals are buried in messages. Both sides lose money, and nobody has a clear picture of what’s actually happening.' }
                 ]
               },
               {
                 span: 4,
+                className: 'flex flex-col justify-center',
                 content: [
-                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_a2ad1234f455483689cb0f2d96312b46~mv2.png/v1/fill/w_1024,h_1224,fp_0.50_0.53,q_90,enc_auto/Copilot%20Aug%202%202025.png', alt: 'ConnectDist App Mockup' }
+                  { type: 'aside', icon: '📉', title: 'The Cost', content: 'Slow-moving stock sits on shelves while fast-moving items go out of stock.' }
+                ]
+              },
+              {
+                span: 12,
+                content: [
+                  { type: 'h2', content: 'Design Goals' },
+                  {
+                    type: 'list', items: [
+                      '**Reduce time and effort** spent placing and tracking orders.',
+                      '**Give shop owners a clearer view** of inventory and product performance.',
+                      '**Help distributors maintain relationships**, not just process transactions.'
+                    ]
+                  }
                 ]
               }
             ]
           }
-        ],
+        ]
       },
       {
-        number: 2,
-        icon: '⭐',
-        title: 'The Investigation',
+        number: 2, icon: '🔍', title: 'Research',
         blocks: [
           { type: 'h1', content: 'Decoding the Psychology of Trust' },
-          { type: 'p', content: 'I knew the biggest risk wasn\'t technology; it was behavior. Why would a store owner change a system they\'ve used for 20 years? My research process was designed to answer that question.' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 6,
-                className: '!bg-transparent !border-none !p-0 !shadow-none',
-                content: [
-                  { type: 'image', src: '/images/connectdist-interviews.png', alt: 'Research interviews with store owners and distributors', className: '!shadow-none' }
-                ]
-              },
-              {
-                span: 6,
-                content: [
-                  { type: 'h2', content: 'Phase 1: Deep Dive Interviews' },
-                  { type: 'p', content: 'I interviewed store owners not as "users," but as entrepreneurs. I focused on their business pains, not just their software pains. I also interviewed distributors to understand their side of the equation—chasing payments, managing manual orders, and the struggle to introduce new products.' }
-                ]
-              }
-            ]
-          },
-          { type: 'h2', content: 'The \'Aha!\' Moment: It\'s Not About Transactions, It\'s About Relationships' },
+          { type: 'p', content: 'I researched independent commerce in London, Ontario, interviewing 5 shop owners and 3 small distributors. I also surveyed others to quantify the pain points.' },
           {
             type: 'bento_grid',
             items: [
               {
                 span: 6,
                 content: [
-                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_eeb94d90ab8c4fe2ace83d2a7bc80996~mv2.png/v1/fill/w_2218,h_872,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2021_05_34.png', alt: 'Smart inventory screen' }
+                  { type: 'h2', content: 'What I Learned' },
+                  {
+                    type: 'list', items: [
+                      '**~80% of shops** struggled to reach distributors quickly for urgent orders.',
+                      '**50% described inventory** as "manual" or "messy."',
+                      '**Trust > Price**: Shop owners often chose a trusted distributor over a cheaper one because of reliability and support.'
+                    ]
+                  }
                 ]
               },
               {
                 span: 6,
                 content: [
-                  { type: 'p', content: 'The breakthrough insight from my research was this: Local commerce runs on personal relationships, not just price. Store owners weren\'t just buying products; they were buying from people they trusted. A purely transactional, Amazon-style marketplace would fail because it would strip away this essential human element.' },
-                  { type: 'p', content: 'Therefore, the design challenge became: **How can we build a platform that\'s hyper-efficient but also strengthens the personal relationships at the heart of local commerce?**' },
+                  { type: 'image', src: '/images/connectdist-interviews.png', alt: 'Research Findings' }
                 ]
               },
               {
                 span: 12,
                 content: [
-                  { type: 'h2', content: 'Phase 2: From Insight to Architecture' },
-                  { type: 'p', content: 'This "relationship-first" principle completely defined the product strategy. The central feature couldn\'t be a generic product search; it had to be a "My Distributors" hub.' },
-                  { type: 'p', content: 'I mapped out the entire service blueprint, considering the journey of both the retailer and the distributor to ensure the system created value for both sides of the marketplace. This dual-sided approach was critical to ensuring adoption.' },
-                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_b1335180f66c4d87a6f7f795a262104d~mv2.png/v1/fill/w_2218,h_872,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2021_04_33.png', alt: 'Service blueprint diagram' }
-                ]
-              }
-            ]
-          },
-        ],
-      },
-      {
-        number: 3,
-        icon: '⭐',
-        title: 'The Breakthrough',
-        blocks: [
-          { type: 'h1', content: 'The ConnectDist Platform' },
-          { type: 'p', content: 'The final design is a direct translation of my research insights into an intuitive, powerful tool. I focused on three strategic pillars.' },
-          { type: 'prototype', src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FDy2HBVXW4rDCw7tJRPUY0y%2FChinmay-s-Design-System%3Fpage-id%3D139%253A23008%26node-id%3D151-32084%26t%3D0pV6yQfm2bG0Co1i-1', title: 'ConnectDist Interactive Prototype' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 5,
-                content: [
-                  { type: 'h2', content: 'Design Pillar 1: The Relationship Hub' },
-                  { type: 'p', content: 'Because trust is built on communication, the dashboard isn\'t a list of products; it\'s a list of people. It allows a retailer to see all their trusted distributors in one place. Every order is tied to a specific distributor and has its own dedicated chat thread, moving communication from messy text messages into an organized, in-context system.' },
-                ]
-              },
-              {
-                span: 7,
-                content: [
-                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_6b0f2e72f38248de88f8e14564a79c74~mv2.png/v1/fill/w_922,h_852,fp_0.51_0.50,q_90,usm_0.66_1.00_0.01,enc_auto/Shots%20Mockups.png', alt: 'App screenshots in mockups' },
-                ]
-              },
-              {
-                span: 12,
-                content: [
-                  { type: 'aside', icon: '♻️', title: 'All About Making It Simple', content: 'Simplicity was at the core of every design decision. By removing unnecessary complexity and focusing on the essential tasks, we created an interface that feels intuitive and effortless for users of all technical skill levels.' },
-                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_facde93c04c34cceae2e7ba351297b3d~mv2.jpeg/v1/fill/w_922,h_852,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a34bojiukqwhp8cgywbgmd.jpeg', alt: 'Simplified interface design' },
-                ]
-              },
-              {
-                span: 7,
-                content: [
-                  { type: 'image', src: '/images/connectdist-smart-inventory-mobile.jpg', alt: 'Smart inventory mobile interface' },
-                ]
-              },
-              {
-                span: 5,
-                content: [
-                  { type: 'h2', content: 'Design Pillar 2: The End of Guesswork with Smart Inventory' },
-                  { type: 'p', content: 'Because retailers were losing money on poor inventory management, I designed a simple, visual inventory tool. It allows owners to see what\'s selling, get alerts on low-stock items, and, crucially, create a new order directly from the inventory screen. This closes the loop between insight and action.' },
-                ]
-              }
-            ]
-          },
-        ],
-      },
-      {
-        number: 4,
-        icon: '⭐',
-        title: 'The Impact',
-        blocks: [
-          { type: 'h1', content: 'A New Trajectory for Local Business' },
-          { type: 'p', content: 'Though a conceptual project, ConnectDist was designed and validated as a market-ready product.' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '✅', title: 'Validation', content: 'In usability tests with 5 target users, the prototype received overwhelmingly positive feedback. The average time to place a complex, multi-item order was under 90 seconds.' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '💰', title: 'Business Viability', content: 'Users confirmed they would be willing to pay a small subscription fee for a tool that saved them an estimated 5-7 hours of administrative work per week.' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '🧠', title: 'My Key Reflection', content: 'This project taught me that in B2B design, you\'re solving for both business efficiency and human psychology. By understanding that the core user need wasn\'t just "ordering" but "trusted partnership," I was able to design a solution that resonated on an emotional level.' }
+                  { type: 'aside', icon: '💡', title: 'Key Insight', content: 'Local commerce runs on relationships, not just price. A purely transactional app would commoditize these relationships instead of strengthening them.' }
                 ]
               }
             ]
           }
-        ],
+        ]
+      },
+      {
+        number: 3, icon: '🏗️', title: 'From Insight to Architecture',
+        blocks: [
+          { type: 'h1', content: 'Relationship-First Structure' },
+          { type: 'p', content: 'With "relationship-first" as the guiding principle, I mapped the end-to-end flow. The goal was to make the relationship the primary object, not the product catalog.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 12,
+                content: [
+                  { type: 'h2', content: 'Service Blueprint' },
+                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_b1335180f66c4d87a6f7f795a262104d~mv2.png/v1/fill/w_2218,h_872,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2021_04_33.png', alt: 'Service Blueprint', caption: 'Highlighted where orders currently break down due to scattered channels.' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 4, icon: '📐', title: 'Design Principles',
+        blocks: [
+          { type: 'h1', content: 'Guiding Decisions' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '❤️', title: 'Relationship-Centric', content: 'Start from distributors and accounts, then drill into products. Keep comms tied to the relationship.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '⚡', title: 'Insight to Action', content: 'Show inventory signals (low stock, fast movers) and let users reorder directly from that view.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '👌', title: 'Simple & Familiar', content: 'Reduce choices. Use plain language. Support "the usual" reorders to respect existing habits.' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 5, icon: '📱', title: 'Key Flows',
+        blocks: [
+          { type: 'h1', content: 'Relationship Hub' },
+          { type: 'p', content: 'Instead of a generic marketplace, the home screen is a Hub showing each distributor with next delivery dates and quick actions. Tapping opens a dedicated space for order history and chat.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 6,
+                content: [
+                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_6b0f2e72f38248de88f8e14564a79c74~mv2.png/v1/fill/w_922,h_852,fp_0.51_0.50,q_90,usm_0.66_1.00_0.01,enc_auto/Shots%20Mockups.png', alt: 'Relationship Hub UI' }
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'h2', content: 'Consolidated History' },
+                  { type: 'p', content: 'This design keeps the personal connection front and center while consolidating scattered conversations and spreadsheets into a single, shared history.' }
+                ]
+              }
+            ]
+          },
+          { type: 'h1', content: 'Smart Inventory & Ordering' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 6,
+                content: [
+                  { type: 'h2', content: 'Ending Guesswork' },
+                  { type: 'p', content: 'Owners see stock grouped by category with "low" or "healthy" indicators. They can top up directly from this view, closing the loop between insight and action.' }
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'image', src: '/images/connectdist-smart-inventory-mobile.jpg', alt: 'Smart Inventory Interface' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 6, icon: '🎨', title: 'Visual System',
+        blocks: [
+          { type: 'h1', content: 'Calm and Approachable' },
+          { type: 'p', content: 'To feel trustworthy to non-technical owners, I used a calm palette and readable typography (Merriweather for headings). Controls are large and touch-friendly for one-handed use.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 12,
+                content: [
+                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_facde93c04c34cceae2e7ba351297b3d~mv2.jpeg/v1/fill/w_922,h_852,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a34bojiukqwhp8cgywbgmd.jpeg', alt: 'Simplified UI Components' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 7, icon: '📈', title: 'Measuring Success',
+        blocks: [
+          { type: 'h1', content: 'Concept Validation' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '⏱️', title: '90 Seconds', content: 'Average time to place a complex multi-item order in usability tests.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '📉', title: '5-7 Hours', content: 'Estimated weekly admin time saved by shop owners.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '💰', title: 'Willingness to Pay', content: 'Validating business viability via subscription interest.' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 8, icon: '🚀', title: 'What I\'d Explore Next',
+        blocks: [
+          { type: 'h1', content: 'Future Roadmap' },
+          {
+            type: 'list', items: [
+              '**Pilot** with a small cluster of shops to measure real-world order accuracy.',
+              '**Integrate** with existing accounting invoices (QuickBooks, etc.).',
+              '**Expand analytics** for distributors to help them propose smart assortments.'
+            ]
+          }
+        ]
+      },
+      {
+        number: 9, icon: '🧠', title: 'Reflection',
+        blocks: [
+          { type: 'h1', content: 'B2B is Human' },
+          { type: 'p', content: 'ConnectDist showed that B2B design is as much about human psychology as operational efficiency. By treating users as partners, we turn messy workflows into a shared platform that helps local businesses compete.' }
+        ]
       }
     ],
   },
