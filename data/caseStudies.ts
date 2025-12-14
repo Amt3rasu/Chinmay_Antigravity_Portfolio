@@ -154,6 +154,9 @@ export const caseStudies: CaseStudy[] = [
     heroImage: 'https://static.wixstatic.com/media/9a7729_db41f399ea68470baac3dedb85a2c370~mv2.jpg/v1/fill/w_603,h_721,fp_0.73_0.23,q_85,usm_0.66_1.00_0.01,enc_auto/Smiling%20Passenger%20Train%20Travel_edited.jpg',
     overview: 'AccessTransit is a multi-channel concept service that helps riders with disabilities plan trips, check real-time accessibility, and buy tickets confidently across mobile, kiosk, and web.',
     tags: ['Accessibility', 'Service Design', 'Mobile App', 'Concept Project · 8 Weeks · Individual'],
+    role: 'Full Stack Product Designer',
+    timeline: '8 Weeks',
+    tools: ['Figma', 'Miro', 'Adobe Suite'],
     impact: [
       { value: '+59 Point', label: 'NPS Swing' },
       { value: '68% Faster', label: 'Ticket Purchase' },
@@ -481,8 +484,11 @@ export const caseStudies: CaseStudy[] = [
     subtitle: 'Streamlining local distribution while strengthening the human connections that power Main Street.',
     thumbnail: 'https://static.wixstatic.com/media/9a7729_a2ad1234f455483689cb0f2d96312b46~mv2.png/v1/fill/w_1024,h_1224,fp_0.50_0.53,q_90,enc_auto/Copilot%20Aug%202%202025.png',
     heroImage: 'https://static.wixstatic.com/media/9a7729_c78319cf9cf743dda2836e075a9b6c04~mv2.jpg/v1/fill/w_1634,h_794,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Person%20Writing%20on%20Paper%202.jpg',
-    overview: 'ConnectDist is a mobile platform that connects small distributors with neighborhood shops, streamlining B2B ordering, inventory, and communication so local retailers can run their businesses with less chaos and more confidence.',
+    overview: 'ConnectDist is a mobile platform that connects small distributors with neighborhood shops, streamlining B2B ordering, inventory, and communication so local retailers can run their businesses with less chaos and more confidence. Based on a small sample in one city; next step would be a pilot with live data.',
     tags: ['Product Management', 'UX Research', 'Concept Project · 7 Weeks · London, Ontario'],
+    role: 'Product Manager & Designer',
+    timeline: '7 Weeks',
+    tools: ['Figma', 'Miro', 'Notion'],
     impact: [
       { value: '90 Sec', label: 'Order Time' },
       { value: '5-7 Hrs', label: 'Saved/Week' },
@@ -537,7 +543,7 @@ export const caseStudies: CaseStudy[] = [
         number: 2, icon: '🔍', title: 'Research',
         blocks: [
           { type: 'h2', content: 'Decoding the Psychology of Trust' },
-          { type: 'p', content: 'I researched independent commerce in London, Ontario, interviewing 5 shop owners and 3 small distributors. I also surveyed others to quantify the pain points.' },
+          { type: 'p', content: 'I interviewed 5 shop owners and 3 distributors in London, Ontario, plus a short survey to quantify pain points.' },
           {
             type: 'bento_grid',
             items: [
@@ -582,7 +588,7 @@ export const caseStudies: CaseStudy[] = [
                 span: 12,
                 content: [
                   { type: 'h3', content: 'Service Blueprint' },
-                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_b1335180f66c4d87a6f7f795a262104d~mv2.png/v1/fill/w_2218,h_872,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2021_04_33.png', alt: 'Service Blueprint', caption: 'Highlighted where orders currently break down due to scattered channels.' }
+                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_b1335180f66c4d87a6f7f795a262104d~mv2.png/v1/fill/w_2218,h_872,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2021_04_33.png', alt: 'Service Blueprint', caption: 'Service blueprint mapping shop and distributor journeys, highlighting where multi-channel orders currently break down.' }
                 ]
               }
             ]
@@ -629,7 +635,7 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 6,
                 content: [
-                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_6b0f2e72f38248de88f8e14564a79c74~mv2.png/v1/fill/w_922,h_852,fp_0.51_0.50,q_90,usm_0.66_1.00_0.01,enc_auto/Shots%20Mockups.png', alt: 'Relationship Hub UI' }
+                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_6b0f2e72f38248de88f8e14564a79c74~mv2.png/v1/fill/w_922,h_852,fp_0.51_0.50,q_90,usm_0.66_1.00_0.01,enc_auto/Shots%20Mockups.png', alt: 'Relationship Hub UI', caption: 'Designed to replace scattered WhatsApp threads with in-context chat per distributor.' }
                 ]
               },
               {
@@ -655,7 +661,7 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 6,
                 content: [
-                  { type: 'image', src: '/images/connectdist-smart-inventory-mobile.jpg', alt: 'Smart Inventory Interface' }
+                  { type: 'image', src: '/images/connectdist-smart-inventory-mobile.jpg', alt: 'Smart Inventory Interface', caption: 'Inventory view surfaced low/healthy stock and allowed direct reorder from this screen.' }
                 ]
               }
             ]
@@ -690,19 +696,19 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 4,
                 content: [
-                  { type: 'aside', icon: '⏱️', title: '90 Seconds', content: 'Average time to place a complex multi-item order in usability tests.' }
+                  { type: 'aside', icon: '⏱️', title: '90 Seconds', content: 'Average time in moderated usability tests.' }
                 ]
               },
               {
                 span: 4,
                 content: [
-                  { type: 'aside', icon: '📉', title: '5-7 Hours', content: 'Estimated weekly admin time saved by shop owners.' }
+                  { type: 'aside', icon: '📉', title: '5-7 Hours', content: 'Self-reported weekly admin time saved (estimate).' }
                 ]
               },
               {
                 span: 4,
                 content: [
-                  { type: 'aside', icon: '💰', title: 'Willingness to Pay', content: 'Validating business viability via subscription interest.' }
+                  { type: 'aside', icon: '💰', title: 'Willingness to Pay', content: 'Stated intent to pay a subscription if launched.' }
                 ]
               }
             ]

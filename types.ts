@@ -41,6 +41,9 @@ export interface CaseStudy {
   highlights?: string[];
   category: string;
   externalUrl?: string;
+  role?: string;
+  timeline?: string;
+  tools?: string[];
   prototype?: { src: string; title: string; };
   content: Chapter[];
 }

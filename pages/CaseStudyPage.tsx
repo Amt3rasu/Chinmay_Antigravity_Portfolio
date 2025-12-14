@@ -142,18 +142,24 @@ export const CaseStudyPage: React.FC = () => {
                                 <p className="text-lg text-muted-foreground leading-relaxed">{project.overview}</p>
                             </div>
                             <div className="flex flex-col gap-8 p-8 bg-card rounded-2xl border border-border">
-                                <div>
-                                    <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Role</h3>
-                                    <p className="text-foreground font-medium">Lead Product Designer</p>
-                                </div>
-                                <div>
-                                    <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Timeline</h3>
-                                    <p className="text-foreground font-medium">4 Weeks</p>
-                                </div>
-                                <div>
-                                    <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Tools</h3>
-                                    <p className="text-foreground font-medium">Figma, React, Tailwind</p>
-                                </div>
+                                {project.role && (
+                                    <div>
+                                        <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Role</h3>
+                                        <p className="text-foreground font-medium">{project.role}</p>
+                                    </div>
+                                )}
+                                {project.timeline && (
+                                    <div>
+                                        <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Timeline</h3>
+                                        <p className="text-foreground font-medium">{project.timeline}</p>
+                                    </div>
+                                )}
+                                {project.tools && (
+                                    <div>
+                                        <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Tools</h3>
+                                        <p className="text-foreground font-medium">{project.tools.join(', ')}</p>
+                                    </div>
+                                )}
                             </div>
                         </div>
 
