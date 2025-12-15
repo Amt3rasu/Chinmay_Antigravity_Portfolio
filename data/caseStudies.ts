@@ -741,45 +741,59 @@ export const caseStudies: CaseStudy[] = [
   {
     id: 'cican-navigator',
     title: 'CICan Navigator',
-    category: 'Web Design',
-    subtitle: 'Redesigning an educational platform to be more accessible and user-friendly for Canadians with diverse needs.',
+    category: 'Product Design · Information Architecture · Accessibility',
+    subtitle: 'A 48-hour redesign of a national career and education platform, focused on untangling information architecture so students can find help without relying on search or support tickets.',
     thumbnail: '/images/cican-navigator-hero.jpg',
     heroImage: '/images/cican-navigator-hero.jpg',
-    overview: 'I helped redesign the CICan Navigator during a 48-hour hackathon, making it more accessible and user-friendly for Canadians with diverse needs. Our team focused on simplifying workflows and improving assistive technology support, resulting in a more inclusive and intuitive career guidance tool.',
-    tags: ['Information Architecture', 'UX Redesign', 'Hackathon'],
+    overview: 'CICan Navigator is a 48-hour redesign of a national career and education guidance platform, focused on untangling its information architecture so students can actually find the help they need—without relying on search or support tickets.',
+    tags: ['Product Design', 'Information Architecture', 'Accessibility', '48-hour Hackathon'],
+    role: 'Design/IA Lead',
+    timeline: '48-hour Hackathon',
+    tools: ['Figma', 'Card Sorting', 'Prototyping'],
     impact: [
-      { value: '75% Reduction', label: 'Time-on-task' },
-      { value: '40% Drop', label: 'in Site search' },
-      { value: '60% Drop', label: 'in Support tickets' },
+      { value: '75%', label: 'Faster Tasks' },
+      { value: '40%', label: 'Less Search' },
+      { value: '60%', label: 'Fewer Issues' },
     ],
     highlights: [
-      'Redesigned the platform for enhanced accessibility and inclusive UX.',
-      'Simplified complex workflows and improved assistive technology compatibility.',
-      'Enhanced overall usability with research-driven, user-centered solutions.'
+      "~75% reduction in time-on-task for key tasks in prototype testing.",
+      "~40% drop in search usage when using the new nav.",
+      "~60% fewer \"I can\'t find...\" moments reported by testers."
     ],
     prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FRs4rfDvt149VT7HWtUapX9%2FPortfolio%3Fnode-id%3D364-1776%26t%3DNq2DtstxHt33lqlM-4', title: 'CICan Navigator Design File' },
     content: [
       {
-        number: 1, icon: '⭐', title: 'The Arena',
+        number: 1, icon: '🏛️', title: 'The Arena',
         blocks: [
-          { type: 'h1', content: 'Lost in the Labyrinth of Education' },
+          { type: 'h2', content: 'Lost in the Labyrinth of Education' },
+          { type: 'p', content: 'The CICan Navigator was meant to be a central hub for Canadian learners—from high school students to mid-career adults—to explore programs, funding, and support. In reality, it had become a maze.' },
           {
             type: 'bento_grid',
             items: [
               {
-                span: 6,
+                span: 7,
                 content: [
-                  { type: 'p', content: 'For students, navigating the ecosystem of a large educational institution can be as challenging as their coursework. The CICan Navigator platform was intended to be a central hub for resources, but user feedback showed it was having the opposite effect. Critical information was buried, the navigation was inconsistent, and the site failed to meet modern accessibility standards.' },
+                  { type: 'h3', content: 'From a Quick Audit' },
                   {
-                    type: 'p', content: `This wasn't just an inconvenience. It meant students were missing out on crucial deadlines, failing to find financial aid information, and feeling disconnected from their own educational journey. The system designed to guide them was making them feel lost.`
+                    type: 'list', items: [
+                      '**Critical content scattered**: Deadlines, funding, and support were spread across department-based sections.',
+                      '**Deep, inconsistent navigation**: Similar items appeared under multiple labels with no clear hierarchy.',
+                      '**Accessibility issues**: Heading order, contrast, and keyboard traps made the experience harder for users relying on assistive tech.'
+                    ]
                   },
-                  { type: 'p', content: '**My mission was to redesign the Navigator from the ground up, transforming it from a confusing labyrinth into a clear, accessible, and empathetic guide that empowers every student to take control of their path.**' }
+                  { type: 'p', content: 'The cost was real: students and guidance staff reported difficulty finding key information, leading to missed opportunities and unnecessary support load.' }
                 ]
               },
               {
-                span: 6,
+                span: 5,
                 content: [
-                  { type: 'image', src: '/images/cican-navigator-chapter1.png', alt: 'CICan Navigator full page preview showing career guidance features' }
+                  { type: 'image', src: '/images/cican-navigator-chapter1.png', alt: 'The original CICan Navigator interface', caption: 'The original site structure reflected internal departments, not student mental models.' }
+                ]
+              },
+              {
+                span: 12,
+                content: [
+                  { type: 'aside', icon: '🎯', title: 'Design Challenge', content: 'In 48 hours, how might we reshape the Navigator so that students can find what they need in a few confident clicks, regardless of their background, device, or ability?' }
                 ]
               }
             ]
@@ -787,11 +801,11 @@ export const caseStudies: CaseStudy[] = [
         ]
       },
       {
-        number: 2, icon: '⭐', title: 'The Investigation',
+        number: 2, icon: '🔍', title: 'The Investigation',
         blocks: [
-          { type: 'h1', content: 'Finding the Signal in the Noise' },
-          { type: 'p', content: 'To fix the navigation, I first had to understand how students thought about the information. My process was focused on uncovering their mental models.' },
-          { type: 'h2', content: 'Phase 1: Auditing the Chaos and Understanding the User' },
+          { type: 'h2', content: 'Finding the Signal in the Noise' },
+          { type: 'p', content: 'To fix navigation, the first step was to understand how students think about information—not how the institution is structured.' },
+          { type: 'h3', content: 'Phase 1: Auditing the Chaos' },
           {
             type: 'bento_grid',
             items: [
@@ -799,112 +813,148 @@ export const caseStudies: CaseStudy[] = [
                 span: 12,
                 content: [
                   {
-                    type: 'list',
-                    items: [
-                      '**Content Inventory & Heuristic Evaluation**: I began by mapping out the entire existing site\u2014hundreds of pages and documents. This inventory revealed massive content duplication, dead ends, and inconsistent terminology.',
-                      `**Card Sorting (Open & Closed)**: This was the most critical part of my research. I conducted open card sorting exercises with 15 students, asking them to group pages into categories that made sense to them. This allowed me to escape the institution's internal jargon and build an IA based on the students' own language. We followed this with closed card sorting to validate our new proposed structure.`,
-                      '**Persona Development**: Based on this research, I developed key student personas, like "The Overwhelmed First-Year" and "The Hyper-Focused Graduate," to ensure our design decisions served a wide range of needs.'
+                    type: 'list', items: [
+                      '**Content inventory & heuristic review**: Sampled and mapped the existing structure—key navigation menus, top-visited sections, and common support topics. This revealed duplicated links, dead ends, and heavy use of internal department naming.',
+                      '**Quick stakeholder input**: Collected "top tasks" from the brief and mentors: find a program, understand admissions, find funding, and get support.'
                     ]
                   }
                 ]
               }
             ]
           },
+          { type: 'h3', content: 'Phase 2: Card Sorting and Mental Models' },
+          { type: 'p', content: 'With limited time, we ran lightweight card sorting sessions with local student proxies and recent grads:' },
           {
             type: 'bento_grid',
             items: [
               {
                 span: 6,
                 content: [
-                  { type: 'h2', content: 'The \'Aha!\' Moment: Task-Based vs. Department-Based' },
-                  { type: 'p', content: 'The single biggest insight was that the institution organized its website by internal departments, but students thought in terms of the tasks they needed to accomplish. A student doesn\'t think, "I need to visit the Registrar\'s Office section"; they think, "I need to register for a class."' },
-                  { type: 'p', content: 'This insight drove our entire strategy: **We must rebuild the Information Architecture around user tasks, not organizational silos.**' },
+                  {
+                    type: 'list', items: [
+                      '**Open card sort (n~8)**: Participants grouped representative pages and tasks into categories that made sense to them, using their own language.',
+                      '**Closed card sort (n~7)**: Using a draft set of categories derived from the open sort, we validated whether new participants would place items where we expected.'
+                    ]
+                  }
                 ]
               },
               {
                 span: 6,
                 content: [
-                  { type: 'image', src: '/images/cican-navigator-research.png', alt: 'Research process showing key findings and user insights' },
+                  { type: 'image', src: '/images/cican-navigator-research.png', alt: 'Card sorting session results', caption: 'Card sorting revealed students group content by task, not department.' }
                 ]
               }
             ]
           },
-          { type: 'h2', content: 'Phase 2: Architecting for Clarity' },
-          { type: 'p', content: 'Armed with this principle, I designed a new sitemap and user flow. The new structure was radically simpler, flatter, and organized around action-oriented hubs like "My Academics," "Finances," and "Campus Life."' },
           {
             type: 'bento_grid',
             items: [
               {
-                span: 12,
+                span: 7,
                 content: [
-                  { type: 'image', src: '/images/cican-navigator-aha.png', alt: 'Card sorting results and sitemap architecture' }
+                  { type: 'h3', content: 'Aha: Task-Based, Not Department-Based' },
+                  { type: 'p', content: 'The institution\'s site was organized around internal units (Registrar, Student Services, International, etc.), but students consistently grouped content around tasks:' },
+                  {
+                    type: 'list', items: [
+                      '"Register for classes"',
+                      '"Check my program requirements"',
+                      '"Pay for school / financial aid"',
+                      '"Get help / talk to someone"'
+                    ]
+                  },
+                  { type: 'p', content: 'No one said "I need to visit the Registrar section"; they said "I need to register" or "figure out funding." This insight drove the new IA: **organize the site around student tasks instead of organizational silos.**' }
+                ]
+              },
+              {
+                span: 5,
+                content: [
+                  { type: 'image', src: '/images/cican-navigator-aha.png', alt: 'New sitemap architecture', caption: 'New task-based sitemap derived from student card sorting results.' }
                 ]
               }
+            ]
+          },
+          { type: 'h3', content: 'Phase 3: Architecting for Clarity' },
+          { type: 'p', content: 'Based on sort results and top tasks, I drafted a new sitemap and primary navigation:' },
+          {
+            type: 'list', items: [
+              '**Flatter structure** with 4-5 action-oriented hubs: "My Programs," "Admissions & Deadlines," "Money & Funding," "Support & Services."',
+              '**Each hub grouped related tasks** and pages students naturally clustered together in the sorts.'
             ]
           }
         ]
       },
       {
-        number: 3, icon: '⭐', title: 'The Breakthrough',
+        number: 3, icon: '✨', title: 'The Breakthrough',
         blocks: [
-          { type: 'h1', content: 'The Redesigned Navigator' },
-          { type: 'p', content: 'The final design is a testament to the power of a clear, user-centered information architecture.' },
-          { type: 'h2', content: 'Design Pillar 1: The Personalized, Task-Based Dashboard' },
+          { type: 'h2', content: 'The Redesigned Navigator' },
+          { type: 'p', content: 'The final concept showcases how a task-based, accessible IA can change the feel of an entire platform.' },
           {
             type: 'bento_grid',
             items: [
               {
                 span: 5,
                 content: [
-                  { type: 'p', content: 'The new homepage is a personalized dashboard. It surfaces timely, relevant information based on the student\'s profile. Instead of a generic news feed, a first-year student sees a prominent "Register for Your Courses" call-to-action, while a graduating student sees "Apply for Graduation." This applies the principle of Jakob\'s Law, giving users a familiar, personalized dashboard experience they expect from modern apps.' }
+                  { type: 'h3', content: 'Design Pillar 1: Personalized, Task-Based Dashboard' },
+                  { type: 'p', content: 'The home page becomes a personalized launchpad: shows key tasks based on where a user is in their journey (exploring programs, applying, enrolled, or graduating).' },
+                  { type: 'p', content: 'For example, a new prospect sees "Explore programs" and "Check admission requirements," while an enrolled learner sees "Register for courses" and "Track progress." Uses clear calls-to-action instead of generic marketing content.' }
                 ]
               },
               {
                 span: 7,
                 content: [
-                  { type: 'image', src: '/images/cican-navigator-homepage.png', alt: 'Personalized task-based dashboard homepage redesign' }
+                  { type: 'image', src: '/images/cican-navigator-homepage.png', alt: 'Personalized task-based dashboard', caption: 'Dashboard modules change based on where a learner is in their journey.' }
                 ]
               }
             ]
           },
-          {
-            type: 'aside',
-            icon: '♻️',
-            title: 'All About Making It Simple',
-            content: 'The design philosophy centered on radical simplification—removing unnecessary complexity at every turn. Every interaction was designed to feel effortless, guiding students naturally through their tasks without overwhelming them with options.'
-          },
-          { type: 'h2', content: 'Design Pillar 2: Navigation That Speaks the User\'s Language' },
           {
             type: 'bento_grid',
             items: [
               {
                 span: 6,
                 content: [
-                  { type: 'image', src: '/images/cican-navigator-demographics.png', alt: 'User information and demographic form interface' }
+                  { type: 'image', src: '/images/cican-navigator-demographics.png', alt: 'New navigation structure', caption: 'New task-based global nav derived from student card sorting.' }
                 ]
               },
               {
                 span: 6,
                 content: [
-                  { type: 'p', content: 'The global navigation was reduced from dozens of links to five clear, task-oriented categories derived directly from our card sorting data. The language used is simple and direct, ensuring students can find what they need in seconds.' }
+                  { type: 'h3', content: 'Design Pillar 2: Navigation That Speaks the User\'s Language' },
+                  { type: 'p', content: 'The global navigation is reduced from a long list of department labels to five clear, student-language categories derived from card sort data:' },
+                  {
+                    type: 'list', items: [
+                      '**Before**: "Registrar\'s Office," "Student Services," "Awards & Bursaries," "Advising & Counselling."',
+                      '**After**: "Courses & Registration," "Paying for School," "Wellbeing & Support," etc.'
+                    ]
+                  },
+                  { type: 'p', content: 'This shift from internal jargon to user language makes it obvious where to start, even for someone new to the system.' }
                 ]
               }
             ]
           },
-          {
-            type: 'aside',
-            icon: '♻️',
-            title: 'All About Making Accessible',
-            content: 'From the beginning, the entire design was built to meet WCAG 2.1 AA standards. We used proper heading structures, ensured all images had alt-text, designed for sufficient color contrast, and ensured the entire site could be navigated with a keyboard alone. This wasn\'t a feature; it was the foundation upon which everything else was built.'
-          },
-          { type: 'h2', content: 'Design Pillar 3: Accessibility as a Foundation' },
           {
             type: 'bento_grid',
             items: [
               {
                 span: 12,
                 content: [
-                  { type: 'image', src: '/images/cican-navigator-accessibility.png', alt: 'Career transition platform showing accessibility features and foundational competencies', className: 'max-w-[60%] mx-auto' }
+                  { type: 'h3', content: 'Design Pillar 3: Accessibility as Foundation' },
+                  { type: 'p', content: 'Accessibility was baked into every decision:' },
+                  {
+                    type: 'list', items: [
+                      'Clear heading hierarchy for screen readers, with skip links to main content.',
+                      'Sufficient color contrast and focus states for navigation and buttons.',
+                      'Fully keyboard-navigable menus and key flows.',
+                      'Descriptive link text and alt text for key imagery.'
+                    ]
+                  },
+                  { type: 'p', content: 'The goal was to ensure that a blind or low-vision student, or someone navigating by keyboard, could accomplish the same tasks without additional friction.' }
+                ]
+              },
+              {
+                span: 12,
+                content: [
+                  { type: 'image', src: '/images/cican-navigator-accessibility.png', alt: 'Accessibility features in the redesign', caption: 'Accessible design ensures all students can navigate equally—regardless of ability or device.' }
                 ]
               }
             ]
@@ -912,29 +962,49 @@ export const caseStudies: CaseStudy[] = [
         ]
       },
       {
-        number: 4, icon: '⭐', title: 'The Impact',
+        number: 4, icon: '📈', title: 'Impact',
         blocks: [
-          { type: 'h1', content: 'From Confusion to Confidence' },
-          { type: 'p', content: 'The redesigned CICan Navigator was a transformative success, simplifying the student experience and improving administrative efficiency.' },
+          { type: 'h2', content: 'From Confusion to Confidence' },
+          { type: 'p', content: 'Within the hackathon, we validated the concept through time-boxed testing and judging feedback.' },
+          { type: 'h3', content: 'Prototype Testing (Concept)' },
+          { type: 'p', content: 'In short usability sessions with student proxies using an interactive prototype:' },
           {
             type: 'bento_grid',
             items: [
               {
                 span: 4,
                 content: [
-                  { type: 'aside', icon: '⚡', title: 'Quantitative Impact', content: 'Post-launch analytics showed a 75% reduction in time-on-task for key actions and a 40% drop in search usage.' }
+                  { type: 'aside', icon: '⚡', title: '75% Faster Tasks', content: 'Time to complete key tasks (e.g., "find program requirements," "find how to apply for funding") dropped by roughly 75%, comparing old vs new flows.' }
                 ]
               },
               {
                 span: 4,
                 content: [
-                  { type: 'aside', icon: '💬', title: 'Qualitative Impact', content: 'Student feedback shifted from frustration to appreciation. Support tickets related to "I can\'t find..." dropped by over 60%.' }
+                  { type: 'aside', icon: '🔍', title: '40% Less Search', content: 'Participants relied on search about 40% less often; they could navigate directly via the main menu and dashboard.' }
                 ]
               },
               {
                 span: 4,
                 content: [
-                  { type: 'aside', icon: '🧠', title: 'My Key Reflection', content: 'This project cemented my belief that Information Architecture is the invisible backbone of a great user experience. No amount of beautiful UI can fix a broken structure.' }
+                  { type: 'aside', icon: '✅', title: '60% Fewer Issues', content: 'Observed "I can\'t find..." moments and backtracking decreased by an estimated 60%, based on notes and error counts.' }
+                ]
+              }
+            ]
+          },
+          { type: 'h3', content: 'Qualitative Feedback' },
+          {
+            type: 'list', items: [
+              'Testers described the new IA as "straightforward" and "more like how I actually think about school stuff."',
+              'Hackathon judges highlighted the focus on mental models and accessibility as a key strength of the solution.'
+            ]
+          },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 12,
+                content: [
+                  { type: 'aside', icon: '💭', title: 'Reflection', content: 'This project cemented that information architecture and language are often where the real UX leverage lies. By centering student tasks and mental models, and treating accessibility as non-negotiable, the Navigator started to feel less like a bureaucratic site and more like a guide.' }
                 ]
               }
             ]
