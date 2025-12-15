@@ -138,11 +138,29 @@ export const IconCloud: React.FC<IconCloudProps> = ({ iconUrls }) => {
             rotationX = -y * 0.0001;
         };
 
+        // Touch interaction for mobile
+        const handleTouchMove = (e: TouchEvent) => {
+            if (!isLoaded || !canvas || e.touches.length === 0) return;
+
+            const touch = e.touches[0];
+            const rect = canvas.getBoundingClientRect();
+            const centerX = rect.left + rect.width / 2;
+            const centerY = rect.top + rect.height / 2;
+
+            const x = touch.clientX - centerX;
+            const y = touch.clientY - centerY;
+
+            rotationY = x * 0.0002; // Slightly more sensitive for touch
+            rotationX = -y * 0.0002;
+        };
+
         window.addEventListener('mousemove', handleMouseMove);
+        window.addEventListener('touchmove', handleTouchMove, { passive: true });
 
         return () => {
             cancelAnimationFrame(animationFrameId);
             window.removeEventListener('mousemove', handleMouseMove);
+            window.removeEventListener('touchmove', handleTouchMove);
         };
     }, [iconUrls]);
 

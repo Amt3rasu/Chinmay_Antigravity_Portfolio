@@ -137,14 +137,16 @@
       font-weight: 700;
     }
 
-    /* Custom cursor for modern mode */
-    body.mode-modern {
-      cursor: none;
-    }
+    /* Custom cursor for modern mode - only on non-touch devices */
+    @media (hover: hover) and (pointer: fine) {
+      body.mode-modern {
+        cursor: none;
+      }
 
-    body.mode-modern a,
-    body.mode-modern button {
-      cursor: none;
+      body.mode-modern a,
+      body.mode-modern button {
+        cursor: none;
+      }
     }
 
 

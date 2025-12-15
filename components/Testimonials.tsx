@@ -28,7 +28,7 @@ export const Testimonials: React.FC = () => {
                     {testimonials.map((ref, index) => (
                         <div
                             key={index}
-                            className="flex-shrink-0 w-[500px] md:w-[700px] p-10 rounded-2xl bg-card border border-border relative"
+                            className="flex-shrink-0 w-[85vw] max-w-[500px] md:w-[500px] lg:w-[700px] lg:max-w-none p-6 md:p-10 rounded-2xl bg-card border border-border relative"
                         >
                             <IconQuote className="absolute top-8 left-8 w-12 h-12 text-primary/20" />
                             <p className="text-lg md:text-xl text-foreground/90 leading-relaxed mb-8 relative z-10 pt-12">
