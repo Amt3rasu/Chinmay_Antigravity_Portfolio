@@ -1016,40 +1016,60 @@ export const caseStudies: CaseStudy[] = [
   {
     id: 'sunnys-finance',
     title: 'Sunny\'s Finance Dashboard',
-    category: 'Fintech',
-    subtitle: 'A data-driven financial dashboard for wealth advisors that transforms scattered client information into a clear, actionable platform.',
+    category: 'Product Design · Data Visualization · Design Systems',
+    subtitle: 'A concept dashboard giving wealth advisors a single, trustworthy view of each client\'s financial life.',
     thumbnail: '/images/sunnys-finance-hero.jpg',
     heroImage: '/images/sunnys-finance-hero.jpg',
-    overview: 'I designed a comprehensive, data-driven financial dashboard for wealth advisors that transforms scattered client information into a clear, actionable, and collaborative platform, designed to reduce administrative overhead and foster more strategic client conversations.',
-    tags: ['Data Visualization', 'Info Architecture', 'Design System'],
+    overview: 'Sunny\'s Finance is a concept dashboard that gives wealth advisors a single, trustworthy view of each client\'s financial life—turning scattered spreadsheets, PDFs, and accounts into a structured, conversation-ready interface.',
+    tags: ['Product Design', 'Data Visualization', 'Design Systems'],
+    role: 'Solo Designer',
+    timeline: 'Concept Project (4-6 Weeks)',
+    tools: ['Figma', 'Design System', 'Prototyping'],
     impact: [
       { value: '✔️', label: 'Data Visualization' },
       { value: '✔️', label: 'Info Architecture' },
       { value: '✔️', label: 'Design System' },
     ],
+    highlights: [
+      "Data Visualization: Charts and progress indicators designed for quick scanning.",
+      "Information Architecture: Card-based modular layout for cognitive clarity.",
+      "Design System Development: Reusable Figma library for consistent, scalable UI."
+    ],
     prototype: {
-      src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FXPqh1WKUyvm0EJMQNIdfgX%2FFinancial-Management-Software%3Fnode-id%3D484-2639', title: `Sunny's Finance Design File`
+      src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FXPqh1WKUyvm0EJMQNIdfgX%2FFinancial-Management-Software%3Fnode-id%3D484-2639', title: 'Sunny\'s Finance Design File'
     },
     content: [
       {
-        number: 1, icon: '⭐', title: 'The Arena',
+        number: 1, icon: '💼', title: 'The Arena',
         blocks: [
-          { type: 'h1', content: 'The Advisor\'s Dilemma' },
+          { type: 'h2', content: 'The Advisor\'s Dilemma' },
+          { type: 'p', content: 'Most advisors don\'t struggle with strategy; they struggle with fragmentation. Client information lives across custodian portals, bank dashboards, PDFs, emailed statements, and spreadsheets for each review.' },
           {
             type: 'bento_grid',
             items: [
               {
                 span: 7,
                 content: [
-                  { type: 'p', content: 'In the world of personal finance, clarity is the most valuable commodity. Yet, financial advisors—the very people tasked with providing it—are often drowning in the opposite: a sea of fragmented data scattered across spreadsheets, bank statements, PDF files, and disparate software. They spend more time wrestling with data entry and administrative tasks than they do providing the high-value, strategic advice their clients depend on.' },
-                  { type: 'p', content: 'On the other side, clients feel disconnected, viewing their financial health through a narrow keyhole of monthly statements. They lack a single, holistic view of their progress, making it difficult to feel engaged and confident in their long-term goals.' },
-                  { type: 'p', content: '**The mission was to design "Finance," a sophisticated yet intuitive dashboard that serves as a single source of truth—empowering advisors to work more efficiently and clients to see their financial future more clearly than ever before.**' }
+                  { type: 'h3', content: 'This Means' },
+                  {
+                    type: 'list', items: [
+                      '**Too much time** spent collecting and reconciling data before meetings.',
+                      '**Difficult live conversations**, because views are spread across multiple windows.',
+                      '**Clients seeing only narrow slices** of their financial picture, often in formats they find intimidating.'
+                    ]
+                  }
                 ]
               },
               {
                 span: 5,
                 content: [
-                  { type: 'image', src: '/images/sunnys-finance-dashboard-light.png', alt: 'Sunny\'s Finance dashboard showing saving goals, expenses, and credit score' }
+                  { type: 'image', src: '/images/sunnys-finance-dashboard-light.png', alt: 'Sunny\'s Finance dashboard overview', caption: 'The main dashboard summarizing goals, balances, and key alerts for quick review prep.' }
+                ]
+              },
+              {
+                span: 12,
+                content: [
+                  { type: 'aside', icon: '🎯', title: 'Design Challenge', content: 'Create a dashboard that becomes a single source of truth for each client—simple enough to share in meetings, but powerful enough for advisors to make confident decisions quickly.' }
                 ]
               }
             ]
@@ -1057,83 +1077,130 @@ export const caseStudies: CaseStudy[] = [
         ]
       },
       {
-        number: 2, icon: '⭐', title: 'Philosophy & Process',
+        number: 2, icon: '🧭', title: 'Process and Design Principles',
         blocks: [
-          { type: 'h1', content: 'My Design Philosophy & Process' },
-          { type: 'p', content: 'For a platform managing sensitive financial data, the design must be built on a foundation of trust and psychological comfort. Before drawing a single pixel, I established three core design principles to guide every decision:' },
+          { type: 'h2', content: 'How the System Came Together' },
+          { type: 'p', content: 'For a product that handles sensitive financial data, the interface must not only be usable, but also feel reliable and calm. The work was guided by three principles:' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '👁️', title: 'Clarity Above All', content: 'Structure every view around a small set of key questions an advisor needs to answer first. Use charts and copy that can be read in a few seconds, not minutes.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '📊', title: 'Data-Rich, Not Overwhelming', content: 'Use progressive disclosure: show summaries up front, then let advisors drill down into details only when needed. Group information into logical modules.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '✨', title: 'Confidence Through Craft', content: 'Apply a restrained, professional aesthetic (calm color palette, consistent type scale, generous spacing) to build trust.' }
+                ]
+              }
+            ]
+          },
+          { type: 'h3', content: 'Steps in the Process' },
           {
             type: 'bento_grid',
             items: [
               {
                 span: 6,
                 content: [
-                  { type: 'list', items: ['**Clarity Above All**: The interface must translate complex data into instantly understandable visuals. The goal is zero ambiguity.', '**Data-Rich, Not Data-Overwhelming**: Employ progressive disclosure at every opportunity. Show high-level summaries first, and provide clear pathways for advisors to drill down into details when necessary.', '**Confidence Through Craft**: The visual design must be immaculate. A professional, calm, and polished aesthetic is not just decoration; it\'s a crucial component in building user trust in the platform.'] }
+                  {
+                    type: 'list', items: [
+                      '**Task mapping**: Mapped a typical quarterly review workflow—preparing for a meeting, running the conversation, and documenting follow-ups.',
+                      '**Information model**: Defined key entities and relationships: accounts, holdings, goals, cash flow categories, and documents. This drove which data appears together on each screen.',
+                      '**Sketches and wireframes**: Explored different layouts for the main dashboard (top-line KPIs, modules, charts), aiming for minimal eye travel during a meeting.',
+                      '**Design system**: Built a Figma library—card components, chart patterns, table styles, status tags, and layout grids—to keep everything consistent as the dashboard grows.'
+                    ]
+                  }
                 ]
               },
               {
                 span: 6,
                 content: [
-                  { type: 'image', src: '/images/sunnys-finance-profile-light.png', alt: 'Client profile page showing personal information and file management' }
+                  { type: 'image', src: '/images/sunnys-finance-profile-light.png', alt: 'Client profile page design', caption: 'Client profile consolidates personal info, account details, and documents in one view.' }
                 ]
               }
             ]
-          },
-          { type: 'h2', content: 'My Process' },
-          { type: 'p', content: 'My process was centered on visual exploration and system-building. I conducted a **competitive analysis** of leading fintech platforms like Personal Capital and Wealthsimple to identify best-in-class patterns for data visualization. This informed a **component-based design system** in Figma, ensuring every element—from a button to a data chart—was consistent, scalable, and pixel-perfect.' }
+          }
         ]
       },
       {
-        number: 3, icon: '⭐', title: 'The Breakthrough',
+        number: 3, icon: '✨', title: 'The Breakthrough',
         blocks: [
-          { type: 'h1', content: 'An Ecosystem of Clarity' },
-          { type: 'p', content: 'The final solution is a comprehensive interface that gives advisors a powerful command center to manage their clients\' financial lives. Each screen and component was meticulously crafted to serve a specific user need.' },
-          { type: 'h2', content: 'The Command Center: The Advisor Dashboard' },
+          { type: 'h2', content: 'An Ecosystem of Clarity' },
+          { type: 'p', content: 'The final concept consists of three tightly connected views: the Advisor Dashboard, the Detail Overlay, and the Client Profile.' },
+          { type: 'h3', content: '3.1 The Advisor\'s Command Center: Dashboard' },
+          { type: 'p', content: 'The dashboard is designed so an advisor can prep for a review in minutes:' },
           {
             type: 'bento_grid',
             items: [
               {
                 span: 5,
                 content: [
-                  { type: 'p', content: 'The dashboard is the heart of the experience. It provides a complete, "at-a-glance" summary of a client\'s financial health.' },
-                  { type: 'list', items: ['**Information Hierarchy**: The most critical data—the client\'s **Total Balance**—is given the most visual prominence. This immediately answers the advisor\'s first question.', '**Actionable Modules**: The screen is organized into logical cards for **Saving Goals, Expenses, AI Recommendations, and Credit Score**. This modular approach, based on **Miller\'s Law**, breaks down complex information into digestible chunks to avoid cognitive overload.', '**Visualized Progress**: Savings goals aren\'t just numbers; they are visualized with progress bars, providing an immediate and motivating sense of accomplishment for the client.'] }
+                  {
+                    type: 'list', items: [
+                      '**Prioritized hierarchy**: The client\'s total balance and key goal status sit at the top, answering "how are we doing overall?" at a glance.',
+                      '**Modular cards**: Saving Goals, Cash Flow, AI Recommendations, and Credit Score each live in dedicated cards. Each card tackles one mental question and can be scanned independently.',
+                      '**Visual progress**: Goals use progress bars and simple "on track / off track" indicators; the credit score shows a short trend line instead of just a static number.'
+                    ]
+                  }
                 ]
               },
               {
                 span: 7,
                 content: [
-                  { type: 'image', src: '/images/sunnys-finance-overlay-light.png', alt: 'Expense detail overlay showing Essential, Discretionary, and Savings categories' },
+                  { type: 'image', src: '/images/sunnys-finance-dashboard-dark.png', alt: 'Dashboard dark mode view', caption: 'In a review, this screen becomes the shared canvas between advisor and client.' }
                 ]
               }
             ]
           },
-          { type: 'h2', content: 'Seamless Detail View' },
+          { type: 'h3', content: '3.2 Detail Without Losing Context: Overlay' },
+          { type: 'p', content: 'Advisors often need to dive deeper while staying on the main view with the client. The "View detail" pattern opens a modal overlay instead of a new page:' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 7,
+                content: [
+                  { type: 'image', src: '/images/sunnys-finance-overlay-light.png', alt: 'Expense detail overlay', caption: 'Overlay preserves dashboard context while showing detailed expense breakdowns.' }
+                ]
+              },
+              {
+                span: 5,
+                content: [
+                  {
+                    type: 'list', items: [
+                      '**Context preservation**: The main dashboard remains visible behind the overlay, so both parties remember where they started.',
+                      '**Structured breakdown**: Expenses and cash flows are grouped into Essential, Discretionary, and Savings categories with aligned values and subtle color cues.',
+                      '**Conversation-first design**: The layout supports pointing and talking through individual categories without scrolling through a full-page report.'
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          { type: 'h3', content: '3.3 A Single Source of Truth: Client Profile' },
+          { type: 'p', content: 'The Client Profile view consolidates everything an advisor needs to know before or during a meeting:' },
           {
             type: 'bento_grid',
             items: [
               {
                 span: 12,
                 content: [
-                  { type: 'p', content: 'Advisors need to move seamlessly from a high-level overview to granular details. When clicking "View detail" on the Total Balance card, a modal overlay appears.' },
-                  { type: 'list', items: ['**Context Preservation**: By using an overlay instead of a separate page, the advisor never loses the context of the main dashboard. This makes the experience feel faster and more fluid.', '**Clear Categorization**: Expenses are clearly bucketed into **Essential, Discretionary, and Savings**, with intuitive icons and right-aligned values for quick scanning. This allows an advisor to pinpoint specific areas for discussion in seconds.'] }
-                ]
-              }
-            ]
-          },
-          { type: 'h2', content: 'A Single Source of Truth: The Client Profile' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 6,
-                content: [
-                  { type: 'image', src: '/images/sunnys-finance-dashboard-dark.png', alt: 'Dashboard dark mode showing saving goals and expenses' }
-                ]
-              },
-              {
-                span: 6,
-                content: [
-                  { type: 'p', content: 'This screen consolidates all of a client\'s core information and documentation, eliminating the need for advisors to hunt through folders or emails.' },
-                  { type: 'list', items: ['**Efficient Layout**: The two-column design separates client data on the left from their documents on the right. This creates a clear, logical separation of information types.', '**Intuitive File Management**: The design includes a large, clear drag-and-drop area for uploads, with a progress bar for active uploads and clear checkmarks for completed ones. The "Download" section uses easily recognizable icons, making it effortless for an advisor to generate reports for client meetings.'] }
+                  {
+                    type: 'list', items: [
+                      '**Two-column layout**: Personal and account details on the left; documents and reports on the right. This mirrors how advisors think ("who/what" vs "supporting paperwork").',
+                      '**File management that doesn\'t get in the way**: Drag-and-drop upload zone, clear upload progress, and a concise list of downloadable reports. Icons and labels ensure quick-glance recognition.'
+                    ]
+                  },
+                  { type: 'p', content: 'Together, these views support the entire flow from preparation to conversation to follow-up.' }
                 ]
               }
             ]
@@ -1141,22 +1208,46 @@ export const caseStudies: CaseStudy[] = [
         ]
       },
       {
-        number: 4, icon: '⭐', title: 'Reflection',
+        number: 4, icon: '💭', title: 'Reflection and Next Steps',
         blocks: [
-          { type: 'h1', content: 'Reflection & Next Steps' },
+          { type: 'h2', content: 'Balancing Data Density with Calm Clarity' },
+          { type: 'p', content: 'This project was an exercise in balancing data density with calm clarity. It highlighted that:' },
           {
             type: 'bento_grid',
             items: [
               {
                 span: 6,
                 content: [
-                  { type: 'list', items: ['**Key Learning**: A successful UI is not just a collection of pretty elements; it\'s a carefully orchestrated system of information architecture. The modular card system was crucial in creating an experience that feels both comprehensive and uncluttered.', '**Future-Ready Design**: Because this UI was built on a robust design system, it is ready for development and future expansion. New features and modules can be added seamlessly while maintaining perfect visual and interactive consistency.'] }
+                  {
+                    type: 'list', items: [
+                      '**Strong UI in finance is really strong information architecture in disguise**; the card-based layout and overlays do most of the cognitive heavy lifting.',
+                      '**A consistent design system is essential** in data-heavy products; it ensures new modules can be added later (e.g., tax projections, scenario analysis) without breaking the visual language.'
+                    ]
+                  }
                 ]
               },
               {
                 span: 6,
                 content: [
-                  { type: 'p', content: 'This project solidified my belief that thoughtful UI design can be a powerful business tool, capable of turning complex data into the clarity and confidence every financial advisor strives to provide.' }
+                  { type: 'h3', content: 'If This Moved Forward' },
+                  {
+                    type: 'list', items: [
+                      '**Validate flows** with real advisors through prototype tests, focusing on prep time and meeting fluency.',
+                      '**Explore a client-facing companion view** derived from the same components but with simplified language and fewer controls.',
+                      '**Integrate compliance considerations** (notes, audit trails) into the design system so the UI supports regulatory realities as well as conversations.'
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 12,
+                content: [
+                  { type: 'aside', icon: '💡', title: 'Key Insight', content: 'A successful UI is not just a collection of pretty elements; it\'s a carefully orchestrated system of information architecture. The modular card system was crucial in creating an experience that feels both comprehensive and uncluttered.' }
                 ]
               }
             ]
