@@ -1117,6 +1117,7 @@ export const caseStudies: CaseStudy[] = [
       "40% reduction in data entry errors via inline validation.",
       "35% faster onboarding sessions (12 min → 7.8 min)."
     ],
+    prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fk9FwBBCiNodBDGsmH68zho%2FCognitive-Load-Management-Chinmay%3Fpage-id%3D0%253A1%26node-id%3D4-570%26p%3Df%26viewport%3D-576%252C1455%252C0.24%26t%3DtbF8cfoQy3woM9SG-1%26scaling%3Dscale-down%26content-scaling%3Dfixed', title: 'Cognitive Clarity Interactive Prototype' },
     content: [
       {
         number: 1, icon: '🏰', title: 'The Arena',
@@ -1231,7 +1232,7 @@ export const caseStudies: CaseStudy[] = [
                 span: 12,
                 content: [
                   { type: 'h3', content: 'Pillar 1: The Agent’s "Co-pilot"' },
-                  { type: 'image', src: '/images/cognitive-clarity-blueprint.jpg', alt: 'Agent Co-pilot Dashboard', caption: 'A control dashboard showing progress, risks, and follow-up prompts—turning agents back into advisors.' },
+                  { type: 'image', src: '/images/cognitive-clarity-pillar1.png', alt: 'Agent Co-pilot Dashboard', caption: 'A control dashboard showing progress, risks, and follow-up prompts—turning agents back into advisors.' },
                   { type: 'p', content: 'Agents see a clear progress overview with fast navigation. If a customer starts online, the agent can pick up immediately without re-entering data.' }
                 ]
               },
@@ -1239,7 +1240,7 @@ export const caseStudies: CaseStudy[] = [
                 span: 6,
                 content: [
                   { type: 'h3', content: 'Pillar 2: Guided Conversation' },
-                  { type: 'image', src: '/images/cognitive-clarity-ui-mockup.jpg', alt: 'Customer Guided Form', caption: 'Large, focused screens with friendly copy and contextual hints.' },
+                  { type: 'image', src: '/images/cognitive-clarity-pillar2.png', alt: 'Customer Guided Form', caption: 'Large, focused screens with friendly copy and contextual hints.' },
                   {
                     type: 'list', items: [
                       '**Focused Screens**: One topic at a time.',
