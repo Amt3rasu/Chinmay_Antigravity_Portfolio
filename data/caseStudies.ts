@@ -1098,52 +1098,48 @@ export const caseStudies: CaseStudy[] = [
   {
     id: 'cognitive-clarity',
     title: 'Cognitive Clarity (Zuo Insurance)',
-    category: 'Product Design · UX Research · Client Engagement',
-    subtitle: 'Redesigning the insurance onboarding flow to reduce cognitive load and improve usability.',
+    category: 'UX Redesign',
+    subtitle: 'Redesigning the data collection experience for an insurance agency, focusing on reducing cognitive load.',
     thumbnail: '/images/cognitive-clarity-hero.jpg',
     heroImage: '/images/cognitive-clarity-hero.jpg',
-    overview: 'Cognitive Clarity is a redesign of Zuo Insurance’s client onboarding flow, focused on reducing cognitive load and improving usability for both agents and customers so that insurance data collection feels like a guided conversation instead of an interrogation.',
-    tags: ['Product Design', 'UX Research', 'Concept / Client Engagement'],
-    role: 'Lead Product Designer',
-    timeline: 'Concept Project (6 Weeks)',
-    tools: ['Figma', 'Miro', 'Prototyping'],
+    overview: 'I redesigned the data collection experience for an insurance agency, focusing on reducing cognitive load and improving usability for both clients and agents. The project aimed to streamline the process, increase form completion rates, and enhance overall user engagement.',
+    tags: ['UX Design', 'Cognitive Psychology', 'Form Design'],
     impact: [
-      { value: '22%', label: 'Inc. Completion' },
-      { value: '40%', label: 'Fewer Errors' },
-      { value: '35%', label: 'Faster Onboarding' },
+      { value: '22% Increase', label: 'Form completion' },
+      { value: '40% Decrease', label: 'in errors' },
+      { value: '35% Reduced', label: 'Call Times' },
     ],
     highlights: [
-      "22% increase in form completion rate.",
-      "40% reduction in data entry errors via inline validation.",
-      "35% faster onboarding sessions (12 min → 7.8 min)."
+      "Cut agent-assisted call times by 35% with faster form completion.",
+      "Increased form completion rates by 22% through a complete user-centric redesign.",
+      "Reduced data entry errors by 40% using real-time validation and e-signature integration."
     ],
     prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fk9FwBBCiNodBDGsmH68zho%2FCognitive-Load-Management-Chinmay%3Fpage-id%3D0%253A1%26node-id%3D4-570%26p%3Df%26viewport%3D-576%252C1455%252C0.24%26t%3DtbF8cfoQy3woM9SG-1%26scaling%3Dscale-down%26content-scaling%3Dfixed', title: 'Cognitive Clarity Interactive Prototype' },
     content: [
       {
-        number: 1, icon: '🏰', title: 'The Arena',
+        number: 1, icon: '⭐', title: 'The Arena',
         blocks: [
           { type: 'h2', content: 'When a Form Becomes a Fortress' },
-          { type: 'p', content: 'For Zuo Insurance, the onboarding form was the single most important touchpoint in the customer journey—and the single biggest source of pain. Customers faced a dense, jargon-heavy, multi-page form that felt more like an audit than a signup experience.' },
           {
             type: 'bento_grid',
             items: [
               {
-                span: 12,
+                span: 7,
                 content: [
-                  { type: 'h3', content: 'The Business Cost' },
-                  {
-                    type: 'list', items: [
-                      '**High abandonment**: Many potential clients dropped off mid-way through the form, especially on the first page with 50+ fields.',
-                      '**Costly errors**: Incomplete or incorrect data led to compliance risk, extra calls, and manual corrections.',
-                      '**Bad first impression**: New customers started their relationship stressed and confused instead of reassured.'
-                    ]
-                  }
+                  { type: 'p', content: 'For Zuo Insurance, the client onboarding form was their single most important touchpoint—and their biggest liability. It was a dense, jargon-filled document that was frustrating for new clients and time-consuming for agents.' },
+                  { type: 'list', items: ['High Abandonment: Potential clients would simply give up.', 'Costly Errors: Manual data entry errors led to compliance risks.', 'Poor First Impression: The frustrating process started relationships on a foundation of stress.'] }
+                ]
+              },
+              {
+                span: 5,
+                content: [
+                  { type: 'image', src: '/images/cognitive-clarity-old-form.jpg', alt: 'Screenshot of the complex legacy form' }
                 ]
               },
               {
                 span: 12,
                 content: [
-                  { type: 'aside', icon: '🚩', title: 'Design Challenge', content: 'How might we transform this intimidating, error-prone form into a guided, human conversation—without sacrificing the data quality and completeness that underwriting requires?' }
+                  { type: 'p', content: 'My mission was to completely redesign this experience, applying principles of cognitive psychology to transform a complex, intimidating process into one that felt effortless, intuitive, and reassuring.' }
                 ]
               }
             ]
@@ -1151,69 +1147,64 @@ export const caseStudies: CaseStudy[] = [
         ]
       },
       {
-        number: 2, icon: '🕵️', title: 'The Investigation',
+        number: 2, icon: '�', title: 'The Investigation',
         blocks: [
           { type: 'h2', content: 'Unpacking Cognitive Overload' },
-          { type: 'p', content: 'The project used a dual-track research approach: understanding both customers filling out the form and agents who lived with it every day.' },
+          { type: 'p', content: 'My process was rooted in a dual-track approach: understanding the journey of both the end-customer and the internal agent. A solution that only worked for one would ultimately fail.' },
+          { type: 'h3', content: 'Phase 1: Diagnosis and Discovery' },
           {
             type: 'bento_grid',
             items: [
-              {
-                span: 6,
-                content: [
-                  { type: 'h3', content: 'Phase 1: Diagnosis' },
-                  {
-                    type: 'list', items: [
-                      '**Heuristic Evaluation**: Identified issues like overloaded screens, inconsistent wording, and weak feedback.',
-                      '**Agent Shadowing**: Observed 5 agents acting as "interpreters" rather than advisors, constantly translating jargon.',
-                      '**Customer Interviews**: Users felt "interrogated" rather than helped.'
-                    ]
-                  }
-                ]
-              },
-              {
-                span: 6,
-                content: [
-                  { type: 'aside', icon: '💡', title: 'The "Aha" Moment', content: 'The form wasn’t just a bad document; it was a broken three-way conversation. The system offered no support, forcing agents to type instead of advise.' }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 3, icon: '🧠', title: 'Designing with Psychology',
-        blocks: [
-          { type: 'h2', content: 'Applying Cognitive Principles' },
-          { type: 'p', content: 'Rather than simply “prettifying” the form, the redesign intentionally applied core cognitive psychology principles.' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 4,
-                content: [
-                  { type: 'h3', content: 'Miller’s Law: Chunking' },
-                  { type: 'p', content: 'Broke 50+ fields into clear sections (3-5 questions max). Reduced perceived complexity to help users stay oriented.' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'h3', content: 'Hick’s Law: Reducing Choices' },
-                  { type: 'p', content: 'Used conditional logic to hide irrelevant paths. (e.g., No car? No vehicle section). Reduces decision fatigue.' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'h3', content: 'Progressive Disclosure' },
-                  { type: 'p', content: 'Advanced options like distinct deductibles are tucked away. Users see simple, friendly choices first.' }
-                ]
-              },
               {
                 span: 12,
                 content: [
-                  { type: 'aside', icon: '💬', title: 'Inline Guidance', content: 'Replaced dense labels with conversational microcopy ("Tell us about your home") and real-time validation to reduce anxiety.' }
+                  {
+                    type: 'list',
+                    items: [
+                      '**Heuristic Evaluation**: I started by conducting a heuristic evaluation of the existing form, identifying dozens of violations related to cognitive load, error prevention, and consistency.',
+                      '**Agent Shadowing**: I observed five agents as they onboarded new clients. I saw firsthand where they got stuck, the workarounds they created, and the common errors that occurred.',
+                      '**Customer Interviews**: I spoke with recent customers about their experience. The key theme was overwhelm. "It felt like I was being interrogated," one user said.'
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 7,
+                content: [
+                  { type: 'h3', content: 'The \'Aha!\' Moment: Two Users, One Broken Conversation' },
+                  { type: 'p', content: 'The key insight was that the form wasn\'t just a document; it was a broken conversation between three parties: the customer, the agent, and the system. The customer didn\'t understand the questions, and the agent spent all their time being a "translator" and data entry clerk instead of an advisor.' },
+                  { type: 'p', content: 'Therefore, the design challenge was: **How can we design an interface that facilitates a natural, guided conversation, where the system does the heavy lifting?**' }
+                ]
+              },
+              {
+                span: 5,
+                content: [
+                  { type: 'image', src: '/images/cognitive-clarity-aha.png', alt: 'Wireframe of the new simplified interface' },
+                ]
+              }
+            ]
+          },
+          { type: 'h3', content: 'Phase 2: Designing with Psychological Principles' },
+          { type: 'p', content: 'I didn\'t just aim for a prettier UI; I used established psychological principles as my guide.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 6,
+                content: [
+                  { type: 'list', items: ["**Miller's Law (The Magic Number 7)**: The old form had over 50 fields on one screen. I broke the process down into logical, bite-sized chunks of 5-7 related questions at a time.", "**Hick's Law (The Paradox of Choice)**: I used conditional logic to eliminate irrelevant questions. If a user says they don't own a car, they never see questions about their vehicle. This dramatically simplified the path for most users.", "**Progressive Disclosure**: Advanced or complex information was tucked away until needed, keeping the primary interface clean and focused."] }
+                ]
+              },
+              {
+                span: 6,
+                className: 'bg-[#1e293b]',
+                content: [
+                  { type: 'image', src: '/images/cognitive-clarity-principles.png', alt: 'Visualizing psychological principles in the new design' }
                 ]
               }
             ]
@@ -1221,97 +1212,95 @@ export const caseStudies: CaseStudy[] = [
         ]
       },
       {
-        number: 4, icon: '✨', title: 'The Breakthrough',
+        number: 3, icon: '⭐', title: 'The Breakthrough',
         blocks: [
           { type: 'h2', content: 'A Dual-Sided Solution' },
-          { type: 'p', content: 'The outcome was a responsive web application with two coordinated views that share the same data model.' },
+          { type: 'p', content: 'The solution was a responsive web application with two distinct views, designed to work in harmony.' },
           {
             type: 'bento_grid',
             items: [
+              {
+                span: 6,
+                content: [
+                  { type: 'h3', content: 'Design Pillar 1: The Agent\'s "Co-Pilot" View' },
+                  { type: 'p', content: 'Because agents need control and efficiency, their interface is a powerful dashboard. It shows a progress overview, highlights missing information, and allows them to easily navigate between sections. It turns them from data clerks into true advisors who can guide the conversation.' },
+                ]
+              },
+              {
+                span: 6,
+                className: 'bg-[#1e293b]',
+                content: [
+                  { type: 'image', src: '/images/cognitive-clarity-pillar1.png', alt: 'Agent dashboard mockup showing progress overview' },
+                ]
+              },
+              {
+                span: 6,
+                className: 'bg-[#1e293b]',
+                content: [
+                  { type: 'image', src: '/images/cognitive-clarity-pillar2.png', alt: 'Customer view mockup showing guided conversation' },
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'h3', content: 'Design Pillar 2: The Customer\'s "Guided Conversation" View' },
+                  { type: 'p', content: 'Because customers need clarity and reassurance, their view is presented one simple question at a time. The language is conversational (e.g., "Tell us about your home" instead of "Property Details Section 2a"). Real-time validation prevents errors before they happen, and a persistent summary view builds confidence.' },
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'h3', content: 'Design Pillar 3: The Seamless Handoff' },
+                  { type: 'p', content: 'The system allows for a seamless handoff. A customer can start the form at home, save their progress, and finish it later with an agent in person without losing any data. This flexibility acknowledges the reality of the customer\'s busy life.' },
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'image', src: '/images/cognitive-clarity-handoff.jpg', alt: 'Seamless handoff mockup' },
+                ]
+              }
+            ]
+          },
+        ]
+      },
+      {
+        number: 4, icon: '⭐', title: 'The Impact',
+        blocks: [
+          { type: 'h2', content: 'Efficiency, Accuracy, and Peace of Mind' },
+          { type: 'p', content: 'The redesigned onboarding flow had an immediate and dramatic impact on the business.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '⚡', title: '35% Faster Onboarding', content: 'The average time for an agent to complete a client onboarding dropped from 12 minutes to just 7.8 minutes.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '🎯', title: '40% Reduction in Errors', content: 'Real-time validation and a simplified UI slashed the rate of costly data entry errors.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '�', title: '22% Increase in Completion', content: 'The less intimidating process led to a significant jump in successful completions.' }
+                ]
+              },
               {
                 span: 12,
                 content: [
-                  { type: 'h3', content: 'Pillar 1: The Agent’s "Co-pilot"' },
-                  { type: 'image', src: '/images/cognitive-clarity-pillar1.png', alt: 'Agent Co-pilot Dashboard', caption: 'A control dashboard showing progress, risks, and follow-up prompts—turning agents back into advisors.' },
-                  { type: 'p', content: 'Agents see a clear progress overview with fast navigation. If a customer starts online, the agent can pick up immediately without re-entering data.' }
-                ]
-              },
-              {
-                span: 6,
-                content: [
-                  { type: 'h3', content: 'Pillar 2: Guided Conversation' },
-                  { type: 'image', src: '/images/cognitive-clarity-pillar2.png', alt: 'Customer Guided Form', caption: 'Large, focused screens with friendly copy and contextual hints.' },
-                  {
-                    type: 'list', items: [
-                      '**Focused Screens**: One topic at a time.',
-                      '**Contextual Hints**: Explains "why" we need this info.',
-                      '**Real-time Feedback**: Catches errors before submission.'
-                    ]
-                  }
-                ]
-              },
-              {
-                span: 6,
-                content: [
-                  { type: 'h3', content: 'Pillar 3: Seamless Handoff' },
-                  { type: 'p', content: 'Customers can start at home and finish with an agent. Agents can send secure links for updates. A single source of truth reduces duplication.' }
+                  { type: 'p', content: '**My Key Reflection**: This project was a powerful lesson in the ROI of UX. By applying fundamental principles of cognitive psychology, we built a more efficient, accurate, and profitable business process. It proved that great design is not a cost center; it\'s a powerful driver of business success.' }
                 ]
               }
             ]
           }
-        ]
-      },
-      {
-        number: 5, icon: '📈', title: 'Impact',
-        blocks: [
-          { type: 'h2', content: 'Efficiency, Accuracy, and Peace of Mind' },
-          { type: 'p', content: 'Optimizing the form for cognitive load produced measurable results in a pilot trial.' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '⏩', title: '35% Faster', content: 'Onboarding dropped from 12m to 7.8m, freeing agents for more calls.' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '✅', title: '40% Fewer Errors', content: 'Inline validation and better wording reduced manual correction tickets.' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '🚀', title: '22% More Completions', content: 'Higher conversion rate due to reduced friction and drop-off.' }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 6, icon: '🔮', title: 'What I’d Do Next',
-        blocks: [
-          { type: 'h2', content: 'Future Roadmap' },
-          {
-            type: 'list', items: [
-              '**A/B Testing**: optimizing microcopy for sensitive financial sections.',
-              '**Extend Patterns**: Applying this dual-sided model to Auto and Life insurance products.',
-              '**Analytics Loop**: integrating feedback loops for underwriting to refine questions based on confusion data.'
-            ]
-          }
-        ]
-      },
-      {
-        number: 7, icon: '💭', title: 'Reflection',
-        blocks: [
-          { type: 'h2', content: 'Form Design is Conversation Design' },
-          { type: 'p', content: 'This project proved that form design isn\'t just about fields—it\'s about conversation. By grounding the work in cognitive psychology and respecting both the agent and customer experience, we created a faster, more accurate, and more reassuring way to start an insurance relationship.' }
         ]
       }
-    ]
+    ],
   }
 ];
 
