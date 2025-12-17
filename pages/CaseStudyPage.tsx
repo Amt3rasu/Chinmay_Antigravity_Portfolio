@@ -10,16 +10,10 @@ const ContentRenderer: React.FC<{ blocks: ContentBlock[], compact?: boolean }> =
 
     const renderBlock = (block: ContentBlock, index: number) => {
         switch (block.type) {
-            case 'h1': return <h1 key={index} className={`text-2xl md:text-3xl font-serif font-bold text-foreground ${compact ? 'mt-0 mb-4' : 'mt-10 mb-6'} tracking-tight`}>{block.content}</h1>;
-            case 'h2': return <h2 key={index} className={`text-xl md:text-2xl font-bold text-foreground ${compact ? 'mt-0 mb-3' : 'mt-8 mb-4'}`}>{block.content}</h2>;
-            case 'h3': return <h3 key={index} className={`text-lg md:text-xl font-bold text-foreground ${compact ? 'mt-0 mb-2' : 'mt-6 mb-3'}`}>{block.content}</h3>;
+            case 'h1': return <h1 key={index} className={`text-3xl md:text-4xl font-serif font-bold text-foreground ${compact ? 'mt-0 mb-2' : 'mt-12 mb-6'} tracking-tight`}>{block.content}</h1>;
+            case 'h2': return <h2 key={index} className={`text-2xl font-bold text-foreground ${compact ? 'mt-0 mb-6' : 'mt-10 mb-4'}`}>{block.content}</h2>;
             case 'p': return <p key={index} className={`text-lg text-muted-foreground ${compact ? 'mb-2' : 'mb-6'} leading-relaxed`} dangerouslySetInnerHTML={{ __html: block.content.replace(/\*\*(.*?)\*\*/g, '<strong class="text-foreground">$1</strong>') }}></p>;
-            case 'image': return (
-                <figure key={index} className={`${compact ? 'my-4' : 'my-10'}`}>
-                    <img src={block.src} alt={block.alt} className={`rounded-2xl shadow-lg w-full border border-border ${block.className || ''}`} />
-                    {block.caption && <figcaption className="mt-3 text-center text-sm text-muted-foreground italic">{block.caption}</figcaption>}
-                </figure>
-            );
+            case 'image': return <img key={index} src={block.src} alt={block.alt} className={`${compact ? 'my-0' : 'my-10'} rounded-2xl shadow-lg w-full border border-border ${block.className || ''}`} />;
             case 'list': return (
                 <ul key={index} className={`list-disc pl-5 ${compact ? 'my-2' : 'my-6'} space-y-3 text-lg text-muted-foreground`}>
                     {block.items.map((item, i) => <li key={i} dangerouslySetInnerHTML={{ __html: item.replace(/\*\*(.*?)\*\*/g, '<strong class="text-foreground">$1</strong>') }}></li>)}
@@ -105,8 +99,8 @@ export const CaseStudyPage: React.FC = () => {
                     <div className="absolute inset-0 bg-black/40 backdrop-blur-[2px]" />
                 </div>
 
-                <div className="absolute inset-0 flex flex-col justify-end pb-24 container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="max-w-7xl mx-auto w-full">
+                <div className="absolute inset-0 flex flex-col justify-end pb-24 px-4 sm:px-6 lg:px-12">
+                    <div className="max-w-5xl mx-auto w-full">
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
@@ -133,8 +127,8 @@ export const CaseStudyPage: React.FC = () => {
                 </div>
             </div>
 
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="max-w-7xl mx-auto">
+            <div className="w-full px-4 sm:px-6 lg:px-12">
+                <div className="max-w-5xl mx-auto">
                     <div className="py-20">
                         <div className="grid md:grid-cols-3 gap-16">
                             <div className="md:col-span-2">
@@ -142,24 +136,18 @@ export const CaseStudyPage: React.FC = () => {
                                 <p className="text-lg text-muted-foreground leading-relaxed">{project.overview}</p>
                             </div>
                             <div className="flex flex-col gap-8 p-8 bg-card rounded-2xl border border-border">
-                                {project.role && (
-                                    <div>
-                                        <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Role</h3>
-                                        <p className="text-foreground font-medium">{project.role}</p>
-                                    </div>
-                                )}
-                                {project.timeline && (
-                                    <div>
-                                        <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Timeline</h3>
-                                        <p className="text-foreground font-medium">{project.timeline}</p>
-                                    </div>
-                                )}
-                                {project.tools && (
-                                    <div>
-                                        <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Tools</h3>
-                                        <p className="text-foreground font-medium">{project.tools.join(', ')}</p>
-                                    </div>
-                                )}
+                                <div>
+                                    <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Role</h3>
+                                    <p className="text-foreground font-medium">Lead Product Designer</p>
+                                </div>
+                                <div>
+                                    <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Timeline</h3>
+                                    <p className="text-foreground font-medium">4 Weeks</p>
+                                </div>
+                                <div>
+                                    <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Tools</h3>
+                                    <p className="text-foreground font-medium">Figma, React, Tailwind</p>
+                                </div>
                             </div>
                         </div>
 
@@ -195,7 +183,9 @@ export const CaseStudyPage: React.FC = () => {
                         {project.content.map(chapter => (
                             <section key={chapter.number}>
                                 <ChapterHeader chapter={chapter} />
-                                <ContentRenderer blocks={chapter.blocks} />
+                                <div className="max-w-4xl mx-auto">
+                                    <ContentRenderer blocks={chapter.blocks} />
+                                </div>
                             </section>
                         ))}
                     </article>

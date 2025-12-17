@@ -22,18 +22,10 @@ export const TailedCursor: React.FC<TailedCursorProps> = ({
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const pointsRef = useRef<Point[]>([]);
     const mouseRef = useRef({ x: 0, y: 0 });
-    const requestRef = useRef<number | undefined>(undefined);
-
-    // Detect touch device - disable cursor effect on touch screens
-    const isTouchDevice = typeof window !== 'undefined' && (
-        'ontouchstart' in window ||
-        navigator.maxTouchPoints > 0 ||
-        (navigator as any).msMaxTouchPoints > 0
-    );
+    const requestRef = useRef<number>();
 
     useEffect(() => {
-        // Skip effect for touch devices or non-modern mode
-        if (mode !== 'modern' || isTouchDevice) return;
+        if (mode !== 'modern') return;
 
         const canvas = canvasRef.current;
         if (!canvas) return;
@@ -135,10 +127,9 @@ export const TailedCursor: React.FC<TailedCursorProps> = ({
                 cancelAnimationFrame(requestRef.current);
             }
         };
-    }, [mode, baseThickness, color, maxAge, isTouchDevice]);
+    }, [mode, baseThickness, color, maxAge]);
 
-    // Don't render on touch devices or non-modern mode
-    if (mode !== 'modern' || isTouchDevice) return null;
+    if (mode !== 'modern') return null;
 
     return (
         <canvas

@@ -1,3 +1,0 @@
-User-agent: *
-Allow: /
-Sitemap: https://chinmaybhaise.com/sitemap.xml
