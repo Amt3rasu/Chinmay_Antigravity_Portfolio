@@ -3,68 +3,72 @@ import { AboutData } from '../types';
 
 export const aboutMeData: AboutData = {
   name: "Chinmay Bhaise",
-  title: "Product & Service Designer",
+  title: "Product Designer | UX Research & Accessibility Specialist",
   profileImage: "/images/profile-photo.jpg",
   summary: [
-    "Highly motivated UX enthusiast with a background in travel content strategy and user research.",
-    "I leverage my keen eye for detail and problem-solving skills to excel in sourcing media assets that align with user needs and brand identity."
+    "Results-driven Product Designer with 3+ years of experience creating accessible, human-centered digital experiences that deliver measurable business impact.",
+    "Proven track record of driving 35% faster workflows, 22% higher completion rates, and 40% fewer data errors across SaaS, fintech, civic tech, and B2B platforms."
   ],
   whatExcitesMe: [
-    "Uncovering hidden user needs and translating them into intuitive and delightful travel experiences.",
-    "Combining my passion for travel with the challenge of crafting human-centred interfaces that make exploration seamless.",
-    "Being at the forefront of innovation, using design thinking to create travel products that redefine the user journey."
+    "Designing for accessibility—it's not a limitation, it's a lens that forces us to design better for everyone.",
+    "Building scalable design systems that empower teams to ship faster while maintaining quality and consistency.",
+    "Translating complex user research into intuitive experiences that balance user needs with business objectives."
   ],
   experience: [
     {
-      company: "C Design",
-      role: "Freelance Designer, Product Leader",
-      duration: "2022 ~ Present",
+      company: "C Designs (Freelance)",
+      role: "Product Designer",
+      duration: "Aug 2023 ~ Present",
       logo: "/logos/c_design.png",
       points: [
-        "Boosted completion rates and reduced errors via UX design.",
-        "Created personas, journey maps, and inclusive prototypes.",
-        "Ensured accessibility with rigorous usability and WCAG audits."
+        "22% higher completion rates, 35% faster workflows, 40% fewer errors across client projects.",
+        "Built 3 custom design systems with 50+ reusable components each.",
+        "Conducted 20+ user research initiatives including interviews, usability tests, and contextual inquiry.",
+        "🏆 2x National Hackathon Winner (AccessTransit, CICan Navigator)"
       ]
     },
     {
       company: "Headout",
       role: "Media Experience Designer",
-      duration: "2022 ~ 2023",
+      duration: "Oct 2022 ~ Aug 2023",
       logo: "/logos/headout.png",
       points: [
-        "Increased sales and efficiency with interactive seat maps.",
-        "Improved content find-ability through optimized media migration.",
-        "Led end-to-end design for high-conversion campaigns."
+        "12% increase in F1 ticket sales through interactive seat map redesign.",
+        "60% workflow efficiency improvement via self-initiated service design project.",
+        "Led team of 7 designers managing $700K+ daily GBV portfolio.",
+        "Maintained 40+ design system components within Agile sprints."
       ]
     },
     {
       company: "Bravvura Digital",
       role: "Visual Experience Designer",
-      duration: "2021 ~ 2021",
+      duration: "Jun 2021 ~ Sep 2021",
       logo: "/logos/bravvura.png",
       points: [
-        "Designed visually appealing, user-friendly web and mobile interfaces.",
-        "Created wireframes and prototypes to convey design ideas.",
-        "Improved designs by integrating user feedback and best practices."
+        "Designed 8+ web/mobile applications serving 100,000+ users.",
+        "20% increase in user engagement through improved visual design.",
+        "Delivered 20+ interactive UI prototypes with WCAG 2.1 AA compliance."
       ]
     }
   ],
   education: [
     {
       institution: "Fanshawe College, Canada",
-      degree: "User Experience Design",
+      degree: "Post-Graduate Certificate: User Experience Design",
       details: [
-        "GPA: 4.14/4.2",
-        "Presidential Excellence Award at the Graduation Exhibition"
+        "GPA: 4.14/4.2 (Dean's List)",
+        "Presidential Excellence Award at Graduation Exhibition",
+        "🏆 1st Place - CICan Skills for Success National Hackathon",
+        "📝 Published: 'AI & Accessibility' - Canadian Design Network"
       ]
     },
     {
       institution: "MIT World Peace University, Pune",
-      degree: "Bachelor’s of Arts",
+      degree: "Bachelor of Arts: Visual Arts",
       details: [
-        "UX Design Professional Course Completion",
-        "Typography Master Class Completion",
-        "Visual Design"
+        "Foundation in Visual Design & Typography",
+        "UX Design Professional Certification",
+        "Color Theory & Graphic Design"
       ]
     }
   ],
