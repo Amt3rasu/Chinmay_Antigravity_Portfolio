@@ -24,7 +24,8 @@ export const SEO: React.FC<SEOProps> = ({
             {/* Standard Metadata */}
             <title>{siteTitle}</title>
             <meta name="description" content={description} />
-            <link rel="canonical" href={url} />
+            <meta name="robots" content="index, follow" />
+            <link rel="canonical" href={url.split('#')[0]} />
 
             {/* Open Graph / Facebook */}
             <meta property="og:type" content={type} />

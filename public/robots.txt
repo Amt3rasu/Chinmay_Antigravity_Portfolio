@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://chinmay-antigravity-portfolio.pages.dev/sitemap.xml
