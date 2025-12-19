@@ -4,27 +4,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Designer Portfolio</title>
+  <title>Chinmay Bhaise | Product & Service Designer</title>
+  <meta name="description" content="Portfolio of Chinmay Bhaise - Product & Service Designer specializing in UX, Service Design, and Product Management." />
   <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://chinmay-antigravity-portfolio.pages.dev/" />
+  <meta property="og:title" content="Chinmay Bhaise | Product & Service Designer" />
+  <meta property="og:description" content="Portfolio of Chinmay Bhaise - Product & Service Designer specializing in UX, Service Design, and Product Management." />
+  <meta property="og:image" content="https://chinmay-antigravity-portfolio.pages.dev/og-image.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://chinmay-antigravity-portfolio.pages.dev/" />
+  <meta property="twitter:title" content="Chinmay Bhaise | Product & Service Designer" />
+  <meta property="twitter:description" content="Portfolio of Chinmay Bhaise - Product & Service Designer specializing in UX, Service Design, and Product Management." />
+  <meta property="twitter:image" content="https://chinmay-antigravity-portfolio.pages.dev/og-image.png" />
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            'cherry-blossom-pink': '#edafb8',
-            'champagne-pink': '#f7e1d7',
-            'timberwolf': '#dedbd2',
-            'ash-gray': '#b0c4b1',
-            'outer-space': '#4a5759',
-
             // Semantic Mapping
             background: 'hsl(var(--background))',
             foreground: 'hsl(var(--foreground))',
 
-            card: 'transparent', // Override: Keep transparent for Toolkit design
+            card: 'transparent',
             'card-foreground': 'hsl(var(--card-foreground))',
-            'card-hover': '#E3E4E9', // Beige/Gray for hover effect
+            'card-hover': '#E3E4E9',
 
             popover: 'hsl(var(--popover))',
             'popover-foreground': 'hsl(var(--popover-foreground))',
@@ -59,9 +68,9 @@
     rel="stylesheet">
   <style>
     :root {
-      /* Light theme - Cherry Blossom (romantic & soft) with increased contrast */
+      /* Theme - Modern Clean */
       --background: 60 8% 95%;
-      /* #F4F4F2 */
+      /* #F4F4F2 - Light Cream */
       --foreground: 192 20% 15%;
 
       --card: 0 0% 100%;
@@ -70,17 +79,18 @@
       --popover: 0 0% 100%;
       --popover-foreground: 192 20% 15%;
 
-      /* Deeper, more saturated colors for visibility on light background */
-      --primary: 350 45% 50%;
+      /* Purpleish Blue - Electric Indigo */
+      --primary: 263 70% 58%;
       --primary-foreground: 0 0% 100%;
-      --primary-glow: 20 70% 60%;
 
+      /* Orangeish - Secondary */
       --secondary: 20 70% 60%;
       --secondary-foreground: 0 0% 100%;
 
       --muted: 220 14% 90%;
       --muted-foreground: 192 20% 40%;
 
+      /* Green - Accent */
       --accent: 135 25% 55%;
       --accent-foreground: 0 0% 100%;
 
@@ -89,18 +99,9 @@
 
       --border: 220 13% 85%;
       --input: 220 13% 85%;
-      --ring: 350 60% 50%;
-    }
-
-    /* Modern Mode - Electric Indigo Accent */
-    body.mode-modern {
-      --primary: 263 70% 58%;
-      /* Electric Indigo */
-      --primary-foreground: 0 0% 100%;
-      --accent: 263 70% 58%;
-      /* Electric Indigo */
-      --accent-foreground: 0 0% 100%;
       --ring: 263 70% 58%;
+
+      --heading-letter-spacing: 2px;
     }
 
     body {
@@ -111,43 +112,37 @@
       background-repeat: no-repeat;
       min-height: 100vh;
       color: hsl(var(--foreground));
+      cursor: none;
+      /* Custom cursor default */
     }
 
-    /* Modern Mode - Dosis Headings & Mega Typography */
-    body.mode-modern h1,
-    body.mode-modern h2,
-    body.mode-modern h3 {
+    h1,
+    h2,
+    h3 {
       font-family: 'Dosis', sans-serif;
       font-optical-sizing: auto;
       font-weight: 800;
       letter-spacing: var(--heading-letter-spacing, 1px);
     }
 
-    body.mode-modern h1 {
+    h1 {
       font-size: clamp(3rem, 8vw, 6rem);
       line-height: 1.1;
       font-weight: 800;
     }
 
-    body.mode-modern h2 {
+    h2 {
       font-size: clamp(2rem, 5vw, 4rem);
       line-height: 1.2;
       font-weight: 700;
     }
 
-    /* Custom cursor for modern mode */
-    body.mode-modern {
+    a,
+    button {
       cursor: none;
     }
 
-    body.mode-modern a,
-    body.mode-modern button {
-      cursor: none;
-    }
 
-    #root {
-      /* isolation: isolate; Removed to allow mix-blend-mode to interact with body background */
-    }
 
     .bending-gallery-container {
       width: 100%;
@@ -229,7 +224,7 @@
 }
 </script>
 
-  <link rel="stylesheet" href="/index.css">
+
 </head>
 
 <body>
