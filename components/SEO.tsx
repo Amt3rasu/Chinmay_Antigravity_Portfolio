@@ -25,6 +25,8 @@ export const SEO: React.FC<SEOProps> = ({
             <title>{siteTitle}</title>
             <meta name="description" content={description} />
             <meta name="robots" content="index, follow" />
+            <meta name="author" content={aboutMeData.name} />
+            <meta property="article:published_time" content="2025-11-27T00:00:00Z" />
             <link rel="canonical" href={url.split('#')[0]} />
 
             {/* Open Graph / Facebook */}
