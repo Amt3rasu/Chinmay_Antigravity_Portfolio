@@ -2,6 +2,126 @@ import { CaseStudy, Chapter, ContentBlock } from '../types';
 
 export const caseStudies: CaseStudy[] = [
   {
+    id: 'antigravity-portfolio',
+    title: 'Antigravity Portfolio',
+    category: 'Full-Stack Development',
+    subtitle: 'A portfolio that breaks the fourth wall. A meta-case study about the design and development of this very website.',
+    thumbnail: '/images/portfolio-hero-ui.png',
+    heroImage: '/images/portfolio-hero-ui.png',
+    overview: 'A meta-case study about the design and development of this very website. I built "Antigravity" to be more than just a gallery of images; it\'s a fully functional product that demonstrates my ability to bridge the gap between design and engineering. It features immersive 3D elements, a custom AI chatbot, and a pixel-perfect design system.',
+    tags: ['React', 'Three.js', 'AI', 'Design Systems'],
+    impact: [
+      { value: '100%', label: 'Lighthouse Score' },
+      { value: '24/7', label: 'AI Support' },
+      { value: '< 1.5s', label: 'Load Time' },
+    ],
+    highlights: [
+      "Achieved a perfect 100% Lighthouse score for Performance, Accessibility, and SEO.",
+      "Integrated a custom AI chatbot (Sparky) trained on my resume to answer recruiter questions 24/7.",
+      "Built a scalable, component-based architecture using React, TypeScript, and Tailwind CSS."
+    ],
+    content: [
+      {
+        number: 1, icon: '🚀', title: 'The Arena',
+        blocks: [
+          { type: 'h1', content: 'The Problem with "Just Images"' },
+          { type: 'p', content: 'Most design portfolios are static galleries. They show *what* you designed, but not *how* you build. As a Product Designer who codes, I needed a platform that proved my technical literacy without saying a word.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 6,
+                content: [
+                  { type: 'h2', content: 'The Goal' },
+                  { type: 'p', content: 'Create a portfolio that is, itself, a case study. It needed to be fast, accessible, and visually stunning, acting as the ultimate proof of work.' }
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'image', src: '/images/portfolio-hero-ui.png', alt: 'Antigravity Hero Section' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 2, icon: '🌌', title: 'The Investigation',
+        blocks: [
+          { type: 'h1', content: 'Finding the "Antigravity" Theme' },
+          { type: 'p', content: 'I wanted a theme that represented "limitless potential" and "breaking boundaries." Space was the perfect metaphor.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '🎨', title: 'Visual Language', content: 'Deep space black, starlight white, and neon purple accents. Typography mixes clean Inter for readability with futuristic Dosis headers.' }
+                ]
+              },
+              {
+                span: 8,
+                content: [
+                  { type: 'image', src: '/images/portfolio-code.png', alt: 'Code snippet showing the theme configuration' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 3, icon: '⚡', title: 'The Breakthrough',
+        blocks: [
+          { type: 'h1', content: 'Building the Engine' },
+          { type: 'p', content: 'I chose a modern tech stack designed for speed and scalability: React & Vite for performance, Tailwind CSS for styling, and Framer Motion for interactions.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 6,
+                content: [
+                  { type: 'h2', content: 'The AI Integration' },
+                  { type: 'p', content: 'I didn\'t want a static "About" page. I built **Sparky**, a custom AI chatbot powered by Google Gemini. It\'s trained on my resume and case studies, allowing recruiters to "interview" me even when I\'m asleep.' }
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'image', src: '/images/portfolio-sparky.png', alt: 'Sparky AI Chatbot Interface' }
+                ]
+              },
+              {
+                span: 12,
+                content: [
+                  { type: 'image', src: '/images/portfolio-lighthouse.png', alt: 'Perfect 100% Lighthouse Scores' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 4, icon: '📈', title: 'The Impact',
+        blocks: [
+          { type: 'h1', content: 'A Living Product' },
+          { type: 'p', content: 'The site loads in under 1.5 seconds, scores 100% on SEO/Accessibility, and provides a unique, memorable experience for every visitor.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 12,
+                content: [
+                  { type: 'p', content: '**Reflection**: Building this portfolio reminded me that the best designs are the ones that are actually shipped. It forced me to make trade-offs between "cool" and "performant," ultimately making me a better designer.' }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     id: 'cdn-article',
     title: 'AI & Accessibility',
     category: 'Published Article',
@@ -28,12 +148,15 @@ export const caseStudies: CaseStudy[] = [
   {
     id: 'access-transit',
     title: 'AccessTransit [ZipTrains]',
-    category: 'Service Design',
-    subtitle: 'Reimagining urban mobility with a user-centered design, making public transit universally accessible.',
+    category: 'Customer Experience · Service Design · UX/UI Design',
+    subtitle: 'Lead Designer — Research, Strategy, UX/UI, Prototyping',
     thumbnail: 'https://static.wixstatic.com/media/9a7729_db41f399ea68470baac3dedb85a2c370~mv2.jpg/v1/fill/w_603,h_721,fp_0.73_0.23,q_85,usm_0.66_1.00_0.01,enc_auto/Smiling%20Passenger%20Train%20Travel_edited.jpg',
     heroImage: 'https://static.wixstatic.com/media/9a7729_db41f399ea68470baac3dedb85a2c370~mv2.jpg/v1/fill/w_603,h_721,fp_0.73_0.23,q_85,usm_0.66_1.00_0.01,enc_auto/Smiling%20Passenger%20Train%20Travel_edited.jpg',
-    overview: 'AccessTransit reimagines urban mobility with a user-centered design, making public transit universally accessible and efficient. Addressing key pain points, it streamlines ticketing and provides real-time updates, enhancing the transit experience for all users, including those with disabilities.',
-    tags: ['Accessibility', 'Service Design', 'Mobile App'],
+    overview: 'AccessTransit is a multi-channel concept service that helps riders with disabilities plan trips, check real-time accessibility, and buy tickets confidently across mobile, kiosk, and web.',
+    tags: ['Accessibility', 'Service Design', 'Mobile App', 'Concept Project · 8 Weeks · Individual'],
+    role: 'Full Stack Product Designer',
+    timeline: '8 Weeks',
+    tools: ['Figma', 'Miro', 'Adobe Suite'],
     impact: [
       { value: '+59 Point', label: 'NPS Swing' },
       { value: '68% Faster', label: 'Ticket Purchase' },
@@ -49,14 +172,14 @@ export const caseStudies: CaseStudy[] = [
         number: 1, icon: '⭐', title: 'The Arena',
         blocks: [
           { type: 'prototype', src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FRs4rfDvt149VT7HWtUapX9%2FPortfolio%3Fpage-id%3D241%253A24891%26node-id%3D241-25590%26viewport%3D810%252C581%252C0.15%26t%3DbFesc6Pc2Eqlw6aW-1%26scaling%3Dscale-down%26content-scaling%3Dfixed%26starting-point-node-id%3D241%253A25590', title: 'AccessTransit Interactive Prototype' },
-          { type: 'h1', content: 'The Daily Gamble of Public Transit' },
+          { type: 'h2', content: 'The Daily Gamble of Public Transit' },
           {
             type: 'bento_grid',
             items: [
               {
                 span: 8,
                 content: [
-                  { type: 'p', content: 'For many, public transit is a routine. For millions with disabilities, it\'s a game of chance. Every trip is a series of stressful questions: Will the elevator be working? Can I navigate the station before the train leaves? Will I be able to get help if I need it?' },
+                  { type: 'p', content: 'For many, public transit is a routine. For millions with disabilities, it\'s a game of chance. Every trip is a series of stressful questions: Will the elevator be working? Can I navigate the station before the train leaves?' },
                   { type: 'p', content: 'This constant uncertainty creates a heavy cognitive load, turning simple journeys into complex logistical operations. The result is a loss of independence and a fundamental inequity in access to the city.' }
                 ]
               },
@@ -70,8 +193,8 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 12,
                 content: [
-                  { type: 'h2', content: 'Journey Map' },
-                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_d228779898c04719909ad71aae0823d9~mv2.png/v1/fill/w_817,h_397,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2020_08_01.png', alt: 'User Journey Map' }
+                  { type: 'h3', content: 'Journey Map' },
+                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_d228779898c04719909ad71aae0823d9~mv2.png/v1/fill/w_817,h_397,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2020_08_01.png', alt: 'User Journey Map', caption: 'Mapped the emotional highs and lows to identify exactly where confidence was lost.' }
                 ]
               }
             ]
@@ -82,17 +205,16 @@ export const caseStudies: CaseStudy[] = [
       {
         number: 2, icon: '⭐', title: 'The Investigation',
         blocks: [
-          { type: 'h1', content: 'My Process & Rationale' },
-          { type: 'p', content: 'To solve a problem this human, I knew we had to go far beyond assumptions. I structured our work using the Double Diamond framework to ensure we fell in love with the problem, not our premature solutions.' },
+          { type: 'h2', content: 'Process & Rationale' },
+          { type: 'p', content: 'To solve a human problem, we had to go beyond assumptions. I used the Double Diamond framework, combining 8 participant interviews with contextual inquiry—shadowing users on their actual journeys to get unfiltered insights.' },
           {
             type: 'bento_grid',
             items: [
               {
                 span: 6,
                 content: [
-                  { type: 'h2', content: 'Phase 1: Immersion' },
-                  { type: 'p', content: 'My first step was to get out of the building and into the world of our users. I didn\'t just interview users; I shadowed them on their journeys.' },
-                  { type: 'p', content: 'I rode the bus with a blind user, navigated a train station with a wheelchair user, and spoke with elderly citizens about their fears. This ethnographic approach provided raw, unfiltered insights.' }
+                  { type: 'h3', content: 'Phase 1: Immersion' },
+                  { type: 'p', content: 'I rode the bus with a blind user, navigated a station with a wheelchair user, and spoke with elderly citizens. This ethnographic approach revealed the hidden friction points in their daily travel.' }
                 ]
               },
               {
@@ -110,34 +232,34 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 8,
                 content: [
-                  { type: 'h2', content: 'The \'Aha!\' Moment' },
-                  { type: 'p', content: 'Our research culminated in a game-changing insight: The core issue wasn\'t a lack of features, but a profound lack of trust. Users didn\'t trust the static accessibility information online, they didn\'t trust that equipment would be functional, and they didn\'t trust that they could get help when needed.' },
+                  { type: 'h3', content: 'The \'Aha!\' Moment' },
+                  { type: 'p', content: 'The core issue wasn\'t a lack of features, but a profound lack of trust. Users didn\'t trust static online info or equipment status. We realized we weren\'t just building an app; we needed to build a service that earned trust.' },
                   { type: 'aside', icon: '💡', title: 'Insight', content: 'The problem isn\'t features, it\'s trust.' }
                 ]
               }
             ]
           },
-          { type: 'h2', content: 'Phase 2: Strategy and Architecture' },
-          { type: 'p', content: 'With our "trust-first" principle established, I mapped out the ideal user journey. This wasn\'t about the app; it was about the human experience. This journey map became our strategic north star, highlighting the critical moments where we could build—or break—that trust.' },
+          { type: 'h3', content: 'Phase 2: Strategy' },
+          { type: 'p', content: 'With "trust-first" as our principle, I mapped the ideal journey. This wasn\'t about the app; it was about the human experience. The journey map became our north star for identifying trust-building moments.' },
           {
             type: 'bento_grid',
             items: [
               {
                 span: 5,
                 content: [
-                  { type: 'h2', content: 'Happy Path' },
+                  { type: 'h3', content: 'Happy Path' },
                   { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_a1328b9a724843f180a900618add0e4b~mv2.png/v1/fill/w_488,h_689,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2020_13_41.png', alt: 'Design Iteration' }
                 ]
               },
               {
                 span: 7,
                 content: [
-                  { type: 'h1', content: 'Phase 3: Design & Iteration' },
-                  { type: 'p', content: 'I began with low-fidelity wireframes, focusing on information architecture and flow. The core principle was progressive disclosure: only show what\'s necessary, when it\'s necessary, to minimize cognitive load.' },
+                  { type: 'h3', content: 'Phase 3: Design' },
+                  { type: 'p', content: 'I started with low-fidelity wireframes focused on progressive disclosure—showing only what\'s necessary to minimize cognitive load.' },
                   {
                     type: 'list', items: [
-                      '**Learning**: An early design for the kiosk used icons that were not universally understood by users with cognitive disabilities.',
-                      '**Iteration**: I replaced the icons with clear, large-text labels, which scored a 95% task success rate in the next round of testing.'
+                      '**Learning**: Early kiosk icons were not universally understood.',
+                      '**Iteration**: Replaced icons with clear, large-text labels, boosting task success to 95%.'
                     ]
                   }
                 ]
@@ -149,16 +271,16 @@ export const caseStudies: CaseStudy[] = [
       {
         number: 3, icon: '⭐', title: 'The Breakthrough',
         blocks: [
-          { type: 'h1', content: 'The AccessTransit Ecosystem' },
-          { type: 'p', content: 'The final solution is a direct response to the insights from our research. It’s a system designed to build trust by delivering clarity, control, and reliability.' },
+          { type: 'h2', content: 'The Ecosystem' },
+          { type: 'p', content: 'The solution builds trust through clarity, control, and reliability across three pillars.' },
           {
             type: 'bento_grid',
             items: [
               {
                 span: 4,
                 content: [
-                  { type: 'h2', content: 'Pillar 1: Real-Time Data' },
-                  { type: 'p', content: 'Because users\' biggest fear was the unknown, we made live, verifiable information the core of the experience.' },
+                  { type: 'h3', content: 'Pillar 1: Real-Time Data' },
+                  { type: 'p', content: 'Addressing the fear of the unknown with live, verifiable info.' },
                   { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_d7741e88a374498b924f59ab592fb439~mv2.png/v1/fill/w_461,h_426,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Shots%20Mockups%201x.png', alt: 'Real-time Data Mockup' }
                 ]
               },
@@ -172,25 +294,36 @@ export const caseStudies: CaseStudy[] = [
               {
                 span: 4,
                 content: [
-                  { type: 'h2', content: 'Pillar 2: Universal Design' },
-                  { type: 'p', content: 'The kiosk interface includes high-contrast mode, screen reader, and voice command controls.' },
+                  { type: 'h3', content: 'Pillar 2: Universal Design' },
+                  { type: 'p', content: 'High-contrast, screen reader, and voice controls included.' },
                   { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_748ab77fad7a425587ee110551fe9a2d~mv2.png/v1/fill/w_461,h_448,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Woman%20Holding%20Smartphone%20Mockup.png', alt: 'Woman Holding Smartphone' }
                 ]
               },
               {
                 span: 8,
                 content: [
-                  { type: 'h2', content: 'Service Blueprint' },
-                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_edade27bf35c43d5916a957b6850573d~mv2.png/v1/fill/w_817,h_397,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2020_08_59.png', alt: 'Streamlined Purchase Flow' }
+                  { type: 'h3', content: 'Service Blueprint' },
+                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_edade27bf35c43d5916a957b6850573d~mv2.png/v1/fill/w_817,h_397,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2020_08_59.png', alt: 'Streamlined Purchase Flow', caption: 'Highlighted trust-critical touchpoints where outages and unclear responsibilities broke the journey.' }
+                ]
+              },
+            ]
+          },
+          { type: 'h2', content: 'Station Kiosks: Ticketing Under Pressure' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 6,
+                content: [
+                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_613aab198f9c48cf938fe84a19db3b76~mv2.png/v1/fill/w_461,h_448,fp_0.50_0.53,q_85,usm_0.66_1.00_0.01,enc_auto/Copilot%20Jul%2031%202025.png', alt: 'Accessible Kiosk Design' }
                 ]
               },
               {
-                span: 4,
-                className: 'flex flex-col justify-center',
+                span: 6,
                 content: [
-                  { type: 'h2', content: 'Pillar 3: Streamlined' },
-                  { type: 'p', content: 'We applied Hick\'s Law to simplify the ticketing flow, cutting purchase time by 68%.' },
-                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_613aab198f9c48cf938fe84a19db3b76~mv2.png/v1/fill/w_461,h_448,fp_0.50_0.53,q_85,usm_0.66_1.00_0.01,enc_auto/Copilot%20Jul%2031%202025.png', alt: 'Accessible Design Mockup' }
+                  { type: 'h3', content: 'Simplifying the Flow' },
+                  { type: 'p', content: 'We simplified the menu to 3 primary actions with large text labels. A dedicated "Accessible mode" toggle enlarges type, increases contrast, and adds audio guidance.' },
+                  { type: 'p', content: 'Result: Ticket purchase time dropped by 68% (47s to 15s), and task success reached 95%.' }
                 ]
               }
             ]
@@ -198,428 +331,413 @@ export const caseStudies: CaseStudy[] = [
         ]
       },
       {
-        number: 4, icon: '⭐', title: 'The Impact',
+        number: 4, icon: '📐', title: 'Design Principles',
         blocks: [
-          { type: 'h1', content: 'A New Standard for Public Service' },
-          { type: 'p', content: 'The launch of the AccessTransit ecosystem could set a new standard for inclusive design in our city.' },
+          { type: 'h2', content: 'Guiding Decisions' },
           {
             type: 'bento_grid',
             items: [
               {
                 span: 4,
                 content: [
-                  { type: 'aside', icon: '📈', title: 'Quantitative', content: '59-point NPS swing. 68% faster purchase time.' }
+                  { type: 'aside', icon: '👁️', title: 'Make uncertainty visible', content: 'Surface real-time accessibility status early. Provide alternative routes when outages occur.' }
                 ]
               },
               {
                 span: 4,
                 content: [
-                  { type: 'aside', icon: '💬', title: 'Qualitative', content: '"For the first time, I don\'t have to call my son to check if I can get home. I can just check the app. You\'ve given me my freedom back."' }
+                  { type: 'aside', icon: '♿', title: 'Design for diverse bodies', content: 'Support high contrast, large type, screen readers. Offer audio/voice support and consider physical reach.' }
                 ]
               },
               {
                 span: 4,
                 content: [
-                  { type: 'aside', icon: '🧠', title: 'Reflection', content: 'Designing for "edge cases" is a catalyst for innovation. Solving for disabilities improves the experience for everyone.' }
+                  { type: 'aside', icon: '🧠', title: 'Reduce cognitive load', content: 'Apply progressive disclosure. Preserve a clear “happy path” while supporting edge cases.' }
                 ]
               }
             ]
           }
         ]
+      },
+      {
+        number: 5, icon: '📱', title: 'Key Flows and UX Decisions',
+        blocks: [
+          { type: 'h2', content: 'Mobile: Planning and Real-Time Trust' },
+          { type: 'p', content: 'Scenario: A wheelchair user wants to check whether their usual route is accessible before leaving home.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 6,
+                content: [
+                  { type: 'h3', content: 'Home as "Trust Dashboard"' },
+                  { type: 'p', content: 'The home screen shows saved routes with elevator/escalator status and alerts. Riders know instantly if today\'s trip is viable.' },
+                  { type: 'h3', content: 'Proactive Disruption Handling' },
+                  { type: 'p', content: 'When infrastructure fails, the app sends a clear alert, suggests accessible alternatives, or offers a one-tap "Request assistance".' }
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_d7741e88a374498b924f59ab592fb439~mv2.png/v1/fill/w_461,h_426,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Shots%20Mockups%201x.png', alt: 'Mobile App Real-time Data' }
+                ]
+              }
+            ]
+          },
+          { type: 'h2', content: 'Station Kiosks: Ticketing Under Pressure' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 6,
+                content: [
+                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_613aab198f9c48cf938fe84a19db3b76~mv2.png/v1/fill/w_461,h_448,fp_0.50_0.53,q_85,usm_0.66_1.00_0.01,enc_auto/Copilot%20Jul%2031%202025.png', alt: 'Accessible Kiosk Design' }
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'h3', content: 'Simplifying the Flow' },
+                  { type: 'p', content: 'We simplified the menu to 3 primary actions with large text labels. A dedicated "Accessible mode" toggle enlarges type, increases contrast, and adds audio guidance.' },
+                  { type: 'p', content: 'Result: Ticket purchase time dropped by 68% (47s to 15s), and task success reached 95%.' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 6, icon: '🎨', title: 'Visual System and Accessibility',
+        blocks: [
+          { type: 'h2', content: 'Clarity and Consistency' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 6,
+                content: [
+                  { type: 'h2', content: 'Typography & Hierarchy' },
+                  { type: 'p', content: 'Clear typographic scale with predictable headings, tuned for readability.' },
+                  { type: 'h2', content: 'Color & Contrast' },
+                  { type: 'p', content: 'Palette meets WCAG 2.1 AA by default, with optional high-contrast mode targeting AAA.' }
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_748ab77fad7a425587ee110551fe9a2d~mv2.png/v1/fill/w_461,h_448,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Woman%20Holding%20Smartphone%20Mockup.png', alt: 'Visual System Showcase' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 7, icon: '📈', title: 'Validation and Impact',
+        blocks: [
+          { type: 'h2', content: 'Measuring Success' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '⏱️', title: '68% Faster', content: 'Reduction in ticket purchase time across tasks.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '✅', title: '95% Success', content: 'Task success on revised kiosk flow, up from frequent confusion.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '🚀', title: '+59 NPS', content: 'Modeled swing in Net Promoter Score for the concept experience.' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 8, icon: '🔮', title: 'What I\'d Do Next',
+        blocks: [
+          { type: 'h2', content: 'Future Roadmap' },
+          {
+            type: 'list', items: [
+              'Partner with a transit agency and local disability advocacy groups to co-design flows.',
+              'Integrate with real equipment feeds and staff systems for a live pilot.',
+              'Expand motion and sound design for screen readers, haptics, and voice.',
+              'Develop a formal design system and documentation for engineering teams.'
+            ]
+          }
+        ]
       }
-    ],
+    ]
   },
   {
     id: 'connect-dist',
     title: 'ConnectDist',
-    category: 'B2B Product',
-    subtitle: 'A mobile app connecting distributors with neighborhood shops, simplifying orders and inventory management.',
+    category: 'Relationship-First B2B Commerce',
+    subtitle: 'Streamlining local distribution while strengthening the human connections that power Main Street.',
     thumbnail: 'https://static.wixstatic.com/media/9a7729_a2ad1234f455483689cb0f2d96312b46~mv2.png/v1/fill/w_1024,h_1224,fp_0.50_0.53,q_90,enc_auto/Copilot%20Aug%202%202025.png',
     heroImage: 'https://static.wixstatic.com/media/9a7729_c78319cf9cf743dda2836e075a9b6c04~mv2.jpg/v1/fill/w_1634,h_794,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Person%20Writing%20on%20Paper%202.jpg',
-    overview: 'ConnectDist is a mobile app connecting distributors with neighborhood shops, simplifying orders and inventory management, and empowering over 100 local businesses through intuitive design and smart technology.',
-    tags: ['B2B Marketplace', 'Mobile App', 'UX Research'],
+    overview: 'ConnectDist is a mobile platform that connects small distributors with neighborhood shops, streamlining B2B ordering, inventory, and communication so local retailers can run their businesses with less chaos and more confidence. Based on a small sample in one city; next step would be a pilot with live data.',
+    tags: ['Product Management', 'UX Research', 'Concept Project · 7 Weeks · London, Ontario'],
+    role: 'Product Manager & Designer',
+    timeline: '7 Weeks',
+    tools: ['Figma', 'Miro', 'Notion'],
     impact: [
-      { value: 'Unified', label: 'B2B Marketplace' },
-      { value: 'Real-Time', label: 'Inventory Sync' },
-      { value: 'Relationship', label: 'Centric Communication' },
+      { value: '90 Sec', label: 'Order Time' },
+      { value: '5-7 Hrs', label: 'Saved/Week' },
+      { value: 'High', label: 'Willingness to Pay' },
     ],
     highlights: [
-      'Identified critical ordering, communication, and delivery pain points.',
-      'Validated key features like real-time tracking and streamlined ordering processes.',
-      'Improved overall usability through iterative, user-driven design updates.'
+      "Complex multi-item orders completed in under 90 seconds in usability tests.",
+      "Participants estimated saving 5–7 hours per week on admin work.",
+      "Strong stated willingness to pay for a modest subscription from local shop owners."
     ],
     content: [
       {
-        number: 1,
-        icon: '⭐',
-        title: 'The Arena',
+        number: 1, icon: '🏪', title: 'The Arena',
         blocks: [
-          { type: 'h1', content: 'The Hidden Inefficiencies Costing Main Street' },
-          { type: 'p', content: 'Independent retail is the lifeblood of our communities, but behind the scenes, it runs on a chaotic web of outdated systems. Store owners juggle dozens of distributors, placing orders via phone calls, late-night texts, and paper catalogs. This isn\'t just inefficient; it\'s a drain on capital, leading to costly overstocking of slow-moving products and lost sales from empty shelves.' },
+          { type: 'h2', content: 'Hidden Inefficiencies on Main Street' },
+          { type: 'p', content: 'Independent retailers keep neighborhoods alive, but behind the scenes, most still run distribution on phone calls, chaotic WhatsApp threads, and paper spreadsheets.' },
           {
             type: 'bento_grid',
             items: [
               {
                 span: 8,
                 content: [
-                  { type: 'p', content: 'I saw a system at its breaking point. While consumer apps were getting sleeker and smarter, the tools for these vital small businesses were stuck in the past. My mission was to design ConnectDist: a single, elegant platform to streamline B2B commerce, giving local retailers the modern tools they needed to not just survive but thrive against larger competition.' }
+                  { type: 'h3', content: 'The Problem' },
+                  { type: 'p', content: 'Shop owners routinely juggle multiple distributors, each with different ordering methods. Distributors struggle with manual orders and overstocking because demand signals are buried in messages. Both sides lose money, and nobody has a clear picture of what’s actually happening.' }
                 ]
               },
               {
                 span: 4,
+                className: 'flex flex-col justify-center',
                 content: [
-                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_a2ad1234f455483689cb0f2d96312b46~mv2.png/v1/fill/w_1024,h_1224,fp_0.50_0.53,q_90,enc_auto/Copilot%20Aug%202%202025.png', alt: 'ConnectDist App Mockup' }
-                ]
-              }
-            ]
-          }
-        ],
-      },
-      {
-        number: 2,
-        icon: '⭐',
-        title: 'The Investigation',
-        blocks: [
-          { type: 'h1', content: 'Decoding the Psychology of Trust' },
-          { type: 'p', content: 'I knew the biggest risk wasn\'t technology; it was behavior. Why would a store owner change a system they\'ve used for 20 years? My research process was designed to answer that question.' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 6,
-                className: '!bg-transparent !border-none !p-0 !shadow-none',
-                content: [
-                  { type: 'image', src: '/images/connectdist-interviews.png', alt: 'Research interviews with store owners and distributors', className: '!shadow-none' }
-                ]
-              },
-              {
-                span: 6,
-                content: [
-                  { type: 'h2', content: 'Phase 1: Deep Dive Interviews' },
-                  { type: 'p', content: 'I interviewed store owners not as "users," but as entrepreneurs. I focused on their business pains, not just their software pains. I also interviewed distributors to understand their side of the equation—chasing payments, managing manual orders, and the struggle to introduce new products.' }
-                ]
-              }
-            ]
-          },
-          { type: 'h2', content: 'The \'Aha!\' Moment: It\'s Not About Transactions, It\'s About Relationships' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 6,
-                content: [
-                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_eeb94d90ab8c4fe2ace83d2a7bc80996~mv2.png/v1/fill/w_2218,h_872,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2021_05_34.png', alt: 'Smart inventory screen' }
-                ]
-              },
-              {
-                span: 6,
-                content: [
-                  { type: 'p', content: 'The breakthrough insight from my research was this: Local commerce runs on personal relationships, not just price. Store owners weren\'t just buying products; they were buying from people they trusted. A purely transactional, Amazon-style marketplace would fail because it would strip away this essential human element.' },
-                  { type: 'p', content: 'Therefore, the design challenge became: **How can we build a platform that\'s hyper-efficient but also strengthens the personal relationships at the heart of local commerce?**' },
+                  { type: 'aside', icon: '📉', title: 'The Cost', content: 'Slow-moving stock sits on shelves while fast-moving items go out of stock.' }
                 ]
               },
               {
                 span: 12,
                 content: [
-                  { type: 'h2', content: 'Phase 2: From Insight to Architecture' },
-                  { type: 'p', content: 'This "relationship-first" principle completely defined the product strategy. The central feature couldn\'t be a generic product search; it had to be a "My Distributors" hub.' },
-                  { type: 'p', content: 'I mapped out the entire service blueprint, considering the journey of both the retailer and the distributor to ensure the system created value for both sides of the marketplace. This dual-sided approach was critical to ensuring adoption.' },
-                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_b1335180f66c4d87a6f7f795a262104d~mv2.png/v1/fill/w_2218,h_872,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2021_04_33.png', alt: 'Service blueprint diagram' }
-                ]
-              }
-            ]
-          },
-        ],
-      },
-      {
-        number: 3,
-        icon: '⭐',
-        title: 'The Breakthrough',
-        blocks: [
-          { type: 'h1', content: 'The ConnectDist Platform' },
-          { type: 'p', content: 'The final design is a direct translation of my research insights into an intuitive, powerful tool. I focused on three strategic pillars.' },
-          { type: 'prototype', src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2FDy2HBVXW4rDCw7tJRPUY0y%2FChinmay-s-Design-System%3Fpage-id%3D139%253A23008%26node-id%3D151-32084%26t%3D0pV6yQfm2bG0Co1i-1', title: 'ConnectDist Interactive Prototype' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 5,
-                content: [
-                  { type: 'h2', content: 'Design Pillar 1: The Relationship Hub' },
-                  { type: 'p', content: 'Because trust is built on communication, the dashboard isn\'t a list of products; it\'s a list of people. It allows a retailer to see all their trusted distributors in one place. Every order is tied to a specific distributor and has its own dedicated chat thread, moving communication from messy text messages into an organized, in-context system.' },
-                ]
-              },
-              {
-                span: 7,
-                content: [
-                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_6b0f2e72f38248de88f8e14564a79c74~mv2.png/v1/fill/w_922,h_852,fp_0.51_0.50,q_90,usm_0.66_1.00_0.01,enc_auto/Shots%20Mockups.png', alt: 'App screenshots in mockups' },
-                ]
-              },
-              {
-                span: 12,
-                content: [
-                  { type: 'aside', icon: '♻️', title: 'All About Making It Simple', content: 'Simplicity was at the core of every design decision. By removing unnecessary complexity and focusing on the essential tasks, we created an interface that feels intuitive and effortless for users of all technical skill levels.' },
-                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_facde93c04c34cceae2e7ba351297b3d~mv2.jpeg/v1/fill/w_922,h_852,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a34bojiukqwhp8cgywbgmd.jpeg', alt: 'Simplified interface design' },
-                ]
-              },
-              {
-                span: 7,
-                content: [
-                  { type: 'image', src: '/images/connectdist-smart-inventory-mobile.jpg', alt: 'Smart inventory mobile interface' },
-                ]
-              },
-              {
-                span: 5,
-                content: [
-                  { type: 'h2', content: 'Design Pillar 2: The End of Guesswork with Smart Inventory' },
-                  { type: 'p', content: 'Because retailers were losing money on poor inventory management, I designed a simple, visual inventory tool. It allows owners to see what\'s selling, get alerts on low-stock items, and, crucially, create a new order directly from the inventory screen. This closes the loop between insight and action.' },
-                ]
-              }
-            ]
-          },
-        ],
-      },
-      {
-        number: 4,
-        icon: '⭐',
-        title: 'The Impact',
-        blocks: [
-          { type: 'h1', content: 'A New Trajectory for Local Business' },
-          { type: 'p', content: 'Though a conceptual project, ConnectDist was designed and validated as a market-ready product.' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '✅', title: 'Validation', content: 'In usability tests with 5 target users, the prototype received overwhelmingly positive feedback. The average time to place a complex, multi-item order was under 90 seconds.' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '💰', title: 'Business Viability', content: 'Users confirmed they would be willing to pay a small subscription fee for a tool that saved them an estimated 5-7 hours of administrative work per week.' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '🧠', title: 'My Key Reflection', content: 'This project taught me that in B2B design, you\'re solving for both business efficiency and human psychology. By understanding that the core user need wasn\'t just "ordering" but "trusted partnership," I was able to design a solution that resonated on an emotional level.' }
-                ]
-              }
-            ]
-          }
-        ],
-      }
-    ],
-  },
-  {
-    id: 'cognitive-clarity',
-    title: 'Cognitive Clarity (Zuo Insurance)',
-    category: 'UX Redesign',
-    subtitle: 'Redesigning the data collection experience for an insurance agency, focusing on reducing cognitive load.',
-    thumbnail: '/images/cognitive-clarity-hero.jpg',
-    heroImage: '/images/cognitive-clarity-hero.jpg',
-    overview: 'I redesigned the data collection experience for an insurance agency, focusing on reducing cognitive load and improving usability for both clients and agents. The project aimed to streamline the process, increase form completion rates, and enhance overall user engagement.',
-    tags: ['UX Design', 'Cognitive Psychology', 'Form Design'],
-    impact: [
-      { value: '22% Increase', label: 'Form completion' },
-      { value: '40% Decrease', label: 'in errors' },
-      { value: '35% Reduced', label: 'Call Times' },
-    ],
-    highlights: [
-      "Cut agent-assisted call times by 35% with faster form completion.",
-      "Increased form completion rates by 22% through a complete user-centric redesign.",
-      "Reduced data entry errors by 40% using real-time validation and e-signature integration."
-    ],
-    prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fk9FwBBCiNodBDGsmH68zho%2FCognitive-Load-Management-Chinmay%3Fpage-id%3D0%253A1%26node-id%3D4-570%26p%3Df%26viewport%3D-576%252C1455%252C0.24%26t%3DtbF8cfoQy3woM9SG-1%26scaling%3Dscale-down%26content-scaling%3Dfixed', title: 'Cognitive Clarity Interactive Prototype' },
-    content: [
-      {
-        number: 1, icon: '⭐', title: 'The Arena',
-        blocks: [
-          { type: 'h1', content: 'When a Form Becomes a Fortress' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 7,
-                content: [
-                  { type: 'p', content: 'For Zuo Insurance, the client onboarding form was their single most important touchpoint—and their biggest liability. It was a dense, jargon-filled document that was frustrating for new clients and time-consuming for agents.' },
-                  { type: 'list', items: ['High Abandonment: Potential clients would simply give up.', 'Costly Errors: Manual data entry errors led to compliance risks.', 'Poor First Impression: The frustrating process started relationships on a foundation of stress.'] }
-                ]
-              },
-              {
-                span: 5,
-                content: [
-                  { type: 'image', src: '/images/cognitive-clarity-old-form.jpg', alt: 'Screenshot of the complex legacy form' }
-                ]
-              },
-              {
-                span: 12,
-                content: [
-                  { type: 'p', content: 'My mission was to completely redesign this experience, applying principles of cognitive psychology to transform a complex, intimidating process into one that felt effortless, intuitive, and reassuring.' }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 2, icon: '💡', title: 'The Investigation',
-        blocks: [
-          { type: 'h1', content: 'Unpacking Cognitive Overload' },
-          { type: 'p', content: 'My process was rooted in a dual-track approach: understanding the journey of both the end-customer and the internal agent. A solution that only worked for one would ultimately fail.' },
-          { type: 'h2', content: 'Phase 1: Diagnosis and Discovery' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 12,
-                content: [
+                  { type: 'h3', content: 'Design Goals' },
                   {
-                    type: 'list',
-                    items: [
-                      '**Heuristic Evaluation**: I started by conducting a heuristic evaluation of the existing form, identifying dozens of violations related to cognitive load, error prevention, and consistency.',
-                      '**Agent Shadowing**: I observed five agents as they onboarded new clients. I saw firsthand where they got stuck, the workarounds they created, and the common errors that occurred.',
-                      '**Customer Interviews**: I spoke with recent customers about their experience. The key theme was overwhelm. "It felt like I was being interrogated," one user said.'
+                    type: 'list', items: [
+                      '**Reduce time and effort** spent placing and tracking orders.',
+                      '**Give shop owners a clearer view** of inventory and product performance.',
+                      '**Help distributors maintain relationships**, not just process transactions.'
                     ]
                   }
                 ]
               }
             ]
-          },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 7,
-                content: [
-                  { type: 'h2', content: 'The \'Aha!\' Moment: Two Users, One Broken Conversation' },
-                  { type: 'p', content: 'The key insight was that the form wasn\'t just a document; it was a broken conversation between three parties: the customer, the agent, and the system. The customer didn\'t understand the questions, and the agent spent all their time being a "translator" and data entry clerk instead of an advisor.' },
-                  { type: 'p', content: 'Therefore, the design challenge was: **How can we design an interface that facilitates a natural, guided conversation, where the system does the heavy lifting?**' }
-                ]
-              },
-              {
-                span: 5,
-                content: [
-                  { type: 'image', src: '/images/cognitive-clarity-aha.png', alt: 'Wireframe of the new simplified interface' },
-                ]
-              }
-            ]
-          },
-          { type: 'h2', content: 'Phase 2: Designing with Psychological Principles' },
-          { type: 'p', content: 'I didn\'t just aim for a prettier UI; I used established psychological principles as my guide.' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 6,
-                content: [
-                  { type: 'list', items: ["**Miller's Law (The Magic Number 7)**: The old form had over 50 fields on one screen. I broke the process down into logical, bite-sized chunks of 5-7 related questions at a time.", "**Hick's Law (The Paradox of Choice)**: I used conditional logic to eliminate irrelevant questions. If a user says they don't own a car, they never see questions about their vehicle. This dramatically simplified the path for most users.", "**Progressive Disclosure**: Advanced or complex information was tucked away until needed, keeping the primary interface clean and focused."] }
-                ]
-              },
-              {
-                span: 6,
-                className: 'bg-[#1e293b]',
-                content: [
-                  { type: 'image', src: '/images/cognitive-clarity-principles.png', alt: 'Visualizing psychological principles in the new design' }
-                ]
-              }
-            ]
           }
         ]
       },
       {
-        number: 3, icon: '⭐', title: 'The Breakthrough',
+        number: 2, icon: '🔍', title: 'Research',
         blocks: [
-          { type: 'h1', content: 'A Dual-Sided Solution' },
-          { type: 'p', content: 'The solution was a responsive web application with two distinct views, designed to work in harmony.' },
+          { type: 'h2', content: 'Decoding the Psychology of Trust' },
+          { type: 'p', content: 'I interviewed 5 shop owners and 3 distributors in London, Ontario, plus a short survey to quantify pain points.' },
           {
             type: 'bento_grid',
             items: [
               {
                 span: 6,
                 content: [
-                  { type: 'h2', content: 'Design Pillar 1: The Agent\'s "Co-Pilot" View' },
-                  { type: 'p', content: 'Because agents need control and efficiency, their interface is a powerful dashboard. It shows a progress overview, highlights missing information, and allows them to easily navigate between sections. It turns them from data clerks into true advisors who can guide the conversation.' },
-                ]
-              },
-              {
-                span: 6,
-                className: 'bg-[#1e293b]',
-                content: [
-                  { type: 'image', src: '/images/cognitive-clarity-pillar1.png', alt: 'Agent dashboard mockup showing progress overview' },
-                ]
-              },
-              {
-                span: 6,
-                className: 'bg-[#1e293b]',
-                content: [
-                  { type: 'image', src: '/images/cognitive-clarity-pillar2.png', alt: 'Customer view mockup showing guided conversation' },
+                  { type: 'h3', content: 'What I Learned' },
+                  {
+                    type: 'list', items: [
+                      '**~80% of shops** struggled to reach distributors quickly for urgent orders.',
+                      '**50% described inventory** as "manual" or "messy."',
+                      '**Trust > Price**: Shop owners often chose a trusted distributor over a cheaper one because of reliability and support.'
+                    ]
+                  }
                 ]
               },
               {
                 span: 6,
                 content: [
-                  { type: 'h2', content: 'Design Pillar 2: The Customer\'s "Guided Conversation" View' },
-                  { type: 'p', content: 'Because customers need clarity and reassurance, their view is presented one simple question at a time. The language is conversational (e.g., "Tell us about your home" instead of "Property Details Section 2a"). Real-time validation prevents errors before they happen, and a persistent summary view builds confidence.' },
-                ]
-              },
-              {
-                span: 6,
-                content: [
-                  { type: 'h2', content: 'Design Pillar 3: The Seamless Handoff' },
-                  { type: 'p', content: 'The system allows for a seamless handoff. A customer can start the form at home, save their progress, and finish it later with an agent in person without losing any data. This flexibility acknowledges the reality of the customer\'s busy life.' },
-                ]
-              },
-              {
-                span: 6,
-                content: [
-                  { type: 'image', src: '/images/cognitive-clarity-handoff.jpg', alt: 'Seamless handoff mockup' },
-                ]
-              }
-            ]
-          },
-        ]
-      },
-      {
-        number: 4, icon: '⭐', title: 'The Impact',
-        blocks: [
-          { type: 'h1', content: 'Efficiency, Accuracy, and Peace of Mind' },
-          { type: 'p', content: 'The redesigned onboarding flow had an immediate and dramatic impact on the business.' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '⚡', title: '35% Faster Onboarding', content: 'The average time for an agent to complete a client onboarding dropped from 12 minutes to just 7.8 minutes.' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '🎯', title: '40% Reduction in Errors', content: 'Real-time validation and a simplified UI slashed the rate of costly data entry errors.' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '📈', title: '22% Increase in Completion', content: 'The less intimidating process led to a significant jump in successful completions.' }
+                  { type: 'image', src: '/images/connectdist-interviews.png', alt: 'Research Findings' }
                 ]
               },
               {
                 span: 12,
                 content: [
-                  { type: 'p', content: '**My Key Reflection**: This project was a powerful lesson in the ROI of UX. By applying fundamental principles of cognitive psychology, we built a more efficient, accurate, and profitable business process. It proved that great design is not a cost center; it\'s a powerful driver of business success.' }
+                  { type: 'aside', icon: '💡', title: 'Key Insight', content: 'Local commerce runs on relationships, not just price. A purely transactional app would commoditize these relationships instead of strengthening them.' }
                 ]
               }
             ]
           }
         ]
+      },
+      {
+        number: 3, icon: '🏗️', title: 'From Insight to Architecture',
+        blocks: [
+          { type: 'h2', content: 'Relationship-First Structure' },
+          { type: 'p', content: 'With "relationship-first" as the guiding principle, I mapped the end-to-end flow. The goal was to make the relationship the primary object, not the product catalog.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 12,
+                content: [
+                  { type: 'h3', content: 'Service Blueprint' },
+                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_b1335180f66c4d87a6f7f795a262104d~mv2.png/v1/fill/w_2218,h_872,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2021_04_33.png', alt: 'Service Blueprint', caption: 'Service blueprint mapping shop and distributor journeys, highlighting where multi-channel orders currently break down.' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 4, icon: '📐', title: 'Design Principles',
+        blocks: [
+          { type: 'h2', content: 'Guiding Decisions' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '❤️', title: 'Relationship-Centric', content: 'Start from distributors and accounts, then drill into products. Keep comms tied to the relationship.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '⚡', title: 'Insight to Action', content: 'Show inventory signals (low stock, fast movers) and let users reorder directly from that view.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '👌', title: 'Simple & Familiar', content: 'Reduce choices. Use plain language. Support "the usual" reorders to respect existing habits.' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 5, icon: '📱', title: 'Key Flows',
+        blocks: [
+          { type: 'h2', content: 'Relationship Hub' },
+          { type: 'p', content: 'Instead of a generic marketplace, the home screen is a Hub showing each distributor with next delivery dates and quick actions. Tapping opens a dedicated space for order history and chat.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 6,
+                content: [
+                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_6b0f2e72f38248de88f8e14564a79c74~mv2.png/v1/fill/w_922,h_852,fp_0.51_0.50,q_90,usm_0.66_1.00_0.01,enc_auto/Shots%20Mockups.png', alt: 'Relationship Hub UI', caption: 'Designed to replace scattered WhatsApp threads with in-context chat per distributor.' }
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'h3', content: 'Consolidated History' },
+                  { type: 'p', content: 'This design keeps the personal connection front and center while consolidating scattered conversations and spreadsheets into a single, shared history.' }
+                ]
+              }
+            ]
+          },
+          { type: 'h2', content: 'Smart Inventory & Ordering' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 6,
+                content: [
+                  { type: 'h3', content: 'Ending Guesswork' },
+                  { type: 'p', content: 'Owners see stock grouped by category with "low" or "healthy" indicators. They can top up directly from this view, closing the loop between insight and action.' }
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'image', src: '/images/connectdist-smart-inventory-mobile.jpg', alt: 'Smart Inventory Interface', caption: 'Inventory view surfaced low/healthy stock and allowed direct reorder from this screen.' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 6, icon: '🎨', title: 'Visual System',
+        blocks: [
+          { type: 'h2', content: 'Calm and Approachable' },
+          { type: 'p', content: 'To feel trustworthy to non-technical owners, I used a calm palette and readable typography (Merriweather for headings). Controls are large and touch-friendly for one-handed use.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 12,
+                content: [
+                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_facde93c04c34cceae2e7ba351297b3d~mv2.jpeg/v1/fill/w_922,h_852,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a34bojiukqwhp8cgywbgmd.jpeg', alt: 'Simplified UI Components' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 7, icon: '📈', title: 'Measuring Success',
+        blocks: [
+          { type: 'h2', content: 'Concept Validation' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '⏱️', title: '90 Seconds', content: 'Average time in moderated usability tests.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '📉', title: '5-7 Hours', content: 'Self-reported weekly admin time saved (estimate).' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '💰', title: 'Willingness to Pay', content: 'Stated intent to pay a subscription if launched.' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 8, icon: '🚀', title: 'What I\'d Explore Next',
+        blocks: [
+          { type: 'h2', content: 'Future Roadmap' },
+          {
+            type: 'list', items: [
+              '**Pilot** with a small cluster of shops to measure real-world order accuracy.',
+              '**Integrate** with existing accounting invoices (QuickBooks, etc.).',
+              '**Expand analytics** for distributors to help them propose smart assortments.'
+            ]
+          }
+        ]
+      },
+      {
+        number: 9, icon: '🧠', title: 'Reflection',
+        blocks: [
+          { type: 'h2', content: 'B2B is Human' },
+          { type: 'p', content: 'ConnectDist showed that B2B design is as much about human psychology as operational efficiency. By treating users as partners, we turn messy workflows into a shared platform that helps local businesses compete.' }
+        ]
       }
     ],
   },
+
   {
     id: 'cican-navigator',
     title: 'CICan Navigator',
@@ -976,6 +1094,259 @@ export const caseStudies: CaseStudy[] = [
         ]
       }
     ]
+  },
+  {
+    id: 'cognitive-clarity',
+    title: 'Cognitive Clarity (Zuo Insurance)',
+    category: 'Product Design · UX Research · Concept / Client Engagement',
+    subtitle: 'Redesigning insurance onboarding so data collection feels like a guided conversation instead of an interrogation.',
+    thumbnail: '/images/cognitive-clarity-hero.jpg',
+    heroImage: '/images/cognitive-clarity-hero.jpg',
+    overview: 'Cognitive Clarity is a redesign of Zuo Insurance\'s client onboarding flow, focused on reducing cognitive load and improving usability for both agents and customers so that insurance data collection feels like a guided conversation instead of an interrogation.',
+    tags: ['Product Design', 'UX Research', 'Concept / Client Engagement'],
+    role: 'Lead Product Designer',
+    timeline: 'Client Concept (6 Weeks)',
+    tools: ['Figma', 'Miro', 'Prototyping'],
+    impact: [
+      { value: '22%', label: 'Higher Completion' },
+      { value: '40%', label: 'Fewer Errors' },
+      { value: '35%', label: 'Faster Sessions' },
+    ],
+    highlights: [
+      "22% increase in form completion rate.",
+      "40% reduction in data entry errors.",
+      "35% faster onboarding sessions (12 min -> 7.8 min)."
+    ],
+    prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fk9FwBBCiNodBDGsmH68zho%2FCognitive-Load-Management-Chinmay%3Fpage-id%3D0%253A1%26node-id%3D4-570%26p%3Df%26viewport%3D-576%252C1455%252C0.24%26t%3DtbF8cfoQy3woM9SG-1%26scaling%3Dscale-down%26content-scaling%3Dfixed', title: 'Cognitive Clarity Interactive Prototype' },
+    content: [
+      {
+        number: 1, icon: '🏰', title: 'The Arena',
+        blocks: [
+          { type: 'h2', content: 'When a Form Becomes a Fortress' },
+          { type: 'p', content: 'For Zuo Insurance, the onboarding form was the single most important touchpoint in the customer journey—and the single biggest source of pain. Customers faced a dense, jargon-heavy, multi-page form that felt more like an audit than a signup experience. Agents had to translate every question and re-enter data into internal systems.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 7,
+                content: [
+                  { type: 'h3', content: 'The Business Cost' },
+                  {
+                    type: 'list', items: [
+                      '**High abandonment**: Many potential clients dropped off mid-way through the form, especially on the first page with 50+ fields.',
+                      '**Costly errors**: Incomplete or incorrect data led to compliance risk, extra calls, and manual corrections.',
+                      '**Bad first impression**: New customers started their relationship stressed and confused instead of reassured.'
+                    ]
+                  }
+                ]
+              },
+              {
+                span: 5,
+                content: [
+                  { type: 'image', src: '/images/cognitive-clarity-old-form.jpg', alt: 'The legacy 50+ field form', caption: 'The original form overwhelmed users with 50+ fields on a single page.' }
+                ]
+              },
+              {
+                span: 12,
+                content: [
+                  { type: 'aside', icon: '🎯', title: 'Design Challenge', content: 'How might we transform this intimidating, error-prone form into a guided, human conversation—without sacrificing the data quality and completeness that underwriting requires?' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 2, icon: '🔍', title: 'The Investigation',
+        blocks: [
+          { type: 'h2', content: 'Unpacking Cognitive Overload' },
+          { type: 'p', content: 'The project used a dual-track research approach: understanding both customers filling out the form and agents who lived with it every day.' },
+          { type: 'h3', content: 'Phase 1: Diagnosis and Discovery' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 12,
+                content: [
+                  {
+                    type: 'list', items: [
+                      '**Heuristic evaluation**: Reviewed the existing web form against usability and cognitive load heuristics, identifying issues such as overloaded screens, inconsistent wording, weak feedback, and poor error handling.',
+                      '**Agent shadowing (5 agents)**: Observed agents onboarding new clients, watching how often they had to translate questions, backtrack, or switch between systems. Agents were effectively acting as interpreters and data-entry clerks, not advisors.',
+                      '**Customer interviews**: Spoke with recent customers about how the process felt. A common sentiment: completing the form felt like being interrogated rather than helped.'
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 7,
+                content: [
+                  { type: 'h3', content: 'Aha: Two Users, One Broken Conversation' },
+                  { type: 'p', content: 'The form was not just a bad document; it was a broken three-way conversation: the customer did not understand the questions or why they mattered, the agent spent their time rephrasing and typing instead of advising, and the system treated everything as rigid fields, offering no support in guiding the conversation.' },
+                  { type: 'p', content: 'The design problem became: **How can the interface facilitate a natural, guided conversation where the system handles complexity, so the customer and agent can focus on understanding and decisions?**' }
+                ]
+              },
+              {
+                span: 5,
+                content: [
+                  { type: 'image', src: '/images/cognitive-clarity-aha.png', alt: 'Wireframe showing the conversation model', caption: 'Early wireframe visualizing the three-way conversation breakdown.' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 3, icon: '🧠', title: 'Designing with Psychology',
+        blocks: [
+          { type: 'h2', content: 'Applying Cognitive Principles' },
+          { type: 'p', content: 'Rather than simply "prettifying" the form, the redesign intentionally applied core cognitive psychology principles.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 6,
+                content: [
+                  { type: 'h3', content: 'Miller\'s Law: Chunking Information' },
+                  { type: 'p', content: 'The old form presented over 50 fields on a single screen. The new flow breaks the journey into clear sections (about you, about your home, coverage details), each with 5-7 related questions. This reduced perceived complexity and helped users stay oriented.' },
+                  { type: 'h3', content: 'Hick\'s Law: Reducing Choices' },
+                  { type: 'p', content: 'Conditional logic now hides irrelevant questions. For example, if a customer indicates they do not own a car, all vehicle-related sections remain hidden, shortening the path and reducing decision fatigue.' },
+                  { type: 'h3', content: 'Progressive Disclosure' },
+                  { type: 'p', content: 'Advanced options like deductible fine-tuning and special riders are tucked behind expanders. Customers see simple, friendly choices first and can access detailed controls only when needed.' }
+                ]
+              },
+              {
+                span: 6,
+                className: 'bg-[#1e293b]',
+                content: [
+                  { type: 'image', src: '/images/cognitive-clarity-principles.png', alt: 'Psychological principles applied to form design', caption: 'Diagram showing how chunking, choice reduction, and progressive disclosure were applied.' }
+                ]
+              },
+              {
+                span: 12,
+                content: [
+                  { type: 'aside', icon: '💬', title: 'Inline Feedback and Guidance', content: 'Real-time validation, helper text, and conversational microcopy ("Tell us about your home") replace dense labels ("Property details section 2a"), reducing anxiety and errors.' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 4, icon: '✨', title: 'The Breakthrough',
+        blocks: [
+          { type: 'h2', content: 'A Dual-Sided Solution' },
+          { type: 'p', content: 'The outcome was a responsive web application with two coordinated views that share the same data model.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 6,
+                content: [
+                  { type: 'h3', content: 'Design Pillar 1: The Agent\'s "Co-Pilot" View' },
+                  { type: 'p', content: 'Agents see a control dashboard rather than a long form: a clear progress overview across sections with indicators for missing or risky information, fast navigation to any section, and inline prompts for key follow-up questions—turning agents into advisors instead of typists.' },
+                  { type: 'p', content: 'If a customer starts online, the agent can pick up their session, review answers, and guide them through remaining questions without duplicating work.' }
+                ]
+              },
+              {
+                span: 6,
+                className: 'bg-[#1e293b]',
+                content: [
+                  { type: 'image', src: '/images/cognitive-clarity-pillar1.png', alt: 'Agent co-pilot dashboard', caption: 'Agent dashboard showing progress overview and missing info indicators—reducing back-and-forth.' }
+                ]
+              },
+              {
+                span: 6,
+                className: 'bg-[#1e293b]',
+                content: [
+                  { type: 'image', src: '/images/cognitive-clarity-pillar2.png', alt: 'Customer guided conversation view', caption: 'Customer view with one focused question at a time, contextual hints, and a progress summary.' }
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'h3', content: 'Design Pillar 2: The Customer\'s "Guided Conversation" View' },
+                  { type: 'p', content: 'Customers interact with a one-step-at-a-time flow: large, focused screens presenting a few related questions with friendly copy, contextual hints and examples to explain what is being asked and why, real-time feedback to catch issues before submission, and a persistent summary panel that updates as they go.' }
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'h3', content: 'Design Pillar 3: Seamless Handoff' },
+                  { type: 'p', content: 'The system supports flexible handoff scenarios: customers can start at home, save progress securely, and continue later with an agent. Agents can send a secure, time-limited link to let customers update details after the call. All interactions feed the same record—a single source of truth.' }
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'image', src: '/images/cognitive-clarity-handoff.jpg', alt: 'Seamless handoff between customer and agent', caption: 'Handoff flow showing how customers and agents share a single source of truth.' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 5, icon: '📈', title: 'Impact',
+        blocks: [
+          { type: 'h2', content: 'Efficiency, Accuracy, and Peace of Mind' },
+          { type: 'p', content: 'After introducing the new flow and testing it with agents and customers, the team saw:' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '⚡', title: '35% Faster Onboarding', content: 'Average agent-led onboarding time dropped from 12 minutes to 7.8 minutes per client, freeing agents to handle more conversations per day.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '🎯', title: '40% Fewer Data Errors', content: 'Inline validation, clearer wording, and better field grouping reduced correction tickets and manual rework.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '🚀', title: '22% Higher Completion', content: 'More customers completed the process without dropping off, improving funnel performance and marketing ROI.' }
+                ]
+              },
+              {
+                span: 12,
+                content: [
+                  { type: 'p', content: 'These results came from comparing pre- and post-redesign sessions over a trial period with the same group of agents and similar types of customers.' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 6, icon: '🔮', title: 'What I\'d Do Next',
+        blocks: [
+          { type: 'h2', content: 'Next Steps for Broader Rollout' },
+          {
+            type: 'list', items: [
+              '**A/B test alternative wordings**: Test microcopy variations for the most sensitive sections (e.g., financial disclosures) to further optimize completion.',
+              '**Extend the dual-sided pattern**: Reuse the cognitive principles and components for other products (auto, life, bundled policies).',
+              '**Integrate richer analytics**: Track completion by segment, common clarification points, and create a feedback loop so underwriting and compliance can refine questions over time.'
+            ]
+          }
+        ]
+      },
+      {
+        number: 7, icon: '💭', title: 'Reflection',
+        blocks: [
+          { type: 'h2', content: 'Form Design is Conversation Design' },
+          { type: 'p', content: 'This project reinforced that form design is really conversation design. By grounding the work in cognitive psychology and treating agents and customers as equal participants, the redesign did not just make the interface nicer—it created a faster, more accurate, and more reassuring way to start an insurance relationship.' }
+        ]
+      }
+    ],
   }
 ];
 
