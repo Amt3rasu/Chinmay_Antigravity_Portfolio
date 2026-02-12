@@ -13,7 +13,12 @@ Command: npx gltfjsx@6.1.4 computers_1-transformed.glb --transform
 const context = createContext({} as any)
 
 export function Instances({ children, ...props }: any) {
-    const { nodes } = useGLTF('/models/computers_1-transformed.glb') as any
+    const result = useGLTF('/models/computers_1-transformed.glb') as any
+    // Detailed error for creation
+    if (!result) throw new Error("useGLTF returned null for computers model")
+    const { nodes } = result;
+    if (!nodes) throw new Error("GLTF nodes property is missing")
+
     const instances = useMemo(
         () => ({
             Object: nodes.Object_4,
@@ -131,7 +136,11 @@ export function Computers(props: any) {
 }
 
 function ScreenInteractive({ frame, panel, data, ...props }: any) {
-    const { nodes, materials } = useGLTF('/models/computers_1-transformed.glb') as any
+    const gltf = useGLTF('/models/computers_1-transformed.glb') as any
+    const nodes = gltf?.nodes
+    const materials = gltf?.materials
+
+    if (!nodes || !materials) return null;
 
     // Store
     const setHovered = useMonitorStore(state => state.setHoveredMonitor)
