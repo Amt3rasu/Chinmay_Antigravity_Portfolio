@@ -14,6 +14,7 @@ import { Testimonials } from '../components/Testimonials';
 import { FAQ } from '../components/FAQ';
 import { CalBooking } from '../components/CalBooking';
 import { ArrowDownIcon } from '../components/Icons';
+import MonitorHighlights from '../components/MonitorHighlights';
 
 const ScrollIndicator: React.FC = () => (
     <div className="scroll-indicator">
@@ -81,52 +82,29 @@ export const HomePage: React.FC = () => {
 
             <TrustedBy />
 
-            <section className="w-full py-16 bg-transparent backdrop-blur-sm snap-start flex-shrink-0">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="max-w-7xl mx-auto mb-12 flex flex-col md:flex-row items-center justify-between gap-6">
-                        <div className="text-center md:text-left">
-                            <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">
+            <ErrorBoundary fallback={<div className="w-full h-[50vh] bg-neutral-900 flex items-center justify-center text-white">3D Scene Error</div>}>
+                <section className="w-full h-screen relative bg-black overflow-hidden snap-start flex-shrink-0">
+                    <MonitorHighlights className="w-full h-full" />
+
+                    {/* Overlay Text for Title/Description */}
+                    <div className="absolute top-0 left-0 w-full p-8 md:p-16 pointer-events-none z-10 flex flex-col items-start justify-start">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl drop-shadow-lg">
                                 Highlights
                             </h2>
-                            <p className="mt-2 text-muted-foreground">
-                                Selected works and achievements.
+                            <p className="mt-2 text-white/80 max-w-lg drop-shadow-md">
+                                Explore selected works in 3D. <br />
+                                <span className="text-sm text-white/60">Drag to rotate • Click monitors to view details</span>
                             </p>
-                        </div>
-                        <Button href="/projects" variant="primary" size="lg" className="group hidden md:inline-flex">
-                            View All Work <ButtonArrow />
-                        </Button>
+                        </motion.div>
                     </div>
-
-                    <div className="relative max-w-7xl mx-auto">
-                        <div className="w-full relative">
-                            <ErrorBoundary fallback={<div className="text-foreground text-center p-10">Carousel failed to load.</div>}>
-                                <Carousel items={caseStudies
-                                    .filter(p => ['cdn-article', 'hackathon-win', 'access-transit', 'cognitive-clarity', 'sunnys-finance'].includes(p.id))
-                                    .sort((a, b) => {
-                                        const order = ['cdn-article', 'hackathon-win', 'access-transit', 'cognitive-clarity', 'sunnys-finance'];
-                                        return order.indexOf(a.id) - order.indexOf(b.id);
-                                    })
-                                    .map((project, index) => (
-                                        <Card key={project.id} card={{
-                                            src: project.thumbnail,
-                                            title: project.title,
-                                            category: project.category,
-                                            id: project.id,
-                                            externalUrl: project.externalUrl
-                                        }} index={index} />
-                                    ))} />
-                            </ErrorBoundary>
-                        </div>
-
-                        {/* Mobile only button */}
-                        <div className="mt-8 text-center md:hidden">
-                            <Button href="/projects" variant="primary" size="lg" className="group">
-                                View All Work <ButtonArrow />
-                            </Button>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                </section>
+            </ErrorBoundary>
 
             <Services />
             <WhyChooseMe />

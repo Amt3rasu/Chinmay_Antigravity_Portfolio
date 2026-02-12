@@ -1,11 +1,7 @@
 import React from 'react';
-import { useDesignMode } from '../context/DesignModeContext';
+
 
 export const NoiseTexture: React.FC = () => {
-    const { mode } = useDesignMode();
-
-    if (mode !== 'modern') return null;
-
     return (
         <div
             className="fixed inset-0 pointer-events-none z-50 opacity-[0.03]"

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 import { MenuIcon } from './Icons';
 import { motion, AnimatePresence } from 'framer-motion';
-import { useDesignMode } from '../context/DesignModeContext';
+
 
 export const Header: React.FC = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +10,6 @@ export const Header: React.FC = () => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isDockVisible, setIsDockVisible] = useState(false);
     const [isHovering, setIsHovering] = useState(false);
-    const { mode } = useDesignMode();
 
     const navLinkClasses = ({ isActive }: { isActive: boolean }) => `text-sm font-medium ${isActive ? 'text-primary' : 'text-muted-foreground'} hover:text-primary`;
     const mobileNavLinkClasses = ({ isActive }: { isActive: boolean }) => `block px-3 py-2 rounded-md text-base font-medium ${isActive ? 'bg-primary/10 text-primary' : 'text-foreground hover:bg-accent'}`;
@@ -25,7 +24,7 @@ export const Header: React.FC = () => {
             setIsScrolled(currentScrollY > 50);
 
             // Determine if dock should be visible (same logic as FloatingDock)
-            const shouldShowDock = mode === 'modern' &&
+            const shouldShowDock =
                 currentScrollY > 100 &&
                 (documentHeight - currentScrollY - windowHeight) > 200;
 
@@ -36,7 +35,7 @@ export const Header: React.FC = () => {
         handleScroll(); // Initial check
 
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [mode]);
+    }, []);
 
     // Logic:
     // 1. Standard Header: Visible when dock is NOT visible.

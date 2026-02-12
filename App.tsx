@@ -1,8 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
-import { DesignModeProvider } from './context/DesignModeContext';
-import { DesignToggle } from './components/DesignToggle';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
@@ -36,40 +34,38 @@ const App: React.FC = () => {
         <>
             {/* @ts-ignore */}
             <HelmetProvider context={{}}>
-                <DesignModeProvider>
-                    <AnimatePresence mode="wait">
-                        {isLoading ? (
-                            <LoadingScreen key="loading" onComplete={() => setIsLoading(false)} />
-                        ) : (
-                            <HashRouter key="app">
-                                <ScrollToTop />
-                                <div className="flex flex-col min-h-screen text-slate-200 relative isolation-isolate">
-                                    <BackgroundDoodles />
-                                    <Header />
+                <AnimatePresence mode="wait">
+                    {isLoading ? (
+                        <LoadingScreen key="loading" onComplete={() => setIsLoading(false)} />
+                    ) : (
+                        <HashRouter key="app">
+                            <ScrollToTop />
+                            <div className="flex flex-col min-h-screen text-slate-200 relative isolation-isolate">
+                                <BackgroundDoodles />
+                                <Header />
 
-                                    <main className="flex-grow">
-                                        <Suspense fallback={null}>
-                                            <Routes>
-                                                <Route path="/" element={<HomePage />} />
-                                                <Route path="/projects" element={<ProjectsPage />} />
-                                                <Route path="/project/:id" element={<CaseStudyPage />} />
-                                                <Route path="/about" element={<AboutPage />} />
-                                                <Route path="/resume" element={<ResumePage />} />
-                                                <Route path="/contact" element={<ContactPage />} />
-                                                <Route path="*" element={<NotFoundPage />} />
-                                            </Routes>
-                                        </Suspense>
-                                    </main>
-                                    <Footer />
-                                    {/* <Chatbot /> */}
-                                    <NoiseTexture />
-                                    <FloatingDock />
-                                    <TailedCursor baseThickness={30} color="#7c3aed" />
-                                </div>
-                            </HashRouter>
-                        )}
-                    </AnimatePresence>
-                </DesignModeProvider>
+                                <main className="flex-grow">
+                                    <Suspense fallback={null}>
+                                        <Routes>
+                                            <Route path="/" element={<HomePage />} />
+                                            <Route path="/projects" element={<ProjectsPage />} />
+                                            <Route path="/project/:id" element={<CaseStudyPage />} />
+                                            <Route path="/about" element={<AboutPage />} />
+                                            <Route path="/resume" element={<ResumePage />} />
+                                            <Route path="/contact" element={<ContactPage />} />
+                                            <Route path="*" element={<NotFoundPage />} />
+                                        </Routes>
+                                    </Suspense>
+                                </main>
+                                <Footer />
+                                {/* <Chatbot /> */}
+                                <NoiseTexture />
+                                <FloatingDock />
+                                <TailedCursor baseThickness={30} color="#7c3aed" />
+                            </div>
+                        </HashRouter>
+                    )}
+                </AnimatePresence>
             </HelmetProvider>
         </>
     );

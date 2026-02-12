@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-import { useDesignMode } from '../context/DesignModeContext';
+
 import { IconHome, IconBriefcase, IconUser, IconMail } from '@tabler/icons-react';
 
 const navItems = [
@@ -12,15 +12,12 @@ const navItems = [
 ];
 
 export const FloatingDock: React.FC = () => {
-    const { mode } = useDesignMode();
     const location = useLocation();
     const [scrollY, setScrollY] = useState(0);
     const [isVisible, setIsVisible] = useState(false);
     const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
     useEffect(() => {
-        if (mode !== 'modern') return;
-
         const handleScroll = () => {
             const currentScrollY = window.scrollY;
             const windowHeight = window.innerHeight;
@@ -40,9 +37,7 @@ export const FloatingDock: React.FC = () => {
         handleScroll(); // Initial check
 
         return () => window.removeEventListener('scroll', handleScroll);
-    }, [mode]);
-
-    if (mode !== 'modern') return null;
+    }, []);
 
     return (
         <AnimatePresence>
@@ -72,10 +67,10 @@ export const FloatingDock: React.FC = () => {
                                         <Link to={item.path}>
                                             <motion.div
                                                 className={`flex items-center gap-2 rounded-full transition-all duration-300 ${isActive
-                                                        ? 'bg-primary text-primary-foreground px-4 py-3'
-                                                        : isHovered
-                                                            ? 'bg-primary/10 text-primary px-4 py-3'
-                                                            : 'px-3 py-3 text-muted-foreground hover:text-foreground'
+                                                    ? 'bg-primary text-primary-foreground px-4 py-3'
+                                                    : isHovered
+                                                        ? 'bg-primary/10 text-primary px-4 py-3'
+                                                        : 'px-3 py-3 text-muted-foreground hover:text-foreground'
                                                     }`}
                                                 whileHover={{ scale: 1.1 }}
                                                 whileTap={{ scale: 0.95 }}

@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { IconDeviceMobile, IconBrowser, IconBulb } from '@tabler/icons-react';
-import { useDesignMode } from '../context/DesignModeContext';
+
 
 const services = [
     {
@@ -25,116 +25,6 @@ const services = [
 ];
 
 export const Services: React.FC = () => {
-    const { mode } = useDesignMode();
-
-    // Modern Mode - Bento Grid Layout
-    if (mode === 'modern') {
-        return (
-            <section className="w-full py-16 bg-transparent">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <div className="text-center mb-16">
-                        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-                            What I Offer
-                        </h2>
-                        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                            Comprehensive design solutions tailored to your needs.
-                        </p>
-                    </div>
-
-                    <div className="grid grid-cols-12 gap-4 max-w-7xl mx-auto">
-                        {/* Large Card - First Service */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.5 }}
-                            className="col-span-12 md:col-span-8 p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 group"
-                        >
-                            <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
-                                {services[0].icon}
-                            </div>
-                            <h3 className="text-3xl font-bold text-foreground mb-3">
-                                {services[0].title}
-                            </h3>
-                            <p className="text-muted-foreground leading-relaxed mb-6">
-                                {services[0].description}
-                            </p>
-                            <div className="flex flex-wrap gap-2">
-                                {services[0].tags.map(tag => (
-                                    <span
-                                        key={tag}
-                                        className="px-3 py-1 text-xs font-medium rounded-full bg-secondary text-secondary-foreground border border-border/50"
-                                    >
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
-                        </motion.div>
-
-                        {/* Medium Card - Second Service */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.1, duration: 0.5 }}
-                            className="col-span-12 md:col-span-4 p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 group"
-                        >
-                            <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
-                                {services[1].icon}
-                            </div>
-                            <h3 className="text-2xl font-bold text-foreground mb-3">
-                                {services[1].title}
-                            </h3>
-                            <p className="text-muted-foreground leading-relaxed mb-6">
-                                {services[1].description}
-                            </p>
-                            <div className="flex flex-wrap gap-2">
-                                {services[1].tags.map(tag => (
-                                    <span
-                                        key={tag}
-                                        className="px-3 py-1 text-xs font-medium rounded-full bg-secondary text-secondary-foreground border border-border/50"
-                                    >
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
-                        </motion.div>
-
-                        {/* Full Width Card - Third Service */}
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: 0.2, duration: 0.5 }}
-                            className="col-span-12 p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 group"
-                        >
-                            <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
-                                {services[2].icon}
-                            </div>
-                            <h3 className="text-2xl font-bold text-foreground mb-3">
-                                {services[2].title}
-                            </h3>
-                            <p className="text-muted-foreground leading-relaxed mb-6">
-                                {services[2].description}
-                            </p>
-                            <div className="flex flex-wrap gap-2">
-                                {services[2].tags.map(tag => (
-                                    <span
-                                        key={tag}
-                                        className="px-3 py-1 text-xs font-medium rounded-full bg-secondary text-secondary-foreground border border-border/50"
-                                    >
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
-                        </motion.div>
-                    </div>
-                </div>
-            </section>
-        );
-    }
-
-    // Classic Mode - Original Grid Layout
     return (
         <section className="w-full py-16 bg-transparent">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -147,40 +37,93 @@ export const Services: React.FC = () => {
                     </p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
-                    {services.map((service, index) => (
-                        <motion.div
-                            key={service.title}
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ delay: index * 0.1, duration: 0.5 }}
-                            className="flex flex-col h-full p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 group"
-                        >
-                            <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
-                                {service.icon}
-                            </div>
+                <div className="grid grid-cols-12 gap-4 max-w-7xl mx-auto">
+                    {/* Large Card - First Service */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5 }}
+                        className="col-span-12 md:col-span-8 p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 group"
+                    >
+                        <div className="w-16 h-16 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                            {services[0].icon}
+                        </div>
+                        <h3 className="text-3xl font-bold text-foreground mb-3">
+                            {services[0].title}
+                        </h3>
+                        <p className="text-muted-foreground leading-relaxed mb-6">
+                            {services[0].description}
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                            {services[0].tags.map(tag => (
+                                <span
+                                    key={tag}
+                                    className="px-3 py-1 text-xs font-medium rounded-full bg-secondary text-secondary-foreground border border-border/50"
+                                >
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
+                    </motion.div>
 
-                            <h3 className="text-2xl font-bold text-foreground mb-3">
-                                {service.title}
-                            </h3>
+                    {/* Medium Card - Second Service */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.1, duration: 0.5 }}
+                        className="col-span-12 md:col-span-4 p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 group"
+                    >
+                        <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                            {services[1].icon}
+                        </div>
+                        <h3 className="text-2xl font-bold text-foreground mb-3">
+                            {services[1].title}
+                        </h3>
+                        <p className="text-muted-foreground leading-relaxed mb-6">
+                            {services[1].description}
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                            {services[1].tags.map(tag => (
+                                <span
+                                    key={tag}
+                                    className="px-3 py-1 text-xs font-medium rounded-full bg-secondary text-secondary-foreground border border-border/50"
+                                >
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
+                    </motion.div>
 
-                            <p className="text-muted-foreground leading-relaxed mb-8 flex-grow">
-                                {service.description}
-                            </p>
-
-                            <div className="flex flex-wrap gap-2 mt-auto">
-                                {service.tags.map(tag => (
-                                    <span
-                                        key={tag}
-                                        className="px-3 py-1 text-xs font-medium rounded-full bg-secondary text-secondary-foreground border border-border/50"
-                                    >
-                                        {tag}
-                                    </span>
-                                ))}
-                            </div>
-                        </motion.div>
-                    ))}
+                    {/* Full Width Card - Third Service */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: 0.2, duration: 0.5 }}
+                        className="col-span-12 p-8 rounded-2xl bg-card border border-border hover:border-primary/50 transition-all duration-300 group"
+                    >
+                        <div className="w-14 h-14 rounded-xl bg-primary/10 flex items-center justify-center text-primary mb-6 group-hover:scale-110 transition-transform duration-300">
+                            {services[2].icon}
+                        </div>
+                        <h3 className="text-2xl font-bold text-foreground mb-3">
+                            {services[2].title}
+                        </h3>
+                        <p className="text-muted-foreground leading-relaxed mb-6">
+                            {services[2].description}
+                        </p>
+                        <div className="flex flex-wrap gap-2">
+                            {services[2].tags.map(tag => (
+                                <span
+                                    key={tag}
+                                    className="px-3 py-1 text-xs font-medium rounded-full bg-secondary text-secondary-foreground border border-border/50"
+                                >
+                                    {tag}
+                                </span>
+                            ))}
+                        </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

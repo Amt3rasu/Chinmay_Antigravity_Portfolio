@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import { useDesignMode } from '../context/DesignModeContext';
+
 
 interface Point {
     x: number;
@@ -18,15 +18,12 @@ export const TailedCursor: React.FC<TailedCursorProps> = ({
     color = '#7c3aed', // Electric Indigo
     maxAge = 500
 }) => {
-    const { mode } = useDesignMode();
     const canvasRef = useRef<HTMLCanvasElement>(null);
     const pointsRef = useRef<Point[]>([]);
     const mouseRef = useRef({ x: 0, y: 0 });
     const requestRef = useRef<number>();
 
     useEffect(() => {
-        if (mode !== 'modern') return;
-
         const canvas = canvasRef.current;
         if (!canvas) return;
 
@@ -127,9 +124,7 @@ export const TailedCursor: React.FC<TailedCursorProps> = ({
                 cancelAnimationFrame(requestRef.current);
             }
         };
-    }, [mode, baseThickness, color, maxAge]);
-
-    if (mode !== 'modern') return null;
+    }, [baseThickness, color, maxAge]);
 
     return (
         <canvas
