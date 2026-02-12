@@ -2,11 +2,8 @@ import { Canvas, useFrame } from '@react-three/fiber'
 import { MeshReflectorMaterial, BakeShadows, useGLTF } from '@react-three/drei'
 import { EffectComposer, Bloom, DepthOfField, Noise } from '@react-three/postprocessing'
 import { easing } from 'maath'
-import { suspend } from 'suspend-react'
 import { Instances, Computers } from './Computers'
 import { Suspense } from 'react'
-
-const suzi = import('@pmndrs/assets/models/bunny.glb')
 
 interface SceneProps {
     eventSource?: HTMLElement
@@ -53,8 +50,6 @@ export default function Scene({ eventSource, className }: SceneProps) {
                         />
                     </mesh>
 
-                    {/* Bunny */}
-                    <Bun scale={0.4} position={[0, 0.3, 0.5]} rotation={[0, -Math.PI * 0.85, 0]} />
                     <pointLight distance={1.5} intensity={1} position={[-0.15, 0.7, 0]} color="orange" />
                 </group>
 
@@ -69,15 +64,6 @@ export default function Scene({ eventSource, className }: SceneProps) {
                 <BakeShadows />
             </Suspense>
         </Canvas>
-    )
-}
-
-function Bun(props: any) {
-    const { nodes } = useGLTF((suspend(suzi) as any).default) as any
-    return (
-        <mesh receiveShadow castShadow geometry={nodes.mesh.geometry} {...props}>
-            <meshStandardMaterial color="#222" roughness={0.5} />
-        </mesh>
     )
 }
 
