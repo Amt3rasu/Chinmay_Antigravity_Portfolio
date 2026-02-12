@@ -53,12 +53,12 @@ export default function Scene({ eventSource, className }: SceneProps) {
                     <pointLight distance={1.5} intensity={1} position={[-0.15, 0.7, 0]} color="orange" />
                 </group>
 
-                {/* Postprocessing */}
-                <EffectComposer>
+                {/* Postprocessing - Disabled for debugging */}
+                {/* <EffectComposer>
                     <Bloom luminanceThreshold={0} mipmapBlur luminanceSmoothing={0.1} intensity={3.5} />
                     <Noise opacity={0.0075} />
                     <DepthOfField target={[0, 0, 13] as any} focalLength={0.3} bokehScale={15} height={700} />
-                </EffectComposer>
+                </EffectComposer> */}
 
                 <CameraRig />
                 <BakeShadows />
