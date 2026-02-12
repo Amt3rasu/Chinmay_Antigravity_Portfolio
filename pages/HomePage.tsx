@@ -82,7 +82,7 @@ export const HomePage: React.FC = () => {
 
             <TrustedBy />
 
-            <ErrorBoundary fallback={<div className="w-full h-[50vh] bg-neutral-900 flex items-center justify-center text-white">3D Scene Error</div>}>
+            <ErrorBoundary>
                 <section className="w-full h-screen relative bg-black overflow-hidden snap-start flex-shrink-0">
                     <MonitorHighlights className="w-full h-full" />
 
