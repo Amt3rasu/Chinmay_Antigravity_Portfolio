@@ -2,6 +2,458 @@ import { CaseStudy, Chapter, ContentBlock } from '../types';
 
 export const caseStudies: CaseStudy[] = [
   {
+    id: 'flamey-ai',
+    title: 'Flamey AI [Sequence Builder]',
+    subtitle: 'Lead Designer — Research, Strategy, UX/UI, Prototyping',
+    category: 'Product Design · AI · SaaS',
+    thumbnail: 'https://placehold.co/1200x800/1a1a1a/ffffff?text=Flamey+Hero',
+    heroImage: 'https://placehold.co/1200x800/1a1a1a/ffffff?text=Flamey+Hero',
+    overview: 'Flamey is an AI-powered outbound sales platform. The Sequence Builder is its core workflow — where sales reps create multi-step email and LinkedIn campaigns. I led the redesign to transform it from a frustrating form-filling exercise into a guided creative partnership between the rep and the AI.',
+    role: 'Lead Product Designer',
+    timeline: '4 Days',
+    tools: ['Figma', 'FigJam', 'Chakra UI'],
+    tags: ['AI', 'SaaS', 'Product Design', 'Strategy'],
+    impact: [
+      { value: '~5 min', label: 'Creation Time (was 30+ min)' },
+      { value: '4', label: 'Entry Points (vs 1)' },
+      { value: 'AA', label: 'WCAG 2.1 Compliance' },
+    ],
+    highlights: [
+      "Transformed a complex 30-minute workflow into a 5-minute guided AI experience.",
+      "introduced 4 distinct entry points catering to different user personas (SDR, AE, Manager).",
+      "Designed a visual timeline preview that increased user trust before launching campaigns."
+    ],
+    content: [
+      {
+        number: 1, icon: '⭐', title: 'The Arena',
+        blocks: [
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 6,
+                content: [
+                  { type: 'h2', content: 'The Blank Sequence Problem' },
+                  { type: 'p', content: 'Outbound sales is already one of the hardest jobs in tech. Cold outreach, constant rejection, shifting quotas — sales reps are under relentless pressure. The last thing they need is a tool that makes the creative parts harder.' },
+                  { type: 'p', content: 'But that\'s exactly what was happening. The existing experience greeted users with a dense, all-at-once form. No guidance. No starting point. Reps would stare at an empty canvas and either guess their way through or abandon it.' },
+                  { type: 'h3', content: 'The Core Problem' },
+                  { type: 'p', content: 'The AI wasn\'t failing because of output quality. It was failing because users didn\'t know **when**, **how**, or **why** to engage it.' },
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'image', src: 'https://placehold.co/800x600/2a2a2a/ffffff?text=Old+vs+New', alt: 'Visual comparison of the old form vs. the new concept', caption: 'Left: The old "Wall of Text" form. Right: The new guided entry.' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 2, icon: '⭐', title: 'The Investigation',
+        blocks: [
+          { type: 'h2', content: 'Process & Rationale' },
+          { type: 'p', content: 'With a 4-day timeline, I couldn\'t run formal user interviews. Instead, I anchored the work in two methods: a competitive teardown (Apollo.io, 11x.ai, Attio) and persona-driven journey mapping.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '⚡', title: 'SDR Persona', content: '**"Just help me launch."**\nGoal: Speed & volume.\nMental model: "Tell me what works and let me go."' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '🧠', title: 'AE Persona', content: '**"I need control."**\nGoal: Precision per account.\nMental model: "Start me somewhere, but let me drive."' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '🛡️', title: 'Manager Persona', content: '**"Consistency is key."**\nGoal: Scale & quality control.\nMental model: "What worked last quarter should be reusable."' }
+                ]
+              },
+              {
+                span: 12,
+                content: [
+                  { type: 'h3', content: 'Design Audit Findings' },
+                  {
+                    type: 'list', items: [
+                      '**Information Architecture**: All configuration steps presented simultaneously → cognitive overload.',
+                      '**AI Discoverability**: Toggle hidden below the fold/ignored.',
+                      '**Feedback & Trust**: No preview of what the AI would generate → users afraid to commit.'
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 3, icon: '⭐', title: 'The Breakthrough',
+        blocks: [
+          { type: 'h2', content: 'The Ecosystem' },
+          { type: 'p', content: 'The redesign makes one fundamental shift: it reframes the Sequence Builder from a **form** into a **guided journey**.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 5,
+                content: [
+                  { type: 'h3', content: '4 Entry Points (Not One)' },
+                  { type: 'p', content: 'The first screen is no longer a blank canvas. It\'s a structured choice respecting valid starting points:' },
+                  {
+                    type: 'list', items: [
+                      '🤖 **AI-Assisted** — "Help me build from scratch"',
+                      '📋 **Templates** — "Start from a proven structure"',
+                      '📎 **Duplicate** — "Clone what worked"',
+                      '✏️ **Manual** — "I know exactly what I want"'
+                    ]
+                  }
+                ]
+              },
+              {
+                span: 7,
+                content: [
+                  { type: 'image', src: 'https://placehold.co/800x500/333/fff?text=Entry+Points+UI', alt: 'Clean UI showing 4 distinct entry point cards' }
+                ]
+              },
+              {
+                span: 7,
+                content: [
+                  { type: 'image', src: 'https://placehold.co/800x500/333/fff?text=AI+Chat+Interface', alt: 'Conversational AI Interface' }
+                ]
+              },
+              {
+                span: 5,
+                content: [
+                  { type: 'h3', content: 'The AI Conversation' },
+                  { type: 'p', content: 'Instead of a form asking "How many steps?", the AI asks strategic questions one by one:\n\n"Who are you reaching out to?"\n"What\'s your main goal?"\n\nThis builds a strategic brief before generating, making the AI feel like a consultant, not a form filler.' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 4, icon: '📐', title: 'Design Principles',
+        blocks: [
+          { type: 'h2', content: 'Guiding Decisions' },
+          {
+            type: 'split_layout',
+            left: [
+              { type: 'aside', icon: '🤖', title: 'AI as co-pilot', content: 'The AI asks before it acts. Users stay in control, but the blank page is removed.' },
+              { type: 'aside', icon: '👁️', title: 'Show before committing', content: 'Visual timeline preview eliminates the fear of "what will this send?"' }
+            ],
+            right: [
+              { type: 'aside', icon: '🧠', title: 'Progressive disclosure', content: 'Only what\'s needed appears. Complex settings are accessible but never in the way.' },
+              { type: 'aside', icon: '⚡', title: 'Respect expertise', content: 'Entry points adapt to the user — SDRs need guidance, Managers need scale.' }
+            ]
+          }
+        ]
+      },
+      {
+        number: 5, icon: '📱', title: 'Key Flows',
+        blocks: [
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 12,
+                content: [
+                  { type: 'image', src: 'https://placehold.co/1200x500/222/fff?text=Visual+Timeline+Preview', alt: 'Visual Timeline Preview', caption: 'The "Trust Moment". Users see the whole sequence pacing (Email → LinkedIn → Call) before launching.' }
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'h3', content: 'Tab-Based Editing' },
+                  { type: 'p', content: 'Once created, editing is organized into focused tabs:\n\n1. **Recipients** (Who)\n2. **Content** (What)\n3. **Settings** (How)\n\nThis separation reduced visible complexity on screens by ~60%.' }
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'image', src: 'https://placehold.co/800x500/222/fff?text=Tabbed+Editing+UI', alt: 'Clean tabbed editing interface' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 6, icon: '🎨', title: 'Visual System',
+        blocks: [
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 12,
+                content: [
+                  { type: 'h2', content: 'Clarity & Consistency' },
+                  { type: 'image', src: 'https://placehold.co/1200x400/333/fff?text=Design+System+Spec', alt: 'Design tokens and typography specification' },
+                  { type: 'p', content: '**Typography**: Poppins for expressive headings, Inter for legible UI text.\n**Color**: Deep Brown foundation with Spark Orange for energy/action.\n**Accessibility**: All key interactive elements meet WCAG 2.1 AA.' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 7, icon: '📈', title: 'Validation',
+        blocks: [
+          { type: 'h2', content: 'Expected Impact' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '⏱️', title: '30m → 5m', content: 'Target reduction in sequence creation time.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '🎯', title: '4 Paths', content: 'Distinct entry points vs. 1 generic flow.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '✅', title: '32 Items', content: 'Design annotations documented for handoff.' }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    id: 'leaf-dex',
+    title: 'Leaf DEX [Design System]',
+    subtitle: 'Lead Designer — Research, Strategy, Component Architecture, UX/UI',
+    category: 'Design System · FinTech · Web3',
+    thumbnail: 'https://placehold.co/1200x800/00facc/0a0e27?text=Leaf+Hero',
+    heroImage: 'https://placehold.co/1200x800/00facc/0a0e27?text=Leaf+Hero',
+    overview: 'Leaf DEX is a concept decentralized exchange trading platform — designed from zero to a production-ready design system and responsive trading interface in 7 days. The project spans a complete design token foundation, a 117-component library, and full trading layouts.',
+    role: 'Lead Product Designer',
+    timeline: '7 Days',
+    tools: ['Figma', 'Auto-Layout 5.0', 'Tailwind'],
+    tags: ['Design System', 'FinTech', 'Web3', 'Product Design'],
+    impact: [
+      { value: '117', label: 'Components Built' },
+      { value: '302', label: 'Button Variants' },
+      { value: 'AAA', label: 'Glass Contrast' },
+    ],
+    highlights: [
+      "Created a complete atomic design system with 117 components and 302 button variants.",
+      "Achieved WCAG 2.1 AAA compliance on all glassmorphism surfaces (12:1 contrast).",
+      "Designed a responsive trading interface that adapts from 1920px desktop to mobile bottom-sheets."
+    ],
+    content: [
+      {
+        number: 1, icon: '⭐', title: 'The Arena',
+        blocks: [
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 7,
+                content: [
+                  { type: 'h2', content: 'The Problem With Trading UIs' },
+                  { type: 'p', content: 'Decentralized exchanges sit at a demanding intersection: extreme information density, real-time data, and high-stakes decisions.' },
+                  { type: 'p', content: 'Most existing platforms fall into two camps: **dense but cold** (Hyperliquid) or **clean but shallow** (Uniswap). Experienced traders tolerate the first. New users bounce off both.' },
+                  { type: 'h3', content: 'The Gap' },
+                  { type: 'p', content: 'Professional density + Consumer accessibility. Nobody\'s done both.' }
+                ]
+              },
+              {
+                span: 5,
+                content: [
+                  { type: 'prototype', src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fplaceholder', title: 'Interactive Prototype' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 2, icon: '⭐', title: 'The Investigation',
+        blocks: [
+          { type: 'h2', content: 'Process & Rationale' },
+          { type: 'p', content: 'Before opening Figma, I spent the first session as a researcher. I studied five live trading platforms (Hyperliquid, dYdX, Uniswap) placing test orders and analyzing friction.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 12,
+                content: [
+                  { type: 'h3', content: 'Insight: Trust through Clarity' },
+                  { type: 'p', content: 'The real problem wasn\'t layout. It was **trust through clarity**. Traders don\'t need fewer features; they need to instantly know *where to look*.' },
+                  { type: 'aside', icon: '💡', title: 'Key Weaknesses Found', content: '1. Static orderbook depth (no visual weight)\n2. Flat card hierarchy (no elevation)\n3. Mobile as afterthought' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 3, icon: '⭐', title: 'The Breakthrough',
+        blocks: [
+          { type: 'h2', content: 'The System' },
+          { type: 'p', content: 'The solution wasn\'t a single screen — it was a layered architecture: **Foundation → Components → Interface**.' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 4,
+                content: [
+                  { type: 'h3', content: 'Atoms (43)' },
+                  { type: 'p', content: 'Buttons (302 variants), Inputs, Toggles, Checkboxes, Icons.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'h3', content: 'Molecules (57)' },
+                  { type: 'p', content: 'Stat Cards, Orderbook Rows, Asset Rows, Crypto Pairs.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'h3', content: 'Organisms (17)' },
+                  { type: 'p', content: 'Full Orderbook Panel, Trading Chart Shell, Order Form.' }
+                ]
+              },
+              {
+                span: 12,
+                content: [
+                  { type: 'image', src: 'https://placehold.co/1200x500/111/00facc?text=Component+System+Visual', alt: 'Leaf DEX Component Library' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 4, icon: '📐', title: 'Design Principles',
+        blocks: [
+          { type: 'h2', content: 'Guiding Decisions' },
+          {
+            type: 'split_layout',
+            left: [
+              { type: 'aside', icon: '🔲', title: 'Structure via Glass', content: 'Don\'t rely on color alone. Use elevation and glass blur to create spatial hierarchy.' },
+              { type: 'aside', icon: '📊', title: 'Let data breathe', content: 'In high density, whitespace is signal. 8px grid provides breathing room.' }
+            ],
+            right: [
+              { type: 'aside', icon: '🎯', title: 'Direct the eye', content: 'Buy/Sell buttons must be the most dominant elements. Caribbean Green gradients draw attention.' },
+              { type: 'aside', icon: '♿', title: 'Readable Glass', content: 'Every glass surface maintains 12:1 (AAA) contrast. Glass is atmosphere, not obstruction.' }
+            ]
+          }
+        ]
+      },
+      {
+        number: 5, icon: '📱', title: 'Key Flows',
+        blocks: [
+          { type: 'h2', content: 'Desktop Trading (1440px)' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 12,
+                content: [
+                  { type: 'image', src: 'https://placehold.co/1200x600/0a0e27/00facc?text=Desktop+Trading+UI', alt: 'Full Desktop Trading Interface' },
+                  { type: 'p', content: 'Three-column layout (Orderbook | Chart | Trade) keeps cognitive flow natural. Panels float on `glass/heavy` layers.' }
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'h3', content: 'The Orderbook Depth Bar' },
+                  { type: 'p', content: 'Instead of static rows, each row carries a gradient bar representing liquidity weight. Traders can scan market depth in under 2 seconds without reading numbers.' },
+                  { type: 'image', src: 'https://placehold.co/600x400/111/00facc?text=Depth+Bar+Detail', alt: 'Detail of Orderbook Depth Bar' }
+                ]
+              },
+              {
+                span: 6,
+                content: [
+                  { type: 'h3', content: 'Mobile Experience (375px)' },
+                  { type: 'p', content: 'The Order Form lives in a **bottom sheet**, sliding up to occupy the lower 70% of the screen. This preserves the chart view while keeping trade actions accessible.' },
+                  { type: 'image', src: 'https://placehold.co/375x667/0a0e27/00facc?text=Mobile+UI', alt: 'Mobile Trading Interface' }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 6, icon: '🎨', title: 'Visual System',
+        blocks: [
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 8,
+                content: [
+                  { type: 'h2', content: 'Typography & Color' },
+                  { type: 'p', content: '**Type**: Inter for UI, JetBrains Mono for prices (tabular alignment).\n**Color**: Caribbean Green (#00facc) for Buy, Red (#ef4444) for Sell. Verified AAA contrast on dark backgrounds.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'h3', content: 'Glassmorphism' },
+                  {
+                    type: 'list', items: [
+                      '**Glass/Heavy**: 10px blur, white/10% (Panels)',
+                      '**Glass/Light**: 3px blur, white/8% (Cards)'
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        number: 7, icon: '📈', title: 'Validation',
+        blocks: [
+          { type: 'h2', content: 'Measuring Success' },
+          {
+            type: 'bento_grid',
+            items: [
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '🧩', title: '117', content: 'Production-ready components built.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '🔢', title: '302', content: 'Button variants covering all states.' }
+                ]
+              },
+              {
+                span: 4,
+                content: [
+                  { type: 'aside', icon: '♿', title: 'AAA', content: '100% accessible text on glass.' }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
     id: 'antigravity-portfolio',
     title: 'Antigravity Portfolio',
     category: 'Full-Stack Development',

@@ -7,6 +7,7 @@ export interface ImpactStat {
 export type ContentBlock =
   | { type: 'h1'; content: string; }
   | { type: 'h2'; content: string; }
+  | { type: 'h3'; content: string; }
   | { type: 'p'; content: string; }
   | { type: 'list'; items: string[]; }
   | { type: 'image'; src: string; alt: string; caption?: string; className?: string; }
@@ -42,6 +43,9 @@ export interface CaseStudy {
   externalUrl?: string;
   prototype?: { src: string; title: string; };
   content: Chapter[];
+  role?: string;
+  timeline?: string;
+  tools?: string[];
 }
 
 export interface ChatMessage {

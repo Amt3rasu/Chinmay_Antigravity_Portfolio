@@ -12,6 +12,7 @@ const ContentRenderer: React.FC<{ blocks: ContentBlock[], compact?: boolean }> =
         switch (block.type) {
             case 'h1': return <h1 key={index} className={`text-3xl md:text-4xl font-serif font-bold text-foreground ${compact ? 'mt-0 mb-2' : 'mt-12 mb-6'} tracking-tight`}>{block.content}</h1>;
             case 'h2': return <h2 key={index} className={`text-2xl font-bold text-foreground ${compact ? 'mt-0 mb-6' : 'mt-10 mb-4'}`}>{block.content}</h2>;
+            case 'h3': return <h3 key={index} className={`text-xl font-bold text-foreground ${compact ? 'mt-0 mb-3' : 'mt-8 mb-3'}`}>{block.content}</h3>;
             case 'p': return <p key={index} className={`text-lg text-muted-foreground ${compact ? 'mb-2' : 'mb-6'} leading-relaxed`} dangerouslySetInnerHTML={{ __html: block.content.replace(/\*\*(.*?)\*\*/g, '<strong class="text-foreground">$1</strong>') }}></p>;
             case 'image': return <img key={index} src={block.src} alt={block.alt} className={`${compact ? 'my-0' : 'my-10'} rounded-2xl shadow-lg w-full border border-border ${block.className || ''}`} />;
             case 'list': return (
@@ -136,18 +137,24 @@ export const CaseStudyPage: React.FC = () => {
                                 <p className="text-lg text-muted-foreground leading-relaxed">{project.overview}</p>
                             </div>
                             <div className="flex flex-col gap-8 p-8 bg-card rounded-2xl border border-border">
-                                <div>
-                                    <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Role</h3>
-                                    <p className="text-foreground font-medium">Lead Product Designer</p>
-                                </div>
-                                <div>
-                                    <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Timeline</h3>
-                                    <p className="text-foreground font-medium">4 Weeks</p>
-                                </div>
-                                <div>
-                                    <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Tools</h3>
-                                    <p className="text-foreground font-medium">Figma, React, Tailwind</p>
-                                </div>
+                                {project.role && (
+                                    <div>
+                                        <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Role</h3>
+                                        <p className="text-foreground font-medium">{project.role}</p>
+                                    </div>
+                                )}
+                                {project.timeline && (
+                                    <div>
+                                        <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Timeline</h3>
+                                        <p className="text-foreground font-medium">{project.timeline}</p>
+                                    </div>
+                                )}
+                                {project.tools && project.tools.length > 0 && (
+                                    <div>
+                                        <h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Tools</h3>
+                                        <p className="text-foreground font-medium">{project.tools.join(', ')}</p>
+                                    </div>
+                                )}
                             </div>
                         </div>
 
