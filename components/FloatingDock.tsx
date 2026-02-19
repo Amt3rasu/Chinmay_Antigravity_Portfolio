@@ -43,59 +43,60 @@ export const FloatingDock: React.FC = () => {
         <AnimatePresence>
             {isVisible && (
                 <motion.nav
-                    className="fixed bottom-8 left-1/2 -translate-x-1/2 z-50"
+                    className="fixed bottom-8 left-1/2 z-50"
+                    style={{ transform: 'translateX(-50%)' }}
                     initial={{ y: 100, opacity: 0 }}
                     animate={{ y: 0, opacity: 1 }}
                     exit={{ y: 100, opacity: 0 }}
                     transition={{ type: 'spring', stiffness: 300, damping: 30 }}
                 >
                     <div className="flex items-center gap-1 px-2 py-2 bg-background/90 backdrop-blur-xl border border-border rounded-full shadow-2xl">
-                        <AnimatePresence>
-                            {navItems.map((item, index) => {
-                                const Icon = item.icon;
-                                const isActive = location.pathname === item.path;
-                                const isHovered = hoveredIndex === index;
+                        {navItems.map((item, index) => {
+                            const Icon = item.icon;
+                            const isActive = location.pathname === item.path;
+                            const isHovered = hoveredIndex === index;
 
-                                return (
-                                    <motion.div
-                                        key={item.path}
-                                        layout
-                                        className="relative"
-                                        onMouseEnter={() => setHoveredIndex(index)}
-                                        onMouseLeave={() => setHoveredIndex(null)}
-                                    >
-                                        <Link to={item.path}>
+                            return (
+                                <div
+                                    key={item.path}
+                                    className="relative"
+                                    onMouseEnter={() => setHoveredIndex(index)}
+                                    onMouseLeave={() => setHoveredIndex(null)}
+                                >
+                                    <Link to={item.path}>
+                                        <motion.div
+                                            className={`flex items-center justify-center rounded-full transition-colors duration-300 w-11 h-11 ${isActive
+                                                ? 'bg-primary text-primary-foreground'
+                                                : isHovered
+                                                    ? 'bg-primary/10 text-primary'
+                                                    : 'text-muted-foreground hover:text-foreground'
+                                                }`}
+                                            whileHover={{ scale: 1.1 }}
+                                            whileTap={{ scale: 0.95 }}
+                                        >
+                                            <Icon className="w-5 h-5" />
+                                        </motion.div>
+                                    </Link>
+
+                                    {/* Tooltip label - absolute positioned so it doesn't shift layout */}
+                                    <AnimatePresence>
+                                        {(isHovered || isActive) && (
                                             <motion.div
-                                                className={`flex items-center gap-2 rounded-full transition-all duration-300 ${isActive
-                                                    ? 'bg-primary text-primary-foreground px-4 py-3'
-                                                    : isHovered
-                                                        ? 'bg-primary/10 text-primary px-4 py-3'
-                                                        : 'px-3 py-3 text-muted-foreground hover:text-foreground'
-                                                    }`}
-                                                whileHover={{ scale: 1.1 }}
-                                                whileTap={{ scale: 0.95 }}
+                                                className="absolute -top-10 left-1/2 -translate-x-1/2 pointer-events-none"
+                                                initial={{ opacity: 0, y: 4 }}
+                                                animate={{ opacity: 1, y: 0 }}
+                                                exit={{ opacity: 0, y: 4 }}
+                                                transition={{ duration: 0.15 }}
                                             >
-                                                <Icon className="w-5 h-5" />
-
-                                                <AnimatePresence>
-                                                    {(isHovered || isActive) && (
-                                                        <motion.span
-                                                            initial={{ width: 0, opacity: 0 }}
-                                                            animate={{ width: 'auto', opacity: 1 }}
-                                                            exit={{ width: 0, opacity: 0 }}
-                                                            transition={{ duration: 0.2 }}
-                                                            className="text-sm font-medium whitespace-nowrap overflow-hidden"
-                                                        >
-                                                            {item.label}
-                                                        </motion.span>
-                                                    )}
-                                                </AnimatePresence>
+                                                <span className="px-2 py-1 text-xs font-medium whitespace-nowrap rounded-md bg-foreground text-background shadow-lg">
+                                                    {item.label}
+                                                </span>
                                             </motion.div>
-                                        </Link>
-                                    </motion.div>
-                                );
-                            })}
-                        </AnimatePresence>
+                                        )}
+                                    </AnimatePresence>
+                                </div>
+                            );
+                        })}
                     </div>
                 </motion.nav>
             )}

@@ -49,6 +49,10 @@ export const TailedCursor: React.FC<TailedCursorProps> = ({
         window.addEventListener('mousemove', handleMouseMove);
         handleResize();
 
+        // Hide default OS cursor since we have a custom one
+        document.body.style.cursor = 'none';
+        document.documentElement.style.cursor = 'none';
+
         const animate = () => {
             if (!ctx || !canvas) return;
 
@@ -123,6 +127,9 @@ export const TailedCursor: React.FC<TailedCursorProps> = ({
             if (requestRef.current) {
                 cancelAnimationFrame(requestRef.current);
             }
+            // Restore default cursor on unmount
+            document.body.style.cursor = '';
+            document.documentElement.style.cursor = '';
         };
     }, [baseThickness, color, maxAge]);
 
