@@ -55,9 +55,9 @@ export default function Scene({ eventSource, className }: SceneProps) {
             </group>
             {/* Postprocessing */}
             <EffectComposer disableNormalPass>
-                <Bloom luminanceThreshold={0} mipmapBlur luminanceSmoothing={0.1} intensity={3.5} />
+                <Bloom luminanceThreshold={0} mipmapBlur luminanceSmoothing={0.1} intensity={1.5} />
                 <Noise opacity={0.0075} />
-                <DepthOfField target={[0, 0, 13] as any} focalLength={0.3} bokehScale={15} height={700} />
+                <DepthOfField target={[0, 0, 13] as any} focalLength={0.3} bokehScale={3} height={700} />
             </EffectComposer>
             {/* Camera movements */}
             <CameraRig />

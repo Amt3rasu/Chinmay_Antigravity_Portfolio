@@ -39,7 +39,7 @@ export const getHighlightsData = (): MonitorData[] => {
             title: study.title,
             subtitle: study.subtitle,
             summary: study.overview.substring(0, 120) + '...', // Truncate summary
-            url: study.externalUrl || `/case-study/${study.id}`,
+            url: study.externalUrl || `/project/${study.id}`,
             // We need to assign colors manually or from tags if not present in data
             color: getColorForProject(study.id),
             // We will use the hero image as texture
