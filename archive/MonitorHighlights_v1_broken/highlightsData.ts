@@ -12,8 +12,8 @@ const PROJECT_ORDER = [
     'antigravity-portfolio',
     'hackathon-win',
     'cdn-article',
-    // 9th item: Design Systems (matches prototype)
-    'design-system'
+    // 9th item: reuse portfolio or a placeholder for now
+    'antigravity-portfolio'
 ]
 
 export const getHighlightsData = (): MonitorData[] => {
