@@ -60,6 +60,19 @@ export const LoadingScreen: React.FC<LoadingScreenProps> = ({ onComplete, isCont
         }
     }, [isMinTimeMet, isContentReady, onComplete]);
 
+    // Fallback: force complete after 15 seconds regardless of content readiness
+    useEffect(() => {
+        const fallbackTimer = setTimeout(() => {
+            if (!hasCompleted.current) {
+                console.warn("LoadingScreen: Content ready signal timeout. Forcing transition.");
+                hasCompleted.current = true;
+                onComplete();
+            }
+        }, 15000); // 15 seconds max
+
+        return () => clearTimeout(fallbackTimer);
+    }, [onComplete]);
+
     return (
         <motion.div
             className="fixed inset-0 z-[10000] bg-background flex flex-col items-center justify-center"
