@@ -86,6 +86,7 @@ export const CaseStudyPage: React.FC = () => {
                 description={project.subtitle}
                 image={project.thumbnail}
                 type="article"
+                caseStudy={project}
             />
 
             {/* Immersive Hero */}

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { aboutMeData } from '../data/aboutMe';
+import { getPersonSchema, getWebSiteSchema, getCaseStudySchema, GLOBAL_SEO_KEYWORDS } from '../data/seoData';
 
 interface SEOProps {
     title?: string;
@@ -8,6 +9,7 @@ interface SEOProps {
     image?: string;
     url?: string;
     type?: string;
+    caseStudy?: any; // If provided, injects the massive CreativeWork schema
 }
 
 export const SEO: React.FC<SEOProps> = ({
@@ -15,7 +17,8 @@ export const SEO: React.FC<SEOProps> = ({
     description = aboutMeData.title,
     image = "/og-image.png",
     url = window.location.href,
-    type = 'website'
+    type = 'website',
+    caseStudy
 }) => {
     const siteTitle = title ? `${title} | ${aboutMeData.name}` : `${aboutMeData.name} - ${aboutMeData.title}`;
 
@@ -24,6 +27,7 @@ export const SEO: React.FC<SEOProps> = ({
             {/* Standard Metadata */}
             <title>{siteTitle}</title>
             <meta name="description" content={description} />
+            <meta name="keywords" content={GLOBAL_SEO_KEYWORDS} />
             <meta name="robots" content="index, follow" />
             <meta name="author" content={aboutMeData.name} />
             <meta property="article:published_time" content="2025-11-27T00:00:00Z" />
@@ -45,20 +49,18 @@ export const SEO: React.FC<SEOProps> = ({
 
             {/* Structured Data (JSON-LD) */}
             <script type="application/ld+json">
-                {JSON.stringify({
-                    "@context": "https://schema.org",
-                    "@type": "Person",
-                    "name": aboutMeData.name,
-                    "url": window.location.origin,
-                    "image": aboutMeData.profileImage,
-                    "jobTitle": aboutMeData.title,
-                    "sameAs": [
-                        aboutMeData.linkedin,
-                        aboutMeData.github,
-                        aboutMeData.twitter
-                    ].filter(Boolean)
-                })}
+                {JSON.stringify(getPersonSchema())}
             </script>
+            <script type="application/ld+json">
+                {JSON.stringify(getWebSiteSchema())}
+            </script>
+
+            {/* Massive Keyword Injection via CreativeWork Schema (Only for Case Studies) */}
+            {caseStudy && (
+                <script type="application/ld+json">
+                    {JSON.stringify(getCaseStudySchema(caseStudy))}
+                </script>
+            )}
         </Helmet>
     );
 };
