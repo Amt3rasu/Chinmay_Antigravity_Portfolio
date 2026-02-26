@@ -951,265 +951,233 @@ export const caseStudies: CaseStudy[] = [
                                                         ]
 },
   {
+{
     id: 'connect-dist',
-    title: 'ConnectDist',
-    category: 'Relationship-First B2B Commerce',
-    subtitle: 'Streamlining local distribution while strengthening the human connections that power Main Street.',
-    thumbnail: 'https://static.wixstatic.com/media/9a7729_a2ad1234f455483689cb0f2d96312b46~mv2.png/v1/fill/w_1024,h_1224,fp_0.50_0.53,q_90,enc_auto/Copilot%20Aug%202%202025.png',
-    heroImage: 'https://static.wixstatic.com/media/9a7729_c78319cf9cf743dda2836e075a9b6c04~mv2.jpg/v1/fill/w_1634,h_794,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Person%20Writing%20on%20Paper%202.jpg',
-    overview: 'ConnectDist is a mobile platform that connects small distributors with neighborhood shops, streamlining B2B ordering, inventory, and communication so local retailers can run their businesses with less chaos and more confidence. Based on a small sample in one city; next step would be a pilot with live data.',
-    tags: ['Product Management', 'UX Research', 'Concept Project · 7 Weeks · London, Ontario'],
-    role: 'Product Manager & Designer',
-    timeline: '7 Weeks',
-    tools: ['Figma', 'Miro', 'Notion'],
-    impact: [
-      { value: '90 Sec', label: 'Order Time' },
-      { value: '5-7 Hrs', label: 'Saved/Week' },
-      { value: 'High', label: 'Willingness to Pay' },
-    ],
-    highlights: [
-      "Complex multi-item orders completed in under 90 seconds in usability tests.",
-      "Participants estimated saving 5–7 hours per week on admin work.",
-      "Strong stated willingness to pay for a modest subscription from local shop owners."
-    ],
-    content: [
-      {
-        number: 1, icon: '🏪', title: 'The Arena',
-        blocks: [
-          { type: 'h2', content: 'Hidden Inefficiencies on Main Street' },
-          { type: 'p', content: 'Independent retailers keep neighborhoods alive, but behind the scenes, most still run distribution on phone calls, chaotic WhatsApp threads, and paper spreadsheets.' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 8,
-                content: [
-                  { type: 'h3', content: 'The Problem' },
-                  { type: 'p', content: 'Shop owners routinely juggle multiple distributors, each with different ordering methods. Distributors struggle with manual orders and overstocking because demand signals are buried in messages. Both sides lose money, and nobody has a clear picture of what’s actually happening.' }
-                ]
-              },
-              {
-                span: 4,
-                className: 'flex flex-col justify-center',
-                content: [
-                  { type: 'aside', icon: '📉', title: 'The Cost', content: 'Slow-moving stock sits on shelves while fast-moving items go out of stock.' }
-                ]
-              },
-              {
-                span: 12,
-                content: [
-                  { type: 'h3', content: 'Design Goals' },
-                  {
-                    type: 'list', items: [
-                      '**Reduce time and effort** spent placing and tracking orders.',
-                      '**Give shop owners a clearer view** of inventory and product performance.',
-                      '**Help distributors maintain relationships**, not just process transactions.'
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 2, icon: '🔍', title: 'Research',
-        blocks: [
-          { type: 'h2', content: 'Decoding the Psychology of Trust' },
-          { type: 'p', content: 'I interviewed 5 shop owners and 3 distributors in London, Ontario, plus a short survey to quantify pain points.' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 6,
-                content: [
-                  { type: 'h3', content: 'What I Learned' },
-                  {
-                    type: 'list', items: [
-                      '**~80% of shops** struggled to reach distributors quickly for urgent orders.',
-                      '**50% described inventory** as "manual" or "messy."',
-                      '**Trust > Price**: Shop owners often chose a trusted distributor over a cheaper one because of reliability and support.'
-                    ]
-                  }
-                ]
-              },
-              {
-                span: 6,
-                content: [
-                  { type: 'image', src: '/images/connectdist-interviews.png', alt: 'Research Findings' }
-                ]
-              },
-              {
-                span: 12,
-                content: [
-                  { type: 'aside', icon: '💡', title: 'Key Insight', content: 'Local commerce runs on relationships, not just price. A purely transactional app would commoditize these relationships instead of strengthening them.' }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 3, icon: '🏗️', title: 'From Insight to Architecture',
-        blocks: [
-          { type: 'h2', content: 'Relationship-First Structure' },
-          { type: 'p', content: 'With "relationship-first" as the guiding principle, I mapped the end-to-end flow. The goal was to make the relationship the primary object, not the product catalog.' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 12,
-                content: [
-                  { type: 'h3', content: 'Service Blueprint' },
-                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_b1335180f66c4d87a6f7f795a262104d~mv2.png/v1/fill/w_2218,h_872,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2021_04_33.png', alt: 'Service Blueprint', caption: 'Service blueprint mapping shop and distributor journeys, highlighting where multi-channel orders currently break down.' }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 4, icon: '📐', title: 'Design Principles',
-        blocks: [
-          { type: 'h2', content: 'Guiding Decisions' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '❤️', title: 'Relationship-Centric', content: 'Start from distributors and accounts, then drill into products. Keep comms tied to the relationship.' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '⚡', title: 'Insight to Action', content: 'Show inventory signals (low stock, fast movers) and let users reorder directly from that view.' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '👌', title: 'Simple & Familiar', content: 'Reduce choices. Use plain language. Support "the usual" reorders to respect existing habits.' }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 5, icon: '📱', title: 'Key Flows',
-        blocks: [
-          { type: 'h2', content: 'Relationship Hub' },
-          { type: 'p', content: 'Instead of a generic marketplace, the home screen is a Hub showing each distributor with next delivery dates and quick actions. Tapping opens a dedicated space for order history and chat.' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 6,
-                content: [
-                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_6b0f2e72f38248de88f8e14564a79c74~mv2.png/v1/fill/w_922,h_852,fp_0.51_0.50,q_90,usm_0.66_1.00_0.01,enc_auto/Shots%20Mockups.png', alt: 'Relationship Hub UI', caption: 'Designed to replace scattered WhatsApp threads with in-context chat per distributor.' }
-                ]
-              },
-              {
-                span: 6,
-                content: [
-                  { type: 'h3', content: 'Consolidated History' },
-                  { type: 'p', content: 'This design keeps the personal connection front and center while consolidating scattered conversations and spreadsheets into a single, shared history.' }
-                ]
-              }
-            ]
-          },
-          { type: 'h2', content: 'Smart Inventory & Ordering' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 6,
-                content: [
-                  { type: 'h3', content: 'Ending Guesswork' },
-                  { type: 'p', content: 'Owners see stock grouped by category with "low" or "healthy" indicators. They can top up directly from this view, closing the loop between insight and action.' }
-                ]
-              },
-              {
-                span: 6,
-                content: [
-                  { type: 'image', src: '/images/connectdist-smart-inventory-mobile.jpg', alt: 'Smart Inventory Interface', caption: 'Inventory view surfaced low/healthy stock and allowed direct reorder from this screen.' }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 6, icon: '🎨', title: 'Visual System',
-        blocks: [
-          { type: 'h2', content: 'Calm and Approachable' },
-          { type: 'p', content: 'To feel trustworthy to non-technical owners, I used a calm palette and readable typography (Merriweather for headings). Controls are large and touch-friendly for one-handed use.' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 12,
-                content: [
-                  { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_facde93c04c34cceae2e7ba351297b3d~mv2.jpeg/v1/fill/w_922,h_852,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/a34bojiukqwhp8cgywbgmd.jpeg', alt: 'Simplified UI Components' }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 7, icon: '📈', title: 'Measuring Success',
-        blocks: [
-          { type: 'h2', content: 'Concept Validation' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '⏱️', title: '90 Seconds', content: 'Average time in moderated usability tests.' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '📉', title: '5-7 Hours', content: 'Self-reported weekly admin time saved (estimate).' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '💰', title: 'Willingness to Pay', content: 'Stated intent to pay a subscription if launched.' }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 8, icon: '🚀', title: 'What I\'d Explore Next',
-        blocks: [
-          { type: 'h2', content: 'Future Roadmap' },
-          {
-            type: 'list', items: [
-              '**Pilot** with a small cluster of shops to measure real-world order accuracy.',
-              '**Integrate** with existing accounting invoices (QuickBooks, etc.).',
-              '**Expand analytics** for distributors to help them propose smart assortments.'
-            ]
-          }
-        ]
-      },
-      {
-        number: 9, icon: '🧠', title: 'Reflection',
-        blocks: [
-          { type: 'h2', content: 'B2B is Human' },
-          { type: 'p', content: 'ConnectDist showed that B2B design is as much about human psychology as operational efficiency. By treating users as partners, we turn messy workflows into a shared platform that helps local businesses compete.' }
-        ]
-      }
-    ],
-  },
+        title: 'ConnectDist',
+            category: 'Product Strategy · B2B Commerce',
+                subtitle: 'Lead Product Manager & Designer — Discovery, Strategy, UX/UI',
+                    thumbnail: 'https://static.wixstatic.com/media/9a7729_a2ad1234f455483689cb0f2d96312b46~mv2.png/v1/fill/w_1024,h_1224,fp_0.50_0.53,q_90,enc_auto/Copilot%20Aug%202%202025.png',
+                        heroImage: 'https://static.wixstatic.com/media/9a7729_c78319cf9cf743dda2836e075a9b6c04~mv2.jpg/v1/fill/w_1634,h_794,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Person%20Writing%20on%20Paper%202.jpg',
+                            overview: 'ConnectDist is a B2B platform designed to modernize the fragmented supply chain between local distributors and independent neighborhood shops. Moving beyond transactional efficiency, the platform was structured to digitize inventory while strengthening the human relationships that power local commerce.',
+                                tags: ['Product Management', 'B2B SaaS', 'UX Research', 'Dual-Sided Marketplace'],
+                                    role: 'Product Manager & UX Designer',
+                                        timeline: '7 Weeks (Concept + Validation)',
+                                            tools: ['Figma', 'Miro', 'Notion', 'JTBD Framework'],
+                                                impact: [
+                                                    { value: '5-7 Hrs', label: 'Admin Time Saved/Wk' },
+                                                    { value: '90 Sec', label: 'Multi-Item Order Time' },
+                                                    { value: 'High', label: 'Validated WTP' },
+                                                ],
+                                                    highlights: [
+                                                        "Conducted foundational research with 8 B2B stakeholders to uncover supply chain inefficiencies.",
+                                                        "Designed a dual-sided marketplace prioritizing 'relationship-first' communication over pure catalog browsing.",
+                                                        "Validated the concept with shop owners, resulting in strong stated Willingness to Pay (WTP)."
+                                                    ],
+                                                        content: [
+                                                            {
+                                                                number: 1, icon: '📋', title: 'The Brief',
+                                                                blocks: [
+                                                                    {
+                                                                        type: 'bento_grid',
+                                                                        items: [
+                                                                            {
+                                                                                span: 7,
+                                                                                content: [
+                                                                                    { type: 'h2', content: 'The Broken B2B Supply Chain' },
+                                                                                    { type: 'p', content: 'While enterprise distribution runs on SAP, local independent commerce still runs on chaos. Shop owners juggle dozens of distributors via phone calls, fragmented WhatsApp threads, and paper invoices. The result is chronic overstocking, missed deliveries, and strained relationships.' },
+                                                                                    { type: 'h3', content: 'The PM Challenge' },
+                                                                                    { type: 'p', content: 'Define and design a digital platform that brings order to this ecosystem without destroying the informal, relationship-based trust that local commerce relies on.' },
+                                                                                    { type: 'h3', content: 'The Constraints' },
+                                                                                    {
+                                                                                        type: 'list', items: [
+                                                                                            '**Zero tech literacy** — Many users actively resist new software, preferring the "devil they know" (WhatsApp).',
+                                                                                            '**Dual-sided complexity** — The platform had to provide immediate value to both the Supply side (Distributors) and Demand side (Shops).',
+                                                                                            '**Resource constraints** — As a solo PM/Designer, I had 7 weeks to move from initial hypothesis to validated high-fidelity prototype.'
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 5,
+                                                                                content: [
+                                                                                    { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_b1335180f66c4d87a6f7f795a262104d~mv2.png/v1/fill/w_2218,h_872,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2021_04_33.png', alt: 'Service Blueprint', caption: 'Mapping the fragmented communications between shop owners and distributors across multiple channels.' }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                number: 2, icon: '🔍', title: 'Discovery',
+                                                                blocks: [
+                                                                    { type: 'h2', content: 'Validating the Problem Space' },
+                                                                    { type: 'p', content: 'Before designing anything, I needed to validate the JTBD (Jobs to be Done). I interviewed 5 shop owners and 3 distributors in London, Ontario.' },
+                                                                    {
+                                                                        type: 'bento_grid',
+                                                                        items: [
+                                                                            {
+                                                                                span: 8,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'The Pivot: Trust > Efficiency' },
+                                                                                    { type: 'p', content: 'My initial hypothesis was that users wanted a "Shopify for B2B" — a massive, searchable catalog of cheap goods. **I was wrong.**' },
+                                                                                    { type: 'p', content: 'Research revealed that shop owners often stick with slightly more expensive distributors because they *trust* them to handle returns or rush a late delivery. A purely transactional e-commerce app would commoditize these relationships and fail adoption.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'aside', icon: '🗣️', title: 'User Quote', content: '"If I buy from a shiny new app and the milk spoils, who do I yell at? I buy from Tony because Tony fixes it."' }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                number: 3, icon: '🧭', title: 'Framing',
+                                                                blocks: [
+                                                                    { type: 'h2', content: 'Defining the Product Strategy' },
+                                                                    { type: 'p', content: 'With the insight that B2B commerce is fundamentally relationship-driven, I defined three core product principles to guide the architecture:' },
+                                                                    {
+                                                                        type: 'bento_grid',
+                                                                        items: [
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'aside', icon: '🤝', title: 'Relationships First', content: 'The primary organizational unit should be the Distributor profile, not a global product search bar. Preserve the 1:1 connection.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'aside', icon: '⚡', title: 'Insight to Action', content: 'Close the loop. If the dashboard flags "Low Stock," the reorder button should be immediately adjacent, not on a separate page.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'aside', icon: '📉', title: 'Minimum Viable Input', content: 'Reduce the burden of data entry. Distributors shouldn\'t need to manually update stock levels; the system should infer it from order history.' }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                number: 4, icon: '🔀', title: 'Exploration',
+                                                                blocks: [
+                                                                    { type: 'h2', content: 'Architecting the Information' },
+                                                                    { type: 'p', content: 'The biggest design challenge was replacing the flexibility of WhatsApp without losing its convenience. I explored two main IA models.' },
+                                                                    {
+                                                                        type: 'bento_grid',
+                                                                        items: [
+                                                                            {
+                                                                                span: 6,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'Option A: The Shopping Cart Model' },
+                                                                                    { type: 'p', content: 'A traditional B2C e-commerce model where users browse categories, add to cart, and checkout.' },
+                                                                                    {
+                                                                                        type: 'list', items: [
+                                                                                            '**Pros:** Deeply familiar mental model.',
+                                                                                            '**Cons:** Too slow. B2B orders aren\'t discovery-driven; they are repetitive bulk replenishments (e.g., "Give me my usual Tuesday order").'
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 6,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'Option B: The Hub Model ✓' },
+                                                                                    { type: 'p', content: 'A dashboard that prioritizes contextual chat and 1-click "reorder past invoice" functionality.' },
+                                                                                    {
+                                                                                        type: 'list', items: [
+                                                                                            '**Pros:** Mimics the speed of a WhatsApp text message but organizes the data into structured invoices backend.',
+                                                                                            '**Cons:** Heavier initial engineering lift to support integrated chat.'
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                number: 5, icon: '🎯', title: 'Solution',
+                                                                blocks: [
+                                                                    { type: 'h2', content: 'The ConnectDist Platform' },
+                                                                    { type: 'p', content: 'The resulting design digitizes the informal supply chain while centering the human element.' },
+                                                                    {
+                                                                        type: 'bento_grid',
+                                                                        items: [
+                                                                            {
+                                                                                span: 6,
+                                                                                content: [
+                                                                                    { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_6b0f2e72f38248de88f8e14564a79c74~mv2.png/v1/fill/w_922,h_852,fp_0.51_0.50,q_90,usm_0.66_1.00_0.01,enc_auto/Shots%20Mockups.png', alt: 'Relationship Hub UI', caption: 'The Relationship Hub: Replacing scattered WhatsApp threads with structured, in-context supplier communication.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 6,
+                                                                                content: [
+                                                                                    { type: 'h3', content: '1. Structured Communication Hub' },
+                                                                                    { type: 'p', content: 'Instead of abstracting the supplier away, each distributor gets a dedicated hub showing next delivery dates, recent invoices, and a contextual chat thread. When a shop owner messages "I need 2 more cases of Coke," the app automatically links the message to the active open invoice.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 6,
+                                                                                content: [
+                                                                                    { type: 'h3', content: '2. Smart Replenishment' },
+                                                                                    { type: 'p', content: 'Shop owners see inventory grouped with "Low" or "Healthy" indicators based on past velocity. They can top up directly from this view, bypassing the traditional multi-step catalog search.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 6,
+                                                                                content: [
+                                                                                    { type: 'image', src: '/images/connectdist-smart-inventory-mobile.jpg', alt: 'Smart Inventory Interface', caption: 'Smart inventory tracking with integrated 1-click replenishment.' }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                number: 6, icon: '📊', title: 'Validation',
+                                                                blocks: [
+                                                                    { type: 'h2', content: 'Concept Testing' },
+                                                                    { type: 'p', content: 'I ran moderated usability sessions with the initial research cohort, asking them to complete a simulated weekly restocking run.' },
+                                                                    {
+                                                                        type: 'bento_grid',
+                                                                        items: [
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'aside', icon: '⏱️', title: '90 Second Orders', content: 'Average completion time for complex, multi-item B2B orders.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'aside', icon: '📉', title: 'Admin Reduction', content: 'Participants estimated the workflow would save them 5–7 hours of admin work per week.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'aside', icon: '💰', title: 'Validated WTP', content: '4 out of 5 shop owners stated they would pay a $30-$50 monthly subscription for this tool.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 12,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'What I\'d Do Differently' },
+                                                                                    { type: 'p', content: 'Building a dual-sided marketplace from scratch is notoriously difficult because of the cold-start problem (shops won\'t use it without distributors; distributors won\'t use it without shops). If I were transitioning this from concept to startup, I would pivot to a **single-player mode first** — providing a brilliant inventory management tool for shops, and only introducing the B2B distributor network once a critical mass of shops was locked in.' }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+},
 
   {
     id: 'cican-navigator',
