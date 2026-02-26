@@ -612,91 +612,6 @@ export const caseStudies: CaseStudy[] = [
                                                             }
                                                         ]
 },
-              {
-                span: 6,
-                content: [
-                  { type: 'image', src: '/images/portfolio-hero-ui.png', alt: 'Antigravity Hero Section' }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 2, icon: '🌌', title: 'The Investigation',
-        blocks: [
-          { type: 'h1', content: 'Finding the "Antigravity" Theme' },
-          { type: 'p', content: 'I wanted a theme that represented "limitless potential" and "breaking boundaries." Space was the perfect metaphor.' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '🎨', title: 'Visual Language', content: 'Deep space black, starlight white, and neon purple accents. Typography mixes clean Inter for readability with futuristic Dosis headers.' }
-                ]
-              },
-              {
-                span: 8,
-                content: [
-                  { type: 'image', src: '/images/portfolio-code.png', alt: 'Code snippet showing the theme configuration' }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 3, icon: '⚡', title: 'The Breakthrough',
-        blocks: [
-          { type: 'h1', content: 'Building the Engine' },
-          { type: 'p', content: 'I chose a modern tech stack designed for speed and scalability: React & Vite for performance, Tailwind CSS for styling, and Framer Motion for interactions.' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 6,
-                content: [
-                  { type: 'h2', content: 'The AI Integration' },
-                  { type: 'p', content: 'I didn\'t want a static "About" page. I built **Sparky**, a custom AI chatbot powered by Google Gemini. It\'s trained on my resume and case studies, allowing recruiters to "interview" me even when I\'m asleep.' }
-                ]
-              },
-              {
-                span: 6,
-                content: [
-                  { type: 'image', src: '/images/portfolio-sparky.png', alt: 'Sparky AI Chatbot Interface' }
-                ]
-              },
-              {
-                span: 12,
-                content: [
-                  { type: 'image', src: '/images/portfolio-lighthouse.png', alt: 'Perfect 100% Lighthouse Scores' }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 4, icon: '📈', title: 'The Impact',
-        blocks: [
-          { type: 'h1', content: 'A Living Product' },
-          { type: 'p', content: 'The site loads in under 1.5 seconds, scores 100% on SEO/Accessibility, and provides a unique, memorable experience for every visitor.' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 12,
-                content: [
-                  { type: 'p', content: '**Reflection**: Building this portfolio reminded me that the best designs are the ones that are actually shipped. It forced me to make trade-offs between "cool" and "performant," ultimately making me a better designer.' }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
   {
     id: 'cdn-article',
     title: 'AI & Accessibility',
@@ -721,7 +636,6 @@ export const caseStudies: CaseStudy[] = [
     externalUrl: 'https://www.fanshawec.ca/about-fanshawe/news/user-experience-design-students-hack-their-way-first-place',
     content: []
   },
-  {
 {
     id: 'access-transit',
         title: 'AccessTransit [ZipTrains]',
