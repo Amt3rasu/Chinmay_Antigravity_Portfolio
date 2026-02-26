@@ -1,239 +1,332 @@
 import { CaseStudy, Chapter, ContentBlock } from '../types';
 
 export const caseStudies: CaseStudy[] = [
-  {
+{
     id: 'flamey-ai',
-    title: 'Flamey AI [Sequence Builder]',
-    subtitle: 'Lead Designer — Research, Strategy, UX/UI, Prototyping',
-    category: 'Product Design · AI · SaaS',
-    thumbnail: 'https://placehold.co/1200x800/1a1a1a/ffffff?text=Flamey+Hero',
-    heroImage: 'https://placehold.co/1200x800/1a1a1a/ffffff?text=Flamey+Hero',
-    overview: 'Flamey is an AI-powered outbound sales platform. The Sequence Builder is its core workflow — where sales reps create multi-step email and LinkedIn campaigns. I led the redesign to transform it from a frustrating form-filling exercise into a guided creative partnership between the rep and the AI.',
-    role: 'Lead Product Designer',
-    timeline: '4 Days',
-    tools: ['Figma', 'FigJam', 'Chakra UI'],
-    tags: ['AI', 'SaaS', 'Product Design', 'Strategy'],
-    impact: [
-      { value: '~5 min', label: 'Creation Time (was 30+ min)' },
-      { value: '4', label: 'Entry Points (vs 1)' },
-      { value: 'AA', label: 'WCAG 2.1 Compliance' },
-    ],
-    highlights: [
-      "Transformed a complex 30-minute workflow into a 5-minute guided AI experience.",
-      "introduced 4 distinct entry points catering to different user personas (SDR, AE, Manager).",
-      "Designed a visual timeline preview that increased user trust before launching campaigns."
-    ],
-    content: [
-      {
-        number: 1, icon: '⭐', title: 'The Arena',
-        blocks: [
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 6,
-                content: [
-                  { type: 'h2', content: 'The Blank Sequence Problem' },
-                  { type: 'p', content: 'Outbound sales is already one of the hardest jobs in tech. Cold outreach, constant rejection, shifting quotas — sales reps are under relentless pressure. The last thing they need is a tool that makes the creative parts harder.' },
-                  { type: 'p', content: 'But that\'s exactly what was happening. The existing experience greeted users with a dense, all-at-once form. No guidance. No starting point. Reps would stare at an empty canvas and either guess their way through or abandon it.' },
-                  { type: 'h3', content: 'The Core Problem' },
-                  { type: 'p', content: 'The AI wasn\'t failing because of output quality. It was failing because users didn\'t know **when**, **how**, or **why** to engage it.' },
-                ]
-              },
-              {
-                span: 6,
-                content: [
-                  { type: 'image', src: 'https://placehold.co/800x600/2a2a2a/ffffff?text=Old+vs+New', alt: 'Visual comparison of the old form vs. the new concept', caption: 'Left: The old "Wall of Text" form. Right: The new guided entry.' }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 2, icon: '⭐', title: 'The Investigation',
-        blocks: [
-          { type: 'h2', content: 'Process & Rationale' },
-          { type: 'p', content: 'With a 4-day timeline, I couldn\'t run formal user interviews. Instead, I anchored the work in two methods: a competitive teardown (Apollo.io, 11x.ai, Attio) and persona-driven journey mapping.' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '⚡', title: 'SDR Persona', content: '**"Just help me launch."**\nGoal: Speed & volume.\nMental model: "Tell me what works and let me go."' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '🧠', title: 'AE Persona', content: '**"I need control."**\nGoal: Precision per account.\nMental model: "Start me somewhere, but let me drive."' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '🛡️', title: 'Manager Persona', content: '**"Consistency is key."**\nGoal: Scale & quality control.\nMental model: "What worked last quarter should be reusable."' }
-                ]
-              },
-              {
-                span: 12,
-                content: [
-                  { type: 'h3', content: 'Design Audit Findings' },
-                  {
-                    type: 'list', items: [
-                      '**Information Architecture**: All configuration steps presented simultaneously → cognitive overload.',
-                      '**AI Discoverability**: Toggle hidden below the fold/ignored.',
-                      '**Feedback & Trust**: No preview of what the AI would generate → users afraid to commit.'
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 3, icon: '⭐', title: 'The Breakthrough',
-        blocks: [
-          { type: 'h2', content: 'The Ecosystem' },
-          { type: 'p', content: 'The redesign makes one fundamental shift: it reframes the Sequence Builder from a **form** into a **guided journey**.' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 5,
-                content: [
-                  { type: 'h3', content: '4 Entry Points (Not One)' },
-                  { type: 'p', content: 'The first screen is no longer a blank canvas. It\'s a structured choice respecting valid starting points:' },
-                  {
-                    type: 'list', items: [
-                      '🤖 **AI-Assisted** — "Help me build from scratch"',
-                      '📋 **Templates** — "Start from a proven structure"',
-                      '📎 **Duplicate** — "Clone what worked"',
-                      '✏️ **Manual** — "I know exactly what I want"'
-                    ]
-                  }
-                ]
-              },
-              {
-                span: 7,
-                content: [
-                  { type: 'image', src: 'https://placehold.co/800x500/333/fff?text=Entry+Points+UI', alt: 'Clean UI showing 4 distinct entry point cards' }
-                ]
-              },
-              {
-                span: 7,
-                content: [
-                  { type: 'image', src: 'https://placehold.co/800x500/333/fff?text=AI+Chat+Interface', alt: 'Conversational AI Interface' }
-                ]
-              },
-              {
-                span: 5,
-                content: [
-                  { type: 'h3', content: 'The AI Conversation' },
-                  { type: 'p', content: 'Instead of a form asking "How many steps?", the AI asks strategic questions one by one:\n\n"Who are you reaching out to?"\n"What\'s your main goal?"\n\nThis builds a strategic brief before generating, making the AI feel like a consultant, not a form filler.' }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 4, icon: '📐', title: 'Design Principles',
-        blocks: [
-          { type: 'h2', content: 'Guiding Decisions' },
-          {
-            type: 'split_layout',
-            left: [
-              { type: 'aside', icon: '🤖', title: 'AI as co-pilot', content: 'The AI asks before it acts. Users stay in control, but the blank page is removed.' },
-              { type: 'aside', icon: '👁️', title: 'Show before committing', content: 'Visual timeline preview eliminates the fear of "what will this send?"' }
-            ],
-            right: [
-              { type: 'aside', icon: '🧠', title: 'Progressive disclosure', content: 'Only what\'s needed appears. Complex settings are accessible but never in the way.' },
-              { type: 'aside', icon: '⚡', title: 'Respect expertise', content: 'Entry points adapt to the user — SDRs need guidance, Managers need scale.' }
-            ]
-          }
-        ]
-      },
-      {
-        number: 5, icon: '📱', title: 'Key Flows',
-        blocks: [
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 12,
-                content: [
-                  { type: 'image', src: 'https://placehold.co/1200x500/222/fff?text=Visual+Timeline+Preview', alt: 'Visual Timeline Preview', caption: 'The "Trust Moment". Users see the whole sequence pacing (Email → LinkedIn → Call) before launching.' }
-                ]
-              },
-              {
-                span: 6,
-                content: [
-                  { type: 'h3', content: 'Tab-Based Editing' },
-                  { type: 'p', content: 'Once created, editing is organized into focused tabs:\n\n1. **Recipients** (Who)\n2. **Content** (What)\n3. **Settings** (How)\n\nThis separation reduced visible complexity on screens by ~60%.' }
-                ]
-              },
-              {
-                span: 6,
-                content: [
-                  { type: 'image', src: 'https://placehold.co/800x500/222/fff?text=Tabbed+Editing+UI', alt: 'Clean tabbed editing interface' }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 6, icon: '🎨', title: 'Visual System',
-        blocks: [
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 12,
-                content: [
-                  { type: 'h2', content: 'Clarity & Consistency' },
-                  { type: 'image', src: 'https://placehold.co/1200x400/333/fff?text=Design+System+Spec', alt: 'Design tokens and typography specification' },
-                  { type: 'p', content: '**Typography**: Poppins for expressive headings, Inter for legible UI text.\n**Color**: Deep Brown foundation with Spark Orange for energy/action.\n**Accessibility**: All key interactive elements meet WCAG 2.1 AA.' }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 7, icon: '📈', title: 'Validation',
-        blocks: [
-          { type: 'h2', content: 'Expected Impact' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '⏱️', title: '30m → 5m', content: 'Target reduction in sequence creation time.' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '🎯', title: '4 Paths', content: 'Distinct entry points vs. 1 generic flow.' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '✅', title: '32 Items', content: 'Design annotations documented for handoff.' }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
+        title: 'Flamey AI [Sequence Builder]',
+            subtitle: 'Lead Designer — Research, Strategy, UX/UI, Prototyping',
+                category: 'Product Design · AI · SaaS',
+                    thumbnail: 'https://placehold.co/1200x800/1a1a1a/ffffff?text=Flamey+Hero',
+                        heroImage: 'https://placehold.co/1200x800/1a1a1a/ffffff?text=Flamey+Hero',
+                            overview: 'Flamey is an AI-powered outbound sales platform. The Sequence Builder — its core workflow — was hemorrhaging users. I had 4 days to redesign it from a lifeless form into a guided experience where AI felt like a creative partner, not a gimmick.',
+                                role: 'Lead Product Designer',
+                                    timeline: '4 Days',
+                                        tools: ['Figma', 'FigJam', 'Chakra UI'],
+                                            tags: ['AI', 'SaaS', 'Product Design', 'B2B'],
+                                                impact: [
+                                                    { value: '~5 min', label: 'Creation Time (was 30+ min)' },
+                                                    { value: '4', label: 'Entry Points (vs 1)' },
+                                                    { value: 'AA', label: 'WCAG 2.1 Compliance' },
+                                                ],
+                                                    highlights: [
+                                                        "Reduced sequence creation time from 30+ minutes to under 5 minutes.",
+                                                        "Designed 4 persona-driven entry points replacing a single generic form.",
+                                                        "Created a visual timeline preview that eliminated user fear before launching campaigns."
+                                                    ],
+                                                        content: [
+                                                            {
+                                                                number: 1, icon: '📋', title: 'The Brief',
+                                                                blocks: [
+                                                                    {
+                                                                        type: 'bento_grid',
+                                                                        items: [
+                                                                            {
+                                                                                span: 7,
+                                                                                content: [
+                                                                                    { type: 'h2', content: 'The Brief & Constraints' },
+                                                                                    { type: 'p', content: 'Flamey\'s product team came to me with a clear signal: **the Sequence Builder had the highest drop-off rate in the platform.** Users would open it, stare at the form, and leave. The AI toggle — their flagship feature — had single-digit engagement.' },
+                                                                                    { type: 'h3', content: 'What I Was Asked' },
+                                                                                    { type: 'p', content: 'Redesign the Sequence Builder end-to-end. Make the AI feel like a genuine creative partner, not a hidden toggle. Deliver high-fidelity prototypes in **4 working days**.' },
+                                                                                    { type: 'h3', content: 'The Constraints' },
+                                                                                    {
+                                                                                        type: 'list', items: [
+                                                                                            '**4-day timeline** — No room for usability testing or iteration sprints.',
+                                                                                            '**Existing Chakra UI** — Must work within the current design system, no new components.',
+                                                                                            '**3 user personas** with conflicting needs — SDRs want speed, AEs want control, Managers want consistency.',
+                                                                                            '**No user access** — PM couldn\'t arrange interviews in time. I had to rely on competitive research and persona mapping.'
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 5,
+                                                                                content: [
+                                                                                    { type: 'image', src: 'https://placehold.co/800x600/2a2a2a/ffffff?text=Old+Sequence+Builder', alt: 'The existing Sequence Builder — a dense wall of form fields with a hidden AI toggle', caption: 'The old builder: every configuration option on one screen. AI toggle buried at the bottom.' }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                number: 2, icon: '🔍', title: 'Discovery',
+                                                                blocks: [
+                                                                    { type: 'h2', content: 'Research Approach' },
+                                                                    { type: 'p', content: 'With no user access and a 4-day window, I needed fast, high-signal research. I chose two methods: a **competitive teardown** of 3 direct competitors and **persona-driven journey mapping** based on the PM\'s qualitative notes.' },
+                                                                    {
+                                                                        type: 'bento_grid',
+                                                                        items: [
+                                                                            {
+                                                                                span: 12,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'Competitive Teardown' },
+                                                                                    { type: 'p', content: 'I spent Day 1 building sequences in Apollo.io, 11x.ai, and Attio. Not just screenshots — I actually created campaigns, measured how long each took, and documented every friction point.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'aside', icon: '🔵', title: 'Apollo.io', content: '**22 minutes** to create a sequence. Strong template library, but AI felt bolted-on. No conversational interface.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'aside', icon: '🟣', title: '11x.ai', content: '**AI-first** approach. Fast creation but users felt out of control. "It just does things" — no preview, no trust.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'aside', icon: '🟢', title: 'Attio', content: '**Clean UI** but shallow AI integration. The design system was excellent; the workflow logic was not.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 12,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'Key Insight' },
+                                                                                    { type: 'p', content: 'Every competitor fell into one of two traps: **AI-first (fast but scary)** or **Form-first (safe but slow)**. Nobody had cracked the middle: **AI as a collaborative partner where the user stays in control.**' }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    { type: 'h2', content: 'Persona Mapping' },
+                                                                    { type: 'p', content: 'Using the PM\'s interview notes and support tickets, I mapped three distinct user personas. This was the moment the design direction crystallized — one-size-fits-all was the root cause of failure.' },
+                                                                    {
+                                                                        type: 'bento_grid',
+                                                                        items: [
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'aside', icon: '⚡', title: 'SDR Persona', content: '**"Just help me launch."**\nGoal: Speed & volume.\nMental model: "Tell me what works and let me go."' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'aside', icon: '🧠', title: 'AE Persona', content: '**"I need control."**\nGoal: Precision per account.\nMental model: "Start me somewhere, but let me drive."' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'aside', icon: '🛡️', title: 'Manager Persona', content: '**"Consistency is key."**\nGoal: Scale & quality control.\nMental model: "What worked last quarter should be reusable."' }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                number: 3, icon: '🧭', title: 'Framing',
+                                                                blocks: [
+                                                                    { type: 'h2', content: 'Synthesizing Research into Principles' },
+                                                                    { type: 'p', content: 'Before sketching a single screen, I distilled the research into 4 design principles. These became the decision-making framework for every UI choice that followed.' },
+                                                                    {
+                                                                        type: 'split_layout',
+                                                                        left: [
+                                                                            { type: 'aside', icon: '🤖', title: 'AI as co-pilot, not autopilot', content: 'The AI asks before it acts. Users stay in control, but the blank page is eliminated. This directly addresses 11x.ai\'s trust problem.' },
+                                                                            { type: 'aside', icon: '👁️', title: 'Show before committing', content: 'Visual timeline preview eliminates the fear of "what will this send?" — the #1 anxiety from support tickets.' }
+                                                                        ],
+                                                                        right: [
+                                                                            { type: 'aside', icon: '🧠', title: 'Progressive disclosure', content: 'Only what\'s needed appears. Complex settings are accessible but never in the way. This solves the "wall of text" problem in the old builder.' },
+                                                                            { type: 'aside', icon: '⚡', title: 'Respect expertise levels', content: 'Entry points adapt to the user — SDRs need guidance, Managers need scale. One door for everyone was the root cause of failure.' }
+                                                                        ]
+                                                                    },
+                                                                    { type: 'h3', content: 'The Design Audit' },
+                                                                    { type: 'p', content: 'I also conducted a heuristic evaluation of the existing builder. Three critical findings:' },
+                                                                    {
+                                                                        type: 'list', items: [
+                                                                            '**Information Architecture**: All configuration steps presented simultaneously → cognitive overload. Nielsen\'s "Recognition over Recall" violated.',
+                                                                            '**AI Discoverability**: The AI toggle was below the fold, with no explanation of what it did. Users didn\'t know it existed.',
+                                                                            '**Feedback & Trust**: No preview of what the AI would generate → users were afraid to commit. Zero progressive feedback.'
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                number: 4, icon: '🔀', title: 'Exploration',
+                                                                blocks: [
+                                                                    { type: 'h2', content: 'Alternatives Considered & Trade-offs' },
+                                                                    { type: 'p', content: 'I explored three structural approaches on Day 2. Each had clear trade-offs. The decision wasn\'t obvious — here\'s the reasoning.' },
+                                                                    {
+                                                                        type: 'bento_grid',
+                                                                        items: [
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'Option A: Step Wizard' },
+                                                                                    { type: 'p', content: 'Linear step-by-step flow (Step 1 → 2 → 3). Simple, familiar.' },
+                                                                                    { type: 'aside', icon: '✅', title: 'Pros', content: 'Low cognitive load. Easy to implement in Chakra UI.' },
+                                                                                    { type: 'aside', icon: '❌', title: 'Cons', content: 'Forced linearity frustrates power users (AEs). Doesn\'t let AI adapt to context.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'Option B: AI-First Canvas' },
+                                                                                    { type: 'p', content: 'Full-screen chat with AI that generates sequences. User refines after.' },
+                                                                                    { type: 'aside', icon: '✅', title: 'Pros', content: 'Fastest creation. Maximizes AI utility.' },
+                                                                                    { type: 'aside', icon: '❌', title: 'Cons', content: '11x.ai proved this scares users. No control = no trust.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'Option C: Hub + Spokes ✓' },
+                                                                                    { type: 'p', content: 'Central hub with 4 entry points. AI integrated as one path, not the only path.' },
+                                                                                    { type: 'aside', icon: '✅', title: 'Pros', content: 'Respects all 3 personas. AI is accessible but optional. Extensible.' },
+                                                                                    { type: 'aside', icon: '⚠️', title: 'Risk', content: 'More complex IA. Requires clear visual hierarchy to avoid choice paralysis.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 12,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'Decision: Hub + Spokes' },
+                                                                                    { type: 'p', content: 'I chose Option C because it was the only approach that respected all three personas without forcing a single workflow. The risk of choice paralysis was mitigated by limiting entry points to exactly 4, each with a clear icon, label, and one-line description. This follows Hick\'s Law — the time to make a decision increases logarithmically with the number of choices, so 4 is the sweet spot.' }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                number: 5, icon: '🎯', title: 'Solution',
+                                                                blocks: [
+                                                                    { type: 'h2', content: 'The Final Design' },
+                                                                    { type: 'p', content: 'The redesign makes one fundamental shift: it reframes the Sequence Builder from a **form** into a **guided journey** with the AI as a creative partner.' },
+                                                                    {
+                                                                        type: 'bento_grid',
+                                                                        items: [
+                                                                            {
+                                                                                span: 5,
+                                                                                content: [
+                                                                                    { type: 'h3', content: '4 Entry Points' },
+                                                                                    { type: 'p', content: 'The first screen is no longer a blank canvas. It\'s a structured choice that respects each persona\'s starting point:' },
+                                                                                    {
+                                                                                        type: 'list', items: [
+                                                                                            '🤖 **AI-Assisted** — "Help me build from scratch" (SDR path)',
+                                                                                            '📋 **Templates** — "Start from a proven structure" (Manager path)',
+                                                                                            '📎 **Duplicate** — "Clone what worked" (Manager path)',
+                                                                                            '✏️ **Manual** — "I know exactly what I want" (AE path)'
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 7,
+                                                                                content: [
+                                                                                    { type: 'image', src: 'https://placehold.co/800x500/333/fff?text=Entry+Points+UI', alt: 'Clean UI showing 4 distinct entry point cards', caption: 'The Hub: 4 cards, each with an icon and one-line description.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 7,
+                                                                                content: [
+                                                                                    { type: 'image', src: 'https://placehold.co/800x500/333/fff?text=AI+Chat+Interface', alt: 'Conversational AI building a sequence step by step', caption: 'The AI Conversation: strategic questions before generation.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 5,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'The AI Conversation' },
+                                                                                    { type: 'p', content: 'Instead of a form asking "How many steps?", the AI asks strategic questions one by one. This builds a brief before generating, making the AI feel like a **consultant, not a form filler**.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 12,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'The Trust Moment: Visual Timeline Preview' },
+                                                                                    { type: 'image', src: 'https://placehold.co/1200x500/222/fff?text=Visual+Timeline+Preview', alt: 'Visual Timeline Preview showing sequence pacing', caption: 'Before launching, users see the full sequence pacing (Email → Wait → LinkedIn → Call). This eliminated the #1 support ticket.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 6,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'Tab-Based Editing' },
+                                                                                    { type: 'p', content: 'Editing organized into focused tabs: **Recipients** (Who), **Content** (What), **Settings** (How). Reduced visible complexity by ~60%.' },
+                                                                                    { type: 'p', content: '**Trade-off accepted:** More clicks to access settings, but cognitive load reduction was worth it.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 6,
+                                                                                content: [
+                                                                                    { type: 'image', src: 'https://placehold.co/800x500/222/fff?text=Tabbed+Editing+UI', alt: 'Clean tabbed editing interface' }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                number: 6, icon: '🎨', title: 'Visual System',
+                                                                blocks: [
+                                                                    {
+                                                                        type: 'bento_grid',
+                                                                        items: [
+                                                                            {
+                                                                                span: 12,
+                                                                                content: [
+                                                                                    { type: 'h2', content: 'Working Within Constraints' },
+                                                                                    { type: 'p', content: 'A key constraint was reusing Flamey\'s existing Chakra UI design system. I couldn\'t introduce new components — only recombine existing ones in smarter configurations.' },
+                                                                                    { type: 'image', src: 'https://placehold.co/1200x400/333/fff?text=Design+System+Spec', alt: 'Design tokens and typography specification' },
+                                                                                    { type: 'p', content: '**Typography**: Poppins for expressive headings, Inter for legible UI text.\n**Color**: Deep Brown foundation with Spark Orange for energy.\n**Accessibility**: All interactive elements meet WCAG 2.1 AA.' },
+                                                                                    { type: 'p', content: '**Trade-off**: I wanted a dedicated "AI accent" color to differentiate AI content. The existing palette didn\'t support this, so I used subtle background shading instead — less distinctive but zero system debt.' }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                number: 7, icon: '📊', title: 'Validation',
+                                                                blocks: [
+                                                                    { type: 'h2', content: 'Tying Back to the Brief' },
+                                                                    { type: 'p', content: 'The brief asked for three things: reduce drop-off, make AI feel natural, deliver in 4 days. Here\'s how each was addressed:' },
+                                                                    {
+                                                                        type: 'bento_grid',
+                                                                        items: [
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'aside', icon: '⏱️', title: '30m → ~5m', content: 'Projected creation time based on task analysis. 4 entry points eliminate "where do I start?" paralysis.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'aside', icon: '🤖', title: 'AI Engagement', content: 'Conversational AI + visual preview address both discoverability and trust barriers.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'aside', icon: '📦', title: '32 Deliverables', content: '18 high-fidelity screens + 14 annotated specs. Zero new components needed. Delivered in 4 days.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 12,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'What I\'d Do Differently' },
+                                                                                    { type: 'p', content: 'With more time, I would validate the 4-entry-point model with real users via a 5-second test plus an A/B test comparing the AI conversation flow against a traditional form. **Unvalidated hypotheses are still hypotheses.**' },
+                                                                                    { type: 'p', content: 'I\'d also explore a first-time onboarding overlay highlighting the AI path — currently, users discover it organically, which may reduce adoption for SDRs who need it most.' }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+},
   {
     id: 'leaf-dex',
     title: 'Leaf DEX [Design System]',
