@@ -119,6 +119,61 @@ export const HomePage: React.FC<HomePageProps> = ({ onReady }) => {
                 </section>
             </ErrorBoundary>
 
+            {/* Creative Gallery Section */}
+            <section className="w-full py-16 bg-background">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-7xl mx-auto mb-8">
+                        <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl">Creative & UI Gallery</h2>
+                        <p className="mt-4 max-w-2xl text-lg text-muted-foreground">
+                            A collection of conceptual work, interface experiments, and passion projects.
+                        </p>
+                    </div>
+                    <Carousel
+                        items={caseStudies
+                            .filter(study => ['sunnys-finance', 'cognitive-clarity'].includes(study.id))
+                            .map((study, index) => (
+                                <Card
+                                    key={study.id}
+                                    index={index}
+                                    card={{
+                                        src: study.thumbnail || '',
+                                        title: study.title,
+                                        category: study.category,
+                                        id: study.id,
+                                        externalUrl: study.externalUrl
+                                    }}
+                                />
+                            ))}
+                    />
+                </div>
+            </section>
+
+            {/* Credentials Section */}
+            <section className="w-full py-16 bg-muted/20">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <div className="max-w-7xl mx-auto">
+                        <h2 className="text-3xl font-bold tracking-tight text-foreground sm:text-4xl mb-8">Featured Mentions</h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl">
+                            {caseStudies
+                                .filter(study => ['cdn-article', 'hackathon-win'].includes(study.id))
+                                .map((study) => (
+                                    <a
+                                        key={study.id}
+                                        href={study.externalUrl || `/project/${study.id}`}
+                                        target={study.externalUrl ? "_blank" : undefined}
+                                        rel={study.externalUrl ? "noopener noreferrer" : undefined}
+                                        className="flex flex-col p-6 bg-background rounded-2xl hover:bg-muted/50 transition-colors border border-border shadow-sm group"
+                                    >
+                                        <span className="text-sm font-medium text-accent mb-2">{study.category}</span>
+                                        <h4 className="text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">{study.title}</h4>
+                                        <p className="text-muted-foreground text-sm line-clamp-2">{study.overview}</p>
+                                    </a>
+                                ))}
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <Services />
             <WhyChooseMe />
             <Testimonials />
