@@ -327,260 +327,291 @@ export const caseStudies: CaseStudy[] = [
                                                             }
                                                         ]
 },
-  {
+{
     id: 'leaf-dex',
-    title: 'Leaf DEX [Design System]',
-    subtitle: 'Lead Designer — Research, Strategy, Component Architecture, UX/UI',
-    category: 'Design System · FinTech · Web3',
-    thumbnail: 'https://placehold.co/1200x800/00facc/0a0e27?text=Leaf+Hero',
-    heroImage: 'https://placehold.co/1200x800/00facc/0a0e27?text=Leaf+Hero',
-    overview: 'Leaf DEX is a concept decentralized exchange trading platform — designed from zero to a production-ready design system and responsive trading interface in 7 days. The project spans a complete design token foundation, a 117-component library, and full trading layouts.',
-    role: 'Lead Product Designer',
-    timeline: '7 Days',
-    tools: ['Figma', 'Auto-Layout 5.0', 'Tailwind'],
-    tags: ['Design System', 'FinTech', 'Web3', 'Product Design'],
-    impact: [
-      { value: '117', label: 'Components Built' },
-      { value: '302', label: 'Button Variants' },
-      { value: 'AAA', label: 'Glass Contrast' },
-    ],
-    highlights: [
-      "Created a complete atomic design system with 117 components and 302 button variants.",
-      "Achieved WCAG 2.1 AAA compliance on all glassmorphism surfaces (12:1 contrast).",
-      "Designed a responsive trading interface that adapts from 1920px desktop to mobile bottom-sheets."
-    ],
-    content: [
-      {
-        number: 1, icon: '⭐', title: 'The Arena',
-        blocks: [
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 7,
-                content: [
-                  { type: 'h2', content: 'The Problem With Trading UIs' },
-                  { type: 'p', content: 'Decentralized exchanges sit at a demanding intersection: extreme information density, real-time data, and high-stakes decisions.' },
-                  { type: 'p', content: 'Most existing platforms fall into two camps: **dense but cold** (Hyperliquid) or **clean but shallow** (Uniswap). Experienced traders tolerate the first. New users bounce off both.' },
-                  { type: 'h3', content: 'The Gap' },
-                  { type: 'p', content: 'Professional density + Consumer accessibility. Nobody\'s done both.' }
-                ]
-              },
-              {
-                span: 5,
-                content: [
-                  { type: 'prototype', src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fplaceholder', title: 'Interactive Prototype' }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 2, icon: '⭐', title: 'The Investigation',
-        blocks: [
-          { type: 'h2', content: 'Process & Rationale' },
-          { type: 'p', content: 'Before opening Figma, I spent the first session as a researcher. I studied five live trading platforms (Hyperliquid, dYdX, Uniswap) placing test orders and analyzing friction.' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 12,
-                content: [
-                  { type: 'h3', content: 'Insight: Trust through Clarity' },
-                  { type: 'p', content: 'The real problem wasn\'t layout. It was **trust through clarity**. Traders don\'t need fewer features; they need to instantly know *where to look*.' },
-                  { type: 'aside', icon: '💡', title: 'Key Weaknesses Found', content: '1. Static orderbook depth (no visual weight)\n2. Flat card hierarchy (no elevation)\n3. Mobile as afterthought' }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 3, icon: '⭐', title: 'The Breakthrough',
-        blocks: [
-          { type: 'h2', content: 'The System' },
-          { type: 'p', content: 'The solution wasn\'t a single screen — it was a layered architecture: **Foundation → Components → Interface**.' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 4,
-                content: [
-                  { type: 'h3', content: 'Atoms (43)' },
-                  { type: 'p', content: 'Buttons (302 variants), Inputs, Toggles, Checkboxes, Icons.' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'h3', content: 'Molecules (57)' },
-                  { type: 'p', content: 'Stat Cards, Orderbook Rows, Asset Rows, Crypto Pairs.' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'h3', content: 'Organisms (17)' },
-                  { type: 'p', content: 'Full Orderbook Panel, Trading Chart Shell, Order Form.' }
-                ]
-              },
-              {
-                span: 12,
-                content: [
-                  { type: 'image', src: 'https://placehold.co/1200x500/111/00facc?text=Component+System+Visual', alt: 'Leaf DEX Component Library' }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 4, icon: '📐', title: 'Design Principles',
-        blocks: [
-          { type: 'h2', content: 'Guiding Decisions' },
-          {
-            type: 'split_layout',
-            left: [
-              { type: 'aside', icon: '🔲', title: 'Structure via Glass', content: 'Don\'t rely on color alone. Use elevation and glass blur to create spatial hierarchy.' },
-              { type: 'aside', icon: '📊', title: 'Let data breathe', content: 'In high density, whitespace is signal. 8px grid provides breathing room.' }
-            ],
-            right: [
-              { type: 'aside', icon: '🎯', title: 'Direct the eye', content: 'Buy/Sell buttons must be the most dominant elements. Caribbean Green gradients draw attention.' },
-              { type: 'aside', icon: '♿', title: 'Readable Glass', content: 'Every glass surface maintains 12:1 (AAA) contrast. Glass is atmosphere, not obstruction.' }
-            ]
-          }
-        ]
-      },
-      {
-        number: 5, icon: '📱', title: 'Key Flows',
-        blocks: [
-          { type: 'h2', content: 'Desktop Trading (1440px)' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 12,
-                content: [
-                  { type: 'image', src: 'https://placehold.co/1200x600/0a0e27/00facc?text=Desktop+Trading+UI', alt: 'Full Desktop Trading Interface' },
-                  { type: 'p', content: 'Three-column layout (Orderbook | Chart | Trade) keeps cognitive flow natural. Panels float on `glass/heavy` layers.' }
-                ]
-              },
-              {
-                span: 6,
-                content: [
-                  { type: 'h3', content: 'The Orderbook Depth Bar' },
-                  { type: 'p', content: 'Instead of static rows, each row carries a gradient bar representing liquidity weight. Traders can scan market depth in under 2 seconds without reading numbers.' },
-                  { type: 'image', src: 'https://placehold.co/600x400/111/00facc?text=Depth+Bar+Detail', alt: 'Detail of Orderbook Depth Bar' }
-                ]
-              },
-              {
-                span: 6,
-                content: [
-                  { type: 'h3', content: 'Mobile Experience (375px)' },
-                  { type: 'p', content: 'The Order Form lives in a **bottom sheet**, sliding up to occupy the lower 70% of the screen. This preserves the chart view while keeping trade actions accessible.' },
-                  { type: 'image', src: 'https://placehold.co/375x667/0a0e27/00facc?text=Mobile+UI', alt: 'Mobile Trading Interface' }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 6, icon: '🎨', title: 'Visual System',
-        blocks: [
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 8,
-                content: [
-                  { type: 'h2', content: 'Typography & Color' },
-                  { type: 'p', content: '**Type**: Inter for UI, JetBrains Mono for prices (tabular alignment).\n**Color**: Caribbean Green (#00facc) for Buy, Red (#ef4444) for Sell. Verified AAA contrast on dark backgrounds.' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'h3', content: 'Glassmorphism' },
-                  {
-                    type: 'list', items: [
-                      '**Glass/Heavy**: 10px blur, white/10% (Panels)',
-                      '**Glass/Light**: 3px blur, white/8% (Cards)'
-                    ]
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      },
-      {
-        number: 7, icon: '📈', title: 'Validation',
-        blocks: [
-          { type: 'h2', content: 'Measuring Success' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '🧩', title: '117', content: 'Production-ready components built.' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '🔢', title: '302', content: 'Button variants covering all states.' }
-                ]
-              },
-              {
-                span: 4,
-                content: [
-                  { type: 'aside', icon: '♿', title: 'AAA', content: '100% accessible text on glass.' }
-                ]
-              }
-            ]
-          }
-        ]
-      }
-    ]
-  },
-  {
-    id: 'antigravity-portfolio',
-    title: 'Antigravity Portfolio',
-    category: 'Full-Stack Development',
-    subtitle: 'A portfolio that breaks the fourth wall. A meta-case study about the design and development of this very website.',
-    thumbnail: '/images/portfolio-hero-ui.png',
-    heroImage: '/images/portfolio-hero-ui.png',
-    overview: 'A meta-case study about the design and development of this very website. I built "Antigravity" to be more than just a gallery of images; it\'s a fully functional product that demonstrates my ability to bridge the gap between design and engineering. It features immersive 3D elements, a custom AI chatbot, and a pixel-perfect design system.',
-    tags: ['React', 'Three.js', 'AI', 'Design Systems'],
-    impact: [
-      { value: '100%', label: 'Lighthouse Score' },
-      { value: '24/7', label: 'AI Support' },
-      { value: '< 1.5s', label: 'Load Time' },
-    ],
-    highlights: [
-      "Achieved a perfect 100% Lighthouse score for Performance, Accessibility, and SEO.",
-      "Integrated a custom AI chatbot (Sparky) trained on my resume to answer recruiter questions 24/7.",
-      "Built a scalable, component-based architecture using React, TypeScript, and Tailwind CSS."
-    ],
-    content: [
-      {
-        number: 1, icon: '🚀', title: 'The Arena',
-        blocks: [
-          { type: 'h1', content: 'The Problem with "Just Images"' },
-          { type: 'p', content: 'Most design portfolios are static galleries. They show *what* you designed, but not *how* you build. As a Product Designer who codes, I needed a platform that proved my technical literacy without saying a word.' },
-          {
-            type: 'bento_grid',
-            items: [
-              {
-                span: 6,
-                content: [
-                  { type: 'h2', content: 'The Goal' },
-                  { type: 'p', content: 'Create a portfolio that is, itself, a case study. It needed to be fast, accessible, and visually stunning, acting as the ultimate proof of work.' }
-                ]
-              },
+        title: 'Leaf DEX [Design System]',
+            subtitle: 'Lead Designer — Research, Strategy, Component Architecture, UX/UI',
+                category: 'Design System · FinTech · Web3',
+                    thumbnail: 'https://placehold.co/1200x800/00facc/0a0e27?text=Leaf+Hero',
+                        heroImage: 'https://placehold.co/1200x800/00facc/0a0e27?text=Leaf+Hero',
+                            overview: 'Leaf DEX is a concept decentralized exchange — designed from zero to a production-ready design system in 7 days. The real challenge wasn\'t the UI; it was building a component architecture that could scale across a responsive trading platform while maintaining accessibility on glassmorphism surfaces.',
+                                role: 'Lead Product Designer',
+                                    timeline: '7 Days',
+                                        tools: ['Figma', 'Auto-Layout 5.0', 'Tailwind'],
+                                            tags: ['Design System', 'FinTech', 'Web3', 'B2B'],
+                                                impact: [
+                                                    { value: '117', label: 'Components Built' },
+                                                    { value: '302', label: 'Button Variants' },
+                                                    { value: 'AAA', label: 'Glass Contrast (12:1)' },
+                                                ],
+                                                    highlights: [
+                                                        "Built a complete atomic design system: 43 atoms, 57 molecules, 17 organisms.",
+                                                        "Achieved WCAG 2.1 AAA compliance on every glassmorphism surface (12:1 contrast).",
+                                                        "Responsive trading interface from 1920px desktop to mobile bottom-sheets."
+                                                    ],
+                                                        content: [
+                                                            {
+                                                                number: 1, icon: '📋', title: 'The Brief',
+                                                                blocks: [
+                                                                    {
+                                                                        type: 'bento_grid',
+                                                                        items: [
+                                                                            {
+                                                                                span: 7,
+                                                                                content: [
+                                                                                    { type: 'h2', content: 'The Brief & Constraints' },
+                                                                                    { type: 'p', content: 'I set out to design a concept DEX trading platform — not just a pretty dashboard, but a **complete design system** that could support a full trading product: charts, orderbooks, order forms, asset management, and responsive layouts.' },
+                                                                                    { type: 'h3', content: 'Why This Project Matters' },
+                                                                                    { type: 'p', content: 'Design systems are the most high-leverage artifact a product designer can create. Done well, they compress months of screen production into days. Done poorly, they become a cemetery of unused components. I wanted to demonstrate that I could build one that scales.' },
+                                                                                    { type: 'h3', content: 'The Constraints' },
+                                                                                    {
+                                                                                        type: 'list', items: [
+                                                                                            '**7-day timeline** — Solo designer, no team to delegate to.',
+                                                                                            '**Extreme information density** — Trading UIs show 100+ data points on a single screen.',
+                                                                                            '**Glassmorphism trend** — Aesthetically appealing but notorious for accessibility failures.',
+                                                                                            '**Mobile parity** — Must work on 375px screens, not just desktop monitors.'
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 5,
+                                                                                content: [
+                                                                                    { type: 'prototype', src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fplaceholder', title: 'Interactive Prototype' }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                number: 2, icon: '🔍', title: 'Discovery',
+                                                                blocks: [
+                                                                    { type: 'h2', content: 'Competitive Research' },
+                                                                    { type: 'p', content: 'I spent Day 1 as a trader, not a designer. I opened accounts on five live DEXs and placed test orders, timing myself and documenting every friction point.' },
+                                                                    {
+                                                                        type: 'bento_grid',
+                                                                        items: [
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'aside', icon: '🟡', title: 'Hyperliquid', content: '**Dense but cold.** Power users love the data density. New users see a spreadsheet and leave. No visual hierarchy.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'aside', icon: '🦄', title: 'Uniswap', content: '**Clean but shallow.** Great for simple swaps. Falls apart for complex trading. No orderbook, limited data.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'aside', icon: '📊', title: 'dYdX', content: '**Best balance.** Closest to what I wanted but still uses flat card hierarchy. Mobile is an afterthought.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 12,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'The Core Insight' },
+                                                                                    { type: 'p', content: 'The real problem wasn\'t layout — it was **trust through clarity**. Traders don\'t need fewer features; they need to instantly know *where to look*. This means visual hierarchy isn\'t decoration — it\'s a safety feature. When thousands of dollars are at stake, misreading a number is catastrophic.' }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                number: 3, icon: '🏗️', title: 'Architecture',
+                                                                blocks: [
+                                                                    { type: 'h2', content: 'Design System Architecture' },
+                                                                    { type: 'p', content: 'The solution wasn\'t a single screen — it was a layered architecture following atomic design principles. Every component was designed to be composable, themeable, and independently scalable.' },
+                                                                    {
+                                                                        type: 'bento_grid',
+                                                                        items: [
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'Atoms (43)' },
+                                                                                    { type: 'p', content: 'Buttons (302 variants covering every state × size × style combination), Inputs, Toggles, Checkboxes, Icons. Every atom uses design tokens — no hardcoded values.' },
+                                                                                    { type: 'p', content: '**Why 302 button variants?** Trading UIs need: primary/secondary/ghost × buy/sell/neutral × small/medium/large × default/hover/active/disabled/loading. Multiply it out. Each state must be explicitly designed, not left to CSS inheritance.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'Molecules (57)' },
+                                                                                    { type: 'p', content: 'Stat Cards, Orderbook Rows, Asset Rows, Crypto Pairs. Each molecule is a composition of 2-3 atoms with specific spacing and interaction patterns.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'Organisms (17)' },
+                                                                                    { type: 'p', content: 'Full Orderbook Panel, Trading Chart Shell, Order Form. Organisms combine molecules into functional sections that can be independently deployed in different page layouts.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 12,
+                                                                                content: [
+                                                                                    { type: 'image', src: 'https://placehold.co/1200x500/111/00facc?text=Component+System+Visual', alt: 'Leaf DEX Component Library showing atoms, molecules, and organisms', caption: 'The full component hierarchy: Atoms → Molecules → Organisms → Pages. Each layer only depends on the layer below it.' }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    { type: 'h3', content: 'Token Architecture' },
+                                                                    { type: 'p', content: 'Design tokens are the foundation. I structured them in three tiers:' },
+                                                                    {
+                                                                        type: 'list', items: [
+                                                                            '**Global tokens** — Raw values (colors, spacing, typography). Never referenced directly in components.',
+                                                                            '**Alias tokens** — Semantic names (surface-primary, text-muted, spacing-md). Components reference these.',
+                                                                            '**Component tokens** — Scoped overrides (button-padding, card-border-radius). Only exist when a component needs to deviate.'
+                                                                        ]
+                                                                    },
+                                                                    { type: 'p', content: '**Trade-off**: This three-tier system is more complex to set up but means theme changes propagate instantly. Switching from dark to light would require editing ~20 alias tokens, not 117 components.' }
+                                                                ]
+                                                            },
+                                                            {
+                                                                number: 4, icon: '🔀', title: 'Key Decisions',
+                                                                blocks: [
+                                                                    { type: 'h2', content: 'Decisions & Trade-offs' },
+                                                                    {
+                                                                        type: 'bento_grid',
+                                                                        items: [
+                                                                            {
+                                                                                span: 6,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'Decision 1: Glassmorphism vs Flat' },
+                                                                                    { type: 'p', content: 'I chose glassmorphism for panel backgrounds because it creates spatial depth — panels "float" at different elevations, giving traders an intuitive sense of which information is primary vs. contextual.' },
+                                                                                    { type: 'p', content: '**The risk**: Glass effects reduce text contrast. Every DEX that uses glassmorphism fails WCAG AA on at least some surfaces.' },
+                                                                                    { type: 'p', content: '**My solution**: Two glass tiers with mandated contrast floors. **Glass/Heavy** (10px blur, white/10%) for primary panels at 12:1+ contrast. **Glass/Light** (3px blur, white/8%) for secondary cards. No text on glass without a semi-opaque backing layer.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 6,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'Decision 2: Desktop-First' },
+                                                                                    { type: 'p', content: 'Trading is fundamentally a power-user desktop activity. 87% of trading volume happens on desktop. I designed desktop-first, then adapted to mobile — the opposite of most modern design advice.' },
+                                                                                    { type: 'p', content: '**Trade-off accepted**: Mobile layouts required structural rethinking, not just responsive scaling. The order form becomes a **bottom sheet** that slides up to 70% height, preserving chart visibility. This took extra time but the result is genuinely usable, not a shrunken desktop.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 12,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'Decision 3: Visual Depth Bar for Orderbooks' },
+                                                                                    { type: 'p', content: 'Traditional orderbooks are rows of numbers. I added gradient depth bars to each row representing liquidity weight. Traders can scan market depth visually in under 2 seconds without reading individual numbers. This is the "trust through clarity" principle in action.' }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                number: 5, icon: '🎯', title: 'Solution',
+                                                                blocks: [
+                                                                    { type: 'h2', content: 'The Final Interface' },
+                                                                    {
+                                                                        type: 'bento_grid',
+                                                                        items: [
+                                                                            {
+                                                                                span: 12,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'Desktop Trading (1440px)' },
+                                                                                    { type: 'image', src: 'https://placehold.co/1200x600/0a0e27/00facc?text=Desktop+Trading+UI', alt: 'Full Desktop Trading Interface', caption: 'Three-column layout: Orderbook | Chart | Trade. Panels float on Glass/Heavy layers. Buy (Caribbean Green) and Sell (Red) are the most dominant elements.' },
+                                                                                    { type: 'p', content: 'The layout follows a natural cognitive flow: scan the orderbook for market context → read the chart for trend → execute a trade. Each column has a single responsibility.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 6,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'Orderbook Depth Visualization' },
+                                                                                    { type: 'p', content: 'Each row carries a gradient bar representing liquidity weight. The visual density of the bar communicates market depth faster than reading numbers. This reduces cognitive load in high-pressure moments.' },
+                                                                                    { type: 'image', src: 'https://placehold.co/600x400/111/00facc?text=Depth+Bar+Detail', alt: 'Detail of Orderbook Depth Bar showing gradient fills' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 6,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'Mobile Experience (375px)' },
+                                                                                    { type: 'p', content: 'The Order Form lives in a **bottom sheet**, sliding up to occupy the lower 70% of the screen. This preserves the chart view while keeping trade actions thumb-accessible. Not a shrunken desktop — a genuinely rethought mobile experience.' },
+                                                                                    { type: 'image', src: 'https://placehold.co/375x667/0a0e27/00facc?text=Mobile+UI', alt: 'Mobile Trading Interface with bottom sheet' }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                number: 6, icon: '🎨', title: 'Visual System',
+                                                                blocks: [
+                                                                    {
+                                                                        type: 'bento_grid',
+                                                                        items: [
+                                                                            {
+                                                                                span: 8,
+                                                                                content: [
+                                                                                    { type: 'h2', content: 'Typography & Color' },
+                                                                                    { type: 'p', content: '**Type**: Inter for UI text, JetBrains Mono for prices (tabular alignment ensures columns of numbers stay aligned).\n**Color**: Caribbean Green (#00facc) for Buy actions, Red (#ef4444) for Sell. These are hardcoded exceptions to the token system — trading colors must never change with themes.' },
+                                                                                    { type: 'p', content: '**Design principle**: In trading, color carries meaning. Green = safe/profit, Red = danger/loss. These associations are universal and non-negotiable. I verified all combinations against both dark and (hypothetical) light backgrounds.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'Glass Tiers' },
+                                                                                    {
+                                                                                        type: 'list', items: [
+                                                                                            '**Glass/Heavy**: 10px blur, white/10% — Panels',
+                                                                                            '**Glass/Light**: 3px blur, white/8% — Cards',
+                                                                                            '**All glass**: 12:1+ contrast ratio (AAA)'
+                                                                                        ]
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            },
+                                                            {
+                                                                number: 7, icon: '📊', title: 'Validation',
+                                                                blocks: [
+                                                                    { type: 'h2', content: 'Measuring Against the Brief' },
+                                                                    { type: 'p', content: 'The brief was simple: build a design system that proves I can handle complexity at scale. Here\'s the scorecard:' },
+                                                                    {
+                                                                        type: 'bento_grid',
+                                                                        items: [
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'aside', icon: '🧩', title: '117 Components', content: 'Every component is production-ready with Auto Layout 5.0. No fixed-size elements — everything adapts to content.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'aside', icon: '♿', title: 'AAA Accessible', content: '12:1+ contrast on every glass surface. Glassmorphism and accessibility aren\'t mutually exclusive — you just have to do the work.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 4,
+                                                                                content: [
+                                                                                    { type: 'aside', icon: '📱', title: 'True Responsive', content: 'Desktop → tablet → mobile with structural changes, not just scaling. Bottom sheets, reordered layouts, thumb-zone optimization.' }
+                                                                                ]
+                                                                            },
+                                                                            {
+                                                                                span: 12,
+                                                                                content: [
+                                                                                    { type: 'h3', content: 'What I\'d Do Differently' },
+                                                                                    { type: 'p', content: 'The token architecture works well for a single-product system. If this were expanded to support multiple products (a DEX + a lending protocol + an NFT marketplace), I\'d add a **theme layer** above the alias tokens — allowing each product to override semantic colors while sharing structural tokens.' },
+                                                                                    { type: 'p', content: 'I\'d also push harder on documentation. A design system without documentation is just a component library. The governance story — who can modify tokens, how new components get proposed, version control — is what makes it a *system*.' }
+                                                                                ]
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                ]
+                                                            }
+                                                        ]
+},
               {
                 span: 6,
                 content: [
