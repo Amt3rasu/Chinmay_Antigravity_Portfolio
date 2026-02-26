@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from 'react';
+import React, { Suspense, lazy, useState, useCallback } from 'react';
 import { HashRouter, Routes, Route } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import { Header } from './components/Header';
@@ -21,51 +21,59 @@ const CaseStudyPage = lazy(() => import('./pages/CaseStudyPage').then(module => 
 const ResumePage = lazy(() => import('./pages/ResumePage').then(module => ({ default: module.ResumePage })));
 const NotFoundPage = lazy(() => import('./pages/NotFoundPage').then(module => ({ default: module.NotFoundPage })));
 
-const LoadingSpinner = () => (
-    <div className="flex items-center justify-center min-h-screen">
-        <div className="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
-    </div>
-);
-
 const App: React.FC = () => {
-    const [isLoading, setIsLoading] = React.useState(true);
+    const [isLoading, setIsLoading] = useState(true);
+    const [isContentReady, setIsContentReady] = useState(false);
+
+    const handleContentReady = useCallback(() => {
+        setIsContentReady(true);
+    }, []);
 
     return (
         <>
             {/* @ts-ignore */}
             <HelmetProvider context={{}}>
-                <AnimatePresence mode="wait">
-                    {isLoading ? (
-                        <LoadingScreen key="loading" onComplete={() => setIsLoading(false)} />
-                    ) : (
-                        <HashRouter key="app">
-                            <ScrollToTop />
-                            <div className="flex flex-col min-h-screen text-slate-200 relative isolation-isolate">
-                                <BackgroundDoodles />
-                                <Header />
-
-                                <main className="flex-grow">
-                                    <Suspense fallback={null}>
-                                        <Routes>
-                                            <Route path="/" element={<HomePage />} />
-                                            <Route path="/projects" element={<ProjectsPage />} />
-                                            <Route path="/project/:id" element={<CaseStudyPage />} />
-                                            <Route path="/about" element={<AboutPage />} />
-                                            <Route path="/resume" element={<ResumePage />} />
-                                            <Route path="/contact" element={<ContactPage />} />
-                                            <Route path="*" element={<NotFoundPage />} />
-                                        </Routes>
-                                    </Suspense>
-                                </main>
-                                <Footer />
-                                {/* <Chatbot /> */}
-                                <NoiseTexture />
-                                <FloatingDock />
-                                <TailedCursor baseThickness={30} color="#7c3aed" />
-                            </div>
-                        </HashRouter>
+                {/* Loading screen overlay — sits on top while app loads behind it */}
+                <AnimatePresence>
+                    {isLoading && (
+                        <LoadingScreen
+                            key="loading"
+                            onComplete={() => setIsLoading(false)}
+                            isContentReady={isContentReady}
+                        />
                     )}
                 </AnimatePresence>
+
+                {/* App always renders — loads in background behind the loading screen */}
+                <HashRouter>
+                    <ScrollToTop />
+                    <div
+                        className="flex flex-col min-h-screen text-slate-200 relative isolation-isolate"
+                        style={{ visibility: isLoading ? 'hidden' : 'visible' }}
+                    >
+                        <BackgroundDoodles />
+                        <Header />
+
+                        <main className="flex-grow">
+                            <Suspense fallback={null}>
+                                <Routes>
+                                    <Route path="/" element={<HomePage onReady={handleContentReady} />} />
+                                    <Route path="/projects" element={<ProjectsPage />} />
+                                    <Route path="/project/:id" element={<CaseStudyPage />} />
+                                    <Route path="/about" element={<AboutPage />} />
+                                    <Route path="/resume" element={<ResumePage />} />
+                                    <Route path="/contact" element={<ContactPage />} />
+                                    <Route path="*" element={<NotFoundPage />} />
+                                </Routes>
+                            </Suspense>
+                        </main>
+                        <Footer />
+                        {/* <Chatbot /> */}
+                        <NoiseTexture />
+                        <FloatingDock />
+                        <TailedCursor baseThickness={30} color="#7c3aed" />
+                    </div>
+                </HashRouter>
             </HelmetProvider>
         </>
     );

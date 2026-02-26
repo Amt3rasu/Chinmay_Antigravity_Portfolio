@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { caseStudies } from '../data/caseStudies';
 import { aboutMeData } from '../data/aboutMe';
@@ -25,7 +25,20 @@ const ScrollIndicator: React.FC = () => (
 
 import { SEO } from '../components/SEO';
 
-export const HomePage: React.FC = () => {
+interface HomePageProps {
+    onReady?: () => void;
+}
+
+export const HomePage: React.FC<HomePageProps> = ({ onReady }) => {
+    // Signal to the loading screen that above-fold content has mounted
+    useEffect(() => {
+        // Give React a frame to paint the DOM, then signal ready
+        const timer = setTimeout(() => {
+            onReady?.();
+        }, 500); // 500ms after mount — enough for above-fold paint
+        return () => clearTimeout(timer);
+    }, [onReady]);
+
     return (
         <SmoothScroll>
             <SEO />
