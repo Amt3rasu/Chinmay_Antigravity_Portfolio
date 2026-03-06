@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 import { caseStudies } from '../data/caseStudies';
 import { CaseStudy } from '../types';
 import { SEO } from '../components/SEO';
+import MonitorHighlights from '../components/MonitorHighlights';
+import { ErrorBoundary } from '../components/ErrorBoundary';
 
 /* ---------- Project Card ---------- */
 const ProjectCard: React.FC<{ project: CaseStudy; index: number }> = ({ project, index }) => (
@@ -54,8 +56,45 @@ export const ProjectsPage: React.FC = () => {
     const awards = caseStudies.filter(s => ['cdn-article', 'hackathon-win'].includes(s.id));
 
     return (
-        <div className="bg-transparent pt-32 pb-24 min-h-screen">
+        <div className="bg-transparent pb-24 min-h-screen">
             <SEO title="My Work" description="Explore my portfolio of UX case studies, UI design explorations, and industry recognition." />
+
+            {/* Interactive 3D Case Studies Hero */}
+            <ErrorBoundary>
+                <section className="w-full h-screen relative bg-black overflow-hidden mb-24 max-h-[900px]">
+                    <MonitorHighlights className="w-full h-full" />
+
+                    {/* Overlay Text for Title/Description */}
+                    <div className="absolute top-0 left-0 w-full p-8 md:p-16 pointer-events-none z-10 flex flex-col items-start justify-start pt-32">
+                        <motion.div
+                            initial={{ opacity: 0, y: 20 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.8 }}
+                        >
+                            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl drop-shadow-lg">
+                                Interactive Case Studies
+                            </h2>
+                            <p className="mt-4 max-w-lg text-lg text-gray-300 drop-shadow-md">
+                                Explore my design process and key projects through an interactive 3D perspective.
+                                Drag to rotate, scroll to zoom, and discover the stories behind the work.
+                            </p>
+                        </motion.div>
+                    </div>
+
+                    {/* Scroll Indicator at the bottom of the section */}
+                    <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center pointer-events-none opacity-60 z-10">
+                        <span className="text-xs font-semibold tracking-widest text-white uppercase mb-2">Scroll to explore</span>
+                        <motion.div
+                            animate={{ y: [0, 8, 0] }}
+                            transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
+                            className="w-5 h-8 border-2 border-white rounded-full flex justify-center p-1"
+                        >
+                            <motion.div className="w-1 h-2 bg-white rounded-full mt-1" />
+                        </motion.div>
+                    </div>
+                </section>
+            </ErrorBoundary>
 
             {/* Page Header */}
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">

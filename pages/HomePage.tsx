@@ -6,15 +6,14 @@ import { Button, ButtonArrow } from '../components/ui/Button';
 import { Carousel, Card } from "../components/AppleCardsCarousel";
 import { SmoothScroll } from '../components/SmoothScroll';
 import { InteractiveBlob } from '../components/3D/InteractiveBlob';
-import { ErrorBoundary } from '../components/ErrorBoundary';
 import { TrustedBy } from '../components/TrustedBy';
 import { Services } from '../components/Services';
+import { ErrorBoundary } from '../components/ErrorBoundary';
 import { WhyChooseMe } from '../components/WhyChooseMe';
 import { Testimonials } from '../components/Testimonials';
 import { FAQ } from '../components/FAQ';
 import { CalBooking } from '../components/CalBooking';
 import { ArrowDownIcon } from '../components/Icons';
-import MonitorHighlights from '../components/MonitorHighlights';
 
 const ScrollIndicator: React.FC = () => (
     <div className="scroll-indicator">
@@ -94,31 +93,6 @@ export const HomePage: React.FC<HomePageProps> = ({ onReady }) => {
             </div>
 
             <TrustedBy />
-
-            <ErrorBoundary>
-                <section className="w-full h-screen relative bg-black overflow-hidden snap-start flex-shrink-0">
-                    <MonitorHighlights className="w-full h-full" />
-
-                    {/* Overlay Text for Title/Description */}
-                    <div className="absolute top-0 left-0 w-full p-8 md:p-16 pointer-events-none z-10 flex flex-col items-start justify-start">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8 }}
-                        >
-                            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl drop-shadow-lg">
-                                Highlights
-                            </h2>
-                            <p className="mt-2 text-white/80 max-w-lg drop-shadow-md">
-                                Explore selected works in 3D. <br />
-                                <span className="text-sm text-white/60">Drag to rotate • Click monitors to view details</span>
-                            </p>
-                        </motion.div>
-                    </div>
-                </section>
-            </ErrorBoundary>
-
             <Services />
             <WhyChooseMe />
             <Testimonials />

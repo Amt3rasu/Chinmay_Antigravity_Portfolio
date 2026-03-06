@@ -135,26 +135,167 @@ export const caseStudies: CaseStudy[] = [
         category: 'Design System · FinTech · Web3',
         thumbnail: 'https://placehold.co/1200x800/00facc/0a0e27?text=Leaf+Hero',
         heroImage: 'https://placehold.co/1200x800/00facc/0a0e27?text=Leaf+Hero',
-        overview: 'Leaf DEX is a concept decentralized exchange — designed from zero to a production-ready design system in 7 days.',
+        overview: 'Leaf DEX is a concept decentralized exchange trading platform — designed from zero to a production-ready design system and responsive trading interface in 7 days. The project spans a complete design token foundation, a 117-component library, and full trading layouts across desktop, tablet, and mobile.',
         role: 'Lead Product Designer',
         timeline: '7 Days',
         tools: ['Figma', 'Auto-Layout 5.0', 'Tailwind'],
         tags: ['Design System', 'FinTech', 'Web3'],
         impact: [
             { value: '117', label: 'Components' },
-            { value: 'AAA', label: 'Accessibility' }
+            { value: '302', label: 'Variants' },
+            { value: 'AAA', label: 'WCAG 2.1' }
         ],
         highlights: [
-            "Built a complete atomic design system in 7 days.",
-            "Achieved WCAG 2.1 AAA compliance."
+            "117 Components (Atoms → Organisms)",
+            "302 Variants (Button System Alone)",
+            "WCAG 2.1 AAA (All Glass Surfaces)"
         ],
+        prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2F', title: 'Leaf DEX Interactive Prototype' },
         content: [
             {
-                number: 1, icon: '🏗️', title: 'Architecture',
+                number: 1, icon: '⭐', title: 'The Arena',
                 blocks: [
-                    { type: 'h2', content: 'Atomic Design System' },
-                    { type: 'p', content: 'The system follows atomic design principles: **Atoms → Molecules → Organisms**. 117 components built from scratch with full token architecture, achieving WCAG 2.1 AAA compliance across all contrast ratios.' },
-                    { type: 'image', src: 'https://placehold.co/1200x500/111/00facc?text=Component+System+Visual', alt: 'Leaf DEX Component Library' }
+                    { type: 'h3', content: 'The Problem With Trading UIs' },
+                    { type: 'p', content: 'Decentralized exchange platforms sit at one of the most demanding intersections in product design: extreme information density, real-time data, and high-stakes decisions — all at once.' },
+                    { type: 'p', content: 'Most existing platforms fall into two camps: **dense but cold** (Hyperliquid, dYdX) or **clean but shallow** (Uniswap). Experienced traders tolerate the first. New users bounce off both.' },
+                    { type: 'aside', icon: '🎯', title: 'The Gap', content: 'Professional density. Consumer accessibility. Nobody\'s done both.\n\nThe opportunity was clear: design a DEX that gives professional traders the density and speed they need while using a visual language that feels premium, modern, and approachable — without sacrificing a single data point.' }
+                ]
+            },
+            {
+                number: 2, icon: '🔍', title: 'The Investigation',
+                blocks: [
+                    { type: 'h3', content: 'Process & Rationale' },
+                    { type: 'p', content: 'Before opening Figma, I spent the first session as a researcher, not a designer. I studied five live trading platforms as a user — placing test orders, noting friction, screenshotting every pattern that worked and every pattern that didn\'t.' },
+                    {
+                        type: 'list', items: [
+                            '**Hyperliquid** — innovative layout, high density, glass-free',
+                            '**Ostium** — clean structure, limited interaction depth',
+                            '**dYdX** — reliable but visually dated',
+                            '**GMX** — aggressive layout, poor mobile',
+                            '**Uniswap** — accessible but too shallow for pro traders'
+                        ]
+                    },
+                    { type: 'p', content: 'I documented every finding in a competitor analysis Figma page with annotations:\n✅ What worked → ❌ What was cluttered → 💡 What was missing' },
+                    { type: 'aside', icon: '💡', title: 'Insight', content: 'The real problem wasn\'t layout. It was trust through clarity.\n\nTraders don\'t need fewer features. They need to *instantly know* where to look. The existing platforms forced users to scan for critical information (order status, spread, price direction) instead of surfacing it naturally.' },
+                    { type: 'h3', content: 'Three universally weak patterns:' },
+                    {
+                        type: 'list', items: [
+                            '**Static orderbook depth** — no visual sense of liquidity weight',
+                            '**Flat card hierarchy** — no sense of elevation or panel priority',
+                            '**Mobile as afterthought** — most platforms gave up at 768px'
+                        ]
+                    },
+                    { type: 'p', content: 'These gaps became my design brief.' }
+                ]
+            },
+            {
+                number: 3, icon: '🚀', title: 'The Breakthrough',
+                blocks: [
+                    { type: 'h3', content: 'The System' },
+                    { type: 'p', content: 'The solution wasn\'t a single screen — it was a layered architecture: one foundation → one component library → one assembled interface.' },
+                    { type: 'h3', content: '✨ Foundation First' },
+                    { type: 'p', content: 'Instead of designing screens and extracting tokens later, I built the token system before touching any component. Every decision downstream would inherit from this layer.' },
+                    {
+                        type: 'list', items: [
+                            '**Color**: 123 semantic aliases, dark + light mode',
+                            '**Typography**: Inter (UI) + JetBrains Mono (prices)',
+                            '**Spacing**: 8px base grid, 15 tokens',
+                            '**Elevation**: M3-inspired, 5 levels',
+                            '**Glassmorphism**: Heavy (10px blur) + Light (3px blur)',
+                            '**Radius**: 4px scale, 10 tokens'
+                        ]
+                    },
+                    { type: 'h3', content: '🏗️ Three-Layer Component Architecture' },
+                    { type: 'aside', icon: '🔵', title: 'ATOMS (43)', content: 'Buttons (302 variants), Inputs, Toggles, Checkboxes, Labels, Tabs, Tags, Icons' },
+                    { type: 'aside', icon: '🟢', title: 'MOLECULES (57)', content: 'Stat Cards, Orderbook Rows, Dropdowns, Market Cards, Asset Rows, Crypto Pairs' },
+                    { type: 'aside', icon: '🟣', title: 'ORGANISMS (17)', content: 'Full Orderbook Panel, Trading Chart Shell, Order Form, Stats Dashboard, Sidebar, Header' },
+                    { type: 'p', content: 'The moment I assembled the organisms from the molecules — and the molecules from the atoms — the system clicked. Changing one token cascaded perfectly through 117 components.' }
+                ]
+            },
+            {
+                number: 4, icon: '📐', title: 'Design Principles',
+                blocks: [
+                    { type: 'h3', content: 'Guiding Every Decision' },
+                    { type: 'aside', icon: '🔲', title: 'Surface hierarchy through glass, not color', content: 'Don\'t rely on color alone to show importance. Use elevation levels and glass depth to create spatial hierarchy across panels.' },
+                    { type: 'aside', icon: '📊', title: 'Let data breathe', content: 'In high-density UIs, whitespace isn\'t waste — it\'s signal. Consistent 8px spacing rhythm gives traders visual breathing room without sacrificing data density.' },
+                    { type: 'aside', icon: '🎯', title: 'Direct the eye to action', content: 'The Buy/Sell button must be the most visually dominant element on any trading screen. Caribbean Green gradients and elevation draw attention there first, always.' },
+                    { type: 'aside', icon: '♿', title: 'Readable glass, not decorative glass', content: 'Apple\'s VisionOS was criticized for unreadable text on glass. Every glass surface in this system maintains a 12:1 contrast ratio — AAA — not just AA. Glass is atmosphere, not obstruction.' },
+                    { type: 'aside', icon: '🔄', title: 'Design for state, not just screens', content: 'Every component exists in at least 5 states: default, hover, focus, active, disabled. Trading UIs fail when edge states are underdeveloped.' }
+                ]
+            },
+            {
+                number: 5, icon: '📱', title: 'Key Flows and UX Decisions',
+                blocks: [
+                    { type: 'h3', content: 'Desktop Trading Page (1440px)' },
+                    { type: 'p', content: '**Scenario:** A crypto trader opens the platform to place a limit buy order on BTC/USDT.' },
+                    { type: 'p', content: 'The three-column layout keeps the cognitive flow natural:\n- **Left** → Orderbook (what the market looks like)\n- **Center** → Chart (what price is doing)\n- **Right** → Order Form + Stats (what action to take)' },
+                    { type: 'p', content: 'Each panel floats on `glass/heavy` (10px blur, white/10% background) with `elevation/3` — the result is a spatial, layered interface where panels feel genuinely distinct without hard borders.' },
+                    { type: 'aside', icon: '📉', title: 'The Orderbook: Unique Feature', content: 'Instead of static rows, each row carries a depth bar — a gradient background whose width equals the cumulative volume at that price level as a percentage of total book depth.\n\nThis gives traders an instant visual sense of where liquidity is concentrated. No competing platform does this. Most show the number. We show the weight.\n\n**Result:** Traders can scan market depth in under 2 seconds without reading a single number.' },
+                    { type: 'h3', content: 'Mobile Trading Page (375px)' },
+                    { type: 'p', content: '**Scenario:** A trader checks their position and places a market sell on the go.' },
+                    { type: 'p', content: 'On mobile, the three-column layout becomes a tabbed interface:\n[CHART] [BOOK] [TRADE]' },
+                    { type: 'p', content: 'The Order Form lives inside a **bottom sheet** — it slides up with a swipe gesture and occupies the lower 70% of screen. This preserves the chart view while keeping the trade action immediately accessible.' },
+                    { type: 'p', content: 'Every touch target meets 44px minimum. Glass intensity drops from 10px blur to 3px (glass/light) to remain crisp on smaller, lower-powered screens.' }
+                ]
+            },
+            {
+                number: 6, icon: '🎨', title: 'Visual System and Accessibility',
+                blocks: [
+                    { type: 'h3', content: 'Clarity at Every Level' },
+                    { type: 'h2', content: 'Typography & Numbers' },
+                    { type: 'p', content: 'UI labels use Inter for optimal small-size readability. Prices, amounts, and totals use JetBrains Mono — a monospace font that keeps all numerals tabular-aligned, so an orderbook\'s columns never shift as numbers update.' },
+                    { type: 'h2', content: 'Color & Contrast' },
+                    { type: 'p', content: 'The primary palette uses Caribbean Green (#00facc) as the success/buy signal and Red (#ef4444) as the sell/loss signal — both tested against the dark background (#0a0e27) and verified:' },
+                    {
+                        type: 'list', items: [
+                            'White text on glass/heavy: **12:1 AAA** ✓',
+                            'Caribbean Green on dark: **15:1 AAA** ✓',
+                            'Red on dark: **10:1 AAA** ✓'
+                        ]
+                    },
+                    { type: 'h2', content: 'Glassmorphism' },
+                    {
+                        type: 'list', items: [
+                            '**glass/heavy**: 10px blur, white/10% bg (Orderbook, Chart, Form panels)',
+                            '**glass/light**: 3px blur, white/8% bg (Stat cards, tooltips, mobile)'
+                        ]
+                    },
+                    { type: 'p', content: 'Every glass element includes an inner highlight (rgba 255,255,255,0.30) and drop shadow (rgba 0,0,0,0.45) to reinforce the floating, premium feel.' },
+                    { type: 'h2', content: 'Gradients: Intentional, Not Decorative' },
+                    {
+                        type: 'list', items: [
+                            '**Buy buttons**: Caribbean Green 500 → 700',
+                            '**Sell buttons**: Red 500 → 700',
+                            '**Depth bars**: Green/Red fading right → transparent'
+                        ]
+                    },
+                    { type: 'p', content: 'Multi-stop gradients were used for emotional design: directing attention to primary actions instantly, reducing cognitive load during high-stakes moments.' }
+                ]
+            },
+            {
+                number: 7, icon: '📈', title: 'Validation and Impact',
+                blocks: [
+                    { type: 'h3', content: 'Measuring Success' },
+                    { type: 'aside', icon: '🧩', title: '117 Components', content: 'Complete atomic library from foundational atoms to complex trading organisms — production-ready with variants, auto-layout, and responsive constraints.' },
+                    { type: 'aside', icon: '🔢', title: '302 Button Variants', content: 'Style × Color × Size × State × Icon position. Zero edge cases unaccounted for.' },
+                    { type: 'aside', icon: '📱', title: '6 Responsive Breakpoints', content: '1920px, 1440px, 1024px, 768px, 414px, 375px — each with custom layout logic, not just resized desktop screens.' },
+                    { type: 'aside', icon: '♿', title: '100% AAA Accessibility', content: 'Every text/background combination verified with Stark. Reduced-motion support. Keyboard navigation. ARIA labels. AODA-compliant.' },
+                    { type: 'aside', icon: '📹', title: 'Complete Handoff Package', content: '16-minute video walkthrough, 6-page design token documentation, component usage guidelines, responsive rules, animation specifications, and CSS variable exports.' }
+                ]
+            },
+            {
+                number: 8, icon: '🔮', title: 'What I\'d Do Next',
+                blocks: [
+                    { type: 'h3', content: 'Future Roadmap' },
+                    {
+                        type: 'list', items: [
+                            '**Integrate real market data**: Connect the Figma prototype to a live WebSocket feed (Binance or Coinbase API) to test how the orderbook depth visualization performs with actual real-time data.',
+                            '**User test with active traders**: Run moderated sessions with 5–8 crypto traders across experience levels. Specifically test the depth bar readability and mobile bottom-sheet flow under time pressure.',
+                            '**Build a live React component library**: Convert the Figma tokens and components to a Tailwind + Radix UI codebase with Storybook documentation — completing the design-to-engineering handoff.',
+                            '**Expand the dark/light theme**: The token architecture already supports light mode through alias swapping. Build and test the light mode variant, including glassmorphism on lighter backgrounds.',
+                            '**Motion and microinteraction prototyping**: Animate the orderbook row updates (pulse on change, fade on removal) and number count-up in stat cards using Framer Motion to validate the motion spec documentation.'
+                        ]
+                    }
                 ]
             }
         ]
