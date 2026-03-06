@@ -28,13 +28,16 @@ const ContentRenderer: React.FC<{ blocks: ContentBlock[]; compact?: boolean }> =
                 );
             case 'image_row':
                 return (
-                    <div key={index} className={`w-full px-3 md:px-6 lg:px-8 my-12 grid gap-4 md:gap-6 ${block.images.length === 2 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1 md:grid-cols-3'}`}>
-                        {block.images.map((img, i) => (
-                            <div key={i}>
-                                <img src={img.src} alt={img.alt} className="w-full h-full object-cover rounded-2xl md:rounded-[1.5rem] shadow-xl" />
-                                {img.caption && <p className="mt-3 text-sm text-muted-foreground text-center italic">{img.caption}</p>}
-                            </div>
-                        ))}
+                    <div key={index} className="w-full my-12">
+                        <div className={`px-3 md:px-6 lg:px-8 grid gap-4 md:gap-6 ${block.images.length === 2 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1 md:grid-cols-3'}`}>
+                            {block.images.map((img, i) => (
+                                <div key={i}>
+                                    <img src={img.src} alt={img.alt} className="w-full h-full object-cover rounded-2xl md:rounded-[1.5rem] shadow-xl" />
+                                    {img.caption && <p className="mt-3 text-sm text-muted-foreground text-center italic">{img.caption}</p>}
+                                </div>
+                            ))}
+                        </div>
+                        {block.caption && <p className="mt-4 px-8 md:px-14 lg:px-20 text-sm text-muted-foreground text-center italic">{block.caption}</p>}
                     </div>
                 );
             case 'divider':

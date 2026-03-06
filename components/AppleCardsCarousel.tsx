@@ -26,14 +26,17 @@ type CardData = {
     category: string;
     id: string;
     externalUrl?: string;
+    chapterNumber?: number;
 };
 
 export const CarouselContext = createContext<{
     onCardClose: (index: number) => void;
     currentIndex: number;
+    isDragging: boolean;
 }>({
     onCardClose: () => { },
     currentIndex: 0,
+    isDragging: false,
 });
 
 export const Carousel = ({ items, initialScroll = 0 }: CarouselProps) => {
@@ -208,6 +211,8 @@ export const Card: React.FC<CardProps> = ({
     const handleOpen = () => {
         if (card.externalUrl) {
             window.open(card.externalUrl, '_blank', 'noopener,noreferrer');
+        } else if (card.chapterNumber) {
+            navigate(`/project/${card.id}?chapter=${card.chapterNumber}`);
         } else {
             navigate(`/project/${card.id}`);
         }

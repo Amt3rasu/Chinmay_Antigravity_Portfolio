@@ -56,8 +56,9 @@ export function Tooltip() {
                 boxShadow: `0 0 30px ${monitorColor}30, 0 8px 32px rgba(0,0,0,0.4)`,
             } as React.CSSProperties}
         >
-            <div className="tooltip-title" style={{ color: monitorColor }}>{hoveredMonitor.title}</div>
-            <div className="tooltip-subtitle">{hoveredMonitor.subtitle}</div>
+            {/* Title and Subtitle archived to avoid overlap with background name */}
+            {/* <div className="tooltip-title" style={{ color: monitorColor }}>{hoveredMonitor.title}</div> */}
+            {/* <div className="tooltip-subtitle">{hoveredMonitor.subtitle}</div> */}
             <div className="tooltip-summary">{hoveredMonitor.summary}</div>
         </div>
     )

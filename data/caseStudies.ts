@@ -9,11 +9,11 @@ export const caseStudies: CaseStudy[] = [
         title: 'Flamey AI [Sequence Builder]',
         subtitle: 'Lead Designer — Research, Strategy, UX/UI, Prototyping',
         category: 'Product Design · AI · SaaS',
-        thumbnail: 'https://placehold.co/1200x800/1a1a1a/ffffff?text=Flamey+Hero',
-        heroImage: 'https://placehold.co/1200x800/1a1a1a/ffffff?text=Flamey+Hero',
-        overview: 'Flamey is an AI-powered outbound sales platform. The Sequence Builder — its core workflow — was hemorrhaging users. I had 4 days to redesign it from a lifeless form into a guided experience where AI felt like a creative partner, not a gimmick.',
-        role: 'Lead Product Designer',
-        timeline: '4 Days',
+        thumbnail: '/images/flamey-ai/MacBook_#01.jpg',
+        heroImage: '/images/flamey-ai/MacBook_#01.jpg',
+        overview: 'Redesigning the Flamey AI Sequence Builder — transforming a complex, high-friction form into a guided, persona-driven experience.',
+        role: 'Lead UX/UI Designer',
+        timeline: '4 Working Days',
         tools: ['Figma', 'FigJam', 'Chakra UI'],
         tags: ['AI', 'SaaS', 'Product Design', 'B2B'],
         impact: [
@@ -44,7 +44,7 @@ export const caseStudies: CaseStudy[] = [
                             '**No user access** — PM couldn\'t arrange interviews in time. I had to rely on competitive research and persona mapping.'
                         ]
                     },
-                    { type: 'image', src: 'https://placehold.co/800x600/2a2a2a/ffffff?text=Old+Sequence+Builder', alt: 'The existing Sequence Builder — a dense wall of form fields with a hidden AI toggle', caption: 'The old builder: every configuration option on one screen. AI toggle buried at the bottom.' }
+                    { type: 'image', src: '/images/flamey-ai/Design_Critique.jpg', alt: 'The existing Sequence Builder — a dense wall of form fields with a hidden AI toggle', caption: 'The old builder: every configuration option on one screen. AI toggle buried at the bottom.' }
                 ]
             },
             {
@@ -52,6 +52,14 @@ export const caseStudies: CaseStudy[] = [
                 blocks: [
                     { type: 'h2', content: 'Research Approach' },
                     { type: 'p', content: 'With no user access and a 4-day window, I needed fast, high-signal research. I chose two methods: a **competitive teardown** of 3 direct competitors and **persona-driven journey mapping** based on the PM\'s qualitative notes.' },
+                    {
+                        type: 'image_row', images: [
+                            { src: '/images/flamey-ai/IMG_4586.jpg', alt: 'LOFI Sketch 1' },
+                            { src: '/images/flamey-ai/IMG_4587.jpg', alt: 'LOFI Sketch 2' },
+                            { src: '/images/flamey-ai/IMG_4588.jpg', alt: 'LOFI Sketch 3' }
+                        ],
+                        caption: 'High-speed LOFI ideation on whiteboard and paper to map out user flows.'
+                    },
                     { type: 'h3', content: 'Competitive Teardown' },
                     { type: 'p', content: 'I spent Day 1 building sequences in Apollo.io, 11x.ai, and Attio. Not just screenshots — I actually created campaigns, measured how long each took, and documented every friction point.' },
                     { type: 'aside', icon: '🔵', title: 'Apollo.io', content: '**22 minutes** to create a sequence. Strong template library, but AI felt bolted-on. No conversational interface.' },
@@ -105,13 +113,13 @@ export const caseStudies: CaseStudy[] = [
                     { type: 'p', content: 'The redesign makes one fundamental shift: it reframes the Sequence Builder from a **form** into a **guided journey** with the AI as a creative partner.' },
                     { type: 'h3', content: '4 Entry Points' },
                     { type: 'p', content: 'The first screen is no longer a blank canvas. It\'s a structured choice: 🤖 AI-Assisted, 📋 Templates, 📎 Duplicate, ✏️ Manual — each respecting a persona\'s starting point.' },
-                    { type: 'image', src: 'https://placehold.co/800x500/333/fff?text=Entry+Points+UI', alt: 'Clean UI showing 4 distinct entry point cards' },
+                    { type: 'image', src: '/images/flamey-ai/New_sequence_selection.jpg', alt: 'Clean UI showing 4 distinct entry point cards', caption: 'Entry points specifically designed for our three target personas.' },
                     { type: 'h3', content: 'The AI Conversation' },
                     { type: 'p', content: 'Instead of a form asking "How many steps?", the AI asks strategic questions one by one, building a brief before generating.' },
-                    { type: 'image', src: 'https://placehold.co/800x500/333/fff?text=AI+Chat+Interface', alt: 'Conversational AI building a sequence step by step' },
+                    { type: 'image', src: '/images/flamey-ai/AI_questions_for_new_sequence.jpg', alt: 'Conversational AI building a sequence step by step' },
                     { type: 'h3', content: 'The Trust Moment: Visual Timeline Preview' },
                     { type: 'p', content: 'Users see exactly what will be sent before committing. This eliminated the #1 fear: "What will this send?"' },
-                    { type: 'image', src: 'https://placehold.co/1200x500/222/fff?text=Visual+Timeline+Preview', alt: 'Visual Timeline Preview showing sequence pacing' }
+                    { type: 'image', src: '/images/flamey-ai/Sequence_editor.jpg', alt: 'Visual Timeline Preview showing sequence pacing', caption: 'The Sequence Editor: combining the speed of AI with the control of a manual editor.' }
                 ]
             },
             {
@@ -134,8 +142,8 @@ export const caseStudies: CaseStudy[] = [
         title: 'Leaf DEX [Design System]',
         subtitle: 'Lead Designer — Research, Strategy, Component Architecture, UX/UI',
         category: 'Design System · FinTech · Web3',
-        thumbnail: 'https://placehold.co/1200x800/00facc/0a0e27?text=Leaf+Hero',
-        heroImage: 'https://placehold.co/1200x800/00facc/0a0e27?text=Leaf+Hero',
+        thumbnail: '/images/leaf-dex/Dashboard-Desktop.jpg',
+        heroImage: '/images/leaf-dex/Dashboard-Desktop.jpg',
         overview: 'Leaf DEX is a concept decentralized exchange trading platform — designed from zero to a production-ready design system and responsive trading interface in 7 days. The project spans a complete design token foundation, a 117-component library, and full trading layouts across desktop, tablet, and mobile.',
         role: 'Lead Product Designer',
         timeline: '7 Days',
@@ -197,6 +205,15 @@ export const caseStudies: CaseStudy[] = [
                     { type: 'h3', content: '✨ Foundation First' },
                     { type: 'p', content: 'Instead of designing screens and extracting tokens later, I built the token system before touching any component. Every decision downstream would inherit from this layer.' },
                     {
+                        type: 'image_row', images: [
+                            { src: '/images/leaf-dex/Primitive_Colors.jpg', alt: 'Primitive Colors' },
+                            { src: '/images/leaf-dex/Radius_Tokens.jpg', alt: 'Radius Tokens' },
+                            { src: '/images/leaf-dex/Spacing_Tokens.jpg', alt: 'Spacing Tokens' },
+                            { src: '/images/leaf-dex/Typography_Tokens.jpg', alt: 'Typography Tokens' }
+                        ],
+                        caption: 'Leaf Design Tokens: The source of truth for color, spacing, radius, and typography.'
+                    },
+                    {
                         type: 'list', items: [
                             '**Color**: 123 semantic aliases, dark + light mode',
                             '**Typography**: Inter (UI) + JetBrains Mono (prices)',
@@ -207,6 +224,14 @@ export const caseStudies: CaseStudy[] = [
                         ]
                     },
                     { type: 'h3', content: '🏗️ Three-Layer Component Architecture' },
+                    {
+                        type: 'image_row', images: [
+                            { src: '/images/leaf-dex/Buttons.jpg', alt: 'Button System' },
+                            { src: '/images/leaf-dex/Molecules.jpg', alt: 'Molecules' },
+                            { src: '/images/leaf-dex/Organisms.jpg', alt: 'Organisms' }
+                        ],
+                        caption: 'Atomic Design: scaling from buttons to complex orderbooks and charts.'
+                    },
                     { type: 'aside', icon: '🔵', title: 'ATOMS (43)', content: 'Buttons (302 variants), Inputs, Toggles, Checkboxes, Labels, Tabs, Tags, Icons' },
                     { type: 'aside', icon: '🟢', title: 'MOLECULES (57)', content: 'Stat Cards, Orderbook Rows, Dropdowns, Market Cards, Asset Rows, Crypto Pairs' },
                     { type: 'aside', icon: '🟣', title: 'ORGANISMS (17)', content: 'Full Orderbook Panel, Trading Chart Shell, Order Form, Stats Dashboard, Sidebar, Header' },
@@ -229,11 +254,19 @@ export const caseStudies: CaseStudy[] = [
                 blocks: [
                     { type: 'h3', content: 'Desktop Trading Page (1440px)' },
                     { type: 'p', content: '**Scenario:** A crypto trader opens the platform to place a limit buy order on BTC/USDT.' },
+                    { type: 'image', src: '/images/leaf-dex/Trading_Page-Desktop.jpg', alt: 'Desktop Trading Interface', caption: 'The full trading dashboard: 3-column layout focused on information density and trade speed.' },
                     { type: 'p', content: 'The three-column layout keeps the cognitive flow natural:\n- **Left** → Orderbook (what the market looks like)\n- **Center** → Chart (what price is doing)\n- **Right** → Order Form + Stats (what action to take)' },
                     { type: 'p', content: 'Each panel floats on `glass/heavy` (10px blur, white/10% background) with `elevation/3` — the result is a spatial, layered interface where panels feel genuinely distinct without hard borders.' },
                     { type: 'aside', icon: '📉', title: 'The Orderbook: Unique Feature', content: 'Instead of static rows, each row carries a depth bar — a gradient background whose width equals the cumulative volume at that price level as a percentage of total book depth.\n\nThis gives traders an instant visual sense of where liquidity is concentrated. No competing platform does this. Most show the number. We show the weight.\n\n**Result:** Traders can scan market depth in under 2 seconds without reading a single number.' },
                     { type: 'h3', content: 'Mobile Trading Page (375px)' },
                     { type: 'p', content: '**Scenario:** A trader checks their position and places a market sell on the go.' },
+                    {
+                        type: 'image_row', images: [
+                            { src: '/images/leaf-dex/Trade-Mobile.jpg', alt: 'Mobile Trade Form' },
+                            { src: '/images/leaf-dex/Portfolio-Mobile.jpg', alt: 'Mobile Portfolio' }
+                        ],
+                        caption: 'Mobile-first trading: tabbed navigation and bottom sheets for high-speed interactions.'
+                    },
                     { type: 'p', content: 'On mobile, the three-column layout becomes a tabbed interface:\n[CHART] [BOOK] [TRADE]' },
                     { type: 'p', content: 'The Order Form lives inside a **bottom sheet** — it slides up with a swipe gesture and occupies the lower 70% of screen. This preserves the chart view while keeping the trade action immediately accessible.' },
                     { type: 'p', content: 'Every touch target meets 44px minimum. Glass intensity drops from 10px blur to 3px (glass/light) to remain crisp on smaller, lower-powered screens.' }
@@ -246,6 +279,14 @@ export const caseStudies: CaseStudy[] = [
                     { type: 'h2', content: 'Typography & Numbers' },
                     { type: 'p', content: 'UI labels use Inter for optimal small-size readability. Prices, amounts, and totals use JetBrains Mono — a monospace font that keeps all numerals tabular-aligned, so an orderbook\'s columns never shift as numbers update.' },
                     { type: 'h2', content: 'Color & Contrast' },
+                    {
+                        type: 'image_row', images: [
+                            { src: '/images/leaf-dex/Leaf_Color_Alias.jpg', alt: 'Color Aliases' },
+                            { src: '/images/leaf-dex/Liquid_glass_Tokens.jpg', alt: 'Glass Tokens' },
+                            { src: '/images/leaf-dex/Layout_Grids.jpg', alt: 'Grid System' }
+                        ],
+                        caption: 'The Visual Language: High-contrast color systems and accessible glass depth.'
+                    },
                     { type: 'p', content: 'The primary palette uses Caribbean Green (#00facc) as the success/buy signal and Red (#ef4444) as the sell/loss signal — both tested against the dark background (#0a0e27) and verified:' },
                     {
                         type: 'list', items: [
@@ -253,24 +294,7 @@ export const caseStudies: CaseStudy[] = [
                             'Caribbean Green on dark: **15:1 AAA** ✓',
                             'Red on dark: **10:1 AAA** ✓'
                         ]
-                    },
-                    { type: 'h2', content: 'Glassmorphism' },
-                    {
-                        type: 'list', items: [
-                            '**glass/heavy**: 10px blur, white/10% bg (Orderbook, Chart, Form panels)',
-                            '**glass/light**: 3px blur, white/8% bg (Stat cards, tooltips, mobile)'
-                        ]
-                    },
-                    { type: 'p', content: 'Every glass element includes an inner highlight (rgba 255,255,255,0.30) and drop shadow (rgba 0,0,0,0.45) to reinforce the floating, premium feel.' },
-                    { type: 'h2', content: 'Gradients: Intentional, Not Decorative' },
-                    {
-                        type: 'list', items: [
-                            '**Buy buttons**: Caribbean Green 500 → 700',
-                            '**Sell buttons**: Red 500 → 700',
-                            '**Depth bars**: Green/Red fading right → transparent'
-                        ]
-                    },
-                    { type: 'p', content: 'Multi-stop gradients were used for emotional design: directing attention to primary actions instantly, reducing cognitive load during high-stakes moments.' }
+                    }
                 ]
             },
             {
@@ -310,8 +334,8 @@ export const caseStudies: CaseStudy[] = [
         title: 'AccessTransit [ZipTrains]',
         category: 'Service Design · Complex Systems · UX/UI',
         subtitle: 'Lead Designer — Ecosystem Strategy, Service Blueprinting, UX/UI',
-        thumbnail: 'https://static.wixstatic.com/media/9a7729_db41f399ea68470baac3dedb85a2c370~mv2.jpg/v1/fill/w_603,h_721,fp_0.73_0.23,q_85,usm_0.66_1.00_0.01,enc_auto/Smiling%20Passenger%20Train%20Travel_edited.jpg',
-        heroImage: 'https://static.wixstatic.com/media/9a7729_db41f399ea68470baac3dedb85a2c370~mv2.jpg/v1/fill/w_603,h_721,fp_0.73_0.23,q_85,usm_0.66_1.00_0.01,enc_auto/Smiling%20Passenger%20Train%20Travel_edited.jpg',
+        thumbnail: '/images/access-transit/Home.png',
+        heroImage: '/images/access-transit/Shots_Mockups_1x_copy.png',
         overview: 'AccessTransit transforms public transport from a gamble into a guarantee for riders with disabilities.',
         tags: ['Service Design', 'Systems Thinking', 'UX/UI'],
         role: 'Lead Service Designer',
@@ -351,10 +375,20 @@ export const caseStudies: CaseStudy[] = [
                     { type: 'p', content: 'Context follows the user from their living room to the station platform.' },
                     { type: 'h3', content: 'Mobile: The Trust Dashboard' },
                     { type: 'p', content: 'The mobile app fronts **real-time infrastructure status**, proactively warning users if the elevator on their saved route breaks down.' },
-                    { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_d7741e88a374498b924f59ab592fb439~mv2.png/v1/fill/w_461,h_426,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Shots%20Mockups%201x.png', alt: 'Mobile app mockup' },
+                    { type: 'image', src: '/images/access-transit/Home2.png', alt: 'Mobile app mockup' },
                     { type: 'h3', content: 'Kiosks: High-Stress UI' },
                     { type: 'p', content: 'Station kiosks feature massive touch targets and brutalist simplicity. I reduced the standard 12-button transit menu down to **3 primary actions**.' },
-                    { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_613aab198f9c48cf938fe84a19db3b76~mv2.png/v1/fill/w_461,h_448,fp_0.50_0.53,q_85,usm_0.66_1.00_0.01,enc_auto/Copilot%20Jul%2031%202025.png', alt: 'Kiosk UI' }
+                    { type: 'image', src: '/images/access-transit/Home3.png', alt: 'Kiosk UI' },
+                    {
+                        type: 'image_row', images: [
+                            { src: '/images/access-transit/Flow_01_Home.png', alt: 'Step 1' },
+                            { src: '/images/access-transit/Flow_02_Results.png', alt: 'Step 2' },
+                            { src: '/images/access-transit/Flow_03_SeatClass.png', alt: 'Step 3' },
+                            { src: '/images/access-transit/Flow_04_Payment.png', alt: 'Step 4' },
+                            { src: '/images/access-transit/Flow_05_Ticket.png', alt: 'Step 5' }
+                        ],
+                        caption: 'Streamlined ticket purchase flow optimized for speed and clarity.'
+                    }
                 ]
             },
             {
@@ -378,8 +412,8 @@ export const caseStudies: CaseStudy[] = [
         title: 'ConnectDist',
         category: 'Product Strategy · B2B Commerce',
         subtitle: 'Lead Product Manager & Designer — Discovery, Strategy, UX/UI',
-        thumbnail: 'https://static.wixstatic.com/media/9a7729_a2ad1234f455483689cb0f2d96312b46~mv2.png/v1/fill/w_1024,h_1224,fp_0.50_0.53,q_90,enc_auto/Copilot%20Aug%202%202025.png',
-        heroImage: 'https://static.wixstatic.com/media/9a7729_c78319cf9cf743dda2836e075a9b6c04~mv2.jpg/v1/fill/w_1634,h_794,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Person%20Writing%20on%20Paper%202.jpg',
+        thumbnail: '/images/connectdist/iPhone_16_Pro_Max_-_32.png',
+        heroImage: '/images/connectdist/ConnectDist_Service_blueprint.svg',
         overview: 'ConnectDist modernizes the fragmented B2B supply chain between local distributors and independent shops — digitizing inventory while preserving the human relationships that power local commerce.',
         tags: ['Product Management', 'B2B SaaS', 'UX Research'],
         role: 'PM & UX Designer',
@@ -397,11 +431,11 @@ export const caseStudies: CaseStudy[] = [
                 blocks: [
                     { type: 'h2', content: 'The Broken B2B Supply Chain' },
                     { type: 'p', content: 'While enterprise distribution runs on SAP, local independent commerce still runs on chaos. Shop owners juggle dozens of distributors via phone calls, fragmented WhatsApp threads, and paper invoices.' },
-                    { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_b1335180f66c4d87a6f7f795a262104d~mv2.png/v1/fill/w_2218,h_872,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2021_04_33.png', alt: 'Service Blueprint' },
+                    { type: 'image', src: '/images/connectdist/ConnectDist_Service_blueprint.svg', alt: 'Service Blueprint', caption: 'Mapping the fragmented journey from distributor warehouse to shop shelf.' },
                     {
                         type: 'image_row', images: [
-                            { src: '/images/connectdist-interviews.png', alt: 'User interviews' },
-                            { src: '/images/connectdist-smart-inventory-mobile.jpg', alt: 'Smart inventory mobile' }
+                            { src: '/images/connectdist/iPhone_16_Pro_Max_-_1.png', alt: 'Shop Owner App' },
+                            { src: '/images/connectdist/iPhone_16_Pro_Max_-_2.png', alt: 'Inventory View' }
                         ]
                     }
                 ]
@@ -411,7 +445,14 @@ export const caseStudies: CaseStudy[] = [
                 blocks: [
                     { type: 'h2', content: 'Relationship-First Commerce' },
                     { type: 'p', content: 'Research revealed that shop owners stick with slightly more expensive distributors because they **trust** them. A purely transactional app would commoditize these relationships and fail.' },
-                    { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_6b0f2e72f38248de88f8e14564a79c74~mv2.png/v1/fill/w_922,h_852,fp_0.51_0.50,q_90,usm_0.66_1.00_0.01,enc_auto/Shots%20Mockups.png', alt: 'Relationship Hub UI' },
+                    {
+                        type: 'image_row', images: [
+                            { src: '/images/connectdist/iPhone_16_Pro_Max_-_6.png', alt: 'Relationship Hub' },
+                            { src: '/images/connectdist/iPhone_16_Pro_Max_-_7.png', alt: 'Order History' },
+                            { src: '/images/connectdist/iPhone_16_Pro_Max_-_8.png', alt: 'Direct Contact' }
+                        ],
+                        caption: 'Maintaining personal connections through digital efficiency.'
+                    },
                     { type: 'aside', icon: '🗣️', title: 'User Quote', content: '"If I buy from a shiny new app and the milk spoils, who do I yell at? I buy from Tony because Tony fixes it."' }
                 ]
             }
@@ -424,10 +465,10 @@ export const caseStudies: CaseStudy[] = [
     {
         id: 'cican-navigator',
         title: 'CICan Navigator',
-        category: 'Civic Tech · Information Architecture',
+        category: 'Civic Tech · Social Impact · UX/UI',
         subtitle: 'Lead Product Designer — IA Audit, UX Research, Rapid Prototyping',
-        thumbnail: '/images/cican-navigator-hero.jpg',
-        heroImage: '/images/cican-navigator-hero.jpg',
+        thumbnail: '/images/cican-navigator/Homepage.png',
+        heroImage: '/images/cican-navigator/Desktop_-_20.png',
         overview: 'In a 48-hour civic tech sprint, I led the redesign of the CICan Navigator, transforming a legacy institutional labyrinth into a task-driven, WCAG-compliant portal.',
         tags: ['Civic Tech', 'IA', 'WCAG 2.1 AA'],
         role: 'Lead UX/UI Designer',
@@ -435,14 +476,14 @@ export const caseStudies: CaseStudy[] = [
         tools: ['Figma', 'Optimal Workshop', 'Miro'],
         impact: [
             { value: '75%', label: 'Drop in Task Time' },
-            { value: '40%', label: 'Less Search' },
-            { value: '60%', label: 'Fewer Tickets' }
+            { value: 'MVP', label: 'Tested & Validated' }
         ],
         highlights: [
             "Rebuilt IA around student tasks instead of institutional departments.",
             "Ensured 100% WCAG 2.1 AA compliance.",
             "Reduced time-on-task by 75%."
         ],
+        externalUrl: '/images/cican-navigator/Hackathon.pdf',
         prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2F', title: 'Interactive Prototype' },
         content: [
             {
@@ -451,9 +492,7 @@ export const caseStudies: CaseStudy[] = [
                     { type: 'h2', content: 'Background Information' },
                     { type: 'p', content: 'During a high-stakes 48-hour civic tech hackathon, I led the modernization of the student portal for CICan (Colleges and Institutes Canada). The goal was to salvage a legacy labyrinth without an enterprise budget.' },
                     { type: 'h2', content: 'The Problem' },
-                    { type: 'p', content: 'The portal was a digital filing cabinet for jargon. Students missed critical deadlines because forms were buried under layers of institutional hierarchy. The portal reflected Conway\'s Law — structure mirrored the HR chart, not student needs.' },
-                    { type: 'h2', content: 'The Opportunity' },
-                    { type: 'p', content: 'Burn down the department-based IA and rebuild it around Student Verbs (Tasks).' },
+                    { type: 'p', content: 'The portal was a digital filing cabinet for jargon. Students missed critical deadlines because forms were buried under layers of institutional hierarchy.' },
                     { type: 'h2', content: 'Goals' },
                     {
                         type: 'list', items: [
@@ -461,60 +500,36 @@ export const caseStudies: CaseStudy[] = [
                             '**Radically Flatten IA**: Reduce global navigation from 30+ links to 5 core task pillars.',
                             '**Accessibility Baseline**: Ensure 100% WCAG 2.1 AA compliance.'
                         ]
-                    },
-                    { type: 'image', src: '/images/cican-navigator-chapter1.png', alt: 'Legacy Audit' }
+                    }
                 ]
             },
             {
-                number: 2, icon: '🔍', title: 'Discovery',
+                number: 2, icon: '🔍', title: 'Discovery & AI Mapping',
                 blocks: [
                     { type: 'h2', content: 'Finding Signal in the Noise' },
                     { type: 'p', content: 'A rapid heuristic audit revealed the core flaw: Conway\'s Law. The portal was structured like the HR chart, not the student\'s needs.' },
-                    { type: 'aside', icon: '✅', title: 'Key Insight', content: 'Students think in verbs, the institution built in nouns.' },
                     {
                         type: 'image_row', images: [
-                            { src: '/images/cican-navigator-research.png', alt: 'Research findings' },
-                            { src: '/images/cican-navigator-aha.png', alt: 'IA audit findings' }
-                        ]
-                    }
+                            { src: '/images/cican-navigator/Demographics.png', alt: 'Demographics' },
+                            { src: '/images/cican-navigator/Career_Transition_Platform_Message_Preview.png', alt: 'Skill Analysis' }
+                        ],
+                        caption: 'Analyzing user demographics and skill gaps for career transition.'
+                    },
+                    { type: 'aside', icon: '✅', title: 'Key Insight', content: 'Students think in verbs, the institution built in nouns.' }
                 ]
             },
             {
-                number: 3, icon: '🧭', title: 'The Pivot',
+                number: 3, icon: '🛠️', title: 'The Build',
                 blocks: [
-                    { type: 'h2', content: 'Architecting for Intent' },
-                    { type: 'p', content: 'I flattened the hierarchy into 3 task-oriented buckets: **Academics**, **Financing**, and **Campus Life**.' },
-                    {
-                        type: 'list', items: [
-                            '**Task-Based Navigation**',
-                            '**Accessibility First**',
-                            '**Contextual Personalization**'
-                        ]
-                    }
-                ]
-            },
-            {
-                number: 4, icon: '🎨', title: 'The Process: Messy Middle',
-                blocks: [
-                    { type: 'h2', content: 'Discovery & Framing' },
-                    { type: 'p', content: 'The first 12 hours were a high-intensity "messy middle" — performing heuristic audits on whiteboards, mapping institutional mental model vs. student task flow.' },
-                    { type: 'image', src: '/images/cican-navigator-process-whiteboard.png', alt: 'Discovery Whiteboard' },
-                    { type: 'h2', content: 'Iterating Toward Clarity' },
-                    { type: 'p', content: 'Moving from whiteboard to wireflow, prioritizing urgent tasks over static content.' },
-                    { type: 'image', src: '/images/cican-navigator-process-wireflow.png', alt: 'Wireflow Logic' }
-                ]
-            },
-            {
-                number: 5, icon: '🎯', title: 'The Solution',
-                blocks: [
-                    { type: 'h2', content: 'The Task-Driven Navigator' },
-                    { type: 'p', content: 'Personalized dashboard curating next steps based on student state. Culled global navigation from 30+ links to 5 pillars.' },
-                    { type: 'image', src: '/images/cican-navigator-homepage.png', alt: 'New Dashboard' },
+                    { type: 'h2', content: 'AI Matching Engine' },
+                    { type: 'p', content: 'We designed a skill-extraction engine that takes a worker\'s resume and maps it directly onto emerging sustainability job descriptions.' },
                     {
                         type: 'image_row', images: [
-                            { src: '/images/cican-navigator-demographics.png', alt: 'Demographics' },
-                            { src: '/images/cican-navigator-accessibility.png', alt: 'Accessible UI' }
-                        ]
+                            { src: '/images/cican-navigator/Career_Transition_Platform_Message_Preview_(1).png', alt: 'Skill Mapping' },
+                            { src: '/images/cican-navigator/Career_Transition_Platform_Message_Preview_(2).png', alt: 'Job Matching' },
+                            { src: '/images/cican-navigator/Career_Transition_Platform_Message_Preview_(3).png', alt: 'Action Plan' }
+                        ],
+                        caption: 'The Task-Driven Navigator: from skill extraction to a concrete career action plan.'
                     }
                 ]
             }
@@ -529,8 +544,8 @@ export const caseStudies: CaseStudy[] = [
         title: 'UI Designs / Redesigns',
         category: 'Creative Gallery',
         subtitle: 'High-fidelity visual explorations and interface redesigns.',
-        thumbnail: '/images/sunnys-finance-hero.jpg',
-        heroImage: '/images/sunnys-finance-hero.jpg',
+        thumbnail: '/images/ui-designs/UI_Design_Thumbnail.jpg',
+        heroImage: '/images/ui-designs/Hero_UI.jpg',
         overview: 'A curated gallery of visual design work — from data-heavy dashboards to accessible onboarding flows.',
         tags: ['UI Design', 'Visual Design'],
         content: [
@@ -539,14 +554,14 @@ export const caseStudies: CaseStudy[] = [
                 blocks: [
                     { type: 'h2', content: 'Sunny\'s Finance' },
                     { type: 'p', content: 'A reimagined financial dashboard to help wealth advisors simplify their workload, surface critical client data at a glance, and reduce cognitive overload through modular card-based layouts.' },
-                    { type: 'image', src: '/images/sunnys-finance-dashboard-light.png', alt: 'Sunny\'s Finance Dashboard — Light Mode' },
+                    { type: 'image', src: '/images/ui-designs/Sunnys_Dashboard_Light.jpg', alt: 'Sunny\'s Finance Dashboard — Light Mode' },
                     {
                         type: 'image_row', images: [
-                            { src: '/images/sunnys-finance-profile-light.png', alt: 'Client profile page' },
-                            { src: '/images/sunnys-finance-overlay-light.png', alt: 'Expense detail overlay' }
+                            { src: '/images/ui-designs/Sunnys_Profile_Light.jpg', alt: 'Client profile page' },
+                            { src: '/images/ui-designs/Sunnys_Overlay_Light.jpg', alt: 'Expense detail overlay' }
                         ]
                     },
-                    { type: 'image', src: '/images/sunnys-finance-dashboard-dark.png', alt: 'Sunny\'s Finance Dashboard — Dark Mode' },
+                    { type: 'image', src: '/images/ui-designs/Sunnys_Dashboard_Dark.jpg', alt: 'Sunny\'s Finance Dashboard — Dark Mode' },
                     { type: 'divider' }
                 ]
             },
@@ -554,52 +569,49 @@ export const caseStudies: CaseStudy[] = [
                 number: 2, icon: '♿', title: 'Cognitive Clarity',
                 blocks: [
                     { type: 'h2', content: 'Cognitive Clarity' },
-                    { type: 'p', content: 'An exploration into WCAG 2.1 AAA compliance — designing a calm, accessible insurance onboarding flow for users with cognitive impairments. Every interaction respects limited working memory and minimizes decision fatigue.' },
-                    { type: 'image', src: '/images/cognitive-clarity-hero.jpg', alt: 'Cognitive Clarity hero' },
+                    { type: 'p', content: 'An exploration into WCAG 2.1 AAA compliance — designing a calm, accessible insurance onboarding flow for users with cognitive impairments.' },
+                    { type: 'image', src: '/images/ui-designs/Cognitive_Clarity_Hero.jpg', alt: 'Cognitive Clarity hero' },
                     {
                         type: 'image_row', images: [
-                            { src: '/images/cognitive-clarity-pillar1.png', alt: 'Pillar 1' },
-                            { src: '/images/cognitive-clarity-pillar2.png', alt: 'Pillar 2' }
+                            { src: '/images/ui-designs/Cognitive_Clarity_Pillar_1.jpg', alt: 'Pillar 1' },
+                            { src: '/images/ui-designs/Cognitive_Clarity_Pillar_2.jpg', alt: 'Pillar 2' }
                         ]
                     },
                     {
                         type: 'image_row', images: [
-                            { src: '/images/cognitive-clarity-principles.png', alt: 'Design principles' },
-                            { src: '/images/cognitive-clarity-old-form.jpg', alt: 'Old form analysis' },
-                            { src: '/images/cognitive-clarity-aha.png', alt: 'Aha moment' }
+                            { src: '/images/ui-designs/Cognitive_Clarity_Principles.jpg', alt: 'Design principles' },
+                            { src: '/images/ui-designs/Cognitive_Clarity_Old_Analysis.jpg', alt: 'Old form analysis' },
+                            { src: '/images/ui-designs/Cognitive_Clarity_Aha.jpg', alt: 'Aha moment' }
                         ]
                     },
-                    { type: 'image', src: '/images/cognitive-clarity-prototype-laptop.png', alt: 'Final prototype on laptop' },
-                    { type: 'image', src: '/images/cognitive-clarity-handoff.jpg', alt: 'Design handoff' }
+                    { type: 'image', src: '/images/ui-designs/Cognitive_Clarity_Mockup.jpg', alt: 'Final prototype on laptop' },
+                    { type: 'image', src: '/images/ui-designs/Cognitive_Clarity_Handoff.jpg', alt: 'Design handoff' }
                 ]
             }
         ]
     },
-
-    /* ============================
-       AWARDS & MENTIONS
-       ============================ */
     {
         id: 'cdn-article',
-        title: 'Featured in CDN News',
-        category: 'Press',
-        subtitle: 'Published article about AI-assisted design workflows.',
-        thumbnail: '/images/ai-accessibility-article.png',
-        heroImage: '/images/ai-accessibility-article.png',
-        overview: 'Featured in CDN News for contributions to accessible design and AI-assisted workflows in the Canadian tech ecosystem.',
-        tags: ['Press', 'AI', 'Accessibility'],
-        externalUrl: 'https://www.cdnnews.com',
+        title: 'AI & Accessibility',
+        category: 'Published Article',
+        subtitle: 'Featured in Canadian Design Network.',
+        thumbnail: '/images/misc/ai-accessibility-article.png',
+        heroImage: '/images/misc/ai-accessibility-article.png',
+        overview: 'An exploration into the intersection of generative AI and digital accessibility for public systems.',
+        tags: ['AI', 'Accessibility', 'Thought Leadership'],
+        externalUrl: 'https://canadiandesignnetwork.com/newsletter-article/ai-accessibility-and-the-future-of-public-systems/',
         content: []
     },
     {
         id: 'hackathon-win',
-        title: 'Hackathon Win — CICan Civic Tech',
-        category: 'Award',
-        subtitle: 'First place in the CICan civic tech hackathon.',
-        thumbnail: '/images/hackathon-team.png',
-        heroImage: '/images/hackathon-team.png',
-        overview: 'Won first place in the CICan Civic Tech hackathon for the Navigator redesign — a 48-hour sprint reimagining student portal information architecture.',
-        tags: ['Award', 'Hackathon', 'Civic Tech'],
+        title: 'CiCan Hackathon Winner',
+        category: 'Competition',
+        subtitle: 'National 1st Place - Skills for Success',
+        thumbnail: '/images/misc/hackathon-team.png',
+        heroImage: '/images/misc/hackathon-team.png',
+        overview: 'Led the winning team in designing an innovative user experience solution for student success in a 48-hour sprint.',
+        tags: ['Hackathon', 'UX Design', 'Rapid Prototyping'],
+        externalUrl: 'https://www.fanshawec.ca/about-fanshawe/news/user-experience-design-students-hack-their-way-first-place',
         content: []
     }
 ];

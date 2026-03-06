@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { caseStudies } from '../data/caseStudies';
 import { CaseStudy } from '../types';
+import { Carousel, Card } from '../components/AppleCardsCarousel';
 import { SEO } from '../components/SEO';
 import MonitorHighlights from '../components/MonitorHighlights';
 import { ErrorBoundary } from '../components/ErrorBoundary';
@@ -101,41 +102,59 @@ export const ProjectsPage: React.FC = () => {
             {/* Section 2: UI Design & Graphic Design */}
             <div className="w-full py-24 mb-32">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                    <SectionHeader number="02" label="UI DESIGN" title="Visual Explorations" description="Interface experiments, conceptual redesigns, and high-fidelity visual work — primarily showcased through imagery." />
+                    <SectionHeader
+                        number="02"
+                        label="UI DESIGN"
+                        title="Visual Explorations"
+                        description="A collection of conceptual work, interface experiments, and passion projects focused heavily on visual execution."
+                    />
 
                     {uiProject && (
-                        <Link to={`/project/${uiProject.id}`} className="group block max-w-5xl mx-auto">
-                            <div className="relative overflow-hidden rounded-3xl border border-border hover:border-primary/40 transition-all duration-500">
-                                <img src={uiProject.thumbnail} alt={uiProject.title} className="w-full h-[400px] object-cover transition-transform duration-700 group-hover:scale-105" />
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                                <div className="absolute bottom-0 left-0 right-0 p-10">
-                                    <h3 className="text-3xl font-serif font-bold text-white mb-3 group-hover:text-primary transition-colors">{uiProject.title}</h3>
-                                    <p className="text-white/80 text-lg max-w-2xl">{uiProject.overview}</p>
-                                    <span className="inline-flex items-center text-primary font-semibold group-hover:translate-x-1 transition-transform mt-4">
-                                        View Gallery →
-                                    </span>
-                                </div>
-                            </div>
-                        </Link>
+                        <Carousel
+                            items={uiProject.content.map((chapter, index) => (
+                                <Card
+                                    key={`${uiProject.id}-${chapter.number}`}
+                                    index={index}
+                                    card={{
+                                        src: chapter.blocks.find(b => b.type === 'image')?.src || uiProject.thumbnail,
+                                        title: chapter.title,
+                                        category: uiProject.category,
+                                        id: uiProject.id,
+                                        chapterNumber: chapter.number
+                                    }}
+                                />
+                            ))}
+                        />
                     )}
                 </div>
             </div>
 
             {/* Section 3: Awards & Recognition */}
-            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <SectionHeader number="03" label="RECOGNITION" title="Awards & Mentions" />
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-32">
+                <SectionHeader
+                    number="03"
+                    label="RECOGNITION"
+                    title="Awards & Mentions"
+                />
+
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-4xl mx-auto">
                     {awards.map(study => (
                         <a
                             key={study.id}
                             href={study.externalUrl || `/project/${study.id}`}
-                            target={study.externalUrl ? '_blank' : undefined}
-                            rel={study.externalUrl ? 'noopener noreferrer' : undefined}
-                            className="flex flex-col p-8 bg-card rounded-2xl hover:bg-muted/50 transition-colors border border-border hover:border-primary/40 shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] group duration-500"
+                            target={study.externalUrl ? "_blank" : undefined}
+                            rel={study.externalUrl ? "noopener noreferrer" : undefined}
+                            className="flex flex-col p-8 bg-card backdrop-blur-sm rounded-2xl hover:bg-muted/50 transition-all border border-border hover:border-primary/40 shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] group duration-500"
                         >
                             <span className="text-sm font-bold text-primary tracking-[0.1em] uppercase mb-3">{study.category}</span>
                             <h4 className="text-2xl font-serif font-bold text-foreground mb-3 group-hover:text-primary transition-colors">{study.title}</h4>
-                            <p className="text-muted-foreground text-base leading-relaxed">{study.overview}</p>
+                            <p className="text-muted-foreground text-base leading-relaxed line-clamp-3">{study.overview}</p>
+
+                            {study.externalUrl && (
+                                <span className="mt-6 text-primary font-semibold flex items-center gap-2 group-hover:translate-x-1 transition-transform">
+                                    Read Article <span className="text-xl">→</span>
+                                </span>
+                            )}
                         </a>
                     ))}
                 </div>
