@@ -5,7 +5,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { ScrollToTop } from './components/ScrollToTop';
 import { BackgroundDoodles } from './components/BackgroundDoodles';
-import { Chatbot } from './components/Chatbot';
+
 import { NoiseTexture } from './components/NoiseTexture';
 import { FloatingDock } from './components/FloatingDock';
 import { TailedCursor } from './components/TailedCursor';
@@ -68,7 +68,6 @@ const App: React.FC = () => {
                             </Suspense>
                         </main>
                         <Footer />
-                        {/* <Chatbot /> */}
                         <NoiseTexture />
                         <FloatingDock />
                         <TailedCursor baseThickness={30} color="#7c3aed" />
