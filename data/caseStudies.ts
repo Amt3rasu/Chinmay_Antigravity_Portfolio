@@ -26,6 +26,7 @@ export const caseStudies: CaseStudy[] = [
             "Designed 4 persona-driven entry points replacing a single generic form.",
             "Created a visual timeline preview that eliminated user fear before launching campaigns."
         ],
+        prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2F', title: 'Interactive Prototype' },
         content: [
             {
                 number: 1, icon: '📋', title: 'The Brief',
@@ -324,6 +325,7 @@ export const caseStudies: CaseStudy[] = [
             "Cohesive ecosystem across mobile, web, and kiosk.",
             "Reduced kiosk purchase time by 68%."
         ],
+        prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2F', title: 'Interactive Prototype' },
         content: [
             {
                 number: 1, icon: '📋', title: 'The Framework',
@@ -388,6 +390,7 @@ export const caseStudies: CaseStudy[] = [
             { value: '90 Sec', label: 'Multi-Item Order Time' },
             { value: 'High', label: 'Validated WTP' }
         ],
+        prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2F', title: 'Interactive Prototype' },
         content: [
             {
                 number: 1, icon: '📋', title: 'The Brief',
@@ -440,6 +443,7 @@ export const caseStudies: CaseStudy[] = [
             "Ensured 100% WCAG 2.1 AA compliance.",
             "Reduced time-on-task by 75%."
         ],
+        prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2F', title: 'Interactive Prototype' },
         content: [
             {
                 number: 1, icon: '📋', title: 'The Framework',

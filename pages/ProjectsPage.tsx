@@ -64,23 +64,7 @@ export const ProjectsPage: React.FC = () => {
                 <section className="w-full h-screen relative bg-black overflow-hidden mb-24 max-h-[900px]">
                     <MonitorHighlights className="w-full h-full" />
 
-                    {/* Overlay Text for Title/Description */}
-                    <div className="absolute top-0 left-0 w-full p-8 md:p-16 pointer-events-none z-10 flex flex-col items-start justify-start pt-32">
-                        <motion.div
-                            initial={{ opacity: 0, y: 20 }}
-                            whileInView={{ opacity: 1, y: 0 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.8 }}
-                        >
-                            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl drop-shadow-lg">
-                                Interactive Case Studies
-                            </h2>
-                            <p className="mt-4 max-w-lg text-lg text-gray-300 drop-shadow-md">
-                                Explore my design process and key projects through an interactive 3D perspective.
-                                Drag to rotate, scroll to zoom, and discover the stories behind the work.
-                            </p>
-                        </motion.div>
-                    </div>
+
 
                     {/* Scroll Indicator at the bottom of the section */}
                     <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center pointer-events-none opacity-60 z-10">
@@ -115,7 +99,7 @@ export const ProjectsPage: React.FC = () => {
             </div>
 
             {/* Section 2: UI Design & Graphic Design */}
-            <div className="w-full bg-card/30 border-y border-border py-24 mb-32">
+            <div className="w-full py-24 mb-32">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <SectionHeader number="02" label="UI DESIGN" title="Visual Explorations" description="Interface experiments, conceptual redesigns, and high-fidelity visual work — primarily showcased through imagery." />
 
