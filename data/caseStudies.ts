@@ -28,94 +28,98 @@ export const caseStudies: CaseStudy[] = [
         ],
         content: [
             {
-                number: 1, icon: '📋', title: 'The Framework',
+                number: 1, icon: '📋', title: 'The Brief',
                 blocks: [
-                    { type: 'h2', content: 'Background Information' },
+                    { type: 'h2', content: 'The Brief & Constraints' },
                     { type: 'p', content: 'Flamey\'s product team came to me with a clear signal: **the Sequence Builder had the highest drop-off rate in the platform.** Users would open it, stare at the form, and leave. The AI toggle — their flagship feature — had single-digit engagement.' },
-                    { type: 'h2', content: 'The Problem' },
-                    { type: 'p', content: 'The existing builder presented every configuration option on one screen. Users had no guidance, no preview of outcomes, and the AI feature was buried below the fold as a simple toggle. Three user personas (SDRs, AEs, Managers) had conflicting needs that one-size-fits-all couldn\'t serve.' },
-                    { type: 'h2', content: 'The Opportunity' },
-                    { type: 'p', content: 'Competitive analysis revealed every competitor fell into one of two traps: **AI-first (fast but scary)** or **Form-first (safe but slow)**. Nobody had cracked the middle: AI as a collaborative partner where the user stays in control.' },
-                    { type: 'h2', content: 'Goals' },
+                    { type: 'h3', content: 'What I Was Asked' },
+                    { type: 'p', content: 'Redesign the Sequence Builder end-to-end. Make the AI feel like a genuine creative partner, not a hidden toggle. Deliver high-fidelity prototypes in **4 working days**.' },
+                    { type: 'h3', content: 'The Constraints' },
                     {
                         type: 'list', items: [
-                            '**Eliminate the blank page** — Give users guided entry points instead of an empty form.',
-                            '**Make AI visible and trustworthy** — Move AI from a hidden toggle to a first-class creative partner.',
-                            '**Respect expertise levels** — SDRs need speed, AEs need control, Managers need consistency.',
-                            '**Ship in 4 days** — Working within the existing Chakra UI design system.'
+                            '**4-day timeline** — No room for usability testing or iteration sprints.',
+                            '**Existing Chakra UI** — Must work within the current design system, no new components.',
+                            '**3 user personas** with conflicting needs — SDRs want speed, AEs want control, Managers want consistency.',
+                            '**No user access** — PM couldn\'t arrange interviews in time. I had to rely on competitive research and persona mapping.'
                         ]
                     },
-                    { type: 'image', src: 'https://placehold.co/800x600/2a2a2a/ffffff?text=Old+Sequence+Builder', alt: 'The existing Sequence Builder — a dense wall of form fields with a hidden AI toggle' }
+                    { type: 'image', src: 'https://placehold.co/800x600/2a2a2a/ffffff?text=Old+Sequence+Builder', alt: 'The existing Sequence Builder — a dense wall of form fields with a hidden AI toggle', caption: 'The old builder: every configuration option on one screen. AI toggle buried at the bottom.' }
                 ]
             },
             {
                 number: 2, icon: '🔍', title: 'Discovery',
                 blocks: [
-                    { type: 'h2', content: 'Competitive Teardown' },
-                    { type: 'p', content: 'I spent Day 1 actually building sequences in Apollo.io, 11x.ai, and Attio — not just screenshots, but real campaigns measuring time-on-task and friction points.' },
-                    { type: 'aside', icon: '🔵', title: 'Apollo.io', content: '22 minutes to create a sequence. Strong templates, but AI felt bolted-on.' },
-                    { type: 'aside', icon: '🟣', title: '11x.ai', content: 'AI-first approach. Fast but users felt out of control. "It just does things."' },
-                    { type: 'aside', icon: '🟢', title: 'Attio', content: 'Clean UI but shallow AI integration. Great design system, weak workflow.' },
+                    { type: 'h2', content: 'Research Approach' },
+                    { type: 'p', content: 'With no user access and a 4-day window, I needed fast, high-signal research. I chose two methods: a **competitive teardown** of 3 direct competitors and **persona-driven journey mapping** based on the PM\'s qualitative notes.' },
+                    { type: 'h3', content: 'Competitive Teardown' },
+                    { type: 'p', content: 'I spent Day 1 building sequences in Apollo.io, 11x.ai, and Attio. Not just screenshots — I actually created campaigns, measured how long each took, and documented every friction point.' },
+                    { type: 'aside', icon: '🔵', title: 'Apollo.io', content: '**22 minutes** to create a sequence. Strong template library, but AI felt bolted-on. No conversational interface.' },
+                    { type: 'aside', icon: '🟣', title: '11x.ai', content: '**AI-first** approach. Fast creation but users felt out of control. "It just does things" — no preview, no trust.' },
+                    { type: 'aside', icon: '🟢', title: 'Attio', content: '**Clean UI** but shallow AI integration. The design system was excellent; the workflow logic was not.' },
+                    { type: 'h3', content: 'Key Insight' },
+                    { type: 'p', content: 'Every competitor fell into one of two traps: **AI-first (fast but scary)** or **Form-first (safe but slow)**. Nobody had cracked the middle: **AI as a collaborative partner where the user stays in control.**' },
                     { type: 'h2', content: 'Persona Mapping' },
-                    { type: 'p', content: 'Using support tickets and PM notes, I mapped three distinct personas. This crystallized the design direction — one-size-fits-all was the root cause of failure.' },
-                    { type: 'aside', icon: '⚡', title: 'SDR', content: '"Just help me launch." Goal: Speed & volume.' },
-                    { type: 'aside', icon: '🧠', title: 'AE', content: '"I need control." Goal: Precision per account.' },
-                    { type: 'aside', icon: '🛡️', title: 'Manager', content: '"Consistency is key." Goal: Scale & quality control.' }
+                    { type: 'p', content: 'Using the PM\'s interview notes and support tickets, I mapped three distinct user personas. This was the moment the design direction crystallized — one-size-fits-all was the root cause of failure.' },
+                    { type: 'aside', icon: '⚡', title: 'SDR Persona', content: '"Just help me launch."\nGoal: Speed & volume.\nMental model: "Tell me what works and let me go."' },
+                    { type: 'aside', icon: '🧠', title: 'AE Persona', content: '"I need control."\nGoal: Precision per account.\nMental model: "Start me somewhere, but let me drive."' },
+                    { type: 'aside', icon: '🛡️', title: 'Manager Persona', content: '"Consistency is key."\nGoal: Scale & quality control.\nMental model: "What worked last quarter should be reusable."' }
                 ]
             },
             {
-                number: 3, icon: '🧭', title: 'The Pivot',
+                number: 3, icon: '🧭', title: 'Framing',
                 blocks: [
-                    { type: 'h2', content: 'Design Principles' },
-                    { type: 'p', content: 'Before sketching a single screen, I distilled the research into 4 principles that became the decision-making framework for every UI choice.' },
-                    { type: 'aside', icon: '🤖', title: 'AI as co-pilot, not autopilot', content: 'The AI asks before it acts. Users stay in control, but the blank page is eliminated.' },
-                    { type: 'aside', icon: '👁️', title: 'Show before committing', content: 'Visual timeline preview eliminates the fear of "what will this send?"' },
-                    { type: 'aside', icon: '🧠', title: 'Progressive disclosure', content: 'Only what\'s needed appears. Complex settings are accessible but never in the way.' },
-                    { type: 'aside', icon: '⚡', title: 'Respect expertise', content: 'Entry points adapt to the user. One door for everyone was the root cause of failure.' },
-                    { type: 'h2', content: 'Heuristic Findings' },
+                    { type: 'h2', content: 'Synthesizing Research into Principles' },
+                    { type: 'p', content: 'Before sketching a single screen, I distilled the research into 4 design principles. These became the decision-making framework for every UI choice that followed.' },
+                    { type: 'aside', icon: '🤖', title: 'AI as co-pilot, not autopilot', content: 'The AI asks before it acts. Users stay in control, but the blank page is eliminated. This directly addresses 11x.ai\'s trust problem.' },
+                    { type: 'aside', icon: '👁️', title: 'Show before committing', content: 'Visual timeline preview eliminates the fear of "what will this send?" — the #1 anxiety from support tickets.' },
+                    { type: 'aside', icon: '🧠', title: 'Progressive disclosure', content: 'Only what\'s needed appears. Complex settings are accessible but never in the way. This solves the "wall of text" problem in the old builder.' },
+                    { type: 'aside', icon: '⚡', title: 'Respect expertise levels', content: 'Entry points adapt to the user — SDRs need guidance, Managers need scale. One door for everyone was the root cause of failure.' },
+                    { type: 'h3', content: 'The Design Audit' },
+                    { type: 'p', content: 'I also conducted a heuristic evaluation of the existing builder. Three critical findings:' },
                     {
                         type: 'list', items: [
-                            '**IA Overload**: All configuration steps presented simultaneously → cognitive overload.',
-                            '**AI Invisible**: The toggle was below the fold with no explanation.',
-                            '**Zero Trust**: No preview of what AI would generate → users afraid to commit.'
+                            '**Information Architecture**: All configuration steps presented simultaneously → cognitive overload. Nielsen\'s "Recognition over Recall" violated.',
+                            '**AI Discoverability**: The AI toggle was below the fold, with no explanation of what it did. Users didn\'t know it existed.',
+                            '**Feedback & Trust**: No preview of what the AI would generate → users were afraid to commit. Zero progressive feedback.'
                         ]
                     }
                 ]
             },
             {
-                number: 4, icon: '🎨', title: 'The Process',
+                number: 4, icon: '🔀', title: 'Exploration',
                 blocks: [
-                    { type: 'h2', content: 'Exploring Alternatives' },
-                    { type: 'p', content: 'I explored three structural approaches on Day 2. Each had clear trade-offs.' },
-                    { type: 'aside', icon: '🅰️', title: 'Option A: Step Wizard', content: 'Linear flow. Low cognitive load but forced linearity frustrates power users.' },
-                    { type: 'aside', icon: '🅱️', title: 'Option B: AI-First Canvas', content: 'Full-screen chat with AI. Fastest creation but 11x.ai proved this scares users.' },
-                    { type: 'aside', icon: '✅', title: 'Option C: Hub + Spokes (chosen)', content: 'Central hub with 4 entry points. AI is accessible but optional. Respects all 3 personas.' },
-                    { type: 'p', content: 'I chose Hub + Spokes because it was the only approach respecting all three personas without forcing a single workflow.' }
+                    { type: 'h2', content: 'Alternatives Considered & Trade-offs' },
+                    { type: 'p', content: 'I explored three structural approaches on Day 2. Each had clear trade-offs. The decision wasn\'t obvious — here\'s the reasoning.' },
+                    { type: 'aside', icon: '🅰️', title: 'Option A: Step Wizard', content: 'Linear flow. Low cognitive load, easy to implement in Chakra UI. But forced linearity frustrates power users (AEs).' },
+                    { type: 'aside', icon: '🅱️', title: 'Option B: AI-First Canvas', content: 'Full-screen chat with AI. Fastest creation but 11x.ai proved this scares users. No control = no trust.' },
+                    { type: 'aside', icon: '✅', title: 'Option C: Hub + Spokes (Chosen)', content: 'Central hub with 4 entry points. AI integrated as one path, not the only path. Respects all 3 personas. Extensible.' },
+                    { type: 'h3', content: 'Decision: Hub + Spokes' },
+                    { type: 'p', content: 'I chose Option C because it was the only approach that respected all three personas without forcing a single workflow. The risk of choice paralysis was mitigated by limiting entry points to exactly 4, each with a clear icon, label, and one-line description.' }
                 ]
             },
             {
-                number: 5, icon: '🎯', title: 'The Solution',
+                number: 5, icon: '🎯', title: 'Solution',
                 blocks: [
                     { type: 'h2', content: 'The Final Design' },
-                    { type: 'p', content: 'The redesign reframes the Sequence Builder from a **form** into a **guided journey** with the AI as a creative partner.' },
+                    { type: 'p', content: 'The redesign makes one fundamental shift: it reframes the Sequence Builder from a **form** into a **guided journey** with the AI as a creative partner.' },
                     { type: 'h3', content: '4 Entry Points' },
-                    { type: 'p', content: 'The first screen offers a structured choice: 🤖 AI-Assisted, 📋 Templates, 📎 Duplicate, ✏️ Manual. Each respects a persona\'s starting point.' },
+                    { type: 'p', content: 'The first screen is no longer a blank canvas. It\'s a structured choice: 🤖 AI-Assisted, 📋 Templates, 📎 Duplicate, ✏️ Manual — each respecting a persona\'s starting point.' },
                     { type: 'image', src: 'https://placehold.co/800x500/333/fff?text=Entry+Points+UI', alt: 'Clean UI showing 4 distinct entry point cards' },
                     { type: 'h3', content: 'The AI Conversation' },
                     { type: 'p', content: 'Instead of a form asking "How many steps?", the AI asks strategic questions one by one, building a brief before generating.' },
                     { type: 'image', src: 'https://placehold.co/800x500/333/fff?text=AI+Chat+Interface', alt: 'Conversational AI building a sequence step by step' },
-                    { type: 'h3', content: 'Visual Timeline Preview' },
-                    { type: 'p', content: 'The trust moment — users see exactly what will be sent before committing.' },
+                    { type: 'h3', content: 'The Trust Moment: Visual Timeline Preview' },
+                    { type: 'p', content: 'Users see exactly what will be sent before committing. This eliminated the #1 fear: "What will this send?"' },
                     { type: 'image', src: 'https://placehold.co/1200x500/222/fff?text=Visual+Timeline+Preview', alt: 'Visual Timeline Preview showing sequence pacing' }
                 ]
             },
             {
-                number: 6, icon: '📊', title: 'Impact',
+                number: 6, icon: '📊', title: 'Validation',
                 blocks: [
-                    { type: 'h2', content: 'Projected Metrics' },
+                    { type: 'h2', content: 'Impact Metrics' },
                     { type: 'aside', icon: '⏱️', title: '30m → ~5m', content: 'Projected creation time reduction.' },
                     { type: 'aside', icon: '🤖', title: 'AI Engagement', content: 'Significant increase in AI feature discoverability.' },
-                    { type: 'aside', icon: '📦', title: '32 Deliverables', content: 'Shipped in 4 working days.' }
+                    { type: 'aside', icon: '📦', title: 'Efficiency', content: '32 Deliverables shipped in 4 working days.' }
                 ]
             }
         ]
@@ -148,8 +152,8 @@ export const caseStudies: CaseStudy[] = [
             {
                 number: 1, icon: '🏗️', title: 'Architecture',
                 blocks: [
-                    { type: 'h2', content: 'Atomic Design' },
-                    { type: 'p', content: 'The system follows atomic design principles: Atoms → Molecules → Organisms. 117 components built from scratch with full token architecture.' },
+                    { type: 'h2', content: 'Atomic Design System' },
+                    { type: 'p', content: 'The system follows atomic design principles: **Atoms → Molecules → Organisms**. 117 components built from scratch with full token architecture, achieving WCAG 2.1 AAA compliance across all contrast ratios.' },
                     { type: 'image', src: 'https://placehold.co/1200x500/111/00facc?text=Component+System+Visual', alt: 'Leaf DEX Component Library' }
                 ]
             }
@@ -200,7 +204,7 @@ export const caseStudies: CaseStudy[] = [
             {
                 number: 2, icon: '🎯', title: 'The Solution',
                 blocks: [
-                    { type: 'h2', content: 'The Ecosystem' },
+                    { type: 'h2', content: 'The Multi-Surface Ecosystem' },
                     { type: 'p', content: 'Context follows the user from their living room to the station platform.' },
                     { type: 'h3', content: 'Mobile: The Trust Dashboard' },
                     { type: 'p', content: 'The mobile app fronts **real-time infrastructure status**, proactively warning users if the elevator on their saved route breaks down.' },
@@ -215,7 +219,7 @@ export const caseStudies: CaseStudy[] = [
                 blocks: [
                     { type: 'aside', icon: '⏱️', title: '68% Time Reduction', content: 'Task completion time for buying a ticket dropped from 47s to 15s.' },
                     { type: 'aside', icon: '✅', title: '95% Success Rate', content: 'First-time completion rate without errors increased dramatically.' },
-                    { type: 'aside', icon: '♿', title: 'AAA Compliance', content: 'The high-contrast mode passed all WCAG 2.1 AAA contrast requirements.' },
+                    { type: 'aside', icon: '♿', title: 'AAA Compliance', content: 'High-contrast mode passed all WCAG 2.1 AAA contrast requirements.' },
                     { type: 'h2', content: 'Reflection' },
                     { type: 'p', content: 'This concept relied on an assumption that transit authorities have accurate real-time APIs for their elevators. If taking this to production, I would design a **crowd-sourced fallback** — allowing riders to instantly report broken infrastructure.' }
                 ]
@@ -249,7 +253,13 @@ export const caseStudies: CaseStudy[] = [
                 blocks: [
                     { type: 'h2', content: 'The Broken B2B Supply Chain' },
                     { type: 'p', content: 'While enterprise distribution runs on SAP, local independent commerce still runs on chaos. Shop owners juggle dozens of distributors via phone calls, fragmented WhatsApp threads, and paper invoices.' },
-                    { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_b1335180f66c4d87a6f7f795a262104d~mv2.png/v1/fill/w_2218,h_872,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2021_04_33.png', alt: 'Service Blueprint' }
+                    { type: 'image', src: 'https://static.wixstatic.com/media/9a7729_b1335180f66c4d87a6f7f795a262104d~mv2.png/v1/fill/w_2218,h_872,al_c,q_90,usm_0.66_1.00_0.01,enc_auto/Screenshot%202025-08-02%20at%2021_04_33.png', alt: 'Service Blueprint' },
+                    {
+                        type: 'image_row', images: [
+                            { src: '/images/connectdist-interviews.png', alt: 'User interviews' },
+                            { src: '/images/connectdist-smart-inventory-mobile.jpg', alt: 'Smart inventory mobile' }
+                        ]
+                    }
                 ]
             },
             {
@@ -294,9 +304,11 @@ export const caseStudies: CaseStudy[] = [
                 number: 1, icon: '📋', title: 'The Framework',
                 blocks: [
                     { type: 'h2', content: 'Background Information' },
-                    { type: 'p', content: 'During a 48-hour civic tech hackathon, I led the modernization of the student portal for CICan (Colleges and Institutes Canada).' },
+                    { type: 'p', content: 'During a high-stakes 48-hour civic tech hackathon, I led the modernization of the student portal for CICan (Colleges and Institutes Canada). The goal was to salvage a legacy labyrinth without an enterprise budget.' },
                     { type: 'h2', content: 'The Problem' },
-                    { type: 'p', content: 'Students missed critical deadlines because forms were buried under layers of institutional hierarchy. The portal reflected Conway\'s Law — structure mirrored the HR chart, not student needs.' },
+                    { type: 'p', content: 'The portal was a digital filing cabinet for jargon. Students missed critical deadlines because forms were buried under layers of institutional hierarchy. The portal reflected Conway\'s Law — structure mirrored the HR chart, not student needs.' },
+                    { type: 'h2', content: 'The Opportunity' },
+                    { type: 'p', content: 'Burn down the department-based IA and rebuild it around Student Verbs (Tasks).' },
                     { type: 'h2', content: 'Goals' },
                     {
                         type: 'list', items: [
@@ -309,28 +321,56 @@ export const caseStudies: CaseStudy[] = [
                 ]
             },
             {
-                number: 2, icon: '🎨', title: 'The Process',
+                number: 2, icon: '🔍', title: 'Discovery',
                 blocks: [
-                    { type: 'h2', content: 'Discovery & Framing' },
-                    { type: 'p', content: 'The first 12 hours were spent in a high-intensity "messy middle" — heuristic audits on whiteboards, mapping institutional mental model vs. student task flow.' },
-                    { type: 'image', src: '/images/cican-navigator-process-whiteboard.png', alt: 'Discovery Whiteboard' },
+                    { type: 'h2', content: 'Finding Signal in the Noise' },
+                    { type: 'p', content: 'A rapid heuristic audit revealed the core flaw: Conway\'s Law. The portal was structured like the HR chart, not the student\'s needs.' },
                     { type: 'aside', icon: '✅', title: 'Key Insight', content: 'Students think in verbs, the institution built in nouns.' },
-                    { type: 'h2', content: 'Iterating Toward Clarity' },
-                    { type: 'p', content: 'Moving from whiteboard to wireflow, I flattened the hierarchy into 3 task-oriented buckets: **Academics**, **Financing**, and **Campus Life**.' },
-                    { type: 'image', src: '/images/cican-navigator-process-wireflow.png', alt: 'IA Wireflow' }
+                    {
+                        type: 'image_row', images: [
+                            { src: '/images/cican-navigator-research.png', alt: 'Research findings' },
+                            { src: '/images/cican-navigator-aha.png', alt: 'IA audit findings' }
+                        ]
+                    }
                 ]
             },
             {
-                number: 3, icon: '🎯', title: 'The Solution',
+                number: 3, icon: '🧭', title: 'The Pivot',
+                blocks: [
+                    { type: 'h2', content: 'Architecting for Intent' },
+                    { type: 'p', content: 'I flattened the hierarchy into 3 task-oriented buckets: **Academics**, **Financing**, and **Campus Life**.' },
+                    {
+                        type: 'list', items: [
+                            '**Task-Based Navigation**',
+                            '**Accessibility First**',
+                            '**Contextual Personalization**'
+                        ]
+                    }
+                ]
+            },
+            {
+                number: 4, icon: '🎨', title: 'The Process: Messy Middle',
+                blocks: [
+                    { type: 'h2', content: 'Discovery & Framing' },
+                    { type: 'p', content: 'The first 12 hours were a high-intensity "messy middle" — performing heuristic audits on whiteboards, mapping institutional mental model vs. student task flow.' },
+                    { type: 'image', src: '/images/cican-navigator-process-whiteboard.png', alt: 'Discovery Whiteboard' },
+                    { type: 'h2', content: 'Iterating Toward Clarity' },
+                    { type: 'p', content: 'Moving from whiteboard to wireflow, prioritizing urgent tasks over static content.' },
+                    { type: 'image', src: '/images/cican-navigator-process-wireflow.png', alt: 'Wireflow Logic' }
+                ]
+            },
+            {
+                number: 5, icon: '🎯', title: 'The Solution',
                 blocks: [
                     { type: 'h2', content: 'The Task-Driven Navigator' },
-                    { type: 'p', content: 'The final design replaces the generic intranet with a personalized, task-driven dashboard that curates next steps based on student state.' },
+                    { type: 'p', content: 'Personalized dashboard curating next steps based on student state. Culled global navigation from 30+ links to 5 pillars.' },
                     { type: 'image', src: '/images/cican-navigator-homepage.png', alt: 'New Dashboard' },
-                    { type: 'image', src: '/images/cican-navigator-demographics.png', alt: 'Accessible UI' },
-                    { type: 'aside', icon: '⏱️', title: '75% Reduction', content: 'Time-on-task for core actions plummeted.' },
-                    { type: 'aside', icon: '☎️', title: '60% Fewer Tickets', content: 'Projected reduction in "Where do I find..." support questions.' },
-                    { type: 'h2', content: 'Reflection' },
-                    { type: 'p', content: 'This sprint cemented my belief that Information Architecture is the invisible backbone of a product\'s success. No amount of polish can save a product if the underlying structure doesn\'t map to how users actually think.' }
+                    {
+                        type: 'image_row', images: [
+                            { src: '/images/cican-navigator-demographics.png', alt: 'Demographics' },
+                            { src: '/images/cican-navigator-accessibility.png', alt: 'Accessible UI' }
+                        ]
+                    }
                 ]
             }
         ]
@@ -343,43 +383,79 @@ export const caseStudies: CaseStudy[] = [
         id: 'ui-designs',
         title: 'UI Designs / Redesigns',
         category: 'Creative Gallery',
-        subtitle: 'A gallery of high-fidelity visual explorations.',
+        subtitle: 'High-fidelity visual explorations and interface redesigns.',
         thumbnail: '/images/sunnys-finance-hero.jpg',
         heroImage: '/images/sunnys-finance-hero.jpg',
-        overview: 'A creative sandbox for tackling specific UI challenges, from data-heavy fintech dashboards to accessible insurance onboarding.',
-        role: 'Lead Visual Designer',
-        timeline: 'Ongoing',
-        tools: ['Figma', 'Illustrator', 'After Effects'],
-        tags: ['UI Design', 'Design Systems', 'Visual Exploration'],
+        overview: 'A curated gallery of visual design work — from data-heavy dashboards to accessible onboarding flows.',
+        tags: ['UI Design', 'Visual Design'],
         content: [
             {
-                number: 1, icon: '📈', title: 'Sunny\'s Finance: Data Density',
+                number: 1, icon: '📈', title: 'Sunny\'s Finance',
                 blocks: [
-                    { type: 'h2', content: 'The Challenge: Miller\'s Law in Fintech' },
-                    { type: 'p', content: 'For this fintech dashboard, the primary challenge was managing high data density without overwhelming the wealth advisor. I utilized Miller\'s Law to chunk information into modular cards.' },
-                    { type: 'image', src: '/images/sunnys-finance-dashboard-light.png', alt: 'Fintech Dashboard' },
-                    { type: 'p', content: 'Deep-dive into client profiles and expense tracking, focusing on clear typography hierarchies and desaturated color palettes.' },
-                    { type: 'image', src: '/images/sunnys-finance-profile-light.png', alt: 'Client profile page' },
-                    { type: 'image', src: '/images/sunnys-finance-overlay-light.png', alt: 'Expense detail overlay' }
+                    { type: 'h2', content: 'Sunny\'s Finance' },
+                    { type: 'p', content: 'A reimagined financial dashboard to help wealth advisors simplify their workload, surface critical client data at a glance, and reduce cognitive overload through modular card-based layouts.' },
+                    { type: 'image', src: '/images/sunnys-finance-dashboard-light.png', alt: 'Sunny\'s Finance Dashboard — Light Mode' },
+                    {
+                        type: 'image_row', images: [
+                            { src: '/images/sunnys-finance-profile-light.png', alt: 'Client profile page' },
+                            { src: '/images/sunnys-finance-overlay-light.png', alt: 'Expense detail overlay' }
+                        ]
+                    },
+                    { type: 'image', src: '/images/sunnys-finance-dashboard-dark.png', alt: 'Sunny\'s Finance Dashboard — Dark Mode' },
+                    { type: 'divider' }
                 ]
             },
             {
-                number: 2, icon: '♿', title: 'Cognitive Clarity: Inclusive Design',
+                number: 2, icon: '♿', title: 'Cognitive Clarity',
                 blocks: [
-                    { type: 'h2', content: 'Designing for Accessibility' },
-                    { type: 'p', content: 'Cognitive Clarity was a deep dive into WCAG 2.1 AAA compliance — exploring how tight contrast constraints and simplified navigation could create a "calm" insurance onboarding experience for users with cognitive impairments.' },
+                    { type: 'h2', content: 'Cognitive Clarity' },
+                    { type: 'p', content: 'An exploration into WCAG 2.1 AAA compliance — designing a calm, accessible insurance onboarding flow for users with cognitive impairments. Every interaction respects limited working memory and minimizes decision fatigue.' },
                     { type: 'image', src: '/images/cognitive-clarity-hero.jpg', alt: 'Cognitive Clarity hero' },
-                    { type: 'image', src: '/images/cognitive-clarity-dashboard.jpg', alt: 'Dashboard interface' }
-                ]
-            },
-            {
-                number: 3, icon: '🧠', title: 'Reflections',
-                blocks: [
-                    { type: 'h2', content: 'Visual Sandbox vs. Production Reality' },
-                    { type: 'p', content: 'Working on these isolated challenges allows me to experiment with "bleeding-edge" visual styles that might be too risky for a standard B2B SaaS product. The learnings — especially regarding accessibility and data visualization — constantly inform my more traditional product work.' }
+                    {
+                        type: 'image_row', images: [
+                            { src: '/images/cognitive-clarity-pillar1.png', alt: 'Pillar 1' },
+                            { src: '/images/cognitive-clarity-pillar2.png', alt: 'Pillar 2' }
+                        ]
+                    },
+                    {
+                        type: 'image_row', images: [
+                            { src: '/images/cognitive-clarity-principles.png', alt: 'Design principles' },
+                            { src: '/images/cognitive-clarity-old-form.jpg', alt: 'Old form analysis' },
+                            { src: '/images/cognitive-clarity-aha.png', alt: 'Aha moment' }
+                        ]
+                    },
+                    { type: 'image', src: '/images/cognitive-clarity-prototype-laptop.png', alt: 'Final prototype on laptop' },
+                    { type: 'image', src: '/images/cognitive-clarity-handoff.jpg', alt: 'Design handoff' }
                 ]
             }
         ]
+    },
+
+    /* ============================
+       AWARDS & MENTIONS
+       ============================ */
+    {
+        id: 'cdn-article',
+        title: 'Featured in CDN News',
+        category: 'Press',
+        subtitle: 'Published article about AI-assisted design workflows.',
+        thumbnail: '/images/ai-accessibility-article.png',
+        heroImage: '/images/ai-accessibility-article.png',
+        overview: 'Featured in CDN News for contributions to accessible design and AI-assisted workflows in the Canadian tech ecosystem.',
+        tags: ['Press', 'AI', 'Accessibility'],
+        externalUrl: 'https://www.cdnnews.com',
+        content: []
+    },
+    {
+        id: 'hackathon-win',
+        title: 'Hackathon Win — CICan Civic Tech',
+        category: 'Award',
+        subtitle: 'First place in the CICan civic tech hackathon.',
+        thumbnail: '/images/hackathon-team.png',
+        heroImage: '/images/hackathon-team.png',
+        overview: 'Won first place in the CICan Civic Tech hackathon for the Navigator redesign — a 48-hour sprint reimagining student portal information architecture.',
+        tags: ['Award', 'Hackathon', 'Civic Tech'],
+        content: []
     }
 ];
 

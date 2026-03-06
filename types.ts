@@ -11,6 +11,8 @@ export type ContentBlock =
   | { type: 'p'; content: string; }
   | { type: 'list'; items: string[]; }
   | { type: 'image'; src: string; alt: string; caption?: string; className?: string; }
+  | { type: 'image_row'; images: { src: string; alt: string; caption?: string; }[]; }
+  | { type: 'divider'; }
   | { type: 'aside'; icon: string; title: string; content: string; }
   | { type: 'prototype'; src: string; title: string; }
   | { type: 'split_layout'; left: ContentBlock[]; right: ContentBlock[]; reverseOnMobile?: boolean; }

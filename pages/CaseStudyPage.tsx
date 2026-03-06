@@ -26,6 +26,19 @@ const ContentRenderer: React.FC<{ blocks: ContentBlock[]; compact?: boolean }> =
                         {block.caption && <p className="mt-4 text-sm text-muted-foreground text-center italic">{block.caption}</p>}
                     </div>
                 );
+            case 'image_row':
+                return (
+                    <div key={index} className={`w-full px-3 md:px-6 lg:px-8 my-12 grid gap-4 md:gap-6 ${block.images.length === 2 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1 md:grid-cols-3'}`}>
+                        {block.images.map((img, i) => (
+                            <div key={i}>
+                                <img src={img.src} alt={img.alt} className="w-full h-full object-cover rounded-2xl md:rounded-[1.5rem] shadow-xl" />
+                                {img.caption && <p className="mt-3 text-sm text-muted-foreground text-center italic">{img.caption}</p>}
+                            </div>
+                        ))}
+                    </div>
+                );
+            case 'divider':
+                return <hr key={index} className="mx-8 md:mx-14 lg:mx-20 my-20 border-border" />;
             case 'list':
                 return (
                     <ul key={index} className={`px-8 md:px-14 lg:px-20 max-w-3xl list-disc pl-5 ${compact ? 'my-2' : 'my-6'} space-y-3 text-lg text-muted-foreground`}>
@@ -124,32 +137,34 @@ export const CaseStudyPage: React.FC = () => {
                 </div>
             </div>
 
-            {/* Overview + Sidebar */}
+            {/* Overview + Sidebar — hidden for gallery projects */}
             <div className="w-full">
-                <div className="px-8 md:px-14 lg:px-20 py-20">
-                    <div className="grid md:grid-cols-3 gap-16 max-w-5xl">
-                        <div className="md:col-span-2">
-                            <h2 className="text-2xl font-bold text-foreground mb-6">Overview</h2>
-                            <p className="text-lg text-muted-foreground leading-relaxed">{project.overview}</p>
+                {!isGallery && (
+                    <div className="px-8 md:px-14 lg:px-20 py-20">
+                        <div className="grid md:grid-cols-3 gap-16 max-w-5xl">
+                            <div className="md:col-span-2">
+                                <h2 className="text-2xl font-bold text-foreground mb-6">Overview</h2>
+                                <p className="text-lg text-muted-foreground leading-relaxed">{project.overview}</p>
+                            </div>
+                            <div className="flex flex-col gap-8 p-8 bg-card rounded-2xl border border-border">
+                                {project.role && (<div><h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Role</h3><p className="text-foreground font-medium">{project.role}</p></div>)}
+                                {project.timeline && (<div><h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Timeline</h3><p className="text-foreground font-medium">{project.timeline}</p></div>)}
+                                {project.tools?.length > 0 && (<div><h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Tools</h3><p className="text-foreground font-medium">{project.tools.join(', ')}</p></div>)}
+                            </div>
                         </div>
-                        <div className="flex flex-col gap-8 p-8 bg-card rounded-2xl border border-border">
-                            {project.role && (<div><h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Role</h3><p className="text-foreground font-medium">{project.role}</p></div>)}
-                            {project.timeline && (<div><h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Timeline</h3><p className="text-foreground font-medium">{project.timeline}</p></div>)}
-                            {project.tools?.length > 0 && (<div><h3 className="text-sm font-bold text-muted-foreground uppercase tracking-wider mb-3">Tools</h3><p className="text-foreground font-medium">{project.tools.join(', ')}</p></div>)}
-                        </div>
-                    </div>
 
-                    {project.impact && (
-                        <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 py-12 border-y border-border max-w-5xl">
-                            {project.impact.map((stat: ImpactStat, i) => (
-                                <motion.div key={stat.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="text-center">
-                                    <p className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600 mb-2">{stat.value}</p>
-                                    <p className="text-sm font-bold text-muted-foreground uppercase tracking-widest">{stat.label}</p>
-                                </motion.div>
-                            ))}
-                        </div>
-                    )}
-                </div>
+                        {project.impact && (
+                            <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 py-12 border-y border-border max-w-5xl">
+                                {project.impact.map((stat: ImpactStat, i) => (
+                                    <motion.div key={stat.label} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: i * 0.1 }} className="text-center">
+                                        <p className="text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-primary to-purple-600 mb-2">{stat.value}</p>
+                                        <p className="text-sm font-bold text-muted-foreground uppercase tracking-widest">{stat.label}</p>
+                                    </motion.div>
+                                ))}
+                            </div>
+                        )}
+                    </div>
+                )}
 
                 {/* Content Chapters */}
                 <article className="pb-32 w-full">
