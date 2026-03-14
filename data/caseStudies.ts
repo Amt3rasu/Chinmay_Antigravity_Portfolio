@@ -412,8 +412,8 @@ export const caseStudies: CaseStudy[] = [
         title: 'ConnectDist',
         category: 'Product Strategy · B2B Commerce',
         subtitle: 'Lead Product Manager & Designer — Discovery, Strategy, UX/UI',
-        thumbnail: '/images/connectdist/iPhone_16_Pro_Max_-_32.png',
-        heroImage: '/images/connectdist/ConnectDist_Service_blueprint.svg',
+        thumbnail: '/images/connect-dist/iPhone_16_Pro_Max_-_32.png',
+        heroImage: '/images/connect-dist/ConnectDist_Service_blueprint.svg',
         overview: 'ConnectDist modernizes the fragmented B2B supply chain between local distributors and independent shops — digitizing inventory while preserving the human relationships that power local commerce.',
         tags: ['Product Management', 'B2B SaaS', 'UX Research'],
         role: 'PM & UX Designer',
@@ -431,11 +431,11 @@ export const caseStudies: CaseStudy[] = [
                 blocks: [
                     { type: 'h2', content: 'The Broken B2B Supply Chain' },
                     { type: 'p', content: 'While enterprise distribution runs on SAP, local independent commerce still runs on chaos. Shop owners juggle dozens of distributors via phone calls, fragmented WhatsApp threads, and paper invoices.' },
-                    { type: 'image', src: '/images/connectdist/ConnectDist_Service_blueprint.svg', alt: 'Service Blueprint', caption: 'Mapping the fragmented journey from distributor warehouse to shop shelf.' },
+                    { type: 'image', src: '/images/connect-dist/ConnectDist_Service_blueprint.svg', alt: 'Service Blueprint', caption: 'Mapping the fragmented journey from distributor warehouse to shop shelf.' },
                     {
                         type: 'image_row', images: [
-                            { src: '/images/connectdist/iPhone_16_Pro_Max_-_1.png', alt: 'Shop Owner App' },
-                            { src: '/images/connectdist/iPhone_16_Pro_Max_-_2.png', alt: 'Inventory View' }
+                            { src: '/images/connect-dist/iPhone_16_Pro_Max_-_1.png', alt: 'Shop Owner App' },
+                            { src: '/images/connect-dist/iPhone_16_Pro_Max_-_2.png', alt: 'Inventory View' }
                         ]
                     }
                 ]
@@ -447,9 +447,9 @@ export const caseStudies: CaseStudy[] = [
                     { type: 'p', content: 'Research revealed that shop owners stick with slightly more expensive distributors because they **trust** them. A purely transactional app would commoditize these relationships and fail.' },
                     {
                         type: 'image_row', images: [
-                            { src: '/images/connectdist/iPhone_16_Pro_Max_-_6.png', alt: 'Relationship Hub' },
-                            { src: '/images/connectdist/iPhone_16_Pro_Max_-_7.png', alt: 'Order History' },
-                            { src: '/images/connectdist/iPhone_16_Pro_Max_-_8.png', alt: 'Direct Contact' }
+                            { src: '/images/connect-dist/iPhone_16_Pro_Max_-_6.png', alt: 'Relationship Hub' },
+                            { src: '/images/connect-dist/iPhone_16_Pro_Max_-_7.png', alt: 'Order History' },
+                            { src: '/images/connect-dist/iPhone_16_Pro_Max_-_8.png', alt: 'Direct Contact' }
                         ],
                         caption: 'Maintaining personal connections through digital efficiency.'
                     },
@@ -483,7 +483,7 @@ export const caseStudies: CaseStudy[] = [
             "Ensured 100% WCAG 2.1 AA compliance.",
             "Reduced time-on-task by 75%."
         ],
-        externalUrl: '/images/cican-navigator/Hackathon.pdf',
+        externalUrl: 'https://www.fanshawec.ca/about-fanshawe/news/user-experience-design-students-hack-their-way-first-place',
         prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2F', title: 'Interactive Prototype' },
         content: [
             {
@@ -525,9 +525,9 @@ export const caseStudies: CaseStudy[] = [
                     { type: 'p', content: 'We designed a skill-extraction engine that takes a worker\'s resume and maps it directly onto emerging sustainability job descriptions.' },
                     {
                         type: 'image_row', images: [
-                            { src: '/images/cican-navigator/Career_Transition_Platform_Message_Preview_(1).png', alt: 'Skill Mapping' },
-                            { src: '/images/cican-navigator/Career_Transition_Platform_Message_Preview_(2).png', alt: 'Job Matching' },
-                            { src: '/images/cican-navigator/Career_Transition_Platform_Message_Preview_(3).png', alt: 'Action Plan' }
+                            { src: '/images/cican-navigator/Career_Transition_Platform_Message_Preview_1.png', alt: 'Skill Mapping' },
+                            { src: '/images/cican-navigator/Career_Transition_Platform_Message_Preview_2.png', alt: 'Job Matching' },
+                            { src: '/images/cican-navigator/Career_Transition_Platform_Message_Preview_3.png', alt: 'Action Plan' }
                         ],
                         caption: 'The Task-Driven Navigator: from skill extraction to a concrete career action plan.'
                     }
@@ -544,8 +544,8 @@ export const caseStudies: CaseStudy[] = [
         title: 'UI Designs / Redesigns',
         category: 'Creative Gallery',
         subtitle: 'High-fidelity visual explorations and interface redesigns.',
-        thumbnail: '/images/ui-designs/UI_Design_Thumbnail.jpg',
-        heroImage: '/images/ui-designs/Hero_UI.jpg',
+        thumbnail: '/images/ui-designs/dashboard_final_Light.jpg',
+        heroImage: '/images/ui-designs/dashboard_final_Light.jpg',
         overview: 'A curated gallery of visual design work — from data-heavy dashboards to accessible onboarding flows.',
         tags: ['UI Design', 'Visual Design'],
         content: [
@@ -554,14 +554,14 @@ export const caseStudies: CaseStudy[] = [
                 blocks: [
                     { type: 'h2', content: 'Sunny\'s Finance' },
                     { type: 'p', content: 'A reimagined financial dashboard to help wealth advisors simplify their workload, surface critical client data at a glance, and reduce cognitive overload through modular card-based layouts.' },
-                    { type: 'image', src: '/images/ui-designs/Sunnys_Dashboard_Light.jpg', alt: 'Sunny\'s Finance Dashboard — Light Mode' },
+                    { type: 'image', src: '/images/ui-designs/dashboard_final_Light.jpg', alt: 'Sunny\'s Finance Dashboard — Light Mode' },
                     {
                         type: 'image_row', images: [
-                            { src: '/images/ui-designs/Sunnys_Profile_Light.jpg', alt: 'Client profile page' },
-                            { src: '/images/ui-designs/Sunnys_Overlay_Light.jpg', alt: 'Expense detail overlay' }
+                            { src: '/images/ui-designs/Profile_Light.jpg', alt: 'Client profile page' },
+                            { src: '/images/ui-designs/dashboard_overlay_Light.jpg', alt: 'Expense detail overlay' }
                         ]
                     },
-                    { type: 'image', src: '/images/ui-designs/Sunnys_Dashboard_Dark.jpg', alt: 'Sunny\'s Finance Dashboard — Dark Mode' },
+                    { type: 'image', src: '/images/ui-designs/dashboard_final_Dark.jpg', alt: 'Sunny\'s Finance Dashboard — Dark Mode' },
                     { type: 'divider' }
                 ]
             },
@@ -570,22 +570,22 @@ export const caseStudies: CaseStudy[] = [
                 blocks: [
                     { type: 'h2', content: 'Cognitive Clarity' },
                     { type: 'p', content: 'An exploration into WCAG 2.1 AAA compliance — designing a calm, accessible insurance onboarding flow for users with cognitive impairments.' },
-                    { type: 'image', src: '/images/ui-designs/Cognitive_Clarity_Hero.jpg', alt: 'Cognitive Clarity hero' },
+                    { type: 'image', src: '/images/cognitive-clarity-hero.jpg', alt: 'Cognitive Clarity hero' },
                     {
                         type: 'image_row', images: [
-                            { src: '/images/ui-designs/Cognitive_Clarity_Pillar_1.jpg', alt: 'Pillar 1' },
-                            { src: '/images/ui-designs/Cognitive_Clarity_Pillar_2.jpg', alt: 'Pillar 2' }
+                            { src: '/images/cognitive-clarity-pillar1.png', alt: 'Pillar 1' },
+                            { src: '/images/cognitive-clarity-pillar2.png', alt: 'Pillar 2' }
                         ]
                     },
                     {
                         type: 'image_row', images: [
-                            { src: '/images/ui-designs/Cognitive_Clarity_Principles.jpg', alt: 'Design principles' },
-                            { src: '/images/ui-designs/Cognitive_Clarity_Old_Analysis.jpg', alt: 'Old form analysis' },
-                            { src: '/images/ui-designs/Cognitive_Clarity_Aha.jpg', alt: 'Aha moment' }
+                            { src: '/images/cognitive-clarity-principles.png', alt: 'Design principles' },
+                            { src: '/images/cognitive-clarity-old-form.jpg', alt: 'Old form analysis' },
+                            { src: '/images/cognitive-clarity-aha.png', alt: 'Aha moment' }
                         ]
                     },
-                    { type: 'image', src: '/images/ui-designs/Cognitive_Clarity_Mockup.jpg', alt: 'Final prototype on laptop' },
-                    { type: 'image', src: '/images/ui-designs/Cognitive_Clarity_Handoff.jpg', alt: 'Design handoff' }
+                    { type: 'image', src: '/images/cognitive-clarity-prototype-laptop.png', alt: 'Final prototype on laptop' },
+                    { type: 'image', src: '/images/cognitive-clarity-handoff.jpg', alt: 'Design handoff' }
                 ]
             }
         ]
@@ -595,8 +595,8 @@ export const caseStudies: CaseStudy[] = [
         title: 'AI & Accessibility',
         category: 'Published Article',
         subtitle: 'Featured in Canadian Design Network.',
-        thumbnail: '/images/misc/ai-accessibility-article.png',
-        heroImage: '/images/misc/ai-accessibility-article.png',
+        thumbnail: '/images/ai-accessibility-article.png',
+        heroImage: '/images/ai-accessibility-article.png',
         overview: 'An exploration into the intersection of generative AI and digital accessibility for public systems.',
         tags: ['AI', 'Accessibility', 'Thought Leadership'],
         externalUrl: 'https://canadiandesignnetwork.com/newsletter-article/ai-accessibility-and-the-future-of-public-systems/',
@@ -607,8 +607,8 @@ export const caseStudies: CaseStudy[] = [
         title: 'CiCan Hackathon Winner',
         category: 'Competition',
         subtitle: 'National 1st Place - Skills for Success',
-        thumbnail: '/images/misc/hackathon-team.png',
-        heroImage: '/images/misc/hackathon-team.png',
+        thumbnail: '/images/hackathon-team.png',
+        heroImage: '/images/hackathon-team.png',
         overview: 'Led the winning team in designing an innovative user experience solution for student success in a 48-hour sprint.',
         tags: ['Hackathon', 'UX Design', 'Rapid Prototyping'],
         externalUrl: 'https://www.fanshawec.ca/about-fanshawe/news/user-experience-design-students-hack-their-way-first-place',
