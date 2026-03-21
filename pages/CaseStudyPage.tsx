@@ -21,18 +21,20 @@ const ContentRenderer: React.FC<{ blocks: ContentBlock[]; compact?: boolean }> =
                 return <p key={index} className={`px-8 md:px-14 lg:px-20 max-w-3xl text-lg text-muted-foreground ${compact ? 'mb-2' : 'mb-8'} leading-relaxed`} dangerouslySetInnerHTML={{ __html: block.content.replace(/\*\*(.*?)\*\*/g, '<strong class="text-foreground">$1</strong>') }} />;
             case 'image':
                 return (
-                    <div key={index} className="w-full px-3 md:px-6 lg:px-8 my-12 relative z-[1]">
-                        <img src={block.src} alt={block.alt} className={`w-full object-cover rounded-2xl md:rounded-[2rem] shadow-2xl ${block.className || ''}`} />
+                    <div key={index} className="w-full px-3 md:px-6 lg:px-8 my-12 relative z-[1] flex justify-center">
+                        <img src={block.src} alt={block.alt} className={`max-w-full max-h-[85vh] object-contain rounded-2xl md:rounded-[2rem] shadow-2xl ${block.className || ''}`} />
                         {block.caption && <p className="mt-4 text-sm text-muted-foreground text-center italic">{block.caption}</p>}
                     </div>
                 );
             case 'image_row':
                 return (
                     <div key={index} className="w-full my-12 relative z-[1]">
-                        <div className={`px-3 md:px-6 lg:px-8 grid gap-4 md:gap-6 ${block.images.length === 2 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1 md:grid-cols-3'}`}>
+                        <div className={`px-3 md:px-6 lg:px-8 flex flex-col md:flex-row gap-4 md:gap-6 items-stretch`}>
                             {block.images.map((img, i) => (
-                                <div key={i}>
-                                    <img src={img.src} alt={img.alt} className="w-full h-full object-cover rounded-2xl md:rounded-[1.5rem] shadow-xl" />
+                                <div key={i} className={`flex-1 min-w-0 flex flex-col`}>
+                                    <div className="flex-1 flex items-center justify-center bg-muted/30 rounded-2xl md:rounded-[1.5rem] overflow-hidden shadow-xl max-h-[70vh]">
+                                        <img src={img.src} alt={img.alt} className="max-w-full max-h-[70vh] object-contain" />
+                                    </div>
                                     {img.caption && <p className="mt-3 text-sm text-muted-foreground text-center italic">{img.caption}</p>}
                                 </div>
                             ))}
