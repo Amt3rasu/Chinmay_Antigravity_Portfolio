@@ -21,14 +21,14 @@ const ContentRenderer: React.FC<{ blocks: ContentBlock[]; compact?: boolean }> =
                 return <p key={index} className={`px-8 md:px-14 lg:px-20 max-w-3xl text-lg text-muted-foreground ${compact ? 'mb-2' : 'mb-8'} leading-relaxed`} dangerouslySetInnerHTML={{ __html: block.content.replace(/\*\*(.*?)\*\*/g, '<strong class="text-foreground">$1</strong>') }} />;
             case 'image':
                 return (
-                    <div key={index} className="w-full px-3 md:px-6 lg:px-8 my-12">
+                    <div key={index} className="w-full px-3 md:px-6 lg:px-8 my-12 relative z-[1]">
                         <img src={block.src} alt={block.alt} className={`w-full object-cover rounded-2xl md:rounded-[2rem] shadow-2xl ${block.className || ''}`} />
                         {block.caption && <p className="mt-4 text-sm text-muted-foreground text-center italic">{block.caption}</p>}
                     </div>
                 );
             case 'image_row':
                 return (
-                    <div key={index} className="w-full my-12">
+                    <div key={index} className="w-full my-12 relative z-[1]">
                         <div className={`px-3 md:px-6 lg:px-8 grid gap-4 md:gap-6 ${block.images.length === 2 ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1 md:grid-cols-3'}`}>
                             {block.images.map((img, i) => (
                                 <div key={i}>
@@ -57,7 +57,7 @@ const ContentRenderer: React.FC<{ blocks: ContentBlock[]; compact?: boolean }> =
                 );
             case 'prototype':
                 return (
-                    <div key={index} className="px-8 md:px-14 lg:px-20 my-16">
+                    <div key={index} className="px-8 md:px-14 lg:px-20 my-16 relative z-[1]">
                         <h2 className="text-2xl font-bold text-center mb-6 text-foreground">{block.title}</h2>
                         <div className="aspect-video w-full bg-card rounded-xl shadow-2xl overflow-hidden border border-border">
                             <iframe className="w-full h-full" src={block.src} allowFullScreen />
@@ -118,7 +118,7 @@ export const CaseStudyPage: React.FC = () => {
             <SEO title={project.title} description={project.subtitle} image={project.thumbnail} type="article" caseStudy={project} />
 
             {/* Hero */}
-            <div className="relative h-[85vh] w-full overflow-hidden">
+            <div className="relative h-[85vh] w-full overflow-hidden z-[1]">
                 <div className="absolute inset-0">
                     <img src={project.heroImage} alt={project.title} className="w-full h-full object-cover" />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0a] via-[#0a0a0a]/80 to-transparent" />
@@ -164,6 +164,16 @@ export const CaseStudyPage: React.FC = () => {
                                         <p className="text-sm font-bold text-muted-foreground uppercase tracking-widest">{stat.label}</p>
                                     </motion.div>
                                 ))}
+                            </div>
+                        )}
+
+                        {/* Figma Project File Embed */}
+                        {project.prototype && (
+                            <div className="mt-24 max-w-5xl relative z-[1]">
+                                <h2 className="text-2xl font-bold text-foreground mb-6">{project.prototype.title || 'Explore the Design File'}</h2>
+                                <div className="aspect-[16/10] w-full bg-card rounded-2xl shadow-2xl overflow-hidden border border-border">
+                                    <iframe className="w-full h-full" src={project.prototype.src} allowFullScreen />
+                                </div>
                             </div>
                         )}
                     </div>

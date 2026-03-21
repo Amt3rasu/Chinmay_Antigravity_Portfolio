@@ -9,24 +9,24 @@ export const caseStudies: CaseStudy[] = [
         title: 'Flamey AI [Sequence Builder]',
         subtitle: 'Lead Designer — Research, Strategy, UX/UI, Prototyping',
         category: 'Product Design · AI · SaaS',
-        thumbnail: '/images/flamey-ai/MacBook_#01.jpg',
-        heroImage: '/images/flamey-ai/MacBook_#01.jpg',
+        thumbnail: '/images/flamey-ai/MacBook_01.jpg',
+        heroImage: '/images/flamey-ai/MacBook_01.jpg',
         overview: 'Redesigning the Flamey AI Sequence Builder — transforming a complex, high-friction form into a guided, persona-driven experience.',
         role: 'Lead UX/UI Designer',
-        timeline: '4 Working Days',
+        timeline: '3 Days',
         tools: ['Figma', 'FigJam', 'Chakra UI'],
         tags: ['AI', 'SaaS', 'Product Design', 'B2B'],
         impact: [
-            { value: '~5 min', label: 'Creation Time (was 30+ min)' },
-            { value: '4', label: 'Entry Points (vs 1)' },
-            { value: 'AA', label: 'WCAG 2.1 Compliance' },
+            { value: '3 Days', label: 'Design Sprint' },
+            { value: '3', label: 'User Personas Mapped' },
+            { value: '7', label: 'Key Screens Delivered' },
         ],
         highlights: [
-            "Reduced sequence creation time from 30+ minutes to under 5 minutes.",
-            "Designed 4 persona-driven entry points replacing a single generic form.",
-            "Created a visual timeline preview that eliminated user fear before launching campaigns."
+            "Mapped 3 distinct user personas to drive design decisions.",
+            "Delivered 7 key screens across the full sequence creation flow.",
+            "Replaced a single generic form with a guided, persona-driven experience."
         ],
-        prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2F', title: 'Interactive Prototype' },
+        prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FxZ7vT8TAJ8kk3XHyt6sL9S%2FFlamey-Design-Challange%3Fnode-id%3D164-59983%26t%3DKxwSYhEMjhjjGJLx-1', title: 'Explore the Figma File' },
         content: [
             {
                 number: 1, icon: '📋', title: 'The Brief',
@@ -123,12 +123,13 @@ export const caseStudies: CaseStudy[] = [
                 ]
             },
             {
-                number: 6, icon: '📊', title: 'Validation',
+                number: 6, icon: '📊', title: 'Outcomes',
                 blocks: [
-                    { type: 'h2', content: 'Impact Metrics' },
-                    { type: 'aside', icon: '⏱️', title: '30m → ~5m', content: 'Projected creation time reduction.' },
-                    { type: 'aside', icon: '🤖', title: 'AI Engagement', content: 'Significant increase in AI feature discoverability.' },
-                    { type: 'aside', icon: '📦', title: 'Efficiency', content: '32 Deliverables shipped in 4 working days.' }
+                    { type: 'h2', content: 'What Was Delivered' },
+                    { type: 'p', content: 'In a 3-day sprint, I shipped a complete redesign of the Sequence Builder — from a single monolithic form to a guided, multi-path experience.' },
+                    { type: 'aside', icon: '🧑‍🤝‍🧑', title: '3 Personas', content: 'SDR, AE, and Manager — each with a distinct entry point tailored to their workflow and mental model.' },
+                    { type: 'aside', icon: '📱', title: '7 Key Screens', content: 'Hub selection, AI conversation, template browser, sequence editor, timeline preview, settings, and recipients.' },
+                    { type: 'aside', icon: '🤖', title: 'AI as Co-Pilot', content: 'AI moved from a hidden toggle to a first-class entry point — conversational, transparent, and user-controlled.' }
                 ]
             }
         ]
@@ -159,7 +160,7 @@ export const caseStudies: CaseStudy[] = [
             "302 Variants (Button System Alone)",
             "WCAG 2.1 AAA (All Glass Surfaces)"
         ],
-        prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2F', title: 'Leaf DEX Interactive Prototype' },
+        prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FipuUvKADJ16IvkPSAfeGVv%2FLeaf-DEX-Design-System%3Fnode-id%3D0-1%26t%3DVDfMSpxDfaINFomg-1', title: 'Explore the Figma File' },
         content: [
             {
                 number: 1, icon: '⭐', title: 'The Arena',
@@ -349,7 +350,7 @@ export const caseStudies: CaseStudy[] = [
             "Cohesive ecosystem across mobile, web, and kiosk.",
             "Reduced kiosk purchase time by 68%."
         ],
-        prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2F', title: 'Interactive Prototype' },
+        prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FRs4rfDvt149VT7HWtUapX9%2FPortfolio%3Fnode-id%3D241-25589%26t%3DuMVoSgxTIT2b7V7c-4', title: 'Explore the Figma File' },
         content: [
             {
                 number: 1, icon: '📋', title: 'The Framework',
@@ -424,7 +425,7 @@ export const caseStudies: CaseStudy[] = [
             { value: '90 Sec', label: 'Multi-Item Order Time' },
             { value: 'High', label: 'Validated WTP' }
         ],
-        prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2F', title: 'Interactive Prototype' },
+        prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FDy2HBVXW4rDCw7tJRPUY0y%2FChinmay-s-Design-System%3Fnode-id%3D223-7273', title: 'Explore the Figma File' },
         content: [
             {
                 number: 1, icon: '📋', title: 'The Brief',
@@ -484,7 +485,7 @@ export const caseStudies: CaseStudy[] = [
             "Reduced time-on-task by 75%."
         ],
         externalUrl: 'https://www.fanshawec.ca/about-fanshawe/news/user-experience-design-students-hack-their-way-first-place',
-        prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2F', title: 'Interactive Prototype' },
+        prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FRs4rfDvt149VT7HWtUapX9%2FPortfolio%3Fnode-id%3D364-1112%26t%3DmFNnviRfrbDzkHdo-1', title: 'Explore the Figma File' },
         content: [
             {
                 number: 1, icon: '📋', title: 'The Framework',
