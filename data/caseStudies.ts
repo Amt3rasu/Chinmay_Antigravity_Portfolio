@@ -91,7 +91,9 @@ export const caseStudies: CaseStudy[] = [
                             '**AI Discoverability**: The AI toggle was below the fold, with no explanation of what it did. Users didn\'t know it existed.',
                             '**Feedback & Trust**: No preview of what the AI would generate → users were afraid to commit. Zero progressive feedback.'
                         ]
-                    }
+                    },
+                    { type: 'image', src: '/images/flamey-ai/IMG_4590.jpg', alt: 'Flamey AI exploration sketch 1' },
+                    { type: 'image', src: '/images/flamey-ai/IMG_4589.jpg', alt: 'Flamey AI exploration sketch 2' }
                 ]
             },
             {
@@ -103,7 +105,10 @@ export const caseStudies: CaseStudy[] = [
                     { type: 'aside', icon: '🅱️', title: 'Option B: AI-First Canvas', content: 'Full-screen chat with AI. Fastest creation but 11x.ai proved this scares users. No control = no trust.' },
                     { type: 'aside', icon: '✅', title: 'Option C: Hub + Spokes (Chosen)', content: 'Central hub with 4 entry points. AI integrated as one path, not the only path. Respects all 3 personas. Extensible.' },
                     { type: 'h3', content: 'Decision: Hub + Spokes' },
-                    { type: 'p', content: 'I chose Option C because it was the only approach that respected all three personas without forcing a single workflow. The risk of choice paralysis was mitigated by limiting entry points to exactly 4, each with a clear icon, label, and one-line description.' }
+                    { type: 'p', content: 'I chose Option C because it was the only approach that respected all three personas without forcing a single workflow. The risk of choice paralysis was mitigated by limiting entry points to exactly 4, each with a clear icon, label, and one-line description.' },
+                    { type: 'image', src: '/images/flamey-ai/Sequence_dashboard.jpg', alt: 'Sequence dashboard' },
+                    { type: 'image', src: '/images/flamey-ai/Sequence_recipients.jpg', alt: 'Sequence recipients table' },
+                    { type: 'image', src: '/images/flamey-ai/Sequence_settings.jpg', alt: 'Sequence settings panel' }
                 ]
             },
             {
@@ -117,6 +122,7 @@ export const caseStudies: CaseStudy[] = [
                     { type: 'h3', content: 'The AI Conversation' },
                     { type: 'p', content: 'Instead of a form asking "How many steps?", the AI asks strategic questions one by one, building a brief before generating.' },
                     { type: 'image', src: '/images/flamey-ai/AI_questions_for_new_sequence.jpg', alt: 'Conversational AI building a sequence step by step' },
+                    { type: 'image', src: '/images/flamey-ai/AI_structure_and_suggested_content.jpg', alt: 'AI generating sequence structure and content suggestions based on answers' },
                     { type: 'h3', content: 'The Trust Moment: Visual Timeline Preview' },
                     { type: 'p', content: 'Users see exactly what will be sent before committing. This eliminated the #1 fear: "What will this send?"' },
                     { type: 'image', src: '/images/flamey-ai/Sequence_editor.jpg', alt: 'Visual Timeline Preview showing sequence pacing', caption: 'The Sequence Editor: combining the speed of AI with the control of a manual editor.' }
@@ -129,7 +135,9 @@ export const caseStudies: CaseStudy[] = [
                     { type: 'p', content: 'In a 3-day sprint, I shipped a complete redesign of the Sequence Builder — from a single monolithic form to a guided, multi-path experience.' },
                     { type: 'aside', icon: '🧑‍🤝‍🧑', title: '3 Personas', content: 'SDR, AE, and Manager — each with a distinct entry point tailored to their workflow and mental model.' },
                     { type: 'aside', icon: '📱', title: '7 Key Screens', content: 'Hub selection, AI conversation, template browser, sequence editor, timeline preview, settings, and recipients.' },
-                    { type: 'aside', icon: '🤖', title: 'AI as Co-Pilot', content: 'AI moved from a hidden toggle to a first-class entry point — conversational, transparent, and user-controlled.' }
+                    { type: 'aside', icon: '🤖', title: 'AI as Co-Pilot', content: 'AI moved from a hidden toggle to a first-class entry point — conversational, transparent, and user-controlled.' },
+                    { type: 'image', src: '/images/flamey-ai/MacBook_Air_2022.jpg', alt: 'Flamey AI sequence builder on MacBook Air' },
+                    { type: 'image', src: '/images/flamey-ai/MacBook_13.jpg', alt: 'Flamey AI mockup' }
                 ]
             }
         ]
@@ -144,7 +152,7 @@ export const caseStudies: CaseStudy[] = [
         subtitle: 'Lead Designer — Research, Strategy, Component Architecture, UX/UI',
         category: 'Design System · FinTech · Web3',
         thumbnail: '/images/leaf-dex/Dashboard-Desktop.jpg',
-        heroImage: '/images/leaf-dex/Dashboard-Desktop.jpg',
+        heroImage: '/images/leaf-dex/MacBook-01.jpg',
         overview: 'Leaf DEX is a concept decentralized exchange trading platform — designed from zero to a production-ready design system and responsive trading interface in 7 days. The project spans a complete design token foundation, a 117-component library, and full trading layouts across desktop, tablet, and mobile.',
         role: 'Lead Product Designer',
         timeline: '7 Days',
@@ -168,7 +176,8 @@ export const caseStudies: CaseStudy[] = [
                     { type: 'h3', content: 'The Problem With Trading UIs' },
                     { type: 'p', content: 'Decentralized exchange platforms sit at one of the most demanding intersections in product design: extreme information density, real-time data, and high-stakes decisions — all at once.' },
                     { type: 'p', content: 'Most existing platforms fall into two camps: **dense but cold** (Hyperliquid, dYdX) or **clean but shallow** (Uniswap). Experienced traders tolerate the first. New users bounce off both.' },
-                    { type: 'aside', icon: '🎯', title: 'The Gap', content: 'Professional density. Consumer accessibility. Nobody\'s done both.\n\nThe opportunity was clear: design a DEX that gives professional traders the density and speed they need while using a visual language that feels premium, modern, and approachable — without sacrificing a single data point.' }
+                    { type: 'aside', icon: '🎯', title: 'The Gap', content: 'Professional density. Consumer accessibility. Nobody\'s done both.\n\nThe opportunity was clear: design a DEX that gives professional traders the density and speed they need while using a visual language that feels premium, modern, and approachable — without sacrificing a single data point.' },
+                    { type: 'image', src: '/images/leaf-dex/image_2.jpg', alt: 'Leaf DEX concept mockup showcasing the trading platform vision' }
                 ]
             },
             {
@@ -195,7 +204,12 @@ export const caseStudies: CaseStudy[] = [
                             '**Mobile as afterthought** — most platforms gave up at 768px'
                         ]
                     },
-                    { type: 'p', content: 'These gaps became my design brief.' }
+                    { type: 'p', content: 'These gaps became my design brief.' },
+                    { type: 'image', src: '/images/leaf-dex/Layout_and_spacing.jpg', alt: 'Layout and spacing analysis for Leaf DEX' },
+                    { type: 'image', src: '/images/leaf-dex/Primitive_Colors.jpg', alt: 'Primitive Colors token system' },
+                    { type: 'image', src: '/images/leaf-dex/Radius_Tokens.jpg', alt: 'Radius Tokens' },
+                    { type: 'image', src: '/images/leaf-dex/Spacing_Tokens.jpg', alt: 'Spacing Tokens' },
+                    { type: 'image', src: '/images/leaf-dex/Typography_Tokens.jpg', alt: 'Typography Tokens' }
                 ]
             },
             {
@@ -205,15 +219,6 @@ export const caseStudies: CaseStudy[] = [
                     { type: 'p', content: 'The solution wasn\'t a single screen — it was a layered architecture: one foundation → one component library → one assembled interface.' },
                     { type: 'h3', content: '✨ Foundation First' },
                     { type: 'p', content: 'Instead of designing screens and extracting tokens later, I built the token system before touching any component. Every decision downstream would inherit from this layer.' },
-                    {
-                        type: 'image_row', images: [
-                            { src: '/images/leaf-dex/Primitive_Colors.jpg', alt: 'Primitive Colors' },
-                            { src: '/images/leaf-dex/Radius_Tokens.jpg', alt: 'Radius Tokens' },
-                            { src: '/images/leaf-dex/Spacing_Tokens.jpg', alt: 'Spacing Tokens' },
-                            { src: '/images/leaf-dex/Typography_Tokens.jpg', alt: 'Typography Tokens' }
-                        ],
-                        caption: 'Leaf Design Tokens: The source of truth for color, spacing, radius, and typography.'
-                    },
                     {
                         type: 'list', items: [
                             '**Color**: 123 semantic aliases, dark + light mode',
@@ -225,18 +230,13 @@ export const caseStudies: CaseStudy[] = [
                         ]
                     },
                     { type: 'h3', content: '🏗️ Three-Layer Component Architecture' },
-                    {
-                        type: 'image_row', images: [
-                            { src: '/images/leaf-dex/Buttons.jpg', alt: 'Button System' },
-                            { src: '/images/leaf-dex/Molecules.jpg', alt: 'Molecules' },
-                            { src: '/images/leaf-dex/Organisms.jpg', alt: 'Organisms' }
-                        ],
-                        caption: 'Atomic Design: scaling from buttons to complex orderbooks and charts.'
-                    },
                     { type: 'aside', icon: '🔵', title: 'ATOMS (43)', content: 'Buttons (302 variants), Inputs, Toggles, Checkboxes, Labels, Tabs, Tags, Icons' },
                     { type: 'aside', icon: '🟢', title: 'MOLECULES (57)', content: 'Stat Cards, Orderbook Rows, Dropdowns, Market Cards, Asset Rows, Crypto Pairs' },
                     { type: 'aside', icon: '🟣', title: 'ORGANISMS (17)', content: 'Full Orderbook Panel, Trading Chart Shell, Order Form, Stats Dashboard, Sidebar, Header' },
-                    { type: 'p', content: 'The moment I assembled the organisms from the molecules — and the molecules from the atoms — the system clicked. Changing one token cascaded perfectly through 117 components.' }
+                    { type: 'p', content: 'The moment I assembled the organisms from the molecules — and the molecules from the atoms — the system clicked. Changing one token cascaded perfectly through 117 components.' },
+                    { type: 'image', src: '/images/leaf-dex/Buttons.jpg', alt: 'Button System — 302 variants across style, color, size, state, and icon position' },
+                    { type: 'image', src: '/images/leaf-dex/Molecules.jpg', alt: 'Molecule components — Stat Cards, Orderbook Rows, Market Cards' },
+                    { type: 'image', src: '/images/leaf-dex/Organisms.jpg', alt: 'Organism components — Full Orderbook Panel, Trading Chart Shell, Order Form' }
                 ]
             },
             {
@@ -247,7 +247,10 @@ export const caseStudies: CaseStudy[] = [
                     { type: 'aside', icon: '📊', title: 'Let data breathe', content: 'In high-density UIs, whitespace isn\'t waste — it\'s signal. Consistent 8px spacing rhythm gives traders visual breathing room without sacrificing data density.' },
                     { type: 'aside', icon: '🎯', title: 'Direct the eye to action', content: 'The Buy/Sell button must be the most visually dominant element on any trading screen. Caribbean Green gradients and elevation draw attention there first, always.' },
                     { type: 'aside', icon: '♿', title: 'Readable glass, not decorative glass', content: 'Apple\'s VisionOS was criticized for unreadable text on glass. Every glass surface in this system maintains a 12:1 contrast ratio — AAA — not just AA. Glass is atmosphere, not obstruction.' },
-                    { type: 'aside', icon: '🔄', title: 'Design for state, not just screens', content: 'Every component exists in at least 5 states: default, hover, focus, active, disabled. Trading UIs fail when edge states are underdeveloped.' }
+                    { type: 'aside', icon: '🔄', title: 'Design for state, not just screens', content: 'Every component exists in at least 5 states: default, hover, focus, active, disabled. Trading UIs fail when edge states are underdeveloped.' },
+                    { type: 'image', src: '/images/leaf-dex/Leaf_Color_Alias.jpg', alt: 'Color Aliases — semantic color system for dark and light modes' },
+                    { type: 'image', src: '/images/leaf-dex/Liquid_glass_Tokens.jpg', alt: 'Glass Tokens — glassmorphism depth levels' },
+                    { type: 'image', src: '/images/leaf-dex/Layout_Grids.jpg', alt: 'Grid System — responsive layout structure' }
                 ]
             },
             {
@@ -255,22 +258,11 @@ export const caseStudies: CaseStudy[] = [
                 blocks: [
                     { type: 'h3', content: 'Desktop Trading Page (1440px)' },
                     { type: 'p', content: '**Scenario:** A crypto trader opens the platform to place a limit buy order on BTC/USDT.' },
-                    { type: 'image', src: '/images/leaf-dex/Trading_Page-Desktop.jpg', alt: 'Desktop Trading Interface', caption: 'The full trading dashboard: 3-column layout focused on information density and trade speed.' },
                     { type: 'p', content: 'The three-column layout keeps the cognitive flow natural:\n- **Left** → Orderbook (what the market looks like)\n- **Center** → Chart (what price is doing)\n- **Right** → Order Form + Stats (what action to take)' },
                     { type: 'p', content: 'Each panel floats on `glass/heavy` (10px blur, white/10% background) with `elevation/3` — the result is a spatial, layered interface where panels feel genuinely distinct without hard borders.' },
                     { type: 'aside', icon: '📉', title: 'The Orderbook: Unique Feature', content: 'Instead of static rows, each row carries a depth bar — a gradient background whose width equals the cumulative volume at that price level as a percentage of total book depth.\n\nThis gives traders an instant visual sense of where liquidity is concentrated. No competing platform does this. Most show the number. We show the weight.\n\n**Result:** Traders can scan market depth in under 2 seconds without reading a single number.' },
-                    { type: 'h3', content: 'Mobile Trading Page (375px)' },
-                    { type: 'p', content: '**Scenario:** A trader checks their position and places a market sell on the go.' },
-                    {
-                        type: 'image_row', images: [
-                            { src: '/images/leaf-dex/Trade-Mobile.jpg', alt: 'Mobile Trade Form' },
-                            { src: '/images/leaf-dex/Portfolio-Mobile.jpg', alt: 'Mobile Portfolio' }
-                        ],
-                        caption: 'Mobile-first trading: tabbed navigation and bottom sheets for high-speed interactions.'
-                    },
-                    { type: 'p', content: 'On mobile, the three-column layout becomes a tabbed interface:\n[CHART] [BOOK] [TRADE]' },
-                    { type: 'p', content: 'The Order Form lives inside a **bottom sheet** — it slides up with a swipe gesture and occupies the lower 70% of screen. This preserves the chart view while keeping the trade action immediately accessible.' },
-                    { type: 'p', content: 'Every touch target meets 44px minimum. Glass intensity drops from 10px blur to 3px (glass/light) to remain crisp on smaller, lower-powered screens.' }
+                    { type: 'image', src: '/images/leaf-dex/Asset.jpg', alt: 'Asset page — token details and market overview' },
+                    { type: 'image', src: '/images/leaf-dex/Spot_Page.jpg', alt: 'Spot trading page — simplified trading interface' }
                 ]
             },
             {
@@ -280,14 +272,6 @@ export const caseStudies: CaseStudy[] = [
                     { type: 'h2', content: 'Typography & Numbers' },
                     { type: 'p', content: 'UI labels use Inter for optimal small-size readability. Prices, amounts, and totals use JetBrains Mono — a monospace font that keeps all numerals tabular-aligned, so an orderbook\'s columns never shift as numbers update.' },
                     { type: 'h2', content: 'Color & Contrast' },
-                    {
-                        type: 'image_row', images: [
-                            { src: '/images/leaf-dex/Leaf_Color_Alias.jpg', alt: 'Color Aliases' },
-                            { src: '/images/leaf-dex/Liquid_glass_Tokens.jpg', alt: 'Glass Tokens' },
-                            { src: '/images/leaf-dex/Layout_Grids.jpg', alt: 'Grid System' }
-                        ],
-                        caption: 'The Visual Language: High-contrast color systems and accessible glass depth.'
-                    },
                     { type: 'p', content: 'The primary palette uses Caribbean Green (#00facc) as the success/buy signal and Red (#ef4444) as the sell/loss signal — both tested against the dark background (#0a0e27) and verified:' },
                     {
                         type: 'list', items: [
@@ -295,7 +279,16 @@ export const caseStudies: CaseStudy[] = [
                             'Caribbean Green on dark: **15:1 AAA** ✓',
                             'Red on dark: **10:1 AAA** ✓'
                         ]
-                    }
+                    },
+                    { type: 'h3', content: 'Mobile Trading Page (375px)' },
+                    { type: 'p', content: '**Scenario:** A trader checks their position and places a market sell on the go.' },
+                    { type: 'p', content: 'On mobile, the three-column layout becomes a tabbed interface:\n[CHART] [BOOK] [TRADE]' },
+                    { type: 'p', content: 'The Order Form lives inside a **bottom sheet** — it slides up with a swipe gesture and occupies the lower 70% of screen. This preserves the chart view while keeping the trade action immediately accessible.' },
+                    { type: 'p', content: 'Every touch target meets 44px minimum. Glass intensity drops from 10px blur to 3px (glass/light) to remain crisp on smaller, lower-powered screens.' },
+                    { type: 'image', src: '/images/leaf-dex/Trading_Page-Desktop.jpg', alt: 'Desktop Trading Interface — 3-column layout focused on information density and trade speed', caption: 'The full trading dashboard: 3-column layout focused on information density and trade speed.' },
+                    { type: 'image', src: '/images/leaf-dex/Dashboard-Desktop.jpg', alt: 'Dashboard overview — portfolio summary and market stats' },
+                    { type: 'image', src: '/images/leaf-dex/Trade-Mobile.jpg', alt: 'Mobile Trade Form — bottom sheet interaction for quick trades' },
+                    { type: 'image', src: '/images/leaf-dex/Portfolio-Mobile.jpg', alt: 'Mobile Portfolio — tabbed navigation for on-the-go trading' }
                 ]
             },
             {
@@ -306,7 +299,8 @@ export const caseStudies: CaseStudy[] = [
                     { type: 'aside', icon: '🔢', title: '302 Button Variants', content: 'Style × Color × Size × State × Icon position. Zero edge cases unaccounted for.' },
                     { type: 'aside', icon: '📱', title: '6 Responsive Breakpoints', content: '1920px, 1440px, 1024px, 768px, 414px, 375px — each with custom layout logic, not just resized desktop screens.' },
                     { type: 'aside', icon: '♿', title: '100% AAA Accessibility', content: 'Every text/background combination verified with Stark. Reduced-motion support. Keyboard navigation. ARIA labels. AODA-compliant.' },
-                    { type: 'aside', icon: '📹', title: 'Complete Handoff Package', content: '16-minute video walkthrough, 6-page design token documentation, component usage guidelines, responsive rules, animation specifications, and CSS variable exports.' }
+                    { type: 'aside', icon: '📹', title: 'Complete Handoff Package', content: '16-minute video walkthrough, 6-page design token documentation, component usage guidelines, responsive rules, animation specifications, and CSS variable exports.' },
+                    { type: 'image', src: '/images/leaf-dex/Group_1.png', alt: 'Leaf DEX complete design system overview — all tokens, components, and layouts' }
                 ]
             },
             {
@@ -321,7 +315,10 @@ export const caseStudies: CaseStudy[] = [
                             '**Expand the dark/light theme**: The token architecture already supports light mode through alias swapping. Build and test the light mode variant, including glassmorphism on lighter backgrounds.',
                             '**Motion and microinteraction prototyping**: Animate the orderbook row updates (pulse on change, fade on removal) and number count-up in stat cards using Framer Motion to validate the motion spec documentation.'
                         ]
-                    }
+                    },
+                    { type: 'image', src: '/images/leaf-dex/MacBook-13.jpg', alt: 'Leaf DEX final mockup on MacBook' },
+                    { type: 'image', src: '/images/leaf-dex/image_2.jpg', alt: 'Leaf DEX design system overview' },
+                    { type: 'image', src: '/images/leaf-dex/Layout_and_spacing.jpg', alt: 'Layout and spacing system used across all breakpoints' }
                 ]
             }
         ]
