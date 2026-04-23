@@ -17,10 +17,8 @@ function splitBlocks(blocks: ContentBlock[]): { textBlocks: ContentBlock[]; visu
 
     for (const block of blocks) {
         if (block.type === 'image_row') {
-            // Unstack image_row into individual images
-            for (const img of block.images) {
-                visualBlocks.push({ type: 'image', src: img.src, alt: img.alt, caption: img.caption });
-            }
+            // Keep image_row intact — renders as 2-up grid in visual column
+            visualBlocks.push(block);
         } else if (isVisualBlock(block)) {
             visualBlocks.push(block);
         } else if (block.type === 'divider') {
@@ -75,6 +73,17 @@ const VisualBlockRenderer: React.FC<{ block: ContentBlock; index: number }> = ({
                         alt={block.alt}
                         className="w-full h-auto rounded-xl md:rounded-2xl shadow-xl"
                     />
+                    {block.caption && <p className="mt-2 text-xs text-muted-foreground text-center italic">{block.caption}</p>}
+                </div>
+            );
+        case 'image_row':
+            return (
+                <div key={index} className="mb-6 relative z-[1]">
+                    <div className="grid grid-cols-2 gap-3">
+                        {block.images.map((img: any, i: number) => (
+                            <img key={i} src={img.src} alt={img.alt} className="w-full h-auto rounded-xl shadow-xl" />
+                        ))}
+                    </div>
                     {block.caption && <p className="mt-2 text-xs text-muted-foreground text-center italic">{block.caption}</p>}
                 </div>
             );

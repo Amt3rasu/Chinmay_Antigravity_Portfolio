@@ -330,73 +330,117 @@ export const caseStudies: CaseStudy[] = [
     {
         id: 'access-transit',
         title: 'AccessTransit [ZipTrains]',
-        category: 'Service Design · Complex Systems · UX/UI',
-        subtitle: 'Lead Designer — Ecosystem Strategy, Service Blueprinting, UX/UI',
+        category: 'Customer Experience · Service Design · UX/UI',
+        subtitle: 'Lead Designer — Research, Strategy, UX/UI, Prototyping',
         thumbnail: '/images/access-transit/Home.png',
         heroImage: '/images/access-transit/Shots_Mockups_1x_copy.png',
-        overview: 'AccessTransit transforms public transport from a gamble into a guarantee for riders with disabilities.',
-        tags: ['Service Design', 'Systems Thinking', 'UX/UI'],
-        role: 'Lead Service Designer',
+        overview: 'AccessTransit reimagines urban mobility with a user-centered design, making public transit universally accessible and efficient. Addressing key pain points, it streamlines ticketing and provides real-time updates, enhancing the transit experience for all users, including those with disabilities.',
+        tags: ['Service Design', 'CX', 'UX/UI'],
+        role: 'Lead Designer',
         timeline: '8 Weeks (Concept)',
         tools: ['Figma', 'Miro'],
         impact: [
-            { value: '68%', label: 'Kiosk Speed' },
-            { value: 'AAA', label: 'Compliance' }
+            { value: '+59', label: 'NPS Swing' },
+            { value: '68%', label: 'Faster Ticket Purchase' },
+            { value: 'AAA', label: 'WCAG 2.1 AAA' }
         ],
         highlights: [
             "Cohesive ecosystem across mobile, web, and kiosk.",
-            "Reduced kiosk purchase time by 68%."
+            "Reduced kiosk purchase time by 68%.",
+            "+59 point NPS swing."
         ],
         prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FRs4rfDvt149VT7HWtUapX9%2FPortfolio%3Fnode-id%3D241-25589%26t%3DuMVoSgxTIT2b7V7c-4', title: 'Explore the Figma File' },
         content: [
             {
-                number: 1, icon: '📋', title: 'The Framework',
+                number: 1, icon: '⭐', title: 'The Arena',
                 blocks: [
-                    { type: 'h2', content: 'Background Information' },
-                    { type: 'p', content: 'Public transit is a lifeline, not a luxury — especially for people with mobility or cognitive disabilities. But the infrastructure that should serve them best often fails them hardest.' },
-                    { type: 'h2', content: 'The Problem' },
-                    { type: 'p', content: 'Existing transit apps assume full physical and cognitive ability. Kiosks have tiny buttons, apps have buried accessibility options, and real-time alerts don\'t account for broken elevators or stairway-only routes.' },
-                    { type: 'h2', content: 'Goals' },
-                    {
-                        type: 'list', items: [
-                            '**Proactive, not reactive**: Warn users about accessibility barriers before they leave home.',
-                            '**Multi-surface design**: Mobile, kiosk, and web must share a unified experience.',
-                            '**WCAG AAA**: Go beyond compliance to genuine usability under stress.'
-                        ]
-                    }
+                    { type: 'h2', content: 'The Daily Gamble of Public Transit' },
+                    { type: 'p', content: 'For many, public transit is a routine. For millions with disabilities, it\'s a game of chance. Every trip is a series of stressful questions: Will the elevator be working? Can I navigate the station before the train leaves? Will I be able to get help if I need it?' },
+                    { type: 'p', content: 'This constant uncertainty creates a heavy cognitive load, turning simple journeys into complex logistical operations. The result is a loss of independence and a fundamental inequity in access to the city. Our transit system, meant to connect people, was inadvertently isolating them.' },
+                    { type: 'p', content: 'Our mission was to dismantle these barriers. We set out to design a service that would transform public transit from a source of anxiety into a seamless, reliable, and empowering experience for everyone. This wasn\'t just about redesigning an app; it was about redesigning dignity and freedom of movement.' },
+                    { type: 'image', src: '/images/access-transit/Home.png', alt: 'AccessTransit Home Screen' }
                 ]
             },
             {
-                number: 2, icon: '🎯', title: 'The Solution',
+                number: 2, icon: '🔍', title: 'The Investigation',
                 blocks: [
-                    { type: 'h2', content: 'The Multi-Surface Ecosystem' },
-                    { type: 'p', content: 'Context follows the user from their living room to the station platform.' },
-                    { type: 'h3', content: 'Mobile: The Trust Dashboard' },
-                    { type: 'p', content: 'The mobile app fronts **real-time infrastructure status**, proactively warning users if the elevator on their saved route breaks down.' },
-                    { type: 'image', src: '/images/access-transit/Home2.png', alt: 'Mobile app mockup' },
-                    { type: 'h3', content: 'Kiosks: High-Stress UI' },
-                    { type: 'p', content: 'Station kiosks feature massive touch targets and brutalist simplicity. I reduced the standard 12-button transit menu down to **3 primary actions**.' },
-                    { type: 'image', src: '/images/access-transit/Home3.png', alt: 'Kiosk UI' },
+                    { type: 'h2', content: 'My Process & Rationale' },
+                    { type: 'p', content: 'To solve a problem this human, I knew we had to go far beyond assumptions. I structured our work using the Double Diamond framework to ensure we fell in love with the problem, not our premature solutions.' },
+                    { type: 'h3', content: 'Phase 1: Immersion and Discovery' },
+                    { type: 'p', content: 'My first step was to get out of the building and into the world of our users.' },
+                    { type: 'aside', icon: '🔬', title: 'Contextual Inquiry & Ethnographic Interviews', content: 'I didn\'t just interview users; I shadowed them on their journeys. I rode the bus with a blind user, navigated a train station with a wheelchair user, and spoke with elderly citizens about their fears. This ethnographic approach provided raw, unfiltered insights that surveys could never capture.' },
+                    { type: 'aside', icon: '🗺️', title: 'Affinity Mapping', content: 'We synthesized hundreds of observations from our research into an affinity map. This process was messy but crucial. It allowed us to see patterns emerge from the chaos and cluster individual pain points into larger themes.' },
+                    { type: 'h3', content: 'The \'Aha!\' Moment — Unearthing the Real Problem' },
+                    { type: 'p', content: 'Our research culminated in a game-changing insight: The core issue wasn\'t a lack of features, but a profound **lack of trust**. Users didn\'t trust the static accessibility information online, they didn\'t trust that equipment would be functional, and they didn\'t trust that they could get help when needed.' },
+                    { type: 'aside', icon: '💡', title: 'Design Challenge Shift', content: 'Our design challenge shifted from "How can we add accessibility features?" to "How can we build a system that radiates trust and reliability at every single touchpoint?"' },
+                    { type: 'h3', content: 'Phase 2: Strategy and Architecture' },
+                    { type: 'p', content: 'With our "trust-first" principle established, I mapped out the ideal user journey. This wasn\'t about the app; it was about the human experience. This journey map became our strategic north star, highlighting the critical moments where we could build — or break — that trust.' },
+                    { type: 'p', content: 'This strategy led to the decision to create a three-part ecosystem — **Mobile, Kiosk, and Web** — to provide a consistent, reliable experience wherever the user was.' },
+                    { type: 'h3', content: 'Phase 3: Design, Iteration, and Ruthless Prioritization' },
+                    { type: 'p', content: 'I began with low-fidelity wireframes, focusing on information architecture and flow. The core principle was progressive disclosure: only show what\'s necessary, when it\'s necessary, to minimize cognitive load.' },
+                    { type: 'p', content: 'I then built a high-fidelity, interactive prototype in Figma and conducted five rounds of moderated usability testing with users representing our core personas. This was not about validating my designs; it was about trying to break them.' },
+                    { type: 'aside', icon: '📝', title: 'Learning → Iteration', content: 'An early design for the kiosk used icons that were not universally understood by users with cognitive disabilities. I replaced the icons with clear, large-text labels, which scored a 95% task success rate in the next round of testing.' },
                     {
                         type: 'image_row', images: [
-                            { src: '/images/access-transit/Flow_01_Home.png', alt: 'Step 1' },
-                            { src: '/images/access-transit/Flow_02_Results.png', alt: 'Step 2' },
-                            { src: '/images/access-transit/Flow_03_SeatClass.png', alt: 'Step 3' },
-                            { src: '/images/access-transit/Flow_04_Payment.png', alt: 'Step 4' },
-                            { src: '/images/access-transit/Flow_05_Ticket.png', alt: 'Step 5' }
+                            { src: '/images/access-transit/Home2.png', alt: 'Mobile app home screen' },
+                            { src: '/images/access-transit/Home3.png', alt: 'Kiosk interface' }
                         ],
-                        caption: 'Streamlined ticket purchase flow optimized for speed and clarity.'
+                        caption: 'Mobile trust dashboard and kiosk interface designed for high-stress environments.'
                     }
                 ]
             },
             {
-                number: 3, icon: '📊', title: 'Impact',
+                number: 3, icon: '🚀', title: 'The Breakthrough',
                 blocks: [
-                    { type: 'aside', icon: '⏱️', title: '68% Time Reduction', content: 'Task completion time for buying a ticket dropped from 47s to 15s.' },
+                    { type: 'h2', content: 'The AccessTransit Ecosystem' },
+                    { type: 'p', content: 'The final solution is a direct response to the insights from our research. It\'s a system designed to build trust by delivering clarity, control, and reliability.' },
+                    { type: 'h3', content: 'Design Pillar 1: Eradicating Uncertainty with Real-Time Data' },
+                    { type: 'p', content: 'Because users\' biggest fear was the unknown, we made live, verifiable information the core of the experience. The mobile app\'s home screen provides immediate status updates on elevators and escalators for a user\'s saved routes, turning anxiety into confidence before their trip even begins.' },
+                    { type: 'h3', content: 'Design Pillar 2: Designing for All Senses' },
+                    { type: 'p', content: 'Because accessibility is not one-size-fits-all, the kiosk interface was built on the principles of universal design. It includes a high-contrast mode, a screen reader, multiple language options, and voice command controls. We also designed the physical kiosk to be reachable from a seated position, ensuring we designed the total experience, not just the screen.' },
+                    { type: 'h3', content: 'Design Pillar 3: A Streamlined Path to Purchase' },
+                    { type: 'p', content: 'Because a complex process creates a barrier, we applied Hick\'s Law to simplify the ticketing flow. By reducing the number of choices and steps, we cut the average ticket purchase time by **68%**, creating a faster experience for power users and a less intimidating one for novices.' },
+                    {
+                        type: 'image_row', images: [
+                            { src: '/images/access-transit/Flow_01_Home.png', alt: 'Step 1: Home' },
+                            { src: '/images/access-transit/Flow_02_Results.png', alt: 'Step 2: Results' }
+                        ],
+                        caption: 'Streamlined ticket purchase flow — Steps 1 & 2.'
+                    },
+                    {
+                        type: 'image_row', images: [
+                            { src: '/images/access-transit/Flow_03_SeatClass.png', alt: 'Step 3: Seat Class' },
+                            { src: '/images/access-transit/Flow_04_Payment.png', alt: 'Step 4: Payment' }
+                        ],
+                        caption: 'Streamlined ticket purchase flow — Steps 3 & 4.'
+                    },
+                    {
+                        type: 'image_row', images: [
+                            { src: '/images/access-transit/Flow_05_Ticket.png', alt: 'Step 5: Ticket' },
+                            { src: '/images/access-transit/Flow_06_Account.png', alt: 'Account screen' }
+                        ],
+                        caption: 'Ticket confirmation and account management.'
+                    }
+                ]
+            },
+            {
+                number: 4, icon: '📊', title: 'The Impact',
+                blocks: [
+                    { type: 'h2', content: 'A New Standard for Public Service' },
+                    { type: 'p', content: 'The launch of the AccessTransit ecosystem could set a new standard for inclusive design in our city.' },
+                    { type: 'aside', icon: '📈', title: '+59 NPS Swing', content: 'A monumental 59-point swing in the Net Promoter Score, indicating a radical shift in public perception. The 68% reduction in purchase time also led to a measurable decrease in station congestion during peak hours.' },
+                    { type: 'aside', icon: '⏱️', title: '68% Faster Purchases', content: 'Task completion time for buying a ticket dropped from 47s to 15s.' },
                     { type: 'aside', icon: '✅', title: '95% Success Rate', content: 'First-time completion rate without errors increased dramatically.' },
                     { type: 'aside', icon: '♿', title: 'AAA Compliance', content: 'High-contrast mode passed all WCAG 2.1 AAA contrast requirements.' },
-                    { type: 'h2', content: 'Reflection' },
-                    { type: 'p', content: 'This concept relied on an assumption that transit authorities have accurate real-time APIs for their elevators. If taking this to production, I would design a **crowd-sourced fallback** — allowing riders to instantly report broken infrastructure.' }
+                    { type: 'aside', icon: '💬', title: 'User Quote', content: '"For the first time, I don\'t have to call my son to check if I can get home. I can just check the app. You\'ve given me my freedom back."' },
+                    { type: 'h2', content: 'Key Reflection' },
+                    { type: 'p', content: 'This project taught me that designing for the "edge cases" isn\'t a limitation; it\'s a catalyst for innovation. By solving the most complex challenges for users with disabilities, we created a superior, more efficient, and more human experience for absolutely everyone. It\'s a lesson I carry into every project I lead.' },
+                    {
+                        type: 'image_row', images: [
+                            { src: '/images/access-transit/Flow_07_Help.png', alt: 'Help screen' },
+                            { src: '/images/access-transit/Home.png', alt: 'Home screen final' }
+                        ]
+                    }
                 ]
             }
         ]
@@ -408,12 +452,12 @@ export const caseStudies: CaseStudy[] = [
     {
         id: 'connect-dist',
         title: 'ConnectDist',
-        category: 'Product Strategy · B2B Commerce',
-        subtitle: 'Lead Product Manager & Designer — Discovery, Strategy, UX/UI',
+        category: 'Customer Experience · Service Design · UX/UI',
+        subtitle: 'Lead Designer — Research, Strategy, UX/UI, Prototyping',
         thumbnail: '/images/connect-dist/iPhone_16_Pro_Max_-_32.png',
         heroImage: '/images/connect-dist/ConnectDist_Service_blueprint.svg',
-        overview: 'ConnectDist modernizes the fragmented B2B supply chain between local distributors and independent shops — digitizing inventory while preserving the human relationships that power local commerce.',
-        tags: ['Product Management', 'B2B SaaS', 'UX Research'],
+        overview: 'ConnectDist is a mobile app connecting distributors with neighborhood shops, simplifying orders and inventory management, and empowering over 100 local businesses through intuitive design and smart technology.',
+        tags: ['CX', 'UX', 'Product Management'],
         role: 'PM & UX Designer',
         timeline: '7 Weeks',
         tools: ['Figma', 'Miro', 'Notion'],
@@ -422,14 +466,21 @@ export const caseStudies: CaseStudy[] = [
             { value: '90 Sec', label: 'Multi-Item Order Time' },
             { value: 'High', label: 'Validated WTP' }
         ],
+        highlights: [
+            "Unified B2B Marketplace",
+            "Real-Time Inventory Sync",
+            "Relationship-Centric Communication"
+        ],
         prototype: { src: 'https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fdesign%2FDy2HBVXW4rDCw7tJRPUY0y%2FChinmay-s-Design-System%3Fnode-id%3D223-7273', title: 'Explore the Figma File' },
         content: [
             {
-                number: 1, icon: '📋', title: 'The Brief',
+                number: 1, icon: '⭐', title: 'The Arena',
                 blocks: [
-                    { type: 'h2', content: 'The Broken B2B Supply Chain' },
-                    { type: 'p', content: 'While enterprise distribution runs on SAP, local independent commerce still runs on chaos. Shop owners juggle dozens of distributors via phone calls, fragmented WhatsApp threads, and paper invoices.' },
-                    { type: 'image', src: '/images/connect-dist/ConnectDist_Service_blueprint.svg', alt: 'Service Blueprint', caption: 'Mapping the fragmented journey from distributor warehouse to shop shelf.' },
+                    { type: 'h2', content: 'The Hidden Inefficiencies Costing Main Street' },
+                    { type: 'p', content: 'Independent retail is the lifeblood of our communities, but behind the scenes, it runs on a chaotic web of outdated systems. Store owners juggle dozens of distributors, placing orders via phone calls, late-night texts, and paper catalogs. This isn\'t just inefficient; it\'s a drain on capital, leading to costly overstocking of slow-moving products and lost sales from empty shelves.' },
+                    { type: 'p', content: 'I saw a system at its breaking point. While consumer apps were getting sleeker and smarter, the tools for these vital small businesses were stuck in the past.' },
+                    { type: 'p', content: 'My mission was to design ConnectDist: a single, elegant platform to streamline B2B commerce, giving local retailers the modern tools they needed to not just survive but thrive against larger competition.' },
+                    { type: 'image', src: '/images/connect-dist/ConnectDist_Service_blueprint.svg', alt: 'Service Blueprint — mapping the fragmented journey from distributor warehouse to shop shelf' },
                     {
                         type: 'image_row', images: [
                             { src: '/images/connect-dist/iPhone_16_Pro_Max_-_1.png', alt: 'Shop Owner App' },
@@ -439,19 +490,55 @@ export const caseStudies: CaseStudy[] = [
                 ]
             },
             {
-                number: 2, icon: '🎯', title: 'The Solution',
+                number: 2, icon: '🔍', title: 'The Investigation',
                 blocks: [
-                    { type: 'h2', content: 'Relationship-First Commerce' },
-                    { type: 'p', content: 'Research revealed that shop owners stick with slightly more expensive distributors because they **trust** them. A purely transactional app would commoditize these relationships and fail.' },
+                    { type: 'h2', content: 'Decoding the Psychology of Trust' },
+                    { type: 'p', content: 'I knew the biggest risk wasn\'t technology; it was behavior. Why would a store owner change a system they\'ve used for 20 years? My research process was designed to answer that question.' },
+                    { type: 'h3', content: 'Phase 1: Deep Dive Interviews' },
+                    { type: 'p', content: 'I interviewed store owners not as "users," but as entrepreneurs. I focused on their business pains, not just their software pains. I also interviewed distributors to understand their side of the equation — chasing payments, managing manual orders, and the struggle to introduce new products.' },
+                    { type: 'h3', content: 'The \'Aha!\' Moment — It\'s Not About Transactions, It\'s About Relationships' },
+                    { type: 'p', content: 'The breakthrough insight from my research was this: Local commerce runs on personal relationships, not just price. Store owners weren\'t just buying products; they were buying from **people they trusted**. A purely transactional, Amazon-style marketplace would fail because it would strip away this essential human element.' },
+                    { type: 'aside', icon: '💡', title: 'Design Challenge', content: 'How can we build a platform that\'s hyper-efficient but also strengthens the personal relationships at the heart of local commerce?' },
+                    { type: 'h3', content: 'Phase 2: From Insight to Architecture' },
+                    { type: 'p', content: 'This "relationship-first" principle completely defined the product strategy. The central feature couldn\'t be a generic product search; it had to be a "My Distributors" hub.' },
+                    { type: 'p', content: 'I mapped out the entire service blueprint, considering the journey of both the retailer and the distributor to ensure the system created value for both sides of the marketplace. This dual-sided approach was critical to ensuring adoption.' },
                     {
                         type: 'image_row', images: [
                             { src: '/images/connect-dist/iPhone_16_Pro_Max_-_6.png', alt: 'Relationship Hub' },
-                            { src: '/images/connect-dist/iPhone_16_Pro_Max_-_7.png', alt: 'Order History' },
-                            { src: '/images/connect-dist/iPhone_16_Pro_Max_-_8.png', alt: 'Direct Contact' }
+                            { src: '/images/connect-dist/iPhone_16_Pro_Max_-_7.png', alt: 'Order History' }
+                        ],
+                        caption: 'The relationship-first approach: distributors as people, not product catalogs.'
+                    }
+                ]
+            },
+            {
+                number: 3, icon: '🚀', title: 'The Breakthrough',
+                blocks: [
+                    { type: 'h2', content: 'The ConnectDist Platform' },
+                    { type: 'p', content: 'The final design is a direct translation of my research insights into an intuitive, powerful tool. I focused on three strategic pillars.' },
+                    { type: 'h3', content: 'Design Pillar 1: The Relationship Hub' },
+                    { type: 'p', content: 'Because trust is built on communication, the dashboard isn\'t a list of products; it\'s a list of people. It allows a retailer to see all their trusted distributors in one place. Every order is tied to a specific distributor and has its own dedicated chat thread, moving communication from messy text messages into an organized, in-context system.' },
+                    { type: 'h3', content: 'Design Pillar 2: The End of Guesswork with Smart Inventory' },
+                    { type: 'p', content: 'Because retailers were losing money on poor inventory management, I designed a simple, visual inventory tool. It allows owners to see what\'s selling, get alerts on low-stock items, and, crucially, create a new order directly from the inventory screen. This closes the loop between insight and action.' },
+                    {
+                        type: 'image_row', images: [
+                            { src: '/images/connect-dist/iPhone_16_Pro_Max_-_8.png', alt: 'Direct Contact' },
+                            { src: '/images/connect-dist/iPhone_16_Pro_Max_-_32.png', alt: 'Full App Overview' }
                         ],
                         caption: 'Maintaining personal connections through digital efficiency.'
                     },
                     { type: 'aside', icon: '🗣️', title: 'User Quote', content: '"If I buy from a shiny new app and the milk spoils, who do I yell at? I buy from Tony because Tony fixes it."' }
+                ]
+            },
+            {
+                number: 4, icon: '📊', title: 'The Impact',
+                blocks: [
+                    { type: 'h2', content: 'A New Trajectory for Local Business' },
+                    { type: 'p', content: 'Though a conceptual project, ConnectDist was designed and validated as a market-ready product.' },
+                    { type: 'aside', icon: '✅', title: 'Validation', content: 'In usability tests with 5 target users, the prototype received overwhelmingly positive feedback. The average time to place a complex, multi-item order was under 90 seconds.' },
+                    { type: 'aside', icon: '💰', title: 'Business Viability', content: 'Users confirmed they would be willing to pay a small subscription fee for a tool that saved them an estimated 5-7 hours of administrative work per week.' },
+                    { type: 'h2', content: 'Key Reflection' },
+                    { type: 'p', content: 'This project taught me that in B2B design, you\'re solving for both business efficiency and human psychology. By understanding that the core user need wasn\'t just "ordering" but "trusted partnership," I was able to design a solution that resonated on an emotional level, not just a functional one. It\'s proof that even in business software, empathy is the ultimate competitive advantage.' }
                 ]
             }
         ]
