@@ -51,7 +51,7 @@ const App: React.FC = () => {
                         className="flex flex-col min-h-screen text-slate-200 relative isolation-isolate"
                         style={{ visibility: isLoading ? 'hidden' : 'visible' }}
                     >
-                        <BackgroundDoodles />
+                        {/* <BackgroundDoodles /> */}
                         <Header />
 
                         <main className="flex-grow">

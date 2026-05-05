@@ -141,7 +141,6 @@ const InlineChapterHeader: React.FC<{ chapter: Chapter }> = ({ chapter }) => (
     <div className="mb-6 pb-4 border-b border-border">
         <div className="flex items-center gap-3 mb-2">
             <span className="text-3xl">{chapter.icon}</span>
-            <span className="text-xs font-bold text-primary tracking-[0.15em] uppercase">Chapter {chapter.number}</span>
         </div>
         <h2 className="text-2xl md:text-3xl font-serif font-bold text-foreground">{chapter.title}</h2>
     </div>
